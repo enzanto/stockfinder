@@ -1,0 +1,3 @@
+testenv/
+credentials.py
+TEST_DB.db

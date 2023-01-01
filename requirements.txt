@@ -1,0 +1,10 @@
+pandas
+pandas_ta
+sqlalchemy
+numpy
+datetime
+yfinance
+discord==1.7.3
+discord.py==1.7.3
+bs4
+matplotlib

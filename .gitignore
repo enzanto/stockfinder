@@ -1,0 +1,4 @@
+testenv
+__pycache__
+TEST_DB.db
+credentials.py
