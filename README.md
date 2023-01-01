@@ -1,0 +1,1 @@
+A simple stock screener that uses Mark Minervini's trend template on stocks on Oslo stock exchange
