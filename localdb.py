@@ -5,10 +5,10 @@ import yfinance as yf
 engine = create_engine('sqlite:///TEST_DB.db')
 
 def db_updater(symbol, engine=engine, start='2021-01-01'):
-    tableName = "ticker-" + symbol.lower().replace(".","_")
+    tableName = "ticker_" + symbol.lower().replace(".","_")
     print(symbol)
     try:
-        max_date = pd.read_sql(f'SELECT MAX(DATE) FROM {tableName}',engine).values[0][0]
+        max_date = pd.read_sql(f'SELECT MAX("Date") FROM {tableName}',engine).values[0][0]
         print(max_date)
         try:
             new_data = yf.download(symbol, start=pd.to_datetime(max_date))
@@ -27,7 +27,7 @@ def db_updater(symbol, engine=engine, start='2021-01-01'):
             
 
 def get_table(symbol, engine=engine):
-    tableName = "ticker-" + symbol.lower().replace(".","_")
+    tableName = "ticker_" + symbol.lower().replace(".","_")
     df = pd.read_sql(tableName,engine, index_col="Date")
     return df
 

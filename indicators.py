@@ -6,7 +6,7 @@ from sqlalchemy import create_engine
 engine = create_engine('sqlite:///TEST_DB.db')
 
 def macd(stock,engine=engine):
-    stock_db = "ticker-" + stock.lower().replace(".","_")
+    stock_db = "ticker_" + stock.lower().replace(".","_")
     try:
         df = pd.read_sql(stock_db,engine)
         if df.empty:
@@ -29,7 +29,7 @@ def macd(stock,engine=engine):
         print("")
 
 def new_20day_high(stock,engine=engine):
-    stock_db = "ticker-" + stock.lower().replace(".","_")
+    stock_db = "ticker_" + stock.lower().replace(".","_")
     try:
         df = pd.read_sql(stock_db,engine)
         if df.empty:
@@ -52,7 +52,7 @@ def new_20day_high(stock,engine=engine):
         print("")
 
 def bollinger_band(stock,engine=engine):
-    stock_db = "ticker-" + stock.lower().replace(".","_")
+    stock_db = "ticker_" + stock.lower().replace(".","_")
     df = pd.read_sql(stock_db,engine)
     if df.empty:
         return None
@@ -67,12 +67,12 @@ def bollinger_band(stock,engine=engine):
     choices = ['Buy', 'Sell']
     df['Signal'] = np.select(conditions,choices)
     if df['Signal'].iloc[-1] == ("Sell" or "Buy"):
-        print(df['Signal'].iloc[-1])
+        #print(df['Signal'].iloc[-1])
         return stock + " is outside Bollinger Band"
         # print('https://finance.yahoo.com/chart/'+stock)
 
 def trend_template(stock, engine=engine):
-    stock_db = "ticker-" + stock.lower().replace(".","_")
+    stock_db = "ticker_" + stock.lower().replace(".","_")
     df = pd.read_sql(stock_db,engine)
     if df.empty:
         return None
@@ -137,7 +137,7 @@ def trend_template(stock, engine=engine):
 
 def pivot_point(stock, engine=engine):
     #stock = stocklist["Symbol"][i]+".ol"
-    stock_db = "ticker-" + stock.lower().replace(".","_")
+    stock_db = "ticker_" + stock.lower().replace(".","_")
     df = pd.read_sql(stock_db, engine, index_col="Date")
     if df.empty:
         return None
@@ -181,4 +181,4 @@ def pivot_point(stock, engine=engine):
         df["Pivot"][i]=lastPivot
             
     if df['High'].iloc[-1] > df['Pivot'].iloc[-1] and df['High'].iloc[-2] < df['Pivot'].iloc[-2]:
-        return stock + " is breaking through a pivot point"
+        return stock + " is breaking through a pivot point at " + str(lastPivot)
