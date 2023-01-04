@@ -98,10 +98,8 @@ for i in stocklist.index:
         if len(message) > 1800:
             if discord:
                 webhook.send(content=message)
-                webhook.send(content="message")
             print(message)
             message = ""
 if discord:
     webhook.send(content=message)
-    webhook.send(content="final msg")
 print(len(message))

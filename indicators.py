@@ -41,7 +41,7 @@ def new_20day_high(stock,engine=engine):
         except:
             moving_average_200_20past=0
         tail = df.tail(20)
-        high20 = tail['Adj Close'][:-1].max()
+        high20 = tail['Adj Close'].iloc[:-1].max()
         if tail['Adj Close'].iloc[-1] > high20 and tail['Adj Close'].iloc[-2] < high20: #and moving_average_200 > moving_average_200_20past:
             return stock+' is a new 20 day max'
             # print(stock+' is a new 20 day max')

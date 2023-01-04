@@ -16,12 +16,16 @@ def db_updater(symbol, engine=engine, start='2021-01-01'):
             new_rows.to_sql(tableName, engine, if_exists='append')
             print(str(len(new_rows))+ ' new rows imported to db')
         except:
-            print('No data on ' + symbol + 'But it has DB table')
+            print('No data on ' + symbol + ' But it has DB table')
     except:
         try:
+            print("0")
             new_data = yf.download(symbol, start=start)
+            print("1")
             new_data.to_sql(tableName, engine)
+            print("2")
             print(f'New table created for {tableName} with {str(len(new_data))} rows')
+            print("3")
         except:
             print("No data on " + symbol)
             
