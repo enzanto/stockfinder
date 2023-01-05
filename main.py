@@ -76,13 +76,23 @@ for i in stocklist.index:
     stock = stocklist["Symbol"][i]+".ol"
     market = stocklist["Market"][i]
     stockname = stocklist["Name"][i]
-    trend = trend_template(stock,engine)
+    stock_db = "ticker_" + stock.lower().replace(".","_")
+    df = pd.read_sql(stock_db,engine)
+    if len(df) < 200:
+        continue
+    df['Volume_SMA_20'] = round(df['Volume'].rolling(window=20).mean(),2)
+    ap = (df['High'].iloc[-1] + df['Low'].iloc[-1] + df['Close'].iloc[-1])/3
+    vwap = round((ap * df['Volume'].iloc[-1])/1000000,2)
+    volumeChange = round(((df['Volume'].iloc[-1] / df['Volume_SMA_20'].iloc[-1]))*100,2)
+    priceChange = round(((df['Adj Close'].iloc[-1] / df['Adj Close'].iloc[-2]) -1)*100,2)
+    trend = trend_template(df)
     if trend != None:
-        macd_out = macd(stock,engine)
-        new_high = new_20day_high(stock,engine)
-        bollinger_band_out = bollinger_band(stock,engine)
-        pivotPoint = pivot_point(stock,engine)
-        message = message + "\n" + stockname + "\n" + trend
+        macd_out = macd(df)
+        new_high = new_20day_high(df)
+        bollinger_band_out = bollinger_band(df)
+        pivotPoint = pivot_point(df)
+        message = message + "\n" + stockname + " " + str(df["Adj Close"].iloc[-1].round(2)) + "kr " + str(priceChange) + "%"
+        message = message + "\n" + str(vwap) + "mNOK " + str(volumeChange)+"% of volume SMA20\n" + trend
         if pivotPoint != None:
             message = message + "\n" + pivotPoint
         if macd_out != None:
@@ -102,4 +112,4 @@ for i in stocklist.index:
             message = ""
 if discord:
     webhook.send(content=message)
-print(len(message))
+print(message)

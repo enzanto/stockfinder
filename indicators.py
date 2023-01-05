@@ -5,57 +5,57 @@ from sqlalchemy import create_engine
 
 engine = create_engine('sqlite:///TEST_DB.db')
 
-def macd(stock,engine=engine):
-    stock_db = "ticker_" + stock.lower().replace(".","_")
-    try:
-        df = pd.read_sql(stock_db,engine)
-        if df.empty:
-            return None
-        df.ta.macd(close='Adj Close', fast=12, slow=26, signal=9, append=True)
-        df["SMA_200"]=round(df['Adj Close'].rolling(window=200).mean(),2)
-        df["EMA_200"]=round(df["Adj Close"].ewm(span=200,min_periods=200).mean())
-        sma200 = df["SMA_200"].iloc[-1]
-        sma200_20old = df["SMA_200"].iloc[-20]
-        ema200 = df['EMA_200'].iloc[-1]
-        if df['Adj Close'].iloc[-1] > sma200 or df['Adj Close'].iloc[-1] > ema200:
-            df = df.tail(20)
-            if df['MACDh_12_26_9'].iloc[-1] > 0 and df['MACDh_12_26_9'].iloc[-2] < 0 and df['MACD_12_26_9'].iloc[-1] < 0:
-                return stock+" started climbing! "+str(df['MACDh_12_26_9'].iloc[-1])
-            elif df['MACDh_12_26_9'].iloc[-1] < 0 and df['MACDh_12_26_9'].iloc[-2].max() > 0 and df['MACD_12_26_9'].iloc[-1] > 0:
-                return stock+' started declining '+str(df['MACDh_12_26_9'].iloc[-1])
-    except:
-        print('no info on '+stock)
-        print("---------------------------------")
-        print("")
+def macd(df):
+    # stock_db = "ticker_" + stock.lower().replace(".","_")
+    # try:
+    #     df = pd.read_sql(stock_db,engine)
+    #     if df.empty:
+    #         return None
+    df.ta.macd(close='Adj Close', fast=12, slow=26, signal=9, append=True)
+    df["SMA_200"]=round(df['Adj Close'].rolling(window=200).mean(),2)
+    df["EMA_200"]=round(df["Adj Close"].ewm(span=200,min_periods=200).mean())
+    sma200 = df["SMA_200"].iloc[-1]
+    sma200_20old = df["SMA_200"].iloc[-20]
+    ema200 = df['EMA_200'].iloc[-1]
+    if df['Adj Close'].iloc[-1] > sma200 or df['Adj Close'].iloc[-1] > ema200:
+        df = df.tail(20)
+        if df['MACDh_12_26_9'].iloc[-1] > 0 and df['MACDh_12_26_9'].iloc[-2] < 0 and df['MACD_12_26_9'].iloc[-1] < 0:
+            return "started climbing! "+str(df['MACDh_12_26_9'].iloc[-1])
+        elif df['MACDh_12_26_9'].iloc[-1] < 0 and df['MACDh_12_26_9'].iloc[-2] > 0 and df['MACD_12_26_9'].iloc[-1] > 0:
+            return 'started declining '+str(df['MACDh_12_26_9'].iloc[-1])
+    # except:
+    #     print('no info on '+stock)
+    #     print("---------------------------------")
+    #     print("")
 
-def new_20day_high(stock,engine=engine):
-    stock_db = "ticker_" + stock.lower().replace(".","_")
+def new_20day_high(df):
+    # stock_db = "ticker_" + stock.lower().replace(".","_")
+    # try:
+    #     df = pd.read_sql(stock_db,engine)
+    #     if df.empty:
+    #         return None
+    df["SMA_200"]=round(df["Adj Close"].rolling(window=200).mean(),2)
+    moving_average_200=df["SMA_200"].iloc[-1]
     try:
-        df = pd.read_sql(stock_db,engine)
-        if df.empty:
-            return None
-        df["SMA_200"]=round(df["Adj Close"].rolling(window=200).mean(),2)
-        moving_average_200=df["SMA_200"].iloc[-1]
-        try:
-            moving_average_200_20past=df['SMA_200'].iloc[-20]
-        except:
-            moving_average_200_20past=0
-        tail = df.tail(20)
-        high20 = tail['Adj Close'].iloc[:-1].max()
-        if tail['Adj Close'].iloc[-1] > high20 and tail['Adj Close'].iloc[-2] < high20: #and moving_average_200 > moving_average_200_20past:
-            return stock+' is a new 20 day max'
-            # print(stock+' is a new 20 day max')
-            # print('https://finance.yahoo.com/chart/'+stock)
+        moving_average_200_20past=df['SMA_200'].iloc[-20]
     except:
-        print('no data on '+stock) 
-        print("---------------------------------")
-        print("")
+        moving_average_200_20past=0
+    tail = df.tail(20)
+    high20 = tail['Adj Close'].iloc[:-1].max()
+    if tail['Adj Close'].iloc[-1] > high20 and tail['Adj Close'].iloc[-2] < high20: #and moving_average_200 > moving_average_200_20past:
+        return 'is a new 20 day max'
+        # print(stock+' is a new 20 day max')
+        # print('https://finance.yahoo.com/chart/'+stock)
+    # except:
+    #     print('no data on '+stock) 
+    #     print("---------------------------------")
+    #     print("")
 
-def bollinger_band(stock,engine=engine):
-    stock_db = "ticker_" + stock.lower().replace(".","_")
-    df = pd.read_sql(stock_db,engine)
-    if df.empty:
-        return None
+def bollinger_band(df):
+    # stock_db = "ticker_" + stock.lower().replace(".","_")
+    # df = pd.read_sql(stock_db,engine)
+    # if df.empty:
+    #     return None
     df['ma20'] = df.Close.rolling(20).mean()
     df['vol'] = df.Close.rolling(20).std()
     df['upper_bb'] = df.ma20 + (2 * df.vol)
@@ -68,12 +68,12 @@ def bollinger_band(stock,engine=engine):
     df['Signal'] = np.select(conditions,choices)
     if df['Signal'].iloc[-1] == ("Sell" or "Buy"):
         #print(df['Signal'].iloc[-1])
-        return stock + " is outside Bollinger Band"
+        return  "is outside Bollinger Band"
         # print('https://finance.yahoo.com/chart/'+stock)
 
-def trend_template(stock, engine=engine):
-    stock_db = "ticker_" + stock.lower().replace(".","_")
-    df = pd.read_sql(stock_db,engine)
+def trend_template(df):
+    # stock_db = "ticker_" + stock.lower().replace(".","_")
+    # df = pd.read_sql(stock_db,engine)
     if df.empty:
         return None
     smaUsed=[50,150,200]
@@ -135,12 +135,12 @@ def trend_template(stock, engine=engine):
     if(cond_1 and cond_2 and cond_3 and cond_4 and cond_5 and cond_6 and cond_7):# and cond_8):
         return "Passed Mark Minervis Trend Template"
 
-def pivot_point(stock, engine=engine):
+def pivot_point(df):
     #stock = stocklist["Symbol"][i]+".ol"
-    stock_db = "ticker_" + stock.lower().replace(".","_")
-    df = pd.read_sql(stock_db, engine, index_col="Date")
-    if df.empty:
-        return None
+    # stock_db = "ticker_" + stock.lower().replace(".","_")
+    # df = pd.read_sql(stock_db, engine, index_col="Date")
+    # if df.empty:
+    #     return None
     pd.set_option('mode.chained_assignment', None)
 
     df["Pivot"] = np.nan
@@ -181,4 +181,4 @@ def pivot_point(stock, engine=engine):
         df["Pivot"][i]=lastPivot
             
     if df['High'].iloc[-1] > df['Pivot'].iloc[-1] and df['High'].iloc[-2] < df['Pivot'].iloc[-2]:
-        return stock + " is breaking through a pivot point at " + str(lastPivot)
+        return  "is breaking through a pivot point at " + str(lastPivot)
