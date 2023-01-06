@@ -41,7 +41,11 @@ if discord:
 today = dt.date.today()
 today = str(today)
 
-# get updated list of ticker symbols
+#### get updated list of ticker symbols
+#
+# provide your own stocklist in a pandas dataframe named stocklist, required columns: Name, Symbol, Market
+# or modify the webscrape to get stocklist from your preferred exhchange
+#
 url = "https://live.euronext.com/en/pd_es/data/stocks"
 
 querystring = {"mics":"XOSL,MERK,XOAS"}
@@ -66,7 +70,7 @@ for i in jsonresponse['aaData']:
     df2 = pd.DataFrame([[name,symbol,exchange]],columns=['Name','Symbol','Market'])
     stocklist = pd.concat([df2,stocklist], ignore_index=True)
 stocklist = stocklist.sort_values('Name')
-
+####### End of stocklist gather, change the above code to your liking
 
 for i in stocklist.index:
     stock = str(stocklist["Symbol"][i])+".ol"
