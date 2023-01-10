@@ -20,7 +20,7 @@ ENV Variables:
 - DBNAME  
 - DBPORT  
 
-credits:
+credits:  
 Big thanks to Richard Moglen for giving me both the idea of making this, and great guides to both python and stock market in general.
 https://twitter.com/RichardMoglen  
 https://www.youtube.com/@RichardMoglen
