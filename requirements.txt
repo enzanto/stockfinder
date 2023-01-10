@@ -9,3 +9,4 @@ discord.py==1.7.3
 bs4
 matplotlib
 psycopg2-binary
+ta

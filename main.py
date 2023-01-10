@@ -9,6 +9,8 @@ import sys, os
 from discord import Webhook, RequestsWebhookAdapter
 import requests
 from bs4 import BeautifulSoup
+import ta
+from io import StringIO
 # setup
 try: 
     discord_url = os.environ['discord_url']
@@ -73,6 +75,35 @@ stocklist['Symbol'] = stocklist["Symbol"]+".ol"
 stocklist = stocklist.sort_values('Name')
 ####### End of stocklist gather, change the above code to your liking
 
+####### Get OSEBEX prices and calculate RSI
+now = dt.datetime.now()
+start = now - dt.timedelta(days=30)
+end_date = now.strftime("%Y-%m-%d")
+start_date = start.strftime("%Y-%m-%d")
+
+url = "https://live.euronext.com/en/ajax/AwlHistoricalPrice/getFullDownloadAjax/NO0007035327-XOSL"
+
+payload = "format=csv&decimal_separator=.&date_form=d%2Fm%2FY&startdate="+start_date+"&startdate="+start_date+"&enddate="+end_date+"&enddate="+end_date
+headers = {
+    "cookie": "visid_incap_2784297=ycNtzE%2BcTqWSMVRPd8UR9i2rsWMAAAAAQUIPAAAAAADJL%2B4cY%2FbTQYmUc9f1OSqh; incap_ses_1103_2784297=LbCYVFR2nRJaynllcKVOD77WvWMAAAAAjsT1QSDAYpwTS2uPjhnxNQ%3D%3D",
+    "authority": "live.euronext.com",
+    "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+    "content-type": "application/x-www-form-urlencoded",
+    "origin": "https://live.euronext.com",
+    "referer": "https://live.euronext.com/en/product/indices/NO0007035327-XOSL",
+    "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36 Edg/108.0.1462.76"
+}
+
+response = requests.request("POST", url, data=payload, headers=headers)
+response=response.text
+
+osebx_df = pd.read_csv(StringIO(response), header=3, index_col=False, dayfirst=True, sep=";").set_index("Date")
+osebx_df.index = pd.to_datetime(osebx_df.index, dayfirst=True)
+osebx_df = osebx_df.sort_index()
+osebx_df['RSI'] = ta.momentum.rsi(osebx_df['Close'], window=6)
+indexRSI = osebx_df['RSI'].iloc[-1]
+###### End of OSEBEX RSI
+
 for i in stocklist.index:
     stock = str(stocklist["Symbol"][i])
     db_updater(stock, engine)
@@ -94,14 +125,16 @@ for i in stocklist.index:
         closingRange = 50
     else:
         closingRange = round(((df['Close'].iloc[-1]-df['Low'].iloc[-1])/(df['High'].iloc[-1]-df["Low"].iloc[-1]))*100,2)
+    df['RSI'] = ta.momentum.rsi(df["Close"], window=6)
     trend = trend_template(df)
     if trend != None:
+        rs = (df['RSI'].iloc[-1] / indexRSI) * 100
         macd_out = macd(df)
         new_high = new_20day_high(df)
         bollinger_band_out = bollinger_band(df)
         pivotPoint = pivot_point(df)
         message = message + "\n" + stockname + " " + str(df["Adj Close"].iloc[-1].round(2)) + "kr " + str(priceChange) + "% and closing range: " + str(closingRange) + "%"
-        message = message + "\n" + str(vwap) + "mNOK " + str(volumeChange)+"% of volume SMA20\n" + trend
+        message = message + "\n" + str(vwap) + "m NOK " + str(volumeChange)+"% of volume SMA20 RS= " + str(rs.round(2)) + "\n" + trend
         if pivotPoint != None:
             message = message + "\n" + pivotPoint
         if macd_out != None:
