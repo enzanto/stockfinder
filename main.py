@@ -69,15 +69,16 @@ for i in jsonresponse['aaData']:
     exchange = htmlexchange.attrs['title']
     df2 = pd.DataFrame([[name,symbol,exchange]],columns=['Name','Symbol','Market'])
     stocklist = pd.concat([df2,stocklist], ignore_index=True)
+stocklist['Symbol'] = stocklist["Symbol"]+".ol"
 stocklist = stocklist.sort_values('Name')
 ####### End of stocklist gather, change the above code to your liking
 
 for i in stocklist.index:
-    stock = str(stocklist["Symbol"][i])+".ol"
+    stock = str(stocklist["Symbol"][i])
     db_updater(stock, engine)
 message = today + "\n"
 for i in stocklist.index:
-    stock = stocklist["Symbol"][i]+".ol"
+    stock = stocklist["Symbol"][i]
     market = stocklist["Market"][i]
     stockname = stocklist["Name"][i]
     stock_db = "ticker_" + stock.lower().replace(".","_")
