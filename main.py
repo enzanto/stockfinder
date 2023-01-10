@@ -85,7 +85,6 @@ url = "https://live.euronext.com/en/ajax/AwlHistoricalPrice/getFullDownloadAjax/
 
 payload = "format=csv&decimal_separator=.&date_form=d%2Fm%2FY&startdate="+start_date+"&startdate="+start_date+"&enddate="+end_date+"&enddate="+end_date
 headers = {
-    "cookie": "visid_incap_2784297=ycNtzE%2BcTqWSMVRPd8UR9i2rsWMAAAAAQUIPAAAAAADJL%2B4cY%2FbTQYmUc9f1OSqh; incap_ses_1103_2784297=LbCYVFR2nRJaynllcKVOD77WvWMAAAAAjsT1QSDAYpwTS2uPjhnxNQ%3D%3D",
     "authority": "live.euronext.com",
     "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
     "content-type": "application/x-www-form-urlencoded",
@@ -103,7 +102,7 @@ osebx_df = osebx_df.sort_index()
 osebx_df['RSI'] = ta.momentum.rsi(osebx_df['Close'], window=6)
 indexRSI = osebx_df['RSI'].iloc[-1]
 ###### End of OSEBEX RSI
-
+stocklist = stocklist.tail(20)
 for i in stocklist.index:
     stock = str(stocklist["Symbol"][i])
     db_updater(stock, engine)
