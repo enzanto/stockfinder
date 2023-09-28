@@ -10,7 +10,7 @@ response = session.get(url_cookie)
 
 cookie = session.cookies.get_dict()['sid']
 
-with open('map.json', 'r') as mapfile:
+with open('data/map.json', 'r') as mapfile:
     data = json.load(mapfile)
     tickers = data['stocks']
 

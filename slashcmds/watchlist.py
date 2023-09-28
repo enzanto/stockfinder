@@ -8,16 +8,16 @@ from investech_scrape import get_img,get_text
 from reports import *
 
 def get_ticker_map():
-    with open('map.json', 'r') as mapfile:
+    with open('data/map.json', 'r') as mapfile:
         data=json.load(mapfile)
         return data
 def get_watchlist():
-    with open('watchlist.json', 'r') as watchfile:
+    with open('data/watchlist.json', 'r') as watchfile:
         data=json.load(watchfile)
     return data
 def update_watchlist(data):
     json_object = json.dumps(data, indent=4)
-    with open('watchlist.json', 'w') as outfile:
+    with open('data/watchlist.json', 'w') as outfile:
         outfile.write(json_object)
 class Watchlist(app_commands.Group):
     @app_commands.command()

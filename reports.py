@@ -87,7 +87,7 @@ def report_full(tickers):
 
 
 if __name__ == "__main__":
-    with open('map.json', 'r') as mapfile:
+    with open('data/map.json', 'r') as mapfile:
         data=json.load(mapfile)
     stocks = data['stocks'][:3]
     stocks[0]['yahoo'] = "https://finance.yahoo.com/chart/"+stocks[0]['ticker']
