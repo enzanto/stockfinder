@@ -63,7 +63,7 @@ def bollinger_band(df):
     df['rsi'] = ta.momentum.rsi(df.Close, window=6)
     
     conditions = [(df.rsi < 30) & (df.Close < df.lower_bb),
-             (df.rsi > 70) & (df.Close > df.upper_bb)]
+            (df.rsi > 70) & (df.Close > df.upper_bb)]
     choices = ['Buy', 'Sell']
     df['Signal'] = np.select(conditions,choices)
     if df['Signal'].iloc[-1] == ("Sell" or "Buy"):

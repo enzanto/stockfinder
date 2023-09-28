@@ -1,4 +1,6 @@
 testenv/
 credentials.py
 TEST_DB.db
-stockfinder-development.tar
+.*
+images/*
+logs/*

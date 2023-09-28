@@ -1,0 +1,3073 @@
+{
+    "stocks": [
+        {
+            "name": "2020 BULKERS",
+            "ticker": "2020.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=100883",
+            "investechID": "100883",
+            "nordnet": "https://www.nordnet.no/market/stocks/16786171-2020-bulkers",
+            "sektor": "sj\u00f8fart",
+            "bransje": "sj\u00f8fart"
+        },
+        {
+            "name": "5TH PLANET GAMES",
+            "ticker": "5pg.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101121",
+            "investechID": "101121",
+            "nordnet": "https://www.nordnet.no/market/stocks/16783956-5th-planet-games",
+            "sektor": "kommunikasjonstjenester",
+            "bransje": "elektronisk gaming & multimedia"
+        },
+        {
+            "name": "AASEN SPAREBANK",
+            "ticker": "aasb.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101047",
+            "investechID": "101047",
+            "nordnet": "https://www.nordnet.no/market/stocks/16198955-aasen-sparebank",
+            "sektor": "finansielle tjenester",
+            "bransje": "banker - regionale"
+        },
+        {
+            "name": "ABG SUNDAL COLLIER",
+            "ticker": "abg.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101025",
+            "investechID": "101025",
+            "nordnet": "https://www.nordnet.no/market/stocks/16105648-abg-sundal-collier",
+            "sektor": "finansielle tjenester",
+            "bransje": "kapitalmarkeder"
+        },
+        {
+            "name": "ABL GROUP",
+            "ticker": "abl.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=100709",
+            "investechID": "100709",
+            "nordnet": "https://www.nordnet.no/market/stocks/16311903-abl-group-asa",
+            "sektor": "energi",
+            "bransje": "olje & gass - utstyr og tjenester"
+        },
+        {
+            "name": "ADEVINTA",
+            "ticker": "ade.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=100905",
+            "investechID": "100905",
+            "nordnet": "https://www.nordnet.no/market/stocks/17029243-adevinta",
+            "sektor": "kommunikasjonstjenester",
+            "bransje": "internettinnhold og -informasjon"
+        },
+        {
+            "name": "ADS MARITIME HOLD",
+            "ticker": "ads.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101014",
+            "investechID": "101014",
+            "nordnet": "https://www.nordnet.no/market/stocks/16916507-ads-maritime-holding",
+            "sektor": "sj\u00f8fart",
+            "bransje": "sj\u00f8fart"
+        },
+        {
+            "name": "AEGA",
+            "ticker": "aega.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=100751",
+            "investechID": "100751",
+            "nordnet": "https://www.nordnet.no/market/stocks/18079987-aega",
+            "sektor": "infrastruktur",
+            "bransje": "nytte - fornybar"
+        },
+        {
+            "name": "AF GRUPPEN",
+            "ticker": "afg.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=100093",
+            "investechID": "100093",
+            "nordnet": "https://www.nordnet.no/market/stocks/16105572-af-gruppen",
+            "sektor": "industri",
+            "bransje": "bygg og anlegg"
+        },
+        {
+            "name": "AGILYX",
+            "ticker": "aglx.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101083",
+            "investechID": "101083",
+            "nordnet": "https://www.nordnet.no/market/stocks/17188095-agilyx-asa",
+            "sektor": "industri",
+            "bransje": "avfallsh\u00e5ndtering"
+        },
+        {
+            "name": "AIRTHINGS",
+            "ticker": "airx.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101104",
+            "investechID": "101104",
+            "nordnet": "https://www.nordnet.no/market/stocks/17373662-airthings",
+            "sektor": "industri",
+            "bransje": "elektronisk utstyr og deler"
+        },
+        {
+            "name": "AKASTOR",
+            "ticker": "akast.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101035",
+            "investechID": "101035",
+            "nordnet": "https://www.nordnet.no/market/stocks/16105609-akastor",
+            "sektor": "energi",
+            "bransje": "olje & gass - utstyr og tjenester"
+        },
+        {
+            "name": "AKER",
+            "ticker": "aker.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=100363",
+            "investechID": "100363",
+            "nordnet": "https://www.nordnet.no/market/stocks/16105613-aker",
+            "sektor": "industri",
+            "bransje": "konglomerater"
+        },
+        {
+            "name": "AKER BIOMARINE",
+            "ticker": "akbm.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101089",
+            "investechID": "101089",
+            "nordnet": "https://www.nordnet.no/market/stocks/17299778-aker-biomarine-asa",
+            "sektor": "konsument defensive",
+            "bransje": "pakket mat"
+        },
+        {
+            "name": "AKER BP",
+            "ticker": "akrbp.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101038",
+            "investechID": "101038",
+            "nordnet": "https://www.nordnet.no/market/stocks/16105717-aker-bp",
+            "sektor": "energi",
+            "bransje": "olje & gass - e&p"
+        },
+        {
+            "name": "AKER CARBON CAPTUR",
+            "ticker": "acc.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101093",
+            "investechID": "101093",
+            "nordnet": "https://www.nordnet.no/market/stocks/17332926-aker-carbon-capture",
+            "sektor": "industri",
+            "bransje": "forurensnings- og behandlingskontroll"
+        },
+        {
+            "name": "AKER HORIZONS",
+            "ticker": "akh.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101158",
+            "investechID": "101158",
+            "nordnet": "https://www.nordnet.no/market/stocks/17434301-aker-horizons-asa",
+            "sektor": "finansielle tjenester",
+            "bransje": "kapitalforvaltning"
+        },
+        {
+            "name": "AKER SOLUTIONS",
+            "ticker": "akso.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=100539",
+            "investechID": "100539",
+            "nordnet": "https://www.nordnet.no/market/stocks/16323787-aker-solutions",
+            "sektor": "energi",
+            "bransje": "olje & gass - utstyr og tjenester"
+        },
+        {
+            "name": "AKOBO MINERALS",
+            "ticker": "akobo.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101217",
+            "investechID": "101217",
+            "nordnet": "https://www.nordnet.no/market/stocks/17428878-akobo-minerals-pub",
+            "sektor": "innsatsvarer",
+            "bransje": "gull"
+        },
+        {
+            "name": "AKVA GROUP",
+            "ticker": "akva.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=100452",
+            "investechID": "100452",
+            "nordnet": "https://www.nordnet.no/market/stocks/16105694-akva-group",
+            "sektor": "industri",
+            "bransje": "landbruks- og anleggsmaskineri"
+        },
+        {
+            "name": "ALTERNUS ENERGY GR",
+            "ticker": "alt.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101213",
+            "investechID": "101213",
+            "nordnet": "https://www.nordnet.no/market/stocks/17425271-alternus-energy-group",
+            "sektor": "infrastruktur",
+            "bransje": "nytte - fornybar"
+        },
+        {
+            "name": "AMSC",
+            "ticker": "amsc.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=100550",
+            "investechID": "100550",
+            "nordnet": "https://www.nordnet.no/market/stocks/16105629-amsc-asa",
+            "sektor": "sj\u00f8fart",
+            "bransje": "sj\u00f8fart"
+        },
+        {
+            "name": "ANDFJORD SALMON",
+            "ticker": "andf.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101076",
+            "investechID": "101076",
+            "nordnet": "https://www.nordnet.no/market/stocks/16902828-andfjord-salmon",
+            "sektor": "konsument defensive",
+            "bransje": "landbruksprodukter"
+        },
+        {
+            "name": "AQUA BIO TECHNO",
+            "ticker": "abtec.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101289",
+            "investechID": "101289",
+            "nordnet": "https://www.nordnet.no/market/stocks/16105727-aqua-bio-technology",
+            "sektor": "helse",
+            "bransje": "bioteknologi"
+        },
+        {
+            "name": "AQUILA HOLDINGS",
+            "ticker": "aquil.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101223",
+            "investechID": "101223",
+            "nordnet": "https://www.nordnet.no/market/stocks/16626849-aquila-holdings-asa",
+            "sektor": "energi",
+            "bransje": "olje & gass - utstyr og tjenester"
+        },
+        {
+            "name": "ARCHER",
+            "ticker": "arch.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101007",
+            "investechID": "101007",
+            "nordnet": "https://www.nordnet.no/market/stocks/16459923-archer",
+            "sektor": "energi",
+            "bransje": "olje & gass - borring"
+        },
+        {
+            "name": "ARCTIC BIOSCIENCE",
+            "ticker": "abs.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101161",
+            "investechID": "101161",
+            "nordnet": "https://www.nordnet.no/market/stocks/17085267-arctic-bioscience",
+            "sektor": "helse",
+            "bransje": "bioteknologi"
+        },
+        {
+            "name": "ARCTIC FISH HOLDIN",
+            "ticker": "afish.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101167",
+            "investechID": "101167",
+            "nordnet": "https://www.nordnet.no/market/stocks/17447494-arctic-fish-holding",
+            "sektor": "konsument defensive",
+            "bransje": "landbruksprodukter"
+        },
+        {
+            "name": "ARCTICZYMES TECHNO",
+            "ticker": "azt.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=100956",
+            "investechID": "100956",
+            "nordnet": "https://www.nordnet.no/market/stocks/16105633-arcticzymes-technologies",
+            "sektor": "helse",
+            "bransje": "bioteknologi"
+        },
+        {
+            "name": "ARENDALS FOSSEKOMP",
+            "ticker": "afk.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=100209",
+            "investechID": "100209",
+            "nordnet": "https://www.nordnet.no/market/stocks/16105630-arendals-fossekompani",
+            "sektor": "industri",
+            "bransje": "konglomerater"
+        },
+        {
+            "name": "ARGEO",
+            "ticker": "argeo.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101193",
+            "investechID": "101193",
+            "nordnet": "https://www.nordnet.no/market/stocks/17457719-argeo",
+            "sektor": "energi",
+            "bransje": "olje & gass - utstyr og tjenester"
+        },
+        {
+            "name": "ARRIBATEC GROUP",
+            "ticker": "arr.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=100982",
+            "investechID": "100982",
+            "nordnet": "https://www.nordnet.no/market/stocks/17995119-arribatec-group-asa",
+            "sektor": "teknologi",
+            "bransje": "it - tjenester"
+        },
+        {
+            "name": "ASETEK",
+            "ticker": "astk.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101015",
+            "investechID": "101015",
+            "nordnet": "https://www.nordnet.no/market/stocks/16186672-asetek",
+            "sektor": "teknologi",
+            "bransje": "datamaskin (hardware)"
+        },
+        {
+            "name": "ASTROCAST",
+            "ticker": "astro.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101224",
+            "investechID": "101224",
+            "nordnet": "https://www.nordnet.no/market/stocks/17556167-astrocast",
+            "sektor": "teknologi",
+            "bransje": "kommunikasjonsutstyr"
+        },
+        {
+            "name": "ATEA",
+            "ticker": "atea.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=100561",
+            "investechID": "100561",
+            "nordnet": "https://www.nordnet.no/market/stocks/16105662-atea",
+            "sektor": "teknologi",
+            "bransje": "it - tjenester"
+        },
+        {
+            "name": "ATLANTIC SAPPHIRE",
+            "ticker": "asa.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=100947",
+            "investechID": "100947",
+            "nordnet": "https://www.nordnet.no/market/stocks/16700544-atlantic-sapphire",
+            "sektor": "konsument defensive",
+            "bransje": "landbruksprodukter"
+        },
+        {
+            "name": "AURORA EIENDOM",
+            "ticker": "aura.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101243",
+            "investechID": "101243",
+            "nordnet": "https://www.nordnet.no/market/stocks/17538552-aurora-eiendom",
+            "sektor": "eiendom",
+            "bransje": "eiendomstjenester"
+        },
+        {
+            "name": "AURSKOG SPAREBANK",
+            "ticker": "aurg.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=100279",
+            "investechID": "100279",
+            "nordnet": "https://www.nordnet.no/market/stocks/16105582-aurskog-sparebank",
+            "sektor": "finansielle tjenester",
+            "bransje": "banker - regionale"
+        },
+        {
+            "name": "AUSTEVOLL SEAFOOD",
+            "ticker": "auss.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=100446",
+            "investechID": "100446",
+            "nordnet": "https://www.nordnet.no/market/stocks/16105687-austevoll-seafood",
+            "sektor": "konsument defensive",
+            "bransje": "landbruksprodukter"
+        },
+        {
+            "name": "AUTOSTORE HOLDINGS",
+            "ticker": "auto.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101236",
+            "investechID": "101236",
+            "nordnet": "https://www.nordnet.no/market/stocks/17602486-autostore-holdings",
+            "sektor": "teknologi",
+            "bransje": "programvare - infrastruktur"
+        },
+        {
+            "name": "AVANCE GAS HOLDING",
+            "ticker": "agas.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101008",
+            "investechID": "101008",
+            "nordnet": "https://www.nordnet.no/market/stocks/16281382-avance-gas-holding",
+            "sektor": "energi",
+            "bransje": "olje & gass - midstream"
+        },
+        {
+            "name": "AWILCO DRILLING",
+            "ticker": "awdr.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=100632",
+            "investechID": "100632",
+            "nordnet": "https://www.nordnet.no/market/stocks/17943233-awilco-drilling",
+            "sektor": "energi",
+            "bransje": "olje & gass - borring"
+        },
+        {
+            "name": "AWILCO LNG",
+            "ticker": "alng.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=100636",
+            "investechID": "100636",
+            "nordnet": "https://www.nordnet.no/market/stocks/16105327-awilco-lng",
+            "sektor": "sj\u00f8fart",
+            "bransje": "sj\u00f8fart"
+        },
+        {
+            "name": "AXACTOR",
+            "ticker": "acr.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101155",
+            "investechID": "101155",
+            "nordnet": "https://www.nordnet.no/market/stocks/16978420-axactor-asa",
+            "sektor": "finansielle tjenester",
+            "bransje": "kredittjenester"
+        },
+        {
+            "name": "AYFIE GROUP",
+            "ticker": "ayfie.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101068",
+            "investechID": "101068",
+            "nordnet": "https://www.nordnet.no/market/stocks/17993690-ayfie-group",
+            "sektor": "teknologi",
+            "bransje": "programvare - applikasjoner"
+        },
+        {
+            "name": "B2HOLDING",
+            "ticker": "b2h.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=100755",
+            "investechID": "100755",
+            "nordnet": "https://www.nordnet.no/market/stocks/16252558-b-2-holding",
+            "sektor": "finansielle tjenester",
+            "bransje": "kredittjenester"
+        },
+        {
+            "name": "BAKKAFROST",
+            "ticker": "bakka.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=100591",
+            "investechID": "100591",
+            "nordnet": "https://www.nordnet.no/market/stocks/16105763-bakkafrost",
+            "sektor": "konsument defensive",
+            "bransje": "landbruksprodukter"
+        },
+        {
+            "name": "BALTIC SEA PROP",
+            "ticker": "balt.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101071",
+            "investechID": "101071",
+            "nordnet": "https://www.nordnet.no/market/stocks/16781835-baltic-sea-properties",
+            "sektor": "eiendom",
+            "bransje": "eiendomstjenester"
+        },
+        {
+            "name": "BARRAMUNDI GROUP",
+            "ticker": "barra.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101225",
+            "investechID": "101225",
+            "nordnet": "https://www.nordnet.no/market/stocks/17558407-barramundi-group",
+            "sektor": "konsument defensive",
+            "bransje": "landbruksprodukter"
+        },
+        {
+            "name": "BELSHIPS",
+            "ticker": "belco.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101026",
+            "investechID": "101026",
+            "nordnet": "https://www.nordnet.no/market/stocks/16105635-belships",
+            "sektor": "sj\u00f8fart",
+            "bransje": "sj\u00f8fart"
+        },
+        {
+            "name": "BENCHMARK HOLDINGS",
+            "ticker": "bmk.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101284",
+            "investechID": "101284",
+            "nordnet": "https://www.nordnet.no/market/stocks/17940813-benchmark-holdings",
+            "sektor": "helse",
+            "bransje": "medsinprodusenter - spesialist og generell"
+        },
+        {
+            "name": "BERGEN CARBON SOL",
+            "ticker": "bcs.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101190",
+            "investechID": "101190",
+            "nordnet": "https://www.nordnet.no/market/stocks/17471378-bergen-carbon-solutions",
+            "sektor": "innsatsvarer",
+            "bransje": "spesialkjemikalier"
+        },
+        {
+            "name": "BERGENBIO",
+            "ticker": "bgbio.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=100782",
+            "investechID": "100782",
+            "nordnet": "https://www.nordnet.no/market/stocks/16263887-bergenbio",
+            "sektor": "helse",
+            "bransje": "bioteknologi"
+        },
+        {
+            "name": "BEWI",
+            "ticker": "bewi.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101096",
+            "investechID": "101096",
+            "nordnet": "https://www.nordnet.no/market/stocks/17335294-bewi",
+            "sektor": "sykliske forbruksvarer",
+            "bransje": "emballasje og containere"
+        },
+        {
+            "name": "BIEN SPAREBANK",
+            "ticker": "bien.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101282",
+            "investechID": "101282",
+            "nordnet": "https://www.nordnet.no/market/stocks/17940192-bien-sparebank-asa",
+            "sektor": "finansielle tjenester",
+            "bransje": "banker - regionale"
+        },
+        {
+            "name": "BIOFISH HOLDING",
+            "ticker": "bfish.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101222",
+            "investechID": "101222",
+            "nordnet": "https://www.nordnet.no/market/stocks/17544700-biofish-holding",
+            "sektor": "konsument defensive",
+            "bransje": "landbruksprodukter"
+        },
+        {
+            "name": "BLACK SEA PROPERTY",
+            "ticker": "bsp.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101061",
+            "investechID": "101061",
+            "nordnet": "https://www.nordnet.no/market/stocks/16497514-black-sea-property",
+            "sektor": "sykliske forbruksvarer",
+            "bransje": "losji"
+        },
+        {
+            "name": "BLUENORD",
+            "ticker": "bnor.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=100522",
+            "investechID": "100522",
+            "nordnet": "https://www.nordnet.no/market/stocks/16105726-bluenord-asa",
+            "sektor": "energi",
+            "bransje": "olje & gass - e&p"
+        },
+        {
+            "name": "BONHEUR",
+            "ticker": "bonhr.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101027",
+            "investechID": "101027",
+            "nordnet": "https://www.nordnet.no/market/stocks/16105637-bonheur",
+            "sektor": "industri",
+            "bransje": "konglomerater"
+        },
+        {
+            "name": "BORGESTAD",
+            "ticker": "bor.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=100094",
+            "investechID": "100094",
+            "nordnet": "https://www.nordnet.no/market/stocks/16105638-borgestad",
+            "sektor": "industri",
+            "bransje": "byggevarer og -utstyr"
+        },
+        {
+            "name": "BORR DRILLING",
+            "ticker": "borr.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101009",
+            "investechID": "101009",
+            "nordnet": "https://www.nordnet.no/market/stocks/17652973-borr-drilling",
+            "sektor": "energi",
+            "bransje": "olje & gass - borring"
+        },
+        {
+            "name": "BORREGAARD",
+            "ticker": "brg.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=100674",
+            "investechID": "100674",
+            "nordnet": "https://www.nordnet.no/market/stocks/16105414-borregaard",
+            "sektor": "innsatsvarer",
+            "bransje": "spesialkjemikalier"
+        },
+        {
+            "name": "BOUVET",
+            "ticker": "bouv.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101040",
+            "investechID": "101040",
+            "nordnet": "https://www.nordnet.no/market/stocks/16105711-bouvet",
+            "sektor": "teknologi",
+            "bransje": "it - tjenester"
+        },
+        {
+            "name": "BW ENERGY LIMITED",
+            "ticker": "bwe.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=100939",
+            "investechID": "100939",
+            "nordnet": "https://www.nordnet.no/market/stocks/17195893-bw-energy-limited",
+            "sektor": "energi",
+            "bransje": "olje & gass - e&p"
+        },
+        {
+            "name": "BW Epic Kosan",
+            "ticker": "bwek.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101182",
+            "investechID": "101182",
+            "nordnet": "https://www.nordnet.no/market/stocks/17458498-bw-epic-kosan",
+            "sektor": "sj\u00f8fart",
+            "bransje": "sj\u00f8fart"
+        },
+        {
+            "name": "BW IDEOL",
+            "ticker": "bwidl.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101183",
+            "investechID": "101183",
+            "nordnet": "https://www.nordnet.no/market/stocks/17468281-bw-ideol",
+            "sektor": "industri",
+            "bransje": "bygg og anlegg"
+        },
+        {
+            "name": "BW LPG",
+            "ticker": "bwlpg.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=100690",
+            "investechID": "100690",
+            "nordnet": "https://www.nordnet.no/market/stocks/16247917-bw-lpg",
+            "sektor": "sj\u00f8fart",
+            "bransje": "sj\u00f8fart"
+        },
+        {
+            "name": "BW OFFSHORE LTD",
+            "ticker": "bwo.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=100436",
+            "investechID": "100436",
+            "nordnet": "https://www.nordnet.no/market/stocks/16634542-bw-offshore-limited",
+            "sektor": "energi",
+            "bransje": "olje & gass - utstyr og tjenester"
+        },
+        {
+            "name": "BYGGMA",
+            "ticker": "bma.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=100306",
+            "investechID": "100306",
+            "nordnet": "https://www.nordnet.no/market/stocks/16105571-byggma",
+            "sektor": "industri",
+            "bransje": "byggevarer og -utstyr"
+        },
+        {
+            "name": "BerGenBio TR",
+            "ticker": "bgbis.ol",
+            "investech": "",
+            "investechID": "",
+            "nordnet": "https://www.nordnet.no/market/stocks/18075211-ber-gen-bio-tr",
+            "sektor": "-",
+            "bransje": "-"
+        },
+        {
+            "name": "CADELER",
+            "ticker": "cadlr.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101006",
+            "investechID": "101006",
+            "nordnet": "https://www.nordnet.no/market/stocks/17393950-cadeler",
+            "sektor": "sj\u00f8fart",
+            "bransje": "sj\u00f8fart"
+        },
+        {
+            "name": "CAMBI",
+            "ticker": "cambi.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101160",
+            "investechID": "101160",
+            "nordnet": "https://www.nordnet.no/market/stocks/16167284-cambi-asa",
+            "sektor": "industri",
+            "bransje": "avfallsh\u00e5ndtering"
+        },
+        {
+            "name": "CAPSOL TECHNOLOGI",
+            "ticker": "capsl.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101241",
+            "investechID": "101241",
+            "nordnet": "https://www.nordnet.no/market/stocks/17446262-capsol-technologies",
+            "sektor": "industri",
+            "bransje": "forurensnings- og behandlingskontroll"
+        },
+        {
+            "name": "CARASENT",
+            "ticker": "cara.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=100866",
+            "investechID": "100866",
+            "nordnet": "https://www.nordnet.no/market/stocks/16105603-carasent",
+            "sektor": "helse",
+            "bransje": "helseinformasjonstjenester"
+        },
+        {
+            "name": "CIRCA GROUP",
+            "ticker": "circa.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101164",
+            "investechID": "101164",
+            "nordnet": "https://www.nordnet.no/market/stocks/17441646-circa-group",
+            "sektor": "helse",
+            "bransje": "bioteknologi"
+        },
+        {
+            "name": "CIRCIO HOLDING",
+            "ticker": "crna.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=100758",
+            "investechID": "100758",
+            "nordnet": "https://www.nordnet.no/market/stocks/16298994-circio-holding-asa",
+            "sektor": "helse",
+            "bransje": "bioteknologi"
+        },
+        {
+            "name": "CLEAN SEAS SEAFOOD",
+            "ticker": "css.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101198",
+            "investechID": "101198",
+            "nordnet": "https://www.nordnet.no/market/stocks/17509324-clean-seas-seafood",
+            "sektor": "konsument defensive",
+            "bransje": "landbruksprodukter"
+        },
+        {
+            "name": "CLOUDBERRY CLEAN",
+            "ticker": "cloud.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101085",
+            "investechID": "101085",
+            "nordnet": "https://www.nordnet.no/market/stocks/17237727-cloudberry-clean-energy",
+            "sektor": "infrastruktur",
+            "bransje": "nytte - fornybar"
+        },
+        {
+            "name": "CODELAB CAPITAL",
+            "ticker": "code.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101105",
+            "investechID": "101105",
+            "nordnet": "https://www.nordnet.no/market/stocks/17371183-codelab-capital",
+            "sektor": "helse",
+            "bransje": "helseinformasjonstjenester"
+        },
+        {
+            "name": "CONTEXTVISION",
+            "ticker": "contx.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101112",
+            "investechID": "101112",
+            "nordnet": "https://www.nordnet.no/market/stocks/17331825-contextvision",
+            "sektor": "helse",
+            "bransje": "helseinformasjonstjenester"
+        },
+        {
+            "name": "COOL COMPANY",
+            "ticker": "clco.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101246",
+            "investechID": "101246",
+            "nordnet": "https://www.nordnet.no/market/stocks/17683928-cool-company",
+            "sektor": "energi",
+            "bransje": "olje & gass - midstream"
+        },
+        {
+            "name": "CRAYON GROUP HOLD",
+            "ticker": "crayn.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101070",
+            "investechID": "101070",
+            "nordnet": "https://www.nordnet.no/market/stocks/16770487-crayon-group-holding",
+            "sektor": "teknologi",
+            "bransje": "it - tjenester"
+        },
+        {
+            "name": "CSAM HEALTH GROUP",
+            "ticker": "csam.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101101",
+            "investechID": "101101",
+            "nordnet": "https://www.nordnet.no/market/stocks/17362061-csam-health-group",
+            "sektor": "helse",
+            "bransje": "helseinformasjonstjenester"
+        },
+        {
+            "name": "CYVIZ",
+            "ticker": "cyviz.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101149",
+            "investechID": "101149",
+            "nordnet": "https://www.nordnet.no/market/stocks/16167187-cyviz",
+            "sektor": "teknologi",
+            "bransje": "datamaskin (hardware)"
+        },
+        {
+            "name": "DEEP VALUE DRILLER",
+            "ticker": "dvd.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101177",
+            "investechID": "101177",
+            "nordnet": "https://www.nordnet.no/market/stocks/17467584-deep-value-driller",
+            "sektor": "energi",
+            "bransje": "olje & gass - borring"
+        },
+        {
+            "name": "DESERT CONTROL",
+            "ticker": "dsrt.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101188",
+            "investechID": "101188",
+            "nordnet": "https://www.nordnet.no/market/stocks/17473891-desert-control",
+            "sektor": "innsatsvarer",
+            "bransje": "jorbruksinnsatser"
+        },
+        {
+            "name": "DNB BANK",
+            "ticker": "dnb.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=100640",
+            "investechID": "100640",
+            "nordnet": "https://www.nordnet.no/market/stocks/17534483-dnb-bank-asa",
+            "sektor": "finansielle tjenester",
+            "bransje": "banker - regionale"
+        },
+        {
+            "name": "DNO",
+            "ticker": "dno.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=100053",
+            "investechID": "100053",
+            "nordnet": "https://www.nordnet.no/market/stocks/16105641-dno",
+            "sektor": "energi",
+            "bransje": "olje & gass - e&p"
+        },
+        {
+            "name": "DOF GROUP",
+            "ticker": "dofg.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101297",
+            "investechID": "101297",
+            "nordnet": "https://www.nordnet.no/market/stocks/18016488-dof-group-asa",
+            "sektor": "industri",
+            "bransje": "bygg og anlegg"
+        },
+        {
+            "name": "DOLPHIN DRILLING",
+            "ticker": "ddril.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101266",
+            "investechID": "101266",
+            "nordnet": "https://www.nordnet.no/market/stocks/17866437-dolphin-drilling",
+            "sektor": "energi",
+            "bransje": "olje & gass - borring"
+        },
+        {
+            "name": "EAM SOLAR",
+            "ticker": "eam.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=100678",
+            "investechID": "100678",
+            "nordnet": "https://www.nordnet.no/market/stocks/16186854-eam-solar",
+            "sektor": "infrastruktur",
+            "bransje": "nytte - fornybar"
+        },
+        {
+            "name": "ECIT AS B-AKSJER",
+            "ticker": "ecit.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101199",
+            "investechID": "101199",
+            "nordnet": "https://www.nordnet.no/market/stocks/17509325-ecit-baksjer",
+            "sektor": "teknologi",
+            "bransje": "it - tjenester"
+        },
+        {
+            "name": "EDDA WIND",
+            "ticker": "ewind.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101237",
+            "investechID": "101237",
+            "nordnet": "https://www.nordnet.no/market/stocks/17630125-edda-wind-asa",
+            "sektor": "energi",
+            "bransje": "olje & gass - utstyr og tjenester"
+        },
+        {
+            "name": "EIDESVIK OFFSHORE",
+            "ticker": "eiof.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=100391",
+            "investechID": "100391",
+            "nordnet": "https://www.nordnet.no/market/stocks/16105627-eidesvik-offshore",
+            "sektor": "energi",
+            "bransje": "olje & gass - utstyr og tjenester"
+        },
+        {
+            "name": "ELECTROMAGNET GEO",
+            "ticker": "emgs.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=100477",
+            "investechID": "100477",
+            "nordnet": "https://www.nordnet.no/market/stocks/16105704-electromagnetic-geoservices",
+            "sektor": "energi",
+            "bransje": "olje & gass - utstyr og tjenester"
+        },
+        {
+            "name": "ELEKTROIMPORT\u00d8REN",
+            "ticker": "elimp.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101150",
+            "investechID": "101150",
+            "nordnet": "https://www.nordnet.no/market/stocks/17407629-elektroimpor-to-ren",
+            "sektor": "sykliske forbruksvarer",
+            "bransje": "spesialist detaljhandel"
+        },
+        {
+            "name": "ELKEM",
+            "ticker": "elk.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=100086",
+            "investechID": "100086",
+            "nordnet": "https://www.nordnet.no/market/stocks/16845391-elkem",
+            "sektor": "innsatsvarer",
+            "bransje": "spesialkjemikalier"
+        },
+        {
+            "name": "ELLIPTIC LABORATOR",
+            "ticker": "elabs.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101053",
+            "investechID": "101053",
+            "nordnet": "https://www.nordnet.no/market/stocks/16335883-elliptic-laboratories-asa",
+            "sektor": "teknologi",
+            "bransje": "programvare - infrastruktur"
+        },
+        {
+            "name": "ELMERA GROUP",
+            "ticker": "elmra.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101074",
+            "investechID": "101074",
+            "nordnet": "https://www.nordnet.no/market/stocks/16845081-elmera-group-asa",
+            "sektor": "infrastruktur",
+            "bransje": "nytte - regulert elektrisk"
+        },
+        {
+            "name": "ELOPAK",
+            "ticker": "elo.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101209",
+            "investechID": "101209",
+            "nordnet": "https://www.nordnet.no/market/stocks/17519997-elopak-asa",
+            "sektor": "sykliske forbruksvarer",
+            "bransje": "emballasje og containere"
+        },
+        {
+            "name": "END\u00daR",
+            "ticker": "endur.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=100857",
+            "investechID": "100857",
+            "nordnet": "https://www.nordnet.no/market/stocks/17789880-endr",
+            "sektor": "industri",
+            "bransje": "konglomerater"
+        },
+        {
+            "name": "ENERGEIA",
+            "ticker": "energ.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101281",
+            "investechID": "101281",
+            "nordnet": "https://www.nordnet.no/market/stocks/17864570-energeia",
+            "sektor": "teknologi",
+            "bransje": "solceller"
+        },
+        {
+            "name": "ENSURGE MICROPOWER",
+            "ticker": "ensu.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101206",
+            "investechID": "101206",
+            "nordnet": "https://www.nordnet.no/market/stocks/17727415-ensurge-micropower-asa",
+            "sektor": "teknologi",
+            "bransje": "elektroniske komponenter"
+        },
+        {
+            "name": "ENTRA",
+            "ticker": "entra.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=100717",
+            "investechID": "100717",
+            "nordnet": "https://www.nordnet.no/market/stocks/16330511-entra",
+            "sektor": "eiendom",
+            "bransje": "eiendomstjenester"
+        },
+        {
+            "name": "ENVIPCO HOLDING",
+            "ticker": "envip.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101168",
+            "investechID": "101168",
+            "nordnet": "https://www.nordnet.no/market/stocks/17533229-envipco-holding",
+            "sektor": "industri",
+            "bransje": "forurensnings- og behandlingskontroll"
+        },
+        {
+            "name": "EQUINOR",
+            "ticker": "eqnr.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=100820",
+            "investechID": "100820",
+            "nordnet": "https://www.nordnet.no/market/stocks/16105420-equinor",
+            "sektor": "energi",
+            "bransje": "olje & gass - integrert"
+        },
+        {
+            "name": "EQVA",
+            "ticker": "eqva.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=100707",
+            "investechID": "100707",
+            "nordnet": "https://www.nordnet.no/market/stocks/16301245-eqva-asa",
+            "sektor": "industri",
+            "bransje": "luftfart- og forsvar"
+        },
+        {
+            "name": "EUROPRIS",
+            "ticker": "epr.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=100734",
+            "investechID": "100734",
+            "nordnet": "https://www.nordnet.no/market/stocks/16418421-europris",
+            "sektor": "konsument defensive",
+            "bransje": "lavprisbutikker"
+        },
+        {
+            "name": "EVERFUEL",
+            "ticker": "efuel.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101018",
+            "investechID": "101018",
+            "nordnet": "https://www.nordnet.no/market/stocks/17374921-everfuel",
+            "sektor": "innsatsvarer",
+            "bransje": "spesialkjemikalier"
+        },
+        {
+            "name": "EXACT THERAPEUTICS",
+            "ticker": "extx.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101078",
+            "investechID": "101078",
+            "nordnet": "https://www.nordnet.no/market/stocks/17302989-exact-therapeutics",
+            "sektor": "helse",
+            "bransje": "bioteknologi"
+        },
+        {
+            "name": "FLEX LNG",
+            "ticker": "flng.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=100570",
+            "investechID": "100570",
+            "nordnet": "https://www.nordnet.no/market/stocks/17011550-flex-lng",
+            "sektor": "energi",
+            "bransje": "olje & gass - midstream"
+        },
+        {
+            "name": "FRONTLINE",
+            "ticker": "fro.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=100129",
+            "investechID": "100129",
+            "nordnet": "https://www.nordnet.no/market/stocks/17951057-frontline",
+            "sektor": "energi",
+            "bransje": "olje & gass - midstream"
+        },
+        {
+            "name": "FR\u00d8Y",
+            "ticker": "froy.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101181",
+            "investechID": "101181",
+            "nordnet": "https://www.nordnet.no/market/stocks/17472560-f-ro-y-asa",
+            "sektor": "konsument defensive",
+            "bransje": "landbruksprodukter"
+        },
+        {
+            "name": "GAMING INNOVATION",
+            "ticker": "gig.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=100730",
+            "investechID": "100730",
+            "nordnet": "https://www.nordnet.no/market/stocks/16976873-gaming-innovation-group",
+            "sektor": "sykliske forbruksvarer",
+            "bransje": "gambling"
+        },
+        {
+            "name": "GC RIEBER SHIPPING",
+            "ticker": "rish.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=100395",
+            "investechID": "100395",
+            "nordnet": "https://www.nordnet.no/market/stocks/16105618-gc-rieber-shipping",
+            "sektor": "sj\u00f8fart",
+            "bransje": "sj\u00f8fart"
+        },
+        {
+            "name": "GENTIAN DIAGNOSTIC",
+            "ticker": "gent.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101060",
+            "investechID": "101060",
+            "nordnet": "https://www.nordnet.no/market/stocks/16467431-gentian-diagnostics-asa",
+            "sektor": "helse",
+            "bransje": "medisinsk utstyr"
+        },
+        {
+            "name": "GIGANTE SALMON",
+            "ticker": "giga.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101215",
+            "investechID": "101215",
+            "nordnet": "https://www.nordnet.no/market/stocks/17529462-gigante-salmon",
+            "sektor": "konsument defensive",
+            "bransje": "landbruksprodukter"
+        },
+        {
+            "name": "GJENSIDIGE FORSIKR",
+            "ticker": "gjf.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=100601",
+            "investechID": "100601",
+            "nordnet": "https://www.nordnet.no/market/stocks/16105269-gjensidige-forsikring",
+            "sektor": "finansielle tjenester",
+            "bransje": "forsikring - eiendom og skader"
+        },
+        {
+            "name": "GOLDEN ENERGY OFF",
+            "ticker": "geos.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101073",
+            "investechID": "101073",
+            "nordnet": "https://www.nordnet.no/market/stocks/16850151-golden-energy-offshore",
+            "sektor": "sj\u00f8fart",
+            "bransje": "sj\u00f8fart"
+        },
+        {
+            "name": "GOLDEN OCEAN GROUP",
+            "ticker": "gogl.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=100727",
+            "investechID": "100727",
+            "nordnet": "https://www.nordnet.no/market/stocks/16586207-golden-ocean-group",
+            "sektor": "sj\u00f8fart",
+            "bransje": "sj\u00f8fart"
+        },
+        {
+            "name": "GOODTECH",
+            "ticker": "god.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=100096",
+            "investechID": "100096",
+            "nordnet": "https://www.nordnet.no/market/stocks/16105650-goodtech",
+            "sektor": "industri",
+            "bransje": "bygg og anlegg"
+        },
+        {
+            "name": "GRAM CAR CARRIERS",
+            "ticker": "gcc.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101247",
+            "investechID": "101247",
+            "nordnet": "https://www.nordnet.no/market/stocks/17682459-gram-car-carriers",
+            "sektor": "sj\u00f8fart",
+            "bransje": "sj\u00f8fart"
+        },
+        {
+            "name": "GREEN MINERALS",
+            "ticker": "gem.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101178",
+            "investechID": "101178",
+            "nordnet": "https://www.nordnet.no/market/stocks/17440469-green-minerals",
+            "sektor": "innsatsvarer",
+            "bransje": "andre industrielle metaller og gruvedrift"
+        },
+        {
+            "name": "GRIEG SEAFOOD",
+            "ticker": "gsf.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=100503",
+            "investechID": "100503",
+            "nordnet": "https://www.nordnet.no/market/stocks/16105714-grieg-seafood",
+            "sektor": "konsument defensive",
+            "bransje": "landbruksprodukter"
+        },
+        {
+            "name": "GRONG SPAREBANK",
+            "ticker": "grong.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101046",
+            "investechID": "101046",
+            "nordnet": "https://www.nordnet.no/market/stocks/16161939-grong-sparebank",
+            "sektor": "finansielle tjenester",
+            "bransje": "banker - regionale"
+        },
+        {
+            "name": "GYLDENDAL",
+            "ticker": "gyl.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=100173",
+            "investechID": "100173",
+            "nordnet": "https://www.nordnet.no/market/stocks/16105653-gyldendal",
+            "sektor": "kommunikasjonstjenester",
+            "bransje": "publisering"
+        },
+        {
+            "name": "HAFNIA LIMITED",
+            "ticker": "hafni.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101010",
+            "investechID": "101010",
+            "nordnet": "https://www.nordnet.no/market/stocks/16994482-hafnia-limited",
+            "sektor": "sj\u00f8fart",
+            "bransje": "sj\u00f8fart"
+        },
+        {
+            "name": "HARMONYCHAIN",
+            "ticker": "hmony.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101203",
+            "investechID": "101203",
+            "nordnet": "https://www.nordnet.no/market/stocks/17436489-harmonychain",
+            "sektor": "teknologi",
+            "bransje": "programvare - infrastruktur"
+        },
+        {
+            "name": "HAV GROUP",
+            "ticker": "hav.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101163",
+            "investechID": "101163",
+            "nordnet": "https://www.nordnet.no/market/stocks/17454724-hav-group-asa",
+            "sektor": "sj\u00f8fart",
+            "bransje": "sj\u00f8fart"
+        },
+        {
+            "name": "HAVILA KYSTRUTEN",
+            "ticker": "hky.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101221",
+            "investechID": "101221",
+            "nordnet": "https://www.nordnet.no/market/stocks/17551146-havila-kystruten",
+            "sektor": "sykliske forbruksvarer",
+            "bransje": "reiselivstjenester"
+        },
+        {
+            "name": "HAVILA SHIPPING",
+            "ticker": "havi.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=100382",
+            "investechID": "100382",
+            "nordnet": "https://www.nordnet.no/market/stocks/16105624-havila-shipping",
+            "sektor": "sj\u00f8fart",
+            "bransje": "sj\u00f8fart"
+        },
+        {
+            "name": "HEXAGON COMPOSITES",
+            "ticker": "hex.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=100255",
+            "investechID": "100255",
+            "nordnet": "https://www.nordnet.no/market/stocks/16105432-hexagon-composites",
+            "sektor": "sykliske forbruksvarer",
+            "bransje": "emballasje og containere"
+        },
+        {
+            "name": "HEXAGON PURUS",
+            "ticker": "hpur.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101146",
+            "investechID": "101146",
+            "nordnet": "https://www.nordnet.no/market/stocks/17399412-hexagon-purus-asa",
+            "sektor": "industri",
+            "bransje": "industriell distribusjon"
+        },
+        {
+            "name": "HIMALAYA SHIPPING",
+            "ticker": "hshp.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101219",
+            "investechID": "101219",
+            "nordnet": "https://www.nordnet.no/market/stocks/17546262-himalaya-shipping",
+            "sektor": "sj\u00f8fart",
+            "bransje": "sj\u00f8fart"
+        },
+        {
+            "name": "HOFSETH BIOCARE",
+            "ticker": "hbc.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=100642",
+            "investechID": "100642",
+            "nordnet": "https://www.nordnet.no/market/stocks/16105329-hofseth-biocare",
+            "sektor": "helse",
+            "bransje": "bioteknologi"
+        },
+        {
+            "name": "HORISONT ENERGI",
+            "ticker": "hrgi.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101156",
+            "investechID": "101156",
+            "nordnet": "https://www.nordnet.no/market/stocks/17430327-horisont-energi",
+            "sektor": "innsatsvarer",
+            "bransje": "spesialkjemikalier"
+        },
+        {
+            "name": "HUDDLESTOCK FINTEC",
+            "ticker": "hudl.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101115",
+            "investechID": "101115",
+            "nordnet": "https://www.nordnet.no/market/stocks/17084633-huddlestock-fintech",
+            "sektor": "teknologi",
+            "bransje": "programvare - applikasjoner"
+        },
+        {
+            "name": "HUDDLY",
+            "ticker": "hdly.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101169",
+            "investechID": "101169",
+            "nordnet": "https://www.nordnet.no/market/stocks/16798371-huddly",
+            "sektor": "teknologi",
+            "bransje": "kommunikasjonsutstyr"
+        },
+        {
+            "name": "HUNTER GROUP",
+            "ticker": "hunt.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=100783",
+            "investechID": "100783",
+            "nordnet": "https://www.nordnet.no/market/stocks/18078478-hunter-group",
+            "sektor": "energi",
+            "bransje": "olje & gass - midstream"
+        },
+        {
+            "name": "HYDROGENPRO",
+            "ticker": "hypro.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101098",
+            "investechID": "101098",
+            "nordnet": "https://www.nordnet.no/market/stocks/17367824-hydrogenpro-asa",
+            "sektor": "industri",
+            "bransje": "spesialindustrimaskiner"
+        },
+        {
+            "name": "HYNION",
+            "ticker": "hyn.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101189",
+            "investechID": "101189",
+            "nordnet": "https://www.nordnet.no/market/stocks/17469323-hynion",
+            "sektor": "sykliske forbruksvarer",
+            "bransje": "spesialist detaljhandel"
+        },
+        {
+            "name": "HYON",
+            "ticker": "hyon.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101248",
+            "investechID": "101248",
+            "nordnet": "https://www.nordnet.no/market/stocks/17690598-hyon",
+            "sektor": "sj\u00f8fart",
+            "bransje": "sj\u00f8fart"
+        },
+        {
+            "name": "H\u00d6EGH AUTOLINERS",
+            "ticker": "hauto.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101238",
+            "investechID": "101238",
+            "nordnet": "https://www.nordnet.no/market/stocks/17636942-hoegh-autoliners-asa",
+            "sektor": "sj\u00f8fart",
+            "bransje": "sj\u00f8fart"
+        },
+        {
+            "name": "H\u00d8LAND OG SETSKOG",
+            "ticker": "hspg.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=100283",
+            "investechID": "100283",
+            "nordnet": "https://www.nordnet.no/market/stocks/16105589-ho-land-og-setskog",
+            "sektor": "finansielle tjenester",
+            "bransje": "banker - regionale"
+        },
+        {
+            "name": "ICE FISH FARM",
+            "ticker": "ifish.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101087",
+            "investechID": "101087",
+            "nordnet": "https://www.nordnet.no/market/stocks/17283497-ice-fish-farm",
+            "sektor": "konsument defensive",
+            "bransje": "landbruksprodukter"
+        },
+        {
+            "name": "ICELANDIC SALMON",
+            "ticker": "islax.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101054",
+            "investechID": "101054",
+            "nordnet": "https://www.nordnet.no/market/stocks/17053643-icelandic-salmon",
+            "sektor": "konsument defensive",
+            "bransje": "landbruksprodukter"
+        },
+        {
+            "name": "IDEX BIOMETRICS",
+            "ticker": "idex.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=100577",
+            "investechID": "100577",
+            "nordnet": "https://www.nordnet.no/market/stocks/16105761-idex-biometrics",
+            "sektor": "teknologi",
+            "bransje": "programvare - applikasjoner"
+        },
+        {
+            "name": "INDUCT",
+            "ticker": "indct.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101041",
+            "investechID": "101041",
+            "nordnet": "https://www.nordnet.no/market/stocks/16151160-induct",
+            "sektor": "helse",
+            "bransje": "helseinformasjonstjenester"
+        },
+        {
+            "name": "INIFY LABORATORIES",
+            "ticker": "inify.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101262",
+            "investechID": "101262",
+            "nordnet": "https://www.nordnet.no/market/stocks/17707030-inify-laboratories",
+            "sektor": "helse",
+            "bransje": "diagnostikk & forskning"
+        },
+        {
+            "name": "ININ GROUP",
+            "ticker": "inin.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101273",
+            "investechID": "101273",
+            "nordnet": "https://www.nordnet.no/market/stocks/17134903-inin-group",
+            "sektor": "teknologi",
+            "bransje": "vitenskapelige og tekniske instrumenter"
+        },
+        {
+            "name": "INSTABANK",
+            "ticker": "insta.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101063",
+            "investechID": "101063",
+            "nordnet": "https://www.nordnet.no/market/stocks/16605236-instabank",
+            "sektor": "finansielle tjenester",
+            "bransje": "banker - regionale"
+        },
+        {
+            "name": "INTEGRATED WIND SO",
+            "ticker": "iws.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101180",
+            "investechID": "101180",
+            "nordnet": "https://www.nordnet.no/market/stocks/17470401-integrated-wind-solutions",
+            "sektor": "infrastruktur",
+            "bransje": "nytte - fornybar"
+        },
+        {
+            "name": "INTEROIL EXPL PROD",
+            "ticker": "iox.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=100442",
+            "investechID": "100442",
+            "nordnet": "https://www.nordnet.no/market/stocks/16105677-interoil-exploration-production",
+            "sektor": "energi",
+            "bransje": "olje & gass - e&p"
+        },
+        {
+            "name": "ITERA",
+            "ticker": "itera.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101028",
+            "investechID": "101028",
+            "nordnet": "https://www.nordnet.no/market/stocks/16105588-itera",
+            "sektor": "teknologi",
+            "bransje": "it - tjenester"
+        },
+        {
+            "name": "JINHUI SHIPP TRANS",
+            "ticker": "jin.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=100133",
+            "investechID": "100133",
+            "nordnet": "https://www.nordnet.no/market/stocks/16105418-jinhui-shipping-transportation",
+            "sektor": "sj\u00f8fart",
+            "bransje": "sj\u00f8fart"
+        },
+        {
+            "name": "J\u00c6REN SPAREBANK",
+            "ticker": "jaren.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101039",
+            "investechID": "101039",
+            "nordnet": "https://www.nordnet.no/market/stocks/16105710-ja-ren-sparebank",
+            "sektor": "finansielle tjenester",
+            "bransje": "banker - regionale"
+        },
+        {
+            "name": "KAHOOT!",
+            "ticker": "kahot.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101122",
+            "investechID": "101122",
+            "nordnet": "https://www.nordnet.no/market/stocks/16874165-kahoot-asa",
+            "sektor": "teknologi",
+            "bransje": "programvare - applikasjoner"
+        },
+        {
+            "name": "KID",
+            "ticker": "kid.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=100738",
+            "investechID": "100738",
+            "nordnet": "https://www.nordnet.no/market/stocks/16467192-kid",
+            "sektor": "sykliske forbruksvarer",
+            "bransje": "spesialist detaljhandel"
+        },
+        {
+            "name": "KITRON",
+            "ticker": "kit.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=100257",
+            "investechID": "100257",
+            "nordnet": "https://www.nordnet.no/market/stocks/16105579-kitron",
+            "sektor": "teknologi",
+            "bransje": "elektroniske komponenter"
+        },
+        {
+            "name": "KLAVENESS COMBINAT",
+            "ticker": "kcc.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=100865",
+            "investechID": "100865",
+            "nordnet": "https://www.nordnet.no/market/stocks/16951374-klaveness-combination-carriers",
+            "sektor": "sj\u00f8fart",
+            "bransje": "sj\u00f8fart"
+        },
+        {
+            "name": "KMC PROPERTIES",
+            "ticker": "kmcp.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101153",
+            "investechID": "101153",
+            "nordnet": "https://www.nordnet.no/market/stocks/16105257-kmc-properties-asa",
+            "sektor": "eiendom",
+            "bransje": "eiendomstjenester"
+        },
+        {
+            "name": "KOMPLETT",
+            "ticker": "kompl.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101210",
+            "investechID": "101210",
+            "nordnet": "https://www.nordnet.no/market/stocks/17520505-komplett-asa",
+            "sektor": "sykliske forbruksvarer",
+            "bransje": "netthandel"
+        },
+        {
+            "name": "KONGSBERG AUTOMOT",
+            "ticker": "koa.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=100392",
+            "investechID": "100392",
+            "nordnet": "https://www.nordnet.no/market/stocks/16105626-kongsberg-automotive",
+            "sektor": "sykliske forbruksvarer",
+            "bransje": "bildeler"
+        },
+        {
+            "name": "KONGSBERG GRUPPEN",
+            "ticker": "kog.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=100098",
+            "investechID": "100098",
+            "nordnet": "https://www.nordnet.no/market/stocks/16105666-kongsberg-gruppen",
+            "sektor": "industri",
+            "bransje": "luftfart- og forsvar"
+        },
+        {
+            "name": "KRAFT BANK",
+            "ticker": "krab.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101145",
+            "investechID": "101145",
+            "nordnet": "https://www.nordnet.no/market/stocks/16857989-kraft-bank-asa",
+            "sektor": "finansielle tjenester",
+            "bransje": "banker - regionale"
+        },
+        {
+            "name": "KYOTO GROUP",
+            "ticker": "kyoto.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101184",
+            "investechID": "101184",
+            "nordnet": "https://www.nordnet.no/market/stocks/17461377-kyoto-group",
+            "sektor": "industri",
+            "bransje": "spesialindustrimaskiner"
+        },
+        {
+            "name": "LEA BANK",
+            "ticker": "lea.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101033",
+            "investechID": "101033",
+            "nordnet": "https://www.nordnet.no/market/stocks/16167144-lea-bank-asa",
+            "sektor": "finansielle tjenester",
+            "bransje": "banker - regionale"
+        },
+        {
+            "name": "LER\u00d8Y SEAFOOD GP",
+            "ticker": "lsg.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=100320",
+            "investechID": "100320",
+            "nordnet": "https://www.nordnet.no/market/stocks/16105604-le-ro-y-seafood-group",
+            "sektor": "konsument defensive",
+            "bransje": "pakket mat"
+        },
+        {
+            "name": "LIFECARE",
+            "ticker": "life.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101043",
+            "investechID": "101043",
+            "nordnet": "https://www.nordnet.no/market/stocks/16155620-lifecare",
+            "sektor": "helse",
+            "bransje": "medisinsk utstyr"
+        },
+        {
+            "name": "LINK MOBILITY GRP",
+            "ticker": "link.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=100992",
+            "investechID": "100992",
+            "nordnet": "https://www.nordnet.no/market/stocks/17371187-link-mobility-group",
+            "sektor": "kommunikasjonstjenester",
+            "bransje": "telekommunikasjon"
+        },
+        {
+            "name": "LUMI GRUPPEN",
+            "ticker": "lumi.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101173",
+            "investechID": "101173",
+            "nordnet": "https://www.nordnet.no/market/stocks/17445516-lumi-gruppen",
+            "sektor": "konsument defensive",
+            "bransje": "utdanningstjenester"
+        },
+        {
+            "name": "LYTIX BIOPHARMA",
+            "ticker": "lytix.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101207",
+            "investechID": "101207",
+            "nordnet": "https://www.nordnet.no/market/stocks/16145419-lytix-biopharma",
+            "sektor": "helse",
+            "bransje": "bioteknologi"
+        },
+        {
+            "name": "M VEST WATER",
+            "ticker": "mvw.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101204",
+            "investechID": "101204",
+            "nordnet": "https://www.nordnet.no/market/stocks/17513495-m-vest-water",
+            "sektor": "industri",
+            "bransje": "forurensnings- og behandlingskontroll"
+        },
+        {
+            "name": "MAGNORA",
+            "ticker": "mgn.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=100851",
+            "investechID": "100851",
+            "nordnet": "https://www.nordnet.no/market/stocks/16105614-magnora",
+            "sektor": "infrastruktur",
+            "bransje": "nytte - fornybar"
+        },
+        {
+            "name": "MEDISTIM",
+            "ticker": "medi.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=100351",
+            "investechID": "100351",
+            "nordnet": "https://www.nordnet.no/market/stocks/16105610-medistim",
+            "sektor": "helse",
+            "bransje": "medisinsk utstyr"
+        },
+        {
+            "name": "MELHUS SPAREBANK",
+            "ticker": "melg.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=100285",
+            "investechID": "100285",
+            "nordnet": "https://www.nordnet.no/market/stocks/16105586-melhus-sparebank",
+            "sektor": "finansielle tjenester",
+            "bransje": "banker - regionale"
+        },
+        {
+            "name": "MINTRA HOLDING",
+            "ticker": "mntr.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101103",
+            "investechID": "101103",
+            "nordnet": "https://www.nordnet.no/market/stocks/17360232-mintra-holding",
+            "sektor": "industri",
+            "bransje": "personal- og arbeidskraftformidling"
+        },
+        {
+            "name": "MORROW BANK",
+            "ticker": "moba.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=100800",
+            "investechID": "100800",
+            "nordnet": "https://www.nordnet.no/market/stocks/16275895-morrow-bank-asa",
+            "sektor": "finansielle tjenester",
+            "bransje": "banker - regionale"
+        },
+        {
+            "name": "MOWI",
+            "ticker": "mowi.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=100855",
+            "investechID": "100855",
+            "nordnet": "https://www.nordnet.no/market/stocks/16105427-mowi",
+            "sektor": "konsument defensive",
+            "bransje": "landbruksprodukter"
+        },
+        {
+            "name": "MPC CONTAINER SHIP",
+            "ticker": "mpcc.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=100806",
+            "investechID": "100806",
+            "nordnet": "https://www.nordnet.no/market/stocks/16697810-mpc-container-ships",
+            "sektor": "sj\u00f8fart",
+            "bransje": "sj\u00f8fart"
+        },
+        {
+            "name": "MPC ENERGY SOLUTIO",
+            "ticker": "mpces.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101157",
+            "investechID": "101157",
+            "nordnet": "https://www.nordnet.no/market/stocks/17430294-mpc-energy-solutions",
+            "sektor": "infrastruktur",
+            "bransje": "nytte - fornybar"
+        },
+        {
+            "name": "MULTICONSULT",
+            "ticker": "multi.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=100728",
+            "investechID": "100728",
+            "nordnet": "https://www.nordnet.no/market/stocks/16407289-multiconsult",
+            "sektor": "industri",
+            "bransje": "bygg og anlegg"
+        },
+        {
+            "name": "M\u00c5S\u00d8VAL",
+            "ticker": "mas.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101208",
+            "investechID": "101208",
+            "nordnet": "https://www.nordnet.no/market/stocks/17528187-ma-so-val",
+            "sektor": "konsument defensive",
+            "bransje": "landbruksprodukter"
+        },
+        {
+            "name": "NAPATECH",
+            "ticker": "napa.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=100691",
+            "investechID": "100691",
+            "nordnet": "https://www.nordnet.no/market/stocks/16250823-napatech",
+            "sektor": "teknologi",
+            "bransje": "kommunikasjonsutstyr"
+        },
+        {
+            "name": "NAVAMEDIC",
+            "ticker": "nava.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=100429",
+            "investechID": "100429",
+            "nordnet": "https://www.nordnet.no/market/stocks/16105660-navamedic",
+            "sektor": "helse",
+            "bransje": "medisinsk distribusjon"
+        },
+        {
+            "name": "NEKKAR",
+            "ticker": "nkr.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=100884",
+            "investechID": "100884",
+            "nordnet": "https://www.nordnet.no/market/stocks/16105423-nekkar",
+            "sektor": "industri",
+            "bransje": "spesialindustrimaskiner"
+        },
+        {
+            "name": "NEL",
+            "ticker": "nel.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=100718",
+            "investechID": "100718",
+            "nordnet": "https://www.nordnet.no/market/stocks/16105612-nel",
+            "sektor": "industri",
+            "bransje": "spesialindustrimaskiner"
+        },
+        {
+            "name": "NEXT BIOMETRICS GP",
+            "ticker": "next.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=100706",
+            "investechID": "100706",
+            "nordnet": "https://www.nordnet.no/market/stocks/16300344-next-biometrics-group",
+            "sektor": "teknologi",
+            "bransje": "vitenskapelige og tekniske instrumenter"
+        },
+        {
+            "name": "NIDAROS SPAREBANK",
+            "ticker": "nisb.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101126",
+            "investechID": "101126",
+            "nordnet": "https://www.nordnet.no/market/stocks/16404891-nidaros-sparebank",
+            "sektor": "finansielle tjenester",
+            "bransje": "banker - regionale"
+        },
+        {
+            "name": "NORAM DRILLING",
+            "ticker": "noram.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101268",
+            "investechID": "101268",
+            "nordnet": "https://www.nordnet.no/market/stocks/16142512-noram-drilling",
+            "sektor": "energi",
+            "bransje": "olje & gass - utstyr og tjenester"
+        },
+        {
+            "name": "NORBIT",
+            "ticker": "norbt.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101079",
+            "investechID": "101079",
+            "nordnet": "https://www.nordnet.no/market/stocks/17071206-norbit",
+            "sektor": "teknologi",
+            "bransje": "vitenskapelige og tekniske instrumenter"
+        },
+        {
+            "name": "NORCOD",
+            "ticker": "ncod.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101099",
+            "investechID": "101099",
+            "nordnet": "https://www.nordnet.no/market/stocks/17354182-norcod",
+            "sektor": "konsument defensive",
+            "bransje": "landbruksprodukter"
+        },
+        {
+            "name": "NORDHEALTH A-AKSJE",
+            "ticker": "nordh.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101202",
+            "investechID": "101202",
+            "nordnet": "https://www.nordnet.no/market/stocks/17513034-nordhealth-aaksjer",
+            "sektor": "helse",
+            "bransje": "helseinformasjonstjenester"
+        },
+        {
+            "name": "NORDIC AQUA PART",
+            "ticker": "noap.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101118",
+            "investechID": "101118",
+            "nordnet": "https://www.nordnet.no/market/stocks/18116197-nordic-aqua-partners",
+            "sektor": "konsument defensive",
+            "bransje": "landbruksprodukter"
+        },
+        {
+            "name": "NORDIC HALIBUT",
+            "ticker": "nohal.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101194",
+            "investechID": "101194",
+            "nordnet": "https://www.nordnet.no/market/stocks/16165305-nordic-halibut",
+            "sektor": "konsument defensive",
+            "bransje": "landbruksprodukter"
+        },
+        {
+            "name": "NORDIC MINING",
+            "ticker": "nom.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=100504",
+            "investechID": "100504",
+            "nordnet": "https://www.nordnet.no/market/stocks/16105722-nordic-mining",
+            "sektor": "innsatsvarer",
+            "bransje": "andre industrielle metaller og gruvedrift"
+        },
+        {
+            "name": "NORDIC SEMICONDUC",
+            "ticker": "nod.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=100260",
+            "investechID": "100260",
+            "nordnet": "https://www.nordnet.no/market/stocks/16105429-nordic-semiconductor",
+            "sektor": "teknologi",
+            "bransje": "halvledere"
+        },
+        {
+            "name": "NORDIC TECHNOLOGY",
+            "ticker": "ntg.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101263",
+            "investechID": "101263",
+            "nordnet": "https://www.nordnet.no/market/stocks/17803823-nordic-technology-group",
+            "sektor": "teknologi",
+            "bransje": "vitenskapelige og tekniske instrumenter"
+        },
+        {
+            "name": "NORDIC UNMANNED",
+            "ticker": "numnd.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101151",
+            "investechID": "101151",
+            "nordnet": "https://www.nordnet.no/market/stocks/17397247-nordic-unmanned-asa",
+            "sektor": "industri",
+            "bransje": "luftfart- og forsvar"
+        },
+        {
+            "name": "NORSE ATLANTIC",
+            "ticker": "norse.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101195",
+            "investechID": "101195",
+            "nordnet": "https://www.nordnet.no/market/stocks/18032874-norse-atlantic-asa",
+            "sektor": "industri",
+            "bransje": "flyselskaper"
+        },
+        {
+            "name": "NORSK HYDRO",
+            "ticker": "nhy.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=100103",
+            "investechID": "100103",
+            "nordnet": "https://www.nordnet.no/market/stocks/16105667-norsk-hydro",
+            "sektor": "innsatsvarer",
+            "bransje": "aluminium"
+        },
+        {
+            "name": "NORSK SOLAR",
+            "ticker": "nsol.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101191",
+            "investechID": "101191",
+            "nordnet": "https://www.nordnet.no/market/stocks/17471416-norsk-solar",
+            "sektor": "infrastruktur",
+            "bransje": "uavhengige energiprodusenter"
+        },
+        {
+            "name": "NORSK TITANIUM",
+            "ticker": "nti.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101197",
+            "investechID": "101197",
+            "nordnet": "https://www.nordnet.no/market/stocks/17505767-norsk-titanium",
+            "sektor": "industri",
+            "bransje": "luftfart- og forsvar"
+        },
+        {
+            "name": "NORSKE SKOG",
+            "ticker": "nskog.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=100891",
+            "investechID": "100891",
+            "nordnet": "https://www.nordnet.no/market/stocks/17134373-norske-skog",
+            "sektor": "innsatsvarer",
+            "bransje": "papir & papirprodukter"
+        },
+        {
+            "name": "NORTEL",
+            "ticker": "ntel.ol",
+            "investech": "",
+            "investechID": "",
+            "nordnet": "https://www.nordnet.no/market/stocks/17376007-nortel",
+            "sektor": "kommunikasjonstjenester",
+            "bransje": "telekommunikasjon"
+        },
+        {
+            "name": "NORTH ENERGY",
+            "ticker": "north.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=100581",
+            "investechID": "100581",
+            "nordnet": "https://www.nordnet.no/market/stocks/16105760-north-energy",
+            "sektor": "finansielle tjenester",
+            "bransje": "kapitalforvaltning"
+        },
+        {
+            "name": "NORTHERN DRILLING",
+            "ticker": "nodl.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=100794",
+            "investechID": "100794",
+            "nordnet": "https://www.nordnet.no/market/stocks/16682289-northern-drilling",
+            "sektor": "energi",
+            "bransje": "olje & gass - borring"
+        },
+        {
+            "name": "NORTHERN OCEAN LTD",
+            "ticker": "nol.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=100941",
+            "investechID": "100941",
+            "nordnet": "https://www.nordnet.no/market/stocks/17156980-northern-ocean",
+            "sektor": "energi",
+            "bransje": "olje & gass - borring"
+        },
+        {
+            "name": "NORWEGIAN AIR SHUT",
+            "ticker": "nas.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=100343",
+            "investechID": "100343",
+            "nordnet": "https://www.nordnet.no/market/stocks/16105606-norwegian-air-shuttle",
+            "sektor": "industri",
+            "bransje": "flyselskaper"
+        },
+        {
+            "name": "NORWEGIAN BLOCK EX",
+            "ticker": "nbx.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101239",
+            "investechID": "101239",
+            "nordnet": "https://www.nordnet.no/market/stocks/17489440-norwegian-block-exchange",
+            "sektor": "finansielle tjenester",
+            "bransje": "kapitalmarkeder"
+        },
+        {
+            "name": "NRC GROUP",
+            "ticker": "nrc.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=100732",
+            "investechID": "100732",
+            "nordnet": "https://www.nordnet.no/market/stocks/16105636-nrc-group",
+            "sektor": "industri",
+            "bransje": "jernbane"
+        },
+        {
+            "name": "NYKODE THERAPEUTIC",
+            "ticker": "nykd.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101050",
+            "investechID": "101050",
+            "nordnet": "https://www.nordnet.no/market/stocks/16312532-nykode-therapeutics-asa",
+            "sektor": "helse",
+            "bransje": "bioteknologi"
+        },
+        {
+            "name": "OBSERVE MEDICAL",
+            "ticker": "obsrv.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101082",
+            "investechID": "101082",
+            "nordnet": "https://www.nordnet.no/market/stocks/17141054-observe-medical",
+            "sektor": "helse",
+            "bransje": "medisinsk utstyr"
+        },
+        {
+            "name": "OCEAN GEOLOOP",
+            "ticker": "ocean.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101251",
+            "investechID": "101251",
+            "nordnet": "https://www.nordnet.no/market/stocks/17432356-ocean-geoloop",
+            "sektor": "industri",
+            "bransje": "forurensnings- og behandlingskontroll"
+        },
+        {
+            "name": "OCEAN SUN",
+            "ticker": "osun.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101092",
+            "investechID": "101092",
+            "nordnet": "https://www.nordnet.no/market/stocks/17373357-ocean-sun",
+            "sektor": "infrastruktur",
+            "bransje": "nytte - fornybar"
+        },
+        {
+            "name": "OCEANTEAM",
+            "ticker": "ots.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=100603",
+            "investechID": "100603",
+            "nordnet": "https://www.nordnet.no/market/stocks/16105699-oceanteam",
+            "sektor": "sj\u00f8fart",
+            "bransje": "sj\u00f8fart"
+        },
+        {
+            "name": "ODFJELL DRILLING",
+            "ticker": "odl.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=100683",
+            "investechID": "100683",
+            "nordnet": "https://www.nordnet.no/market/stocks/16237838-odfjell-drilling",
+            "sektor": "energi",
+            "bransje": "olje & gass - borring"
+        },
+        {
+            "name": "ODFJELL SER. A",
+            "ticker": "odf.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=100143",
+            "investechID": "100143",
+            "nordnet": "https://www.nordnet.no/market/stocks/16105682-odfjell-a",
+            "sektor": "sj\u00f8fart",
+            "bransje": "sj\u00f8fart"
+        },
+        {
+            "name": "ODFJELL SER. B",
+            "ticker": "odfb.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=100144",
+            "investechID": "100144",
+            "nordnet": "https://www.nordnet.no/market/stocks/16105683-odfjell-b",
+            "sektor": "sj\u00f8fart",
+            "bransje": "sj\u00f8fart"
+        },
+        {
+            "name": "ODFJELL TECHNOLOGY",
+            "ticker": "otl.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101252",
+            "investechID": "101252",
+            "nordnet": "https://www.nordnet.no/market/stocks/17736586-odfjell-technology",
+            "sektor": "energi",
+            "bransje": "olje & gass - borring"
+        },
+        {
+            "name": "OKEA",
+            "ticker": "okea.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=100880",
+            "investechID": "100880",
+            "nordnet": "https://www.nordnet.no/market/stocks/17069504-okea",
+            "sektor": "energi",
+            "bransje": "olje & gass - e&p"
+        },
+        {
+            "name": "OKEANIS ECO TANKER",
+            "ticker": "oet.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=100858",
+            "investechID": "100858",
+            "nordnet": "https://www.nordnet.no/market/stocks/16893906-okeanis-eco-tankers",
+            "sektor": "sj\u00f8fart",
+            "bransje": "sj\u00f8fart"
+        },
+        {
+            "name": "OLAV THON EIENDOMS",
+            "ticker": "olt.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=100221",
+            "investechID": "100221",
+            "nordnet": "https://www.nordnet.no/market/stocks/16105673-olav-thon-eiendomsselskap",
+            "sektor": "eiendom",
+            "bransje": "eiendomstjenester"
+        },
+        {
+            "name": "ORKLA",
+            "ticker": "ork.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=100186",
+            "investechID": "100186",
+            "nordnet": "https://www.nordnet.no/market/stocks/16105674-orkla",
+            "sektor": "konsument defensive",
+            "bransje": "pakket mat"
+        },
+        {
+            "name": "OTELLO CORPORATION",
+            "ticker": "otec.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101029",
+            "investechID": "101029",
+            "nordnet": "https://www.nordnet.no/market/stocks/16105607-otello-corporation",
+            "sektor": "kommunikasjonstjenester",
+            "bransje": "reklamebyr\u00e5er"
+        },
+        {
+            "name": "OTOVO",
+            "ticker": "otovo.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101170",
+            "investechID": "101170",
+            "nordnet": "https://www.nordnet.no/market/stocks/16857988-otovo-asa",
+            "sektor": "teknologi",
+            "bransje": "solceller"
+        },
+        {
+            "name": "PANORO ENERGY",
+            "ticker": "pen.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=100589",
+            "investechID": "100589",
+            "nordnet": "https://www.nordnet.no/market/stocks/16105762-panoro-energy",
+            "sektor": "energi",
+            "bransje": "olje & gass - e&p"
+        },
+        {
+            "name": "PARETO BANK",
+            "ticker": "parb.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=100760",
+            "investechID": "100760",
+            "nordnet": "https://www.nordnet.no/market/stocks/16145070-pareto-bank",
+            "sektor": "finansielle tjenester",
+            "bransje": "banker - regionale"
+        },
+        {
+            "name": "PCI BIOTECH HOLD",
+            "ticker": "pcib.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=100544",
+            "investechID": "100544",
+            "nordnet": "https://www.nordnet.no/market/stocks/16105737-pci-biotech-holding",
+            "sektor": "helse",
+            "bransje": "bioteknologi"
+        },
+        {
+            "name": "PETROLIA",
+            "ticker": "pse.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=100843",
+            "investechID": "100843",
+            "nordnet": "https://www.nordnet.no/market/stocks/16105568-petrolia",
+            "sektor": "energi",
+            "bransje": "olje & gass - utstyr og tjenester"
+        },
+        {
+            "name": "PETRONOR E&P",
+            "ticker": "pnor.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=100885",
+            "investechID": "100885",
+            "nordnet": "https://www.nordnet.no/market/stocks/18070363-petronor-ep-asa",
+            "sektor": "energi",
+            "bransje": "olje & gass - e&p"
+        },
+        {
+            "name": "PEXIP HOLDING",
+            "ticker": "pexip.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=100949",
+            "investechID": "100949",
+            "nordnet": "https://www.nordnet.no/market/stocks/16981769-pexip-holding",
+            "sektor": "teknologi",
+            "bransje": "programvare - applikasjoner"
+        },
+        {
+            "name": "PGS",
+            "ticker": "pgs.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=100068",
+            "investechID": "100068",
+            "nordnet": "https://www.nordnet.no/market/stocks/16105675-pgs",
+            "sektor": "energi",
+            "bransje": "olje & gass - utstyr og tjenester"
+        },
+        {
+            "name": "PHILLY SHIPYARD",
+            "ticker": "phly.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=100743",
+            "investechID": "100743",
+            "nordnet": "https://www.nordnet.no/market/stocks/16105731-philly-shipyard",
+            "sektor": "industri",
+            "bransje": "luftfart- og forsvar"
+        },
+        {
+            "name": "PHOTOCURE",
+            "ticker": "pho.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=100199",
+            "investechID": "100199",
+            "nordnet": "https://www.nordnet.no/market/stocks/16105593-photocure",
+            "sektor": "helse",
+            "bransje": "medsinprodusenter - spesialist og generell"
+        },
+        {
+            "name": "PIONEER PROPERTY",
+            "ticker": "ppg.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101058",
+            "investechID": "101058",
+            "nordnet": "https://www.nordnet.no/market/stocks/16418422-pioneer-property-group",
+            "sektor": "eiendom",
+            "bransje": "eiendomstjenester"
+        },
+        {
+            "name": "POLARIS MEDIA",
+            "ticker": "pol.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=100554",
+            "investechID": "100554",
+            "nordnet": "https://www.nordnet.no/market/stocks/16105742-polaris-media",
+            "sektor": "kommunikasjonstjenester",
+            "bransje": "publisering"
+        },
+        {
+            "name": "POLIGHT",
+            "ticker": "plt.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=100844",
+            "investechID": "100844",
+            "nordnet": "https://www.nordnet.no/market/stocks/17775474-polight",
+            "sektor": "teknologi",
+            "bransje": "elektroniske komponenter"
+        },
+        {
+            "name": "PROSAFE",
+            "ticker": "prs.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=100071",
+            "investechID": "100071",
+            "nordnet": "https://www.nordnet.no/market/stocks/17107917-prosafe",
+            "sektor": "energi",
+            "bransje": "olje & gass - utstyr og tjenester"
+        },
+        {
+            "name": "PROTECTOR FORSIKRG",
+            "ticker": "prot.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101034",
+            "investechID": "101034",
+            "nordnet": "https://www.nordnet.no/market/stocks/16105707-protector-forsikring",
+            "sektor": "finansielle tjenester",
+            "bransje": "forsikring - spesialiteter"
+        },
+        {
+            "name": "PROXIMAR SEAFOOD",
+            "ticker": "proxi.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101159",
+            "investechID": "101159",
+            "nordnet": "https://www.nordnet.no/market/stocks/17376002-proximar-seafood",
+            "sektor": "konsument defensive",
+            "bransje": "landbruksprodukter"
+        },
+        {
+            "name": "PRYME",
+            "ticker": "pryme.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101171",
+            "investechID": "101171",
+            "nordnet": "https://www.nordnet.no/market/stocks/17436486-pryme",
+            "sektor": "industri",
+            "bransje": "avfallsh\u00e5ndtering"
+        },
+        {
+            "name": "PYRUM INNOVATIONS",
+            "ticker": "pyrum.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101233",
+            "investechID": "101233",
+            "nordnet": "https://www.nordnet.no/market/stocks/17594785-pyrum-innovations",
+            "sektor": "industri",
+            "bransje": "forurensnings- og behandlingskontroll"
+        },
+        {
+            "name": "Q-FREE",
+            "ticker": "qfr.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=100301",
+            "investechID": "100301",
+            "nordnet": "https://www.nordnet.no/market/stocks/16105602-qfree",
+            "sektor": "industri",
+            "bransje": "drift infrastruktur"
+        },
+        {
+            "name": "QUANTAFUEL",
+            "ticker": "qfuel.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101066",
+            "investechID": "101066",
+            "nordnet": "https://www.nordnet.no/market/stocks/16665923-quantafuel",
+            "sektor": "industri",
+            "bransje": "avfallsh\u00e5ndtering"
+        },
+        {
+            "name": "QUESTBACK GROUP",
+            "ticker": "quest.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=100393",
+            "investechID": "100393",
+            "nordnet": "https://www.nordnet.no/market/stocks/17567368-questback-group",
+            "sektor": "teknologi",
+            "bransje": "programvare - infrastruktur"
+        },
+        {
+            "name": "QUESTERRE ENERGY",
+            "ticker": "qec.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=100393",
+            "investechID": "100393",
+            "nordnet": "https://www.nordnet.no/market/stocks/16105625-questerre-energy-corporation",
+            "sektor": "energi",
+            "bransje": "olje & gass - e&p"
+        },
+        {
+            "name": "RANA GRUBER",
+            "ticker": "rana.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101166",
+            "investechID": "101166",
+            "nordnet": "https://www.nordnet.no/market/stocks/17447523-rana-gruber-asa",
+            "sektor": "innsatsvarer",
+            "bransje": "st\u00e5l"
+        },
+        {
+            "name": "REACH SUBSEA",
+            "ticker": "reach.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=100676",
+            "investechID": "100676",
+            "nordnet": "https://www.nordnet.no/market/stocks/16105668-reach-subsea",
+            "sektor": "energi",
+            "bransje": "olje & gass - utstyr og tjenester"
+        },
+        {
+            "name": "REC SILICON",
+            "ticker": "recsi.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101031",
+            "investechID": "101031",
+            "nordnet": "https://www.nordnet.no/market/stocks/16105665-rec-silicon",
+            "sektor": "teknologi",
+            "bransje": "halvlederutstyr og -materialer"
+        },
+        {
+            "name": "RECREATE",
+            "ticker": "rcr.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101205",
+            "investechID": "101205",
+            "nordnet": "https://www.nordnet.no/market/stocks/17089171-recreate-asa",
+            "sektor": "eiendom",
+            "bransje": "eiendomstjenester"
+        },
+        {
+            "name": "REFUELS",
+            "ticker": "refl.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101293",
+            "investechID": "101293",
+            "nordnet": "https://www.nordnet.no/market/stocks/18043859-refuels",
+            "sektor": "sykliske forbruksvarer",
+            "bransje": "spesialist detaljhandel"
+        },
+        {
+            "name": "RIVER TECH",
+            "ticker": "river.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101023",
+            "investechID": "101023",
+            "nordnet": "https://www.nordnet.no/market/stocks/16847400-river-tech",
+            "sektor": "teknologi",
+            "bransje": "it - tjenester"
+        },
+        {
+            "name": "ROMERIKE SPAREBK",
+            "ticker": "romer.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101232",
+            "investechID": "101232",
+            "nordnet": "https://www.nordnet.no/market/stocks/16786639-romerike-sparebank",
+            "sektor": "finansielle tjenester",
+            "bransje": "banker - regionale"
+        },
+        {
+            "name": "ROMREAL",
+            "ticker": "rom.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=100492",
+            "investechID": "100492",
+            "nordnet": "https://www.nordnet.no/market/stocks/16105715-romreal",
+            "sektor": "eiendom",
+            "bransje": "eiendomstjenester"
+        },
+        {
+            "name": "ROMSDAL SPAREBANK",
+            "ticker": "romsb.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101154",
+            "investechID": "101154",
+            "nordnet": "https://www.nordnet.no/market/stocks/16548266-romsdal-sparebank",
+            "sektor": "finansielle tjenester",
+            "bransje": "finansielle konglomerater"
+        },
+        {
+            "name": "S.D. STANDARD ETC",
+            "ticker": "sdsd.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=100608",
+            "investechID": "100608",
+            "nordnet": "https://www.nordnet.no/market/stocks/16105293-sd-standard-etc",
+            "sektor": "energi",
+            "bransje": "olje & gass - utstyr og tjenester"
+        },
+        {
+            "name": "SAGA PURE",
+            "ticker": "saga.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=100587",
+            "investechID": "100587",
+            "nordnet": "https://www.nordnet.no/market/stocks/16105256-saga-pure",
+            "sektor": "innsatsvarer",
+            "bransje": "spesialkjemikalier"
+        },
+        {
+            "name": "SALMAR",
+            "ticker": "salm.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=100481",
+            "investechID": "100481",
+            "nordnet": "https://www.nordnet.no/market/stocks/16105712-salmar",
+            "sektor": "konsument defensive",
+            "bransje": "landbruksprodukter"
+        },
+        {
+            "name": "SALMON EVOLUTION",
+            "ticker": "salme.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101097",
+            "investechID": "101097",
+            "nordnet": "https://www.nordnet.no/market/stocks/17350508-salmon-evolution-asa",
+            "sektor": "konsument defensive",
+            "bransje": "landbruksprodukter"
+        },
+        {
+            "name": "SALMONES CAMANCHAC",
+            "ticker": "sacam.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101013",
+            "investechID": "101013",
+            "nordnet": "https://www.nordnet.no/market/stocks/17701612-salmones-camanchac",
+            "sektor": "konsument defensive",
+            "bransje": "landbruksprodukter"
+        },
+        {
+            "name": "SANDNES SPAREBANK",
+            "ticker": "sadg.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=100288",
+            "investechID": "100288",
+            "nordnet": "https://www.nordnet.no/market/stocks/16105424-sandnes-sparebank",
+            "sektor": "finansielle tjenester",
+            "bransje": "banker - regionale"
+        },
+        {
+            "name": "SAS AB",
+            "ticker": "sasno.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101108",
+            "investechID": "101108",
+            "nordnet": "https://www.nordnet.no/market/stocks/16105600-sas",
+            "sektor": "industri",
+            "bransje": "flyselskaper"
+        },
+        {
+            "name": "SATS",
+            "ticker": "sats.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=100892",
+            "investechID": "100892",
+            "nordnet": "https://www.nordnet.no/market/stocks/17134374-sats",
+            "sektor": "sykliske forbruksvarer",
+            "bransje": "fritid"
+        },
+        {
+            "name": "SCANA",
+            "ticker": "scana.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=100948",
+            "investechID": "100948",
+            "nordnet": "https://www.nordnet.no/market/stocks/16105426-scana",
+            "sektor": "industri",
+            "bransje": "industriell distribusjon"
+        },
+        {
+            "name": "SCATEC",
+            "ticker": "scatc.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101152",
+            "investechID": "101152",
+            "nordnet": "https://www.nordnet.no/market/stocks/16324395-scatec-asa",
+            "sektor": "infrastruktur",
+            "bransje": "nytte - fornybar"
+        },
+        {
+            "name": "SCHIBSTED SER. A",
+            "ticker": "scha.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=100731",
+            "investechID": "100731",
+            "nordnet": "https://www.nordnet.no/market/stocks/16105679-schibsted-a",
+            "sektor": "kommunikasjonstjenester",
+            "bransje": "publisering"
+        },
+        {
+            "name": "SCHIBSTED SER. B",
+            "ticker": "schb.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=100733",
+            "investechID": "100733",
+            "nordnet": "https://www.nordnet.no/market/stocks/16408915-schibsted-b",
+            "sektor": "kommunikasjonstjenester",
+            "bransje": "publisering"
+        },
+        {
+            "name": "SEABIRD EXPLORAT",
+            "ticker": "sbx.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101227",
+            "investechID": "101227",
+            "nordnet": "https://www.nordnet.no/market/stocks/16105654-seabird-exploration",
+            "sektor": "energi",
+            "bransje": "olje & gass - utstyr og tjenester"
+        },
+        {
+            "name": "SEACREST PETROLEO",
+            "ticker": "seapt.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101285",
+            "investechID": "101285",
+            "nordnet": "https://www.nordnet.no/market/stocks/18016486-seacrest-petroleo-bermuda",
+            "sektor": "energi",
+            "bransje": "olje & gass - e&p"
+        },
+        {
+            "name": "SEADRILL",
+            "ticker": "sdrl.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101256",
+            "investechID": "101256",
+            "nordnet": "https://www.nordnet.no/market/stocks/17716663-seadrill-limited",
+            "sektor": "energi",
+            "bransje": "olje & gass - borring"
+        },
+        {
+            "name": "SELF STORAGE GROUP",
+            "ticker": "ssg.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=100802",
+            "investechID": "100802",
+            "nordnet": "https://www.nordnet.no/market/stocks/16700587-self-storage-group",
+            "sektor": "industri",
+            "bransje": "spesialtjenester"
+        },
+        {
+            "name": "SELVAAG BOLIG",
+            "ticker": "sbo.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=100649",
+            "investechID": "100649",
+            "nordnet": "https://www.nordnet.no/market/stocks/16105342-selvaag-bolig",
+            "sektor": "eiendom",
+            "bransje": "eiendomstjenester"
+        },
+        {
+            "name": "SHELF DRILLING",
+            "ticker": "shlf.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=100835",
+            "investechID": "100835",
+            "nordnet": "https://www.nordnet.no/market/stocks/16698390-shelf-drilling",
+            "sektor": "energi",
+            "bransje": "olje & gass - borring"
+        },
+        {
+            "name": "SHELF DRILLING NO",
+            "ticker": "sdns.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101267",
+            "investechID": "101267",
+            "nordnet": "https://www.nordnet.no/market/stocks/17884399-shelf-drilling-north",
+            "sektor": "energi",
+            "bransje": "olje & gass - utstyr og tjenester"
+        },
+        {
+            "name": "SIEM OFFSHORE",
+            "ticker": "sioff.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=100421",
+            "investechID": "100421",
+            "nordnet": "https://www.nordnet.no/market/stocks/17515778-siem-offshore",
+            "sektor": "energi",
+            "bransje": "olje & gass - utstyr og tjenester"
+        },
+        {
+            "name": "SIKRI GROUP",
+            "ticker": "sikri.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101086",
+            "investechID": "101086",
+            "nordnet": "https://www.nordnet.no/market/stocks/17788215-sikri-group-asa",
+            "sektor": "teknologi",
+            "bransje": "it - tjenester"
+        },
+        {
+            "name": "SKANDIA GREENPOWER",
+            "ticker": "skand.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101172",
+            "investechID": "101172",
+            "nordnet": "https://www.nordnet.no/market/stocks/17441647-skandia-greenpower",
+            "sektor": "infrastruktur",
+            "bransje": "nytte - fornybar"
+        },
+        {
+            "name": "SKUE SPAREBANK",
+            "ticker": "skue.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=100685",
+            "investechID": "100685",
+            "nordnet": "https://www.nordnet.no/market/stocks/16105585-skue-sparebank",
+            "sektor": "finansielle tjenester",
+            "bransje": "banker - regionale"
+        },
+        {
+            "name": "SMARTCRAFT",
+            "ticker": "smcrt.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101212",
+            "investechID": "101212",
+            "nordnet": "https://www.nordnet.no/market/stocks/17520015-smartcraft-asa",
+            "sektor": "teknologi",
+            "bransje": "programvare - applikasjoner"
+        },
+        {
+            "name": "SMARTOPTICS GROUP",
+            "ticker": "smop.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101201",
+            "investechID": "101201",
+            "nordnet": "https://www.nordnet.no/market/stocks/17516278-smartoptics-group",
+            "sektor": "teknologi",
+            "bransje": "kommunikasjonsutstyr"
+        },
+        {
+            "name": "SOFTOX SOLUTIONS",
+            "ticker": "softx.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101072",
+            "investechID": "101072",
+            "nordnet": "https://www.nordnet.no/market/stocks/16857982-softox-solutions",
+            "sektor": "helse",
+            "bransje": "bioteknologi"
+        },
+        {
+            "name": "SOGN SPAREBANK",
+            "ticker": "sogn.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=100861",
+            "investechID": "100861",
+            "nordnet": "https://www.nordnet.no/market/stocks/16105431-sogn-sparebank",
+            "sektor": "finansielle tjenester",
+            "bransje": "banker - regionale"
+        },
+        {
+            "name": "SOLSTAD OFFSHORE",
+            "ticker": "soff.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=100312",
+            "investechID": "100312",
+            "nordnet": "https://www.nordnet.no/market/stocks/16105574-solstad-offshore",
+            "sektor": "sj\u00f8fart",
+            "bransje": "sj\u00f8fart"
+        },
+        {
+            "name": "SPARBNK 68 GR NORD",
+            "ticker": "sb68.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101226",
+            "investechID": "101226",
+            "nordnet": "https://www.nordnet.no/market/stocks/17311345-sparebank-68-grader",
+            "sektor": "finansielle tjenester",
+            "bransje": "banker - regionale"
+        },
+        {
+            "name": "SPAREBANK 1 SMN",
+            "ticker": "ming.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=100291",
+            "investechID": "100291",
+            "nordnet": "https://www.nordnet.no/market/stocks/16105415-sparebank-1-smn",
+            "sektor": "finansielle tjenester",
+            "bransje": "banker - regionale"
+        },
+        {
+            "name": "SPAREBANK 1 SR-BK",
+            "ticker": "srbnk.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101045",
+            "investechID": "101045",
+            "nordnet": "https://www.nordnet.no/market/stocks/16105330-sparebank-1-srbank",
+            "sektor": "finansielle tjenester",
+            "bransje": "banker - regionale"
+        },
+        {
+            "name": "SPAREBANK 1 S\u00d8R\u00d8",
+            "ticker": "soon.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101200",
+            "investechID": "101200",
+            "nordnet": "https://www.nordnet.no/market/stocks/16105417-sparebank-1-so-ro-stnorge",
+            "sektor": "finansielle tjenester",
+            "bransje": "banker - regionale"
+        },
+        {
+            "name": "SPAREBANKEN M\u00d8RE",
+            "ticker": "morg.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=100292",
+            "investechID": "100292",
+            "nordnet": "https://www.nordnet.no/market/stocks/17739816-sparebanken-mo-re",
+            "sektor": "finansielle tjenester",
+            "bransje": "banker - regionale"
+        },
+        {
+            "name": "SPAREBANKEN S\u00d8R",
+            "ticker": "sor.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=100696",
+            "investechID": "100696",
+            "nordnet": "https://www.nordnet.no/market/stocks/16105581-sparebanken-so-r",
+            "sektor": "finansielle tjenester",
+            "bransje": "banker - regionale"
+        },
+        {
+            "name": "SPAREBANKEN VEST",
+            "ticker": "sveg.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=100297",
+            "investechID": "100297",
+            "nordnet": "https://www.nordnet.no/market/stocks/16105421-sparebanken-vest",
+            "sektor": "finansielle tjenester",
+            "bransje": "banker - regionale"
+        },
+        {
+            "name": "SPAREBANKEN \u00d8ST",
+            "ticker": "spog.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=100298",
+            "investechID": "100298",
+            "nordnet": "https://www.nordnet.no/market/stocks/16105645-sparebanken-o-st",
+            "sektor": "finansielle tjenester",
+            "bransje": "banker - regionale"
+        },
+        {
+            "name": "SPBK 1 NORDM\u00d8RE",
+            "ticker": "snor.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=100793",
+            "investechID": "100793",
+            "nordnet": "https://www.nordnet.no/market/stocks/16256376-sparebank-1-nord-mo-re",
+            "sektor": "finansielle tjenester",
+            "bransje": "banker - regionale"
+        },
+        {
+            "name": "SPBK 1 \u00d8STLANDET",
+            "ticker": "spol.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=100787",
+            "investechID": "100787",
+            "nordnet": "https://www.nordnet.no/market/stocks/16719249-sparebank-1-o-stlandet",
+            "sektor": "finansielle tjenester",
+            "bransje": "banker - regionale"
+        },
+        {
+            "name": "SPBK1 HELGELAND",
+            "ticker": "helg.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=100281",
+            "investechID": "100281",
+            "nordnet": "https://www.nordnet.no/market/stocks/16105591-sparebank-1-helgeland",
+            "sektor": "finansielle tjenester",
+            "bransje": "banker - regionale"
+        },
+        {
+            "name": "SPBK1 NORD-NORGE",
+            "ticker": "nong.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=100293",
+            "investechID": "100293",
+            "nordnet": "https://www.nordnet.no/market/stocks/16105416-sparebank-1-nordnorge",
+            "sektor": "finansielle tjenester",
+            "bransje": "banker - regionale"
+        },
+        {
+            "name": "SPBK1 RINGERIKE",
+            "ticker": "ring.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=100287",
+            "investechID": "100287",
+            "nordnet": "https://www.nordnet.no/market/stocks/16105430-sparebank-1-ringerike",
+            "sektor": "finansielle tjenester",
+            "bransje": "banker - regionale"
+        },
+        {
+            "name": "SPBK1 \u00d8STFOLD AKE",
+            "ticker": "soag.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=100637",
+            "investechID": "100637",
+            "nordnet": "https://www.nordnet.no/market/stocks/16105639-sparebank-1-o-stfold",
+            "sektor": "finansielle tjenester",
+            "bransje": "banker - regionale"
+        },
+        {
+            "name": "SPOTLIO",
+            "ticker": "spot.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101148",
+            "investechID": "101148",
+            "nordnet": "https://www.nordnet.no/market/stocks/17400032-spotlio",
+            "sektor": "teknologi",
+            "bransje": "programvare - applikasjoner"
+        },
+        {
+            "name": "STAINLESS TANKERS",
+            "ticker": "stst.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101287",
+            "investechID": "101287",
+            "nordnet": "https://www.nordnet.no/market/stocks/18010214-stainless-tankers-asa",
+            "sektor": "-",
+            "bransje": "-"
+        },
+        {
+            "name": "STANDARD SUPPLY",
+            "ticker": "stsu.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101261",
+            "investechID": "101261",
+            "nordnet": "https://www.nordnet.no/market/stocks/17790875-standard-supply",
+            "sektor": "sj\u00f8fart",
+            "bransje": "sj\u00f8fart"
+        },
+        {
+            "name": "STATT TORSK",
+            "ticker": "statt.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101192",
+            "investechID": "101192",
+            "nordnet": "https://www.nordnet.no/market/stocks/16700542-statt-torsk-asa",
+            "sektor": "konsument defensive",
+            "bransje": "landbruksprodukter"
+        },
+        {
+            "name": "STOLT-NIELSEN",
+            "ticker": "sni.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=100150",
+            "investechID": "100150",
+            "nordnet": "https://www.nordnet.no/market/stocks/16105428-stoltnielsen",
+            "sektor": "sj\u00f8fart",
+            "bransje": "sj\u00f8fart"
+        },
+        {
+            "name": "STOREBRAND",
+            "ticker": "stb.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=100215",
+            "investechID": "100215",
+            "nordnet": "https://www.nordnet.no/market/stocks/16105685-storebrand",
+            "sektor": "finansielle tjenester",
+            "bransje": "finansielle konglomerater"
+        },
+        {
+            "name": "STRONGPOINT",
+            "ticker": "stro.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101030",
+            "investechID": "101030",
+            "nordnet": "https://www.nordnet.no/market/stocks/16105598-strongpoint",
+            "sektor": "industri",
+            "bransje": "forretningsutstyr"
+        },
+        {
+            "name": "SUBSEA 7",
+            "ticker": "subc.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=100602",
+            "investechID": "100602",
+            "nordnet": "https://www.nordnet.no/market/stocks/16105569-subsea-7",
+            "sektor": "energi",
+            "bransje": "olje & gass - utstyr og tjenester"
+        },
+        {
+            "name": "SUNNDAL SPAREBANK",
+            "ticker": "sunsb.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101048",
+            "investechID": "101048",
+            "nordnet": "https://www.nordnet.no/market/stocks/16199579-sunndal-sparebank",
+            "sektor": "finansielle tjenester",
+            "bransje": "banker - regionale"
+        },
+        {
+            "name": "TECHSTEP",
+            "ticker": "tech.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=100754",
+            "investechID": "100754",
+            "nordnet": "https://www.nordnet.no/market/stocks/18054417-techstep",
+            "sektor": "teknologi",
+            "bransje": "programvare - applikasjoner"
+        },
+        {
+            "name": "TECO 2030",
+            "ticker": "teco.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101091",
+            "investechID": "101091",
+            "nordnet": "https://www.nordnet.no/market/stocks/17363130-teco-2030",
+            "sektor": "industri",
+            "bransje": "spesialindustrimaskiner"
+        },
+        {
+            "name": "TEKNA HOLDING",
+            "ticker": "tekna.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101186",
+            "investechID": "101186",
+            "nordnet": "https://www.nordnet.no/market/stocks/17473119-tekna-holding-asa",
+            "sektor": "innsatsvarer",
+            "bransje": "spesialkjemikalier"
+        },
+        {
+            "name": "TELENOR",
+            "ticker": "tel.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=100275",
+            "investechID": "100275",
+            "nordnet": "https://www.nordnet.no/market/stocks/16105595-telenor",
+            "sektor": "kommunikasjonstjenester",
+            "bransje": "telekommunikasjon"
+        },
+        {
+            "name": "TGS",
+            "ticker": "tgs.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=100082",
+            "investechID": "100082",
+            "nordnet": "https://www.nordnet.no/market/stocks/16105575-tgs-asa",
+            "sektor": "energi",
+            "bransje": "olje & gass - utstyr og tjenester"
+        },
+        {
+            "name": "THE KINGFISH COMP",
+            "ticker": "king.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101024",
+            "investechID": "101024",
+            "nordnet": "https://www.nordnet.no/market/stocks/17392206-the-kingfish-company",
+            "sektor": "konsument defensive",
+            "bransje": "pakket mat"
+        },
+        {
+            "name": "THOR MEDICAL",
+            "ticker": "trmed.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101044",
+            "investechID": "101044",
+            "nordnet": "https://www.nordnet.no/market/stocks/16156313-thor-medical-asa",
+            "sektor": "helse",
+            "bransje": "bioteknologi"
+        },
+        {
+            "name": "TIETOEVRY",
+            "ticker": "tieto.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101019",
+            "investechID": "101019",
+            "nordnet": "https://www.nordnet.no/market/stocks/17156779-tietoevry",
+            "sektor": "teknologi",
+            "bransje": "it - tjenester"
+        },
+        {
+            "name": "TOMRA SYSTEMS",
+            "ticker": "tom.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=100107",
+            "investechID": "100107",
+            "nordnet": "https://www.nordnet.no/market/stocks/17775123-tomra-systems",
+            "sektor": "industri",
+            "bransje": "avfallsh\u00e5ndtering"
+        },
+        {
+            "name": "TOTENS SPAREBANK",
+            "ticker": "totg.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=100299",
+            "investechID": "100299",
+            "nordnet": "https://www.nordnet.no/market/stocks/16105425-totens-sparebank",
+            "sektor": "finansielle tjenester",
+            "bransje": "banker - regionale"
+        },
+        {
+            "name": "TREASURE",
+            "ticker": "tre.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=100756",
+            "investechID": "100756",
+            "nordnet": "https://www.nordnet.no/market/stocks/16561379-treasure",
+            "sektor": "finansielle tjenester",
+            "bransje": "kapitalforvaltning"
+        },
+        {
+            "name": "TYSNES SPAREBANK",
+            "ticker": "tysb.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101055",
+            "investechID": "101055",
+            "nordnet": "https://www.nordnet.no/market/stocks/16391948-tysnes-sparebank",
+            "sektor": "finansielle tjenester",
+            "bransje": "banker - regionale"
+        },
+        {
+            "name": "ULTIMOVACS",
+            "ticker": "ulti.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101077",
+            "investechID": "101077",
+            "nordnet": "https://www.nordnet.no/market/stocks/17058977-ultimovacs",
+            "sektor": "helse",
+            "bransje": "bioteknologi"
+        },
+        {
+            "name": "UNIVID",
+            "ticker": "univ.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101187",
+            "investechID": "101187",
+            "nordnet": "https://www.nordnet.no/market/stocks/16105696-univid-asa",
+            "sektor": "teknologi",
+            "bransje": "programvare - infrastruktur"
+        },
+        {
+            "name": "VEIDEKKE",
+            "ticker": "vei.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=100109",
+            "investechID": "100109",
+            "nordnet": "https://www.nordnet.no/market/stocks/16105686-veidekke",
+            "sektor": "industri",
+            "bransje": "bygg og anlegg"
+        },
+        {
+            "name": "VISTIN PHARMA",
+            "ticker": "vistn.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101056",
+            "investechID": "101056",
+            "nordnet": "https://www.nordnet.no/market/stocks/16411097-vistin-pharma",
+            "sektor": "helse",
+            "bransje": "medsinprodusenter - spesialist og generell"
+        },
+        {
+            "name": "VOLUE",
+            "ticker": "volue.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101102",
+            "investechID": "101102",
+            "nordnet": "https://www.nordnet.no/market/stocks/17367126-volue-asa",
+            "sektor": "teknologi",
+            "bransje": "programvare - applikasjoner"
+        },
+        {
+            "name": "VOSS VEKSEL OGLAND",
+            "ticker": "vvl.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=100206",
+            "investechID": "100206",
+            "nordnet": "https://www.nordnet.no/market/stocks/16105690-voss-veksel-og",
+            "sektor": "finansielle tjenester",
+            "bransje": "banker - regionale"
+        },
+        {
+            "name": "VOW",
+            "ticker": "vow.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=100933",
+            "investechID": "100933",
+            "nordnet": "https://www.nordnet.no/market/stocks/16280186-vow",
+            "sektor": "industri",
+            "bransje": "forurensnings- og behandlingskontroll"
+        },
+        {
+            "name": "VOW GREEN METALS",
+            "ticker": "vgm.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101218",
+            "investechID": "101218",
+            "nordnet": "https://www.nordnet.no/market/stocks/17539752-vow-green-metals",
+            "sektor": "industri",
+            "bransje": "avfallsh\u00e5ndtering"
+        },
+        {
+            "name": "V\u00c5R ENERGI",
+            "ticker": "var.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101249",
+            "investechID": "101249",
+            "nordnet": "https://www.nordnet.no/market/stocks/17686528-va-r-energi-asa",
+            "sektor": "energi",
+            "bransje": "olje & gass - e&p"
+        },
+        {
+            "name": "WALLENIUS WILHELMS",
+            "ticker": "wawi.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101042",
+            "investechID": "101042",
+            "nordnet": "https://www.nordnet.no/market/stocks/16105255-wallenius-wilhelmsen",
+            "sektor": "sj\u00f8fart",
+            "bransje": "sj\u00f8fart"
+        },
+        {
+            "name": "WEBSTEP",
+            "ticker": "wstep.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=100803",
+            "investechID": "100803",
+            "nordnet": "https://www.nordnet.no/market/stocks/16159227-webstep",
+            "sektor": "teknologi",
+            "bransje": "it - tjenester"
+        },
+        {
+            "name": "WESTERN BULK CHART",
+            "ticker": "west.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101229",
+            "investechID": "101229",
+            "nordnet": "https://www.nordnet.no/market/stocks/16606769-western-bulk-chartering",
+            "sektor": "sj\u00f8fart",
+            "bransje": "sj\u00f8fart"
+        },
+        {
+            "name": "WILH. WILHELMSEN A",
+            "ticker": "wwi.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=100160",
+            "investechID": "100160",
+            "nordnet": "https://www.nordnet.no/market/stocks/16105691-wilh-wilhelmsen-holding",
+            "sektor": "sj\u00f8fart",
+            "bransje": "sj\u00f8fart"
+        },
+        {
+            "name": "WILH. WILHELMSEN B",
+            "ticker": "wwib.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=100161",
+            "investechID": "100161",
+            "nordnet": "https://www.nordnet.no/market/stocks/16105692-wilh-wilhelmsen-holding",
+            "sektor": "sj\u00f8fart",
+            "bransje": "sj\u00f8fart"
+        },
+        {
+            "name": "WPU - WASTE PLASTI",
+            "ticker": "wpu.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101255",
+            "investechID": "101255",
+            "nordnet": "https://www.nordnet.no/market/stocks/17593738-wpu-waste-plastic",
+            "sektor": "industri",
+            "bransje": "avfallsh\u00e5ndtering"
+        },
+        {
+            "name": "XPLORA TECHNOLOGIE",
+            "ticker": "xplra.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101106",
+            "investechID": "101106",
+            "nordnet": "https://www.nordnet.no/market/stocks/17383198-xplora-technologies",
+            "sektor": "sykliske forbruksvarer",
+            "bransje": "netthandel"
+        },
+        {
+            "name": "XXL",
+            "ticker": "xxl.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=100716",
+            "investechID": "100716",
+            "nordnet": "https://www.nordnet.no/market/stocks/16325339-xxl",
+            "sektor": "sykliske forbruksvarer",
+            "bransje": "spesialist detaljhandel"
+        },
+        {
+            "name": "YARA INTERNATIONAL",
+            "ticker": "yar.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=100346",
+            "investechID": "100346",
+            "nordnet": "https://www.nordnet.no/market/stocks/16105608-yara-international",
+            "sektor": "innsatsvarer",
+            "bransje": "jorbruksinnsatser"
+        },
+        {
+            "name": "ZALARIS",
+            "ticker": "zal.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=100705",
+            "investechID": "100705",
+            "nordnet": "https://www.nordnet.no/market/stocks/16299948-zalaris",
+            "sektor": "industri",
+            "bransje": "personal- og arbeidskraftformidling"
+        },
+        {
+            "name": "ZAPTEC",
+            "ticker": "zap.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101049",
+            "investechID": "101049",
+            "nordnet": "https://www.nordnet.no/market/stocks/16478530-zaptec-asa",
+            "sektor": "sykliske forbruksvarer",
+            "bransje": "bildeler"
+        },
+        {
+            "name": "ZENITH ENERGY",
+            "ticker": "zena.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101012",
+            "investechID": "101012",
+            "nordnet": "https://www.nordnet.no/market/stocks/16952978-zenith-energy",
+            "sektor": "energi",
+            "bransje": "olje & gass - e&p"
+        },
+        {
+            "name": "ZWIPE",
+            "ticker": "zwipe.ol",
+            "investech": "https://www.investtech.com/no/market.php?CompanyID=101052",
+            "investechID": "101052",
+            "nordnet": "https://www.nordnet.no/market/stocks/16335884-zwipe",
+            "sektor": "teknologi",
+            "bransje": "programvare - infrastruktur"
+        }
+    ]
+}

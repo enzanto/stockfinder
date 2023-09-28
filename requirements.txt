@@ -4,9 +4,10 @@ sqlalchemy
 numpy
 datetime
 yfinance
-discord==1.7.3
-discord.py==1.7.3
+discord.py==2.3.2
 bs4
 matplotlib
 psycopg2-binary
 ta
+gspread
+gspread_dataframe

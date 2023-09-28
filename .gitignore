@@ -1,5 +1,6 @@
-testenv
 __pycache__
 TEST_DB.db
-.gitignore
-.dockerignore
+.*
+images/*
+logs/*
+watchlist.json
