@@ -3,7 +3,7 @@ import pandas_ta as ta
 import numpy as np
 from sqlalchemy import create_engine
 
-engine = create_engine('sqlite:///TEST_DB.db')
+engine = create_engine('sqlite:///data/TEST_DB.db')
 
 def macd(df):
     # stock_db = "ticker_" + stock.lower().replace(".","_")

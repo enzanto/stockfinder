@@ -4,3 +4,4 @@ TEST_DB.db
 .*
 images/*
 logs/*
+data/watchlist.json

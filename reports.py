@@ -35,7 +35,7 @@ def report_full(tickers):
     embeds = []
     length = 6
     indexRSI = get_osebx_rsi()
-    engine = create_engine('sqlite:///TEST_DB.db')
+    engine = create_engine('sqlite:///data/TEST_DB.db')
     for ticker in tickers:
         print(ticker)
         stock = ticker['ticker']

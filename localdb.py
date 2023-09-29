@@ -5,7 +5,7 @@ from datetime import date, timedelta, datetime
 import settings
 logger = settings.logging.getLogger("bot")
 
-engine = create_engine('sqlite:///TEST_DB.db')
+engine = create_engine('sqlite:///data/TEST_DB.db')
 start_date = date.today() - timedelta(days= 365*3)
 def db_updater(symbol, engine=engine, start=start_date):
     tableName = "ticker_" + symbol.lower().replace(".","_")

@@ -1,6 +1,6 @@
 __pycache__
-TEST_DB.db
+data/TEST_DB.db
 .*
 images/*
 logs/*
-watchlist.json
+data/watchlist.json
