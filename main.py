@@ -1,17 +1,25 @@
 import settings
 import discord
 from discord.ext import commands
+from cogs.cronjobs import CronJobs
+from apscheduler.schedulers.asyncio import AsyncIOScheduler
+from apscheduler.triggers.cron import CronTrigger
+import aiocron
 
 logger = settings.logging.getLogger("bot")
 
 async def is_owner(ctx):
     return ctx.author.id == ctx.guild.owner.id
 
+CHANNEL_ID=1155922005565116426
+
 def run():
     intents= discord.Intents.all()
     intents.message_content = True
     intents.members = True
     bot = commands.Bot(command_prefix="!", intents=intents)
+
+
 
     @bot.event
     async def on_ready():
@@ -25,6 +33,7 @@ def run():
             if slash_file.name != "__init__.py":
                 # print(slash_file.name)
                 await bot.load_extension(f"slashcmds.{slash_file.name[:-3]}")
+
         
         await bot.tree.sync(guild=settings.GUILD_ID)
     @bot.command(
@@ -37,8 +46,7 @@ def run():
         """ Answers with pong"""
         await ctx.send("pong")
 
-
-
     bot.run(settings.discord_token, root_logger=True)
+    
 if __name__ == "__main__":
     run()

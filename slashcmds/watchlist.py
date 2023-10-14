@@ -4,7 +4,7 @@ import json
 from discord import app_commands
 import settings
 import time
-from investech_scrape import get_img,get_text
+# from investech_scrape import get_img,get_text
 from reports import *
 
 def get_ticker_map():

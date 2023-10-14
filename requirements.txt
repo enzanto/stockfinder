@@ -11,3 +11,8 @@ psycopg2-binary
 ta
 gspread
 gspread_dataframe
+apscheduler
+aiocron
+mplfinance
+aio_pika
+asyncio

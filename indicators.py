@@ -43,7 +43,7 @@ def new_20day_high(df):
     tail = df.tail(20)
     high20 = tail['Adj Close'].iloc[:-1].max()
     if tail['Adj Close'].iloc[-1] > high20:# and tail['Adj Close'].iloc[-2] < high20: #and moving_average_200 > moving_average_200_20past:
-        return 'is a new 20 day max'
+        return True
         # print(stock+' is a new 20 day max')
         # print('https://finance.yahoo.com/chart/'+stock)
     # except:
@@ -74,7 +74,9 @@ def bollinger_band(df):
 def trend_template(df):
     # stock_db = "ticker_" + stock.lower().replace(".","_")
     # df = pd.read_sql(stock_db,engine)
+    tests_passed=0
     if df.empty:
+        print("empty dataframe passed to trend template")
         return None
     smaUsed=[50,150,200]
     for x in smaUsed:
@@ -89,42 +91,49 @@ def trend_template(df):
     high_of_52week=max(df["Adj Close"][-260:])
 
     try:
-        moving_average_200_20past=df["SMA_200"][-20]
+        moving_average_200_20past=df["SMA_200"].iloc[-20]
     except Exception:
         moving_average_200_20past=0
     #Condition 1: Current Price > 150 SMA and > 200 SMA
     if(currentClose>moving_average_150 and currentClose > moving_average_200):
         cond_1=True
+        tests_passed += 1
     else:
         cond_1=False
     #Condition 2: 150 SMA and > 200 SMA
     if(moving_average_150>moving_average_200):
         cond_2=True
+        tests_passed += 1
     else:
         cond_2=False
     #Condition 3: 200 SMA trending up for at least 1 month (ideally 4-5 months)
     if(moving_average_150>moving_average_200_20past):
         cond_3=True
+        tests_passed += 1
     else:
         cond_3=False
     #Condition 4: 50 SMA> 150 SMA and 50 SMA> 200 SMA
     if(moving_average_50>moving_average_150 and moving_average_50> moving_average_200):
         cond_4=True
+        tests_passed += 1
     else:
         cond_4=False
     #Condition 5: Current Price > 50 SMA
     if(currentClose>moving_average_50):
         cond_5=True
+        tests_passed += 1
     else:
         cond_5=False
     #Condition 6: Current Price is at least 30% above 52 week low (Many of the best are up 100-300% before coming out of consolidation)
     if(currentClose>(1.3*low_of_52week)):
         cond_6=True
+        tests_passed += 1
     else:
         cond_6=False
     #Condition 7: Current Price is within 25% of 52 week high
     if(currentClose>(0.75*high_of_52week)):
         cond_7=True
+        tests_passed += 1
     else:
         cond_7=False
     #Condition 8: IBD RS rating >70 and the higher the better
@@ -132,8 +141,9 @@ def trend_template(df):
     #     cond_8=True
     # else:
     #     cond_8=False
-    if(cond_1 and cond_2 and cond_3 and cond_4 and cond_5 and cond_6 and cond_7):# and cond_8):
-        return "Passed Mark Minervis Trend Template"
+    # if(cond_1 and cond_2 and cond_3 and cond_4 and cond_5 and cond_6 and cond_7):# and cond_8):
+    #     return "Passed Mark Minervis Trend Template"
+    return tests_passed
 
 def pivot_point(df):
     #stock = stocklist["Symbol"][i]+".ol"
@@ -181,4 +191,4 @@ def pivot_point(df):
         df["Pivot"][i]=lastPivot
             
     if df['High'].iloc[-1] > df['Pivot'].iloc[-1] and df['High'].iloc[-2] < df['Pivot'].iloc[-2]:
-        return  "is breaking through a pivot point at " + str(lastPivot)
+        return  lastPivot
