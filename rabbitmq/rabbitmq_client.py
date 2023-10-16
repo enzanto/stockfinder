@@ -24,7 +24,7 @@ class rabbitmq(object):
         self.rpc_queue = uuid.uuid4()
 
     async def connect(self):
-        self.connection = await aio_pika.connect_robust("amqp://pod:pod@192.168.1.204:31597/", loop=self.loop)
+        self.connection = await aio_pika.connect_robust("amqp://pod:pod@rabbit-cluster.default/", loop=self.loop)
         self.channel = await self.connection.channel()
         self.callback_queue = await self.channel.declare_queue(name=self.rpc_queue,exclusive=True)
         await self.callback_queue.consume(self.on_response, no_ack=True)
