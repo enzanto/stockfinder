@@ -2,5 +2,5 @@ __pycache__
 data/TEST_DB.db
 .*
 images/*
-logs/*
+logs/*.log
 data/watchlist.json

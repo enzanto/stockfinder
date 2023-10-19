@@ -3,5 +3,8 @@ credentials.py
 TEST_DB.db
 .*
 images/*
-logs/*
+logs/*.log
 data/watchlist.json
+rabbitmq/*.sh
+rabbitmq/*.json
+rabbitmq/dockerfile-rabbit

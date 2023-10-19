@@ -75,6 +75,7 @@ class MarketScreener:
         self.exportdf = pd.DataFrame(columns = ['Stock', 'Ticker', 'Adj Close', 'Change', 'Closing range', 'vwap', 'Volume vs sma20', 'RS', 'Market', 'Yahoo'])
         self.missing = []
         self.rabbit = rabbitmq.rabbitmq()
+        self.loop = asyncio.get_event_loop()
 
     def get_osebx_tickers(self):
         url = "https://live.euronext.com/en/pd_es/data/stocks"
@@ -131,7 +132,6 @@ class MarketScreener:
 
 
     def create_chart(self,stock=None, df=pd.DataFrame()):
-        print(stock)
         today = dt.datetime.now()
         start = today - dt.timedelta(days=365)
         filename = "images/" + stock.lower().replace(".","_")+".jpg"
@@ -197,7 +197,7 @@ class MarketScreener:
             stock = str(self.stocklist["Symbol"][i])
             update_tasks.append(asyncio.create_task(db_updater(stock, engine, rabbit=self.rabbit)))
         try:
-            await asyncio.wait_for(asyncio.gather(*update_tasks), timeout=3600)
+            result = await asyncio.shield(asyncio.wait_for(asyncio.gather(*update_tasks), timeout=180))
         except asyncio.TimeoutError:
             print("timed out of gather")
             cancel = 0
@@ -206,6 +206,10 @@ class MarketScreener:
                     task.cancel()
                     cancel += 1
             print(f"{cancel} tasks canceled")
+            return
+        for task_result in result:
+            if isinstance(task_result, Exception):
+                print(f"An exception occurred in one of the tasks: {task_result}")
         # start investtech gather here?
 
     async def scan(self, i):
@@ -254,19 +258,6 @@ class MarketScreener:
             export_dict = {'Stock': '=hyperlink(\"https://finance.yahoo.com/chart/'+stock+'\",\"'+stockname+'\")', 'Ticker': stock, 'Adj Close' : df["Adj Close"].iloc[-1].round(2), 'Change': str(priceChange)+"%", 'Closing range': closingRange, \
                         'vwap': vwap, 'Volume vs sma20': str(volumeChange)+"%", 'RS': rs.round(2), 'Market': market, 'Yahoo': "https://finance.yahoo.com/chart/"+stock, \
                         'PivotPoint': False, 'MACD': False, '20Day high': False, 'Minervini': trend}
-            if pivotPoint != None:
-                export_dict['PivotPoint'] = True
-            if macd_out != None:
-                if "climb" in macd_out:
-                    export_dict['MACD'] = "Climb"
-                elif "decline" in macd_out:
-                    export_dict['MACD'] = "Decline"
-            if new_high != None:
-                export_dict['20Day high'] = True
-            if bollinger_band_out != None:
-                print("bollinger")
-            new_row = pd.Series(export_dict)
-            self.exportdf = pd.concat([self.exportdf, new_row.to_frame().T], ignore_index=True)
             #################################################################### discord embed ###############################
             
             if rs >= 100:
@@ -296,12 +287,30 @@ class MarketScreener:
             mbd.add_field(name="vwap", value=str(vwap)+"mNOK")
             mbd.add_field(name="Volume sma20", value=str(volumeChange)+"%")
             mbd.add_field(name="RS", value=rs.round(2))
+            if pivotPoint != None:
+                export_dict['PivotPoint'] = True
+                mbd.add_field(name="Pivot point breached", value=pivotPoint)
+            if macd_out != None:
+                if "climb" in macd_out:
+                    export_dict['MACD'] = "Climb"
+                    mbd.add_field(name="MACD", value=macd_out)
+                elif "decline" in macd_out:
+                    export_dict['MACD'] = "Decline"
+                    mbd.add_field(name="MACD", value=macd_out)
+            if new_high != None:
+                export_dict['20Day high'] = True
+                mbd.add_field(name="New High", value=new_high)
+            if bollinger_band_out != None:
+                print("bollinger")
+                mbd.add_field(name="Bollinger Band", value=bollinger_band_out)
             mbd.set_footer(text=market)
             try:
                 self.result['result'].append({"stock":stock,"market": market, "embed": [mbd,mbd2], "image": [img,img_investtech], "image investtech": img_investtech, "trend": trend})
             except Exception as e:
                 print(e)
                 self.result['result'].append({"stock":stock,"market": market, "embed": [mbd], "image": [img], "trend": trend})
+            new_row = pd.Series(export_dict)
+            self.exportdf = pd.concat([self.exportdf, new_row.to_frame().T], ignore_index=True)
             # await self.rabbit.disconnect()
 
 
