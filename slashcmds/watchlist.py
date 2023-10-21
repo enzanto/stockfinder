@@ -85,6 +85,29 @@ class Watchlist(app_commands.Group):
         except:
             await interaction.response.send_message("Item not in list, or you have no list", ephemeral=True, delete_after=60)
     
+    # @app_commands.command()
+    # async def report(self, interaction: discord.Interaction):
+    #     await interaction.response.send_message("Building Report", ephemeral=True, delete_after=60)
+    #     map = get_ticker_map()
+    #     data = get_watchlist()
+    #     user = next(item for item in data['users'] if item['userid'] == interaction.user.id)
+    #     userlist = user['tickers']
+    #     userlist.sort()
+    #     watchlist = []
+    #     for i in userlist:
+    #         ticker = next(item for item in map['stocks'] if item['ticker'].lower() == i.lower())
+    #         watchlist.append(ticker)
+    #     embeds,embed_images = report_simple(watchlist)
+    #     print(len(embeds))
+    #     await interaction.edit_original_response(content="report in DM")
+    #     length = 6
+    #     for i in range(0, len(embeds), length):
+    #         x=i
+    #         print(i,x)
+    #         emb = embeds[x:x+length]
+    #         im = embed_images[x:x+length]
+    #         await interaction.user.send(embeds=emb, files=im)
+
     @app_commands.command()
     async def report(self, interaction: discord.Interaction):
         await interaction.response.send_message("Building Report", ephemeral=True, delete_after=60)
@@ -97,43 +120,30 @@ class Watchlist(app_commands.Group):
         for i in userlist:
             ticker = next(item for item in map['stocks'] if item['ticker'].lower() == i.lower())
             watchlist.append(ticker)
-        embeds,embed_images = report_simple(watchlist)
-        print(len(embeds))
-        await interaction.edit_original_response(content="report in DM")
-        length = 6
-        for i in range(0, len(embeds), length):
-            x=i
-            print(i,x)
-            emb = embeds[x:x+length]
-            im = embed_images[x:x+length]
-            await interaction.user.send(embeds=emb, files=im)
-
-    @app_commands.command()
-    async def fullreport(self, interaction: discord.Interaction):
-        await interaction.response.send_message("Building Report", ephemeral=True, delete_after=60)
-        map = get_ticker_map()
-        data = get_watchlist()
-        user = next(item for item in data['users'] if item['userid'] == interaction.user.id)
-        userlist = user['tickers']
-        userlist.sort()
-        watchlist = []
-        # time.sleep(10)
-        for i in userlist:
-            ticker = next(item for item in map['stocks'] if item['ticker'].lower() == i.lower())
-            watchlist.append(ticker)
-        # watchlist = watchlist.sort()
-        embeds,embed_images = report_full(watchlist)
-        # print(embeds)
-        # print(watchlist)
+        embeds,images,embeds2,images2 = await report_full(watchlist)
+        print("got the stuff")
         print("length: " ,len(embeds))
         await interaction.edit_original_response(content="report in DM")
         length = 6
-        for i in range(0, len(embeds), length):
+        for i in range(0, len(embeds2), length):
             x=i
             print(i,x)
-            emb = embeds[x:x+length]
-            im = embed_images[x:x+length]
-            await interaction.user.send(embeds=emb, files=im)
+            emb = embeds2[x:x+length]
+            im = images2[x:x+length]
+            await interaction.user.send(embeds=emb, files=im, silent=True)
+        if len(embeds) > 0:
+            for i in range(0, len(embeds), length):
+                x=i
+                print(i,x)
+                emb = embeds[x:x+length]
+                im = images[x:x+length]
+                await interaction.user.send(embeds=emb, files=im, silent=True)
+        # for i in range(0, len(embeds), length):
+        #     x=i
+        #     print(i,x)
+        #     emb = embeds[x:x+length]
+        #     im = embed_images[x:x+length]
+        #     await interaction.user.send(embeds=emb, files=im)
 
 
 async def setup(bot):
