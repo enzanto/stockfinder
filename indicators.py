@@ -190,5 +190,5 @@ def pivot_point(df):
             dates.append(lastDate)
         df["Pivot"][i]=lastPivot
             
-    if df['High'].iloc[-1] > df['Pivot'].iloc[-1] and df['High'].iloc[-2] < df['Pivot'].iloc[-2]:
+    if df['High'].iloc[-1] > df['Pivot'].iloc[-1] and df['Adj Close'].iloc[-2] < df['Pivot'].iloc[-2]:
         return  lastPivot
