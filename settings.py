@@ -2,9 +2,28 @@ import os,pathlib
 import logging
 from logging.config import dictConfig
 import discord
+from sqlalchemy import create_engine
 
 discord_token=os.environ['discord_token']
 GUILD_ID = discord.Object(id=int(os.environ['GUILD_ID']))
+try:#database
+    DBUSER = os.environ['DBUSER']
+    print("DBUSER ENV ok")
+    DBPASSWORD = os.environ['DBPASSWORD']
+    print("DBPASSWORD ENV ok")
+    DBADDRESS = os.environ['DBADDRESS']
+    print('DBADDRESS ENV OK')
+    DBNAME = os.environ['DBNAME']
+    try:
+        DBPORT = os.environ['DBPORT']
+        print('DBPORT ENV ok')
+    except:
+        DBPORT = 5432
+        print('DBPORT set to standard 5432')
+    engine = create_engine('postgresql+psycopg2://'+DBUSER+':'+DBPASSWORD+'@'+DBADDRESS+':'+DBPORT+'/'+DBNAME)
+except KeyError as err:
+    print("DB variables not present, using sqlite local db")
+    engine = create_engine('sqlite:///data/TEST_DB.db')
 
 BASE_DIR = pathlib.Path(__file__).parent
 
