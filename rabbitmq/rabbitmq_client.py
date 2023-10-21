@@ -21,10 +21,14 @@ class rabbitmq(object):
         self.data = None
         self.futures: MutableMapping[str, asyncio.Future] = {}
         self.loop = asyncio.get_running_loop()
-        self.rpc_queue = uuid.uuid4()
+        self.rpc_queue = str(uuid.uuid4())
+        print(self.rpc_queue)
 
     async def connect(self):
-        self.connection = await aio_pika.connect_robust("amqp://pod:pod@rabbit-cluster.default/", loop=self.loop)
+        try:
+            self.connection = await aio_pika.connect_robust("amqp://pod:pod@rabbit-cluster.default/", loop=self.loop)
+        except:
+            self.connection = await aio_pika.connect_robust("amqp://pod:pod@192.168.1.204:31597/", loop=self.loop)
         self.channel = await self.connection.channel()
         self.callback_queue = await self.channel.declare_queue(name=self.rpc_queue,exclusive=True)
         await self.callback_queue.consume(self.on_response, no_ack=True)
@@ -36,10 +40,15 @@ class rabbitmq(object):
         await self.connection.close()
         self.futures.clear()
         try:
-            await self.callback_queue.delete()
+            # await self.callback_queue.delete()
+            await asyncio.wait_for(self.callback_queue.delete(), timeout=3)
+        except asyncio.TimeoutError:
+            print("Timeout occurred while deleting the queue")
         except aio_pika.exceptions.ChannelNotFoundEntity:
             pass
-
+        except Exception as e:
+            print(e)
+        print("done closing")
     async def on_response(self, message: AbstractIncomingMessage) -> None:
         if message.correlation_id is None:
             print(f"Bad message {message!r}")
