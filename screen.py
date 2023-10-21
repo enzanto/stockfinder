@@ -22,7 +22,6 @@ import json
 import time
 import settings
 
-logger = settings.logging.getLogger("discord")
 # setup
 try: #discord
     discord_token = os.environ['discord_token']
@@ -60,7 +59,8 @@ except KeyError as err:
 
 if discord_chk:
     intents = discord.Intents.default()
-    client = commands.Bot(command_prefix="!", intents=intents)
+    bot = discord.Client(intents=intents)
+    channel_id = 1161668764341907556
 today = dt.date.today()
 today = str(today)
 
@@ -120,7 +120,6 @@ class MarketScreener:
             }
             response = requests.request("POST", url, data=payload, headers=headers)
             response=response.text
-            print(response)
             osebx_df = pd.read_csv(StringIO(response), header=3, index_col=False, dayfirst=True, sep=";").set_index("Date")
             osebx_df.index = pd.to_datetime(osebx_df.index, dayfirst=True)
             osebx_df = osebx_df.sort_index()
@@ -189,19 +188,37 @@ class MarketScreener:
         apdict = mpf.make_addplot(df['SMA_50'])
         mpf.plot(df,**kwargs,style='yahoo',addplot=apdict, alines=dict(alines=pivotlines), savefig=filename)
 
-    async def database(self):
+    async def database(self, engine=engine):
         self.get_osebx_tickers()
         self.get_osebx_rsi()
         update_tasks = []
         for i in self.stocklist.index:
             stock = str(self.stocklist["Symbol"][i])
-            update_tasks.append(asyncio.create_task(db_updater(stock, engine, rabbit=self.rabbit)))
+            update_tasks.append(asyncio.create_task(db_updater(stock, engine, rabbit=self.rabbit,logger=logger)))
         try:
-            result = await asyncio.shield(asyncio.wait_for(asyncio.gather(*update_tasks), timeout=180))
+            result = await asyncio.shield(asyncio.wait_for(asyncio.gather(*update_tasks), timeout=300))
         except asyncio.TimeoutError:
             print("timed out of gather")
             cancel = 0
             for task in update_tasks:
+                if not task.done():
+                    cancel += 1
+                    task.cancel()
+            print(f"{cancel} tasks canceled")
+            return
+        for task_result in result:
+            if isinstance(task_result, Exception):
+                print(f"An exception occurred in one of the tasks: {task_result}")
+        # start investtech gather here?
+
+    async def fullscan(self):
+        tasks = [self.scan(i) for i in self.stocklist.index]
+        try:
+            result = await asyncio.shield(asyncio.wait_for(asyncio.gather(*tasks), timeout=3600))
+        except asyncio.TimeoutError:
+            print("timed out of gather")
+            cancel = 0
+            for task in tasks:
                 if not task.done():
                     task.cancel()
                     cancel += 1
@@ -210,25 +227,34 @@ class MarketScreener:
         for task_result in result:
             if isinstance(task_result, Exception):
                 print(f"An exception occurred in one of the tasks: {task_result}")
-        # start investtech gather here?
+        
+
 
     async def scan(self, i):
             x = i
             notfound=True
-            stock = self.stocklist["Symbol"][i]
-            market = self.stocklist["Market"][i]
-            stockname = self.stocklist["Name"][i]
+            watchlist = False
+            # get from stocklist when doing full scan
+            try:
+                stock = self.stocklist["Symbol"][i]
+                market = self.stocklist["Market"][i]
+                stockname = self.stocklist["Name"][i]
+            except: #if called from watchlist
+                stock = i['ticker']
+                market = "placeholder"
+                stockname = i['name']
+                watchlist = True
             stock_db = "ticker_" + stock.lower().replace(".","_")
             filename = stock.lower().replace(".","_")+".jpg"
             filename_investtech = stock.lower().replace(".","_")+"-investtech.png"
             df = pd.read_sql(stock_db,engine, index_col="Date", parse_dates={"Date": {"format": "%d/%m/%y"}})
-            if len(df) < 200:
-                logger.info(f"Under 200 days of data on {stockname}, skipping")
+            if len(df) < 200 and watchlist == False:
+                logger.warn(f"Under 200 days of data on {stockname}, skipping")
                 return
             df['Volume_SMA_20'] = round(df['Volume'].rolling(window=20).mean(),2)
             ap = (df['High'].iloc[-1] + df['Low'].iloc[-1] + df['Close'].iloc[-1])/3
             vwap = round((ap * df['Volume'].iloc[-1])/1000000,2)
-            if vwap < 1:
+            if vwap < 1 and watchlist == False:
                 logger.info(f"Too low volume on {stockname}, skipping")
                 return
             volumeChange = round(((df['Volume'].iloc[-1] / df['Volume_SMA_20'].iloc[-1]))*100,2)
@@ -247,7 +273,7 @@ class MarketScreener:
                 mapped_ticker = None
                 self.missing.append(x)
                 logger.warn(f"{stockname}, {stock}, not in tickermap!")
-
+            # await asyncio.sleep(5)
             self.create_chart(stock=stock, df=df)
             df['RSI'] = ta.momentum.rsi(df["Close"], window=6)
             rs = (df['RSI'].iloc[-1] / self.indexRSI) * 100
@@ -299,9 +325,8 @@ class MarketScreener:
                     mbd.add_field(name="MACD", value=macd_out)
             if new_high != None:
                 export_dict['20Day high'] = True
-                mbd.add_field(name="New High", value=new_high)
+                mbd.add_field(name="20-Day High", value=new_high)
             if bollinger_band_out != None:
-                print("bollinger")
                 mbd.add_field(name="Bollinger Band", value=bollinger_band_out)
             mbd.set_footer(text=market)
             try:
@@ -317,24 +342,54 @@ class MarketScreener:
 #main is striclty used as local debugging. As this file is called by other files
 async def main():
     testing = MarketScreener()
-
-    embeds = []
-    images = []
-    minervini = []
-    tasks = []
+    await testing.rabbit.connect()
     await testing.database() 
-    for i in testing.stocklist.index:
-        tasks.append(asyncio.create_task(testing.scan(i)))
-    await asyncio.gather(*tasks)
-    for i in testing.result['result']:
-        print(i)
-        if i['trend'] >=7:
-            embeds.append(i['embed'])
-            images.append(i['image'])
-            minervini.append(i['stock'])
-    print(embeds, images, minervini)
-    await asyncio.sleep(30)
+    await testing.fullscan()
+    global finished_result
+    finished_result = sorted(testing.result['result'], key=lambda x: x['stock'])
+    #connect here and send
+    await bot.start(discord_token)
+    await testing.rabbit.disconnect()
+    print("ALL DONE GOING TO BED")
     # testing.create_chart(stock="eqnr.ol")
 
+@bot.event
+async def on_ready():
+    global finished_result
+    channel = bot.get_channel(channel_id)
+    logger.info("Bot is ready")
+    embeds = []
+    embeds2 = []
+    images = []
+    images2 = []
+    for i in finished_result:
+        if i['trend'] >= 7 and "image investtech" in i:
+            embeds2.extend(i['embed'])
+            images2.extend(i['image'])
+        elif i['trend'] >= 7 and "image investtech" not in i:
+            embeds.append(i['embed'])
+            images.append(i['image'])
+    logger.info(embeds)
+    length=6
+    for i in range(0, len(embeds2), length):
+        x=i
+        emb = embeds2[x:x+length]
+        im = images2[x:x+length]
+        await channel.send(embeds=emb, files=im, silent=True)
+    if len(embeds) > 0:
+        for i in range(0, len(embeds), length):
+            x=i
+            emb = embeds[x:x+length]
+            im = images[x:x+length]
+            await channel.send(embeds=emb, files=im, silent=True)
+    logger.info("done sending")
+    await asyncio.sleep(30)
+    await bot.close()
 if __name__ == "__main__":
+    logger = settings.logging.getLogger("bot")
+    logger.info("test")
+    time.sleep(25)
     asyncio.run(main())
+else:
+
+    logger = settings.logging.getLogger("discord")
