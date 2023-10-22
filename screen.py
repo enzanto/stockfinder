@@ -3,7 +3,7 @@ import rabbitmq.rabbitmq_client as rabbitmq
 import asyncio
 from sqlalchemy import create_engine
 from localdb import db_updater
-from indicators import macd,new_20day_high,bollinger_band,trend_template,pivot_point
+from indicators import macd,new_20day_high,bollinger_band,trend_template,pivot_point,trailing_stop
 # from investech_scrape import get_img,get_text
 import numpy as np
 import datetime as dt
@@ -22,6 +22,7 @@ import json
 import time
 import settings
 
+logger = settings.logging.getLogger("discord")
 # setup
 try: #discord
     discord_token = os.environ['discord_token']
@@ -29,7 +30,7 @@ try: #discord
     discord_chk=True
 except:
     print("Discord URL not provided, will only print resluls")
-    discord=False
+    discord_chk=False
 try:#google sheet
     gc = gspread.service_account("/usr/src/app/credentials.json")
     sh = gc.open('oslobors')
@@ -244,6 +245,7 @@ class MarketScreener:
                 market = "placeholder"
                 stockname = i['name']
                 watchlist = True
+            logger.info(f"watchlist set to {watchlist}")
             stock_db = "ticker_" + stock.lower().replace(".","_")
             filename = stock.lower().replace(".","_")+".jpg"
             filename_investtech = stock.lower().replace(".","_")+"-investtech.png"
@@ -281,6 +283,7 @@ class MarketScreener:
             new_high = new_20day_high(df)
             bollinger_band_out = bollinger_band(df)
             pivotPoint = pivot_point(df)
+            trailing = trailing_stop(df)
             export_dict = {'Stock': '=hyperlink(\"https://finance.yahoo.com/chart/'+stock+'\",\"'+stockname+'\")', 'Ticker': stock, 'Adj Close' : df["Adj Close"].iloc[-1].round(2), 'Change': str(priceChange)+"%", 'Closing range': closingRange, \
                         'vwap': vwap, 'Volume vs sma20': str(volumeChange)+"%", 'RS': rs.round(2), 'Market': market, 'Yahoo': "https://finance.yahoo.com/chart/"+stock, \
                         'PivotPoint': False, 'MACD': False, '20Day high': False, 'Minervini': trend}
@@ -328,6 +331,9 @@ class MarketScreener:
                 mbd.add_field(name="20-Day High", value=new_high)
             if bollinger_band_out != None:
                 mbd.add_field(name="Bollinger Band", value=bollinger_band_out)
+            if trailing != None:
+                export_dict['Trailing'] = True
+                mbd.add_field(name="Trailing stop", value=trailing)
             mbd.set_footer(text=market)
             try:
                 self.result['result'].append({"stock":stock,"market": market, "embed": [mbd,mbd2], "image": [img,img_investtech], "image investtech": img_investtech, "trend": trend})
@@ -348,48 +354,45 @@ async def main():
     global finished_result
     finished_result = sorted(testing.result['result'], key=lambda x: x['stock'])
     #connect here and send
+    # testing.create_chart(stock="eqnr.ol")
+
+    @bot.event
+    async def on_ready():
+        global finished_result
+        channel = bot.get_channel(channel_id)
+        logger.info("Bot is ready")
+        embeds = []
+        embeds2 = []
+        images = []
+        images2 = []
+        for i in finished_result:
+            if i['trend'] >= 7 and "image investtech" in i:
+                embeds2.extend(i['embed'])
+                images2.extend(i['image'])
+            elif i['trend'] >= 7 and "image investtech" not in i:
+                embeds.append(i['embed'])
+                images.append(i['image'])
+        logger.info(embeds)
+        length=6
+        for i in range(0, len(embeds2), length):
+            x=i
+            emb = embeds2[x:x+length]
+            im = images2[x:x+length]
+            await channel.send(embeds=emb, files=im, silent=True)
+        if len(embeds) > 0:
+            for i in range(0, len(embeds), length):
+                x=i
+                emb = embeds[x:x+length]
+                im = images[x:x+length]
+                await channel.send(embeds=emb, files=im, silent=True)
+        logger.info("done sending")
+        await asyncio.sleep(30)
+        await bot.close()
     await bot.start(discord_token)
     await testing.rabbit.disconnect()
     print("ALL DONE GOING TO BED")
-    # testing.create_chart(stock="eqnr.ol")
-
-@bot.event
-async def on_ready():
-    global finished_result
-    channel = bot.get_channel(channel_id)
-    logger.info("Bot is ready")
-    embeds = []
-    embeds2 = []
-    images = []
-    images2 = []
-    for i in finished_result:
-        if i['trend'] >= 7 and "image investtech" in i:
-            embeds2.extend(i['embed'])
-            images2.extend(i['image'])
-        elif i['trend'] >= 7 and "image investtech" not in i:
-            embeds.append(i['embed'])
-            images.append(i['image'])
-    logger.info(embeds)
-    length=6
-    for i in range(0, len(embeds2), length):
-        x=i
-        emb = embeds2[x:x+length]
-        im = images2[x:x+length]
-        await channel.send(embeds=emb, files=im, silent=True)
-    if len(embeds) > 0:
-        for i in range(0, len(embeds), length):
-            x=i
-            emb = embeds[x:x+length]
-            im = images[x:x+length]
-            await channel.send(embeds=emb, files=im, silent=True)
-    logger.info("done sending")
-    await asyncio.sleep(30)
-    await bot.close()
 if __name__ == "__main__":
     logger = settings.logging.getLogger("bot")
     logger.info("test")
     time.sleep(25)
     asyncio.run(main())
-else:
-
-    logger = settings.logging.getLogger("discord")

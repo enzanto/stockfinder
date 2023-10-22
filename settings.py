@@ -4,8 +4,11 @@ from logging.config import dictConfig
 import discord
 from sqlalchemy import create_engine
 
-discord_token=os.environ['discord_token']
-GUILD_ID = discord.Object(id=int(os.environ['GUILD_ID']))
+try:
+    discord_token=os.environ['discord_token']
+    GUILD_ID = discord.Object(id=int(os.environ['GUILD_ID']))
+except KeyError:
+    print("discord not set up")
 try:#database
     DBUSER = os.environ['DBUSER']
     print("DBUSER ENV ok")

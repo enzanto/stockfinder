@@ -192,3 +192,47 @@ def pivot_point(df):
             
     if df['High'].iloc[-1] > df['Pivot'].iloc[-1] and df['Adj Close'].iloc[-2] < df['Pivot'].iloc[-2]:
         return  lastPivot
+
+def trailing_stop(df):
+    if len(df) < 50:
+        return
+    pd.set_option('mode.chained_assignment', None)
+    df.ta.atr(length=14, append=True)
+    df.dropna()
+    atr_multiplier = 3
+    df['stop'] = None
+    df['trend'] = 'Uptrend'
+    if "Adj Close" in df.columns:
+        df['stop'].iloc[0] = df['Adj Close'].iloc[0] - atr_multiplier * df['ATRr_14'].iloc[0]
+    else:
+        df['stop'].iloc[0] = df['Close'].iloc[0] - atr_multiplier * df['ATRr_14'].iloc[0]
+    
+    for i in range(1, len(df)):
+        if "Adj Close" in df.columns:
+            current_price = df['Adj Close'].iloc[i]
+        else:
+            current_price = df['Close'].iloc[i]
+        previous_stop = df['stop'].iloc[i-1]
+        atr = df['ATRr_14'].iloc[i]
+        current_trend = df["trend"].iloc[i-1]
+
+        if current_price < previous_stop and current_trend == "Uptrend":
+            df['trend'].iloc[i] = 'Downtrend'
+            df['stop'].iloc[i] = current_price + atr_multiplier * atr
+            continue
+        elif current_price > previous_stop and current_trend == "Downtrend":
+            df['trend'].iloc[i] = 'Uptrend'
+            df['stop'].iloc[i] = current_price - atr_multiplier * atr
+            continue
+        else:
+            df['trend'].iloc[i] = df['trend'].iloc[i-1]
+        
+        if df['trend'].iloc[i] == 'Uptrend':
+            df['stop'].iloc[i] = max(current_price - atr_multiplier * atr, previous_stop)
+        if df['trend'].iloc[i] == 'Downtrend':
+            df['stop'].iloc[i] = min(current_price + atr_multiplier * atr, previous_stop)
+            
+    df.dropna()
+    if df['trend'].iloc[-1] != df['trend'].iloc[-2]:
+        trend = df['trend'].iloc[-1]
+        return f"Broke trailing stop. Now in: {trend}"
