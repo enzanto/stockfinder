@@ -26,17 +26,14 @@ class CronJobs(commands.Cog):
         self.bot = bot
         logger.info("Ready")
         self.scheduler = AsyncIOScheduler()
-        self.func.start()
-        self.scheduler.add_job(self.run_func, trigger="cron", day_of_week="0-4", hour="16", minute="45")
+        self.scheduler.add_job(self.func, trigger="cron", day_of_week="0-4", hour="16", minute="45")
 
         # starting the scheduler
         self.scheduler.start()
 
 
 
-    @tasks.loop(time=time_of_day) 
     async def func(self):
-        channel = self.bot.get_channel(CHANNEL_ID)
         result = MarketScreener()
         await result.rabbit.connect() #awaited
         await result.database(engine=settings.engine)#awaited
