@@ -7,6 +7,7 @@ import time
 # from investech_scrape import get_img,get_text
 from reports import *
 
+logger = settings.logging.getLogger("discord")
 def get_ticker_map():
     with open('data/map.json', 'r') as mapfile:
         data=json.load(mapfile)
@@ -148,4 +149,4 @@ class Watchlist(app_commands.Group):
 
 async def setup(bot):
     bot.tree.add_command(Watchlist(name="watchlist", description="Says hello"), guild=settings.GUILD_ID)
-    # print("setup")
+    print("watchlist added")
