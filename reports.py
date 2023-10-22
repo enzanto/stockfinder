@@ -50,10 +50,10 @@ async def report_full(tickers):
     images2 = []
     finished_result = sorted(screener.result['result'], key=lambda x: x['stock'])
     for i in finished_result:
-        if i['trend'] >= 7 and "image investtech" in i:
+        if "image investtech" in i:
             embeds2.extend(i['embed'])
             images2.extend(i['image'])
-        elif i['trend'] >= 7 and "image investtech" not in i:
+        elif "image investtech" not in i:
             embeds.append(i['embed'])
             images.append(i['image'])
     await screener.rabbit.disconnect()

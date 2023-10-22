@@ -46,7 +46,7 @@ def run():
         """ Answers with pong"""
         await ctx.send("pong")
 
-    bot.run(settings.discord_token, root_logger=True)
+    bot.run(settings.discord_token) #removed root_logger=true
     
 if __name__ == "__main__":
     run()
