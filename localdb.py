@@ -38,10 +38,13 @@ async def db_updater(symbol, engine=engine, start=start_date, rabbit=None,logger
                 new_data = await rabbit.get_yahoo(symbol, start=start)
                 new_data.index.name = "Date"
                 new_data.to_sql(tableName, engine, if_exists='replace')
+                return
             elif str(e) == f"{symbol} already at newest data":
                 print(e)
+                return
             else:
                 print(e)
+                return
         
     except Exception as e:
         print(symbol,e)
@@ -53,6 +56,7 @@ async def db_updater(symbol, engine=engine, start=start_date, rabbit=None,logger
         except Exception as e:
             print(e)
             print("No data on " + symbol)
+            return
     # await rabbit.disconnect()
 
 def get_table(symbol, engine=engine):

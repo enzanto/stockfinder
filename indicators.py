@@ -193,7 +193,7 @@ def pivot_point(df):
     if df['High'].iloc[-1] > df['Pivot'].iloc[-1] and df['Adj Close'].iloc[-2] < df['Pivot'].iloc[-2]:
         return  lastPivot
 
-def trailing_stop(df):
+def trailing_stop(df, return_df = False):
     if len(df) < 50:
         return
     pd.set_option('mode.chained_assignment', None)
@@ -233,6 +233,8 @@ def trailing_stop(df):
             df['stop'].iloc[i] = min(current_price + atr_multiplier * atr, previous_stop)
             
     df.dropna()
-    if df['trend'].iloc[-1] != df['trend'].iloc[-2]:
+    if return_df:
+        return df
+    elif df['trend'].iloc[-1] != df['trend'].iloc[-2]:
         trend = df['trend'].iloc[-1]
         return f"Broke trailing stop. Now in: {trend}"

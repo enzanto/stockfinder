@@ -197,7 +197,7 @@ class MarketScreener:
             stock = str(self.stocklist["Symbol"][i])
             update_tasks.append(asyncio.create_task(db_updater(stock, engine, rabbit=self.rabbit,logger=logger)))
         try:
-            result = await asyncio.shield(asyncio.wait_for(asyncio.gather(*update_tasks), timeout=300))
+            result = await asyncio.shield(asyncio.wait_for(asyncio.gather(*update_tasks), timeout=600))
         except asyncio.TimeoutError:
             print("timed out of gather")
             cancel = 0
@@ -245,13 +245,12 @@ class MarketScreener:
                 market = "placeholder"
                 stockname = i['name']
                 watchlist = True
-            logger.info(f"watchlist set to {watchlist}")
             stock_db = "ticker_" + stock.lower().replace(".","_")
             filename = stock.lower().replace(".","_")+".jpg"
             filename_investtech = stock.lower().replace(".","_")+"-investtech.png"
             df = pd.read_sql(stock_db,engine, index_col="Date", parse_dates={"Date": {"format": "%d/%m/%y"}})
             if len(df) < 200 and watchlist == False:
-                logger.warn(f"Under 200 days of data on {stockname}, skipping")
+                logger.warning(f"Under 200 days of data on {stockname}, skipping")
                 return
             df['Volume_SMA_20'] = round(df['Volume'].rolling(window=20).mean(),2)
             ap = (df['High'].iloc[-1] + df['Low'].iloc[-1] + df['Close'].iloc[-1])/3
@@ -274,7 +273,8 @@ class MarketScreener:
             if notfound:
                 mapped_ticker = None
                 self.missing.append(x)
-                logger.warn(f"{stockname}, {stock}, not in tickermap!")
+                logger.warning(f"{stockname}, {stock}, not in tickermap!")
+                return
             # await asyncio.sleep(5)
             self.create_chart(stock=stock, df=df)
             df['RSI'] = ta.momentum.rsi(df["Close"], window=6)
@@ -353,8 +353,6 @@ async def main():
     await testing.fullscan()
     global finished_result
     finished_result = sorted(testing.result['result'], key=lambda x: x['stock'])
-    #connect here and send
-    # testing.create_chart(stock="eqnr.ol")
 
     @bot.event
     async def on_ready():
@@ -388,11 +386,11 @@ async def main():
         logger.info("done sending")
         await asyncio.sleep(30)
         await bot.close()
+
     await bot.start(discord_token)
     await testing.rabbit.disconnect()
     print("ALL DONE GOING TO BED")
 if __name__ == "__main__":
     logger = settings.logging.getLogger("bot")
     logger.info("test")
-    time.sleep(25)
     asyncio.run(main())
