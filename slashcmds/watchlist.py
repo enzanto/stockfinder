@@ -4,87 +4,107 @@ import json
 from discord import app_commands
 import settings
 import time
+import localdb
 # from investech_scrape import get_img,get_text
 from reports import *
+tickermapdb = localdb.tickermap()
+userdatadb = localdb.userdata()
 
 logger = settings.logging.getLogger("discord")
-def get_ticker_map():
-    with open('data/map.json', 'r') as mapfile:
-        data=json.load(mapfile)
-        return data
-def get_watchlist():
-    with open('data/watchlist.json', 'r') as watchfile:
-        data=json.load(watchfile)
-    return data
-def update_watchlist(data):
-    json_object = json.dumps(data, indent=4)
-    with open('data/watchlist.json', 'w') as outfile:
-        outfile.write(json_object)
+# def get_ticker_map():
+#     with open('data/map.json', 'r') as mapfile:
+#         data=json.load(mapfile)
+#         return data
+# def get_watchlist():
+#     with open('data/watchlist.json', 'r') as watchfile:
+#         data=json.load(watchfile)
+#     return data
+# def update_watchlist(data):
+#     json_object = json.dumps(data, indent=4)
+#     with open('data/watchlist.json', 'w') as outfile:
+#         outfile.write(json_object)
 class Watchlist(app_commands.Group):
     @app_commands.command()
     async def add(self,interaction: discord.Interaction, text: str):
-        map = get_ticker_map()
         inputs = text.split()
         discorduser = interaction.user
         discordusername = discorduser.name
-        data = get_watchlist()
-        datalist = data['users']
+        try:
+            userdata = userdatadb.get_portfolio_data(discorduser.id) 
+            watchlist = userdata['watchlist']
+            present = True
+        except:
+            present = False
         if discorduser.nick != None:
             discordusername = discorduser.nick
         result = []
         for i in inputs:
-            ticker = next(item for item in map['stocks'] if item['ticker'].lower() == i.lower() or item['ticker'].lower() == i.lower()+".ol")
+            try:
+                ticker = tickermapdb.get_map_data(ticker)
+                if ticker == None:
+                    raise Exception(f"{ticker} not found in tickermap. trying .ol extension")
+            except Exception as e:
+                print(e)
+                ticker = tickermapdb.get_map_data(ticker+".ol")
+            if ticker == None:
+                logger.warning(f"{ticker} not in tickermap")
+                return
             result.append(ticker['ticker'])
-        try:
-            user = next(item for item in data['users'] if item['userid'] == discorduser.id)
+        if present == True:
             for i in result:
-                if i not in user['tickers']:
-                    user['tickers'].append(i)
+                if i not in watchlist:
+                    watchlist.append(i)
                 else:
-                    print("already present")
-        except:
+                    print(f"{i} already present")
+            userdatadb.insert_portfolio_data(discorduser.id, userdata)
+        elif present == False:
             print("user not found")
-            new_dict = {"username": discorduser.name, "userid": discorduser.id, "tickers": result}
-            datalist.append(new_dict)
-            data['users'] = datalist
-        update_watchlist(data)
+            new_dict = {"userid": discorduser.id, "watchlist": result}
+            userdatadb.insert_portfolio_data(discorduser.id, new_dict)
         await interaction.response.send_message(" ".join(result)+f" added to {discordusername}", ephemeral=True, delete_after=60)
 
     @app_commands.command()
     async def view(self, interaction: discord.Interaction):
-        data = get_watchlist()
+        userdata = userdatadb.get_portfolio_data(interaction.user.id)
         try:
-            userlist = next(item for item in data['users'] if item['userid'] == interaction.user.id)
-            await interaction.response.send_message("found list of "+" ".join(userlist['tickers']), ephemeral=True, delete_after=60)
+            await interaction.response.send_message("found list of "+" ".join(userdata['watchlist']), ephemeral=True, delete_after=60)
         except:
             await interaction.response.send_message("You have no list", ephemeral=True, delete_after=60)
 
     @app_commands.command()
     async def remove(self,interaction: discord.Interaction, text: str):
-        map = get_ticker_map()
         inputs = text.split()
         discorduser = interaction.user
         discordusername = discorduser.name
-        data = get_watchlist()
+        userdata = userdatadb.get_portfolio_data(discorduser.id)
+        if userdata == None:
+            await interaction.response.send_message("You have no list", ephemeral=True, silent=True, delete_after=60)
+            return
         if discorduser.nick != None:
             discordusername = discorduser.nick
         
         
         result = []
         for i in inputs:
-            ticker = next(item for item in map['stocks'] if item['ticker'].lower() == i.lower() or item['ticker'].lower() == i.lower()+".ol")
+            try:
+                ticker = tickermapdb.get_map_data(ticker)
+                if ticker == None:
+                    raise Exception(f"{ticker} not found in tickermap. trying .ol extension")
+            except Exception as e:
+                print(e)
+                ticker = tickermapdb.get_map_data(ticker+".ol")
+            if ticker == None:
+                logger.warning(f"{ticker} not in tickermap")
+                return
             result.append(ticker['ticker'])
-        try:
-            user = next(item for item in data['users'] if item['userid'] == discorduser.id)
-            for i in result:
-                if i in user['tickers']:
-                    user['tickers'].remove(i)
-                else:
-                    print("not in list")
-            update_watchlist(data)
-            await interaction.response.send_message(" ".join(result)+f" removed from {discordusername}", ephemeral=True, delete_after=60)
-        except:
-            await interaction.response.send_message("Item not in list, or you have no list", ephemeral=True, delete_after=60)
+
+        for i in result:
+            if i in userdata['watchlist']:
+                userdata['watchlist'].remove(i)
+            else:
+                logger.info(f"{i} not in list")
+        userdatadb.insert_portfolio_data(userdata)
+        await interaction.response.send_message(" ".join(result)+f" removed from {discordusername}", ephemeral=True, delete_after=60)
     
     # @app_commands.command()
     # async def report(self, interaction: discord.Interaction):
@@ -112,16 +132,12 @@ class Watchlist(app_commands.Group):
     @app_commands.command()
     async def report(self, interaction: discord.Interaction):
         await interaction.response.send_message("Building Report", ephemeral=True, delete_after=60)
-        map = get_ticker_map()
-        data = get_watchlist()
-        user = next(item for item in data['users'] if item['userid'] == interaction.user.id)
-        userlist = user['tickers']
+        userdata = userdatadb.get_portfolio_data(interaction.user.id) 
+        if userdata == None:
+            await interaction.response.send_message("No watchlist found", ephemeral=True, delete_after=60)
+        userlist = userdata['watchlist']
         userlist.sort()
-        watchlist = []
-        for i in userlist:
-            ticker = next(item for item in map['stocks'] if item['ticker'].lower() == i.lower())
-            watchlist.append(ticker)
-        embeds,images,embeds2,images2 = await report_full(watchlist)
+        embeds,images,embeds2,images2 = await report_full(userlist)
         print("got the stuff")
         print("length: " ,len(embeds))
         await interaction.edit_original_response(content="report in DM")

@@ -79,15 +79,15 @@ class tickermap:
         Session = sessionmaker(bind=engine)
         self.session=Session()
     def insert_map_data(self,ticker, json_data):
-        record = self.session.query(self.jsonMap).filter_by(ticker=ticker).first()
+        record = self.session.query(self.jsonMap).filter_by(ticker=ticker.lower()).first()
         if record:
             record.json_data = json_data
         else:
-            new_record = self.jsonMap(ticker=ticker, json_data=json_data)
+            new_record = self.jsonMap(ticker=ticker.lower(), json_data=json_data)
             self.session.add(new_record)
         self.session.commit()
     def get_map_data(self,ticker):
-        record = self.session.query(self.jsonMap).filter_by(ticker=ticker).first()
+        record = self.session.query(self.jsonMap).filter_by(ticker=ticker.lower()).first()
         if record:
             return record.json_data
         else:
@@ -103,6 +103,10 @@ class userdata:
         Session = sessionmaker(bind=engine)
         self.session=Session()
     def insert_portfolio_data(self,userid, json_data):
+        required_keys = ['userid', 'portfolio','watchlist']
+        for key in required_keys:
+            if key not in json_data:
+                json_data[key] = None
         record = self.session.query(self.userdata).filter_by(userid=userid).first()
         if record:
             record.json_data = json_data
@@ -111,7 +115,7 @@ class userdata:
             self.session.add(new_record)
         self.session.commit()
     def get_portfolio_data(self,userid):
-        record = self.session.query(self.userdate).filter_by(userid=userid).first()
+        record = self.session.query(self.userdata).filter_by(userid=userid).first()
         if record:
             return record.json_data
         else:
