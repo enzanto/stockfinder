@@ -41,10 +41,10 @@ LOGGING_CONFIG = {
     "disabled_existing_loggers": False,
     "formatters": {
         "verbose":{
-            "format": "%(levelname)-10s - %(asctime)s - %(name)-15s : %(message)s"
+            "format": "%(levelname)-10s - %(asctime)s [%(filename)-10s - %(lineno)-4s - %(funcName)-10s ] %(name)-15s: %(message)s"
         },
         "standard":{
-            "format": "%(levelname)-10s - %(name)-15s : %(message)s"
+            "format": "%(levelname)-10s [%(filename)-10s - %(lineno)-4s - %(funcName)-10s ] %(name)-15s: %(message)s"
         }
     },
     "handlers":{
