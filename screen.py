@@ -2,7 +2,7 @@ import pandas as pd
 import rabbitmq.rabbitmq_client as rabbitmq
 import asyncio
 from sqlalchemy import create_engine
-from localdb import db_updater
+from localdb import db_updater,tickermap
 from indicators import macd,new_20day_high,bollinger_band,trend_template,pivot_point,trailing_stop
 # from investech_scrape import get_img,get_text
 import numpy as np
@@ -67,9 +67,10 @@ today = str(today)
 
 class MarketScreener:
     def __init__(self):
-        with open('data/map.json','r') as mapfile:
-            data = json.load(mapfile)
-            self.tickermap = data['stocks']
+        # with open('data/map.json','r') as mapfile:
+        #     data = json.load(mapfile)
+        #     self.tickermap = data['stocks']
+        self.tickermapdb = tickermap()
         self.result = {"result": [], "metadata": {"time": None}}
         self.indexRSI = 0
         self.stocklist = pd.DataFrame(columns = ['Name', 'Symbol', 'Market'])
@@ -266,10 +267,13 @@ class MarketScreener:
                 closingRange = round(((df['Close'].iloc[-1]-df['Low'].iloc[-1])/(df['High'].iloc[-1]-df["Low"].iloc[-1]))*100,2)
             trend = trend_template(df)
             #################3 part 2
-            for tickers in self.tickermap:
-                if stock.lower() == tickers['ticker']:
-                    mapped_ticker = tickers
-                    notfound=False
+            # for tickers in self.tickermap:
+            #     if stock.lower() == tickers['ticker']:
+            #         mapped_ticker = tickers
+            #         notfound=False
+            mapped_ticker = self.tickermapdb.get_map_data(stock)
+            if mapped_ticker == None:
+                notfound = True
             if notfound:
                 mapped_ticker = None
                 self.missing.append(x)
