@@ -1,13 +1,16 @@
 import pandas as pd
 import asyncio
 import rabbitmq.rabbitmq_client as rabbitmq_client
-from sqlalchemy import create_engine
+from sqlalchemy import create_engine, Column, Integer, JSON, BigInteger, String
+from sqlalchemy.orm import sessionmaker,declarative_base
 import yfinance as yf
 from datetime import date, timedelta, datetime
 import settings
+import json
 logger2 = settings.logging.getLogger("discord")
 
-engine = create_engine('sqlite:///data/TEST_DB.db')
+Base = declarative_base()
+engine = settings.engine
 start_date = date.today() - timedelta(days= 365*3)
 async def db_updater(symbol, engine=engine, start=start_date, rabbit=None,logger=logger2):
     tableName = "ticker_" + symbol.lower().replace(".","_")
@@ -63,6 +66,56 @@ def get_table(symbol, engine=engine):
     tableName = "ticker_" + symbol.lower().replace(".","_")
     df = pd.read_sql(tableName,engine, index_col="Date")
     return df
+
+# set and get tickermapclass jsonMap(Base):
+class tickermap:
+    class jsonMap(Base):
+        __tablename__ = 'tickermap'
+        ticker = Column(String, primary_key=True)
+        json_data = Column(JSON)
+
+    def __init__(self):
+        Base.metadata.create_all(engine)
+        Session = sessionmaker(bind=engine)
+        self.session=Session()
+    def insert_map_data(self,ticker, json_data):
+        record = self.session.query(self.jsonMap).filter_by(ticker=ticker).first()
+        if record:
+            record.json_data = json_data
+        else:
+            new_record = self.jsonMap(ticker=ticker, json_data=json_data)
+            self.session.add(new_record)
+        self.session.commit()
+    def get_map_data(self,ticker):
+        record = self.session.query(self.jsonMap).filter_by(ticker=ticker).first()
+        if record:
+            return record.json_data
+        else:
+            return None
+class userdata:
+    class userdata(Base):
+        __tablename__ = 'userdata'
+        userid = Column(BigInteger, primary_key=True)
+        json_data = Column(JSON)
+
+    def __init__(self):
+        Base.metadata.create_all(engine)
+        Session = sessionmaker(bind=engine)
+        self.session=Session()
+    def insert_portfolio_data(self,userid, json_data):
+        record = self.session.query(self.userdata).filter_by(userid=userid).first()
+        if record:
+            record.json_data = json_data
+        else:
+            new_record = self.userdata(userid=userid, json_data=json_data)
+            self.session.add(new_record)
+        self.session.commit()
+    def get_portfolio_data(self,userid):
+        record = self.session.query(self.userdate).filter_by(userid=userid).first()
+        if record:
+            return record.json_data
+        else:
+            return None
 # for testing
 if __name__ == "__main__":
     loop = asyncio.get_event_loop()
