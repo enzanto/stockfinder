@@ -15,15 +15,15 @@ logger = settings.logging.getLogger("discord")
 #     with open('data/map.json', 'r') as mapfile:
 #         data=json.load(mapfile)
 #         return data
-# def get_watchlist():
-#     with open('data/watchlist.json', 'r') as watchfile:
+# def get_portfolio():
+#     with open('data/portfolio.json', 'r') as watchfile:
 #         data=json.load(watchfile)
 #     return data
-# def update_watchlist(data):
+# def update_portfolio(data):
 #     json_object = json.dumps(data, indent=4)
-#     with open('data/watchlist.json', 'w') as outfile:
+#     with open('data/portfolio.json', 'w') as outfile:
 #         outfile.write(json_object)
-class Watchlist(app_commands.Group):
+class Portfolio(app_commands.Group):
     @app_commands.command()
     async def add(self,interaction: discord.Interaction, text: str):
         inputs = text.split()
@@ -31,7 +31,7 @@ class Watchlist(app_commands.Group):
         discordusername = discorduser.name
         try:
             userdata = userdatadb.get_portfolio_data(discorduser.id) 
-            watchlist = userdata['watchlist']
+            portfolio = userdata['portfolio']
             present = True
         except:
             present = False
@@ -52,14 +52,14 @@ class Watchlist(app_commands.Group):
             result.append(ticker['ticker'])
         if present == True:
             for i in result:
-                if i not in watchlist:
-                    watchlist.append(i)
+                if i not in portfolio:
+                    portfolio.append(i)
                 else:
                     print(f"{i} already present")
             userdatadb.insert_portfolio_data(discorduser.id, userdata)
         elif present == False:
             print("user not found")
-            new_dict = {"userid": discorduser.id, "watchlist": result}
+            new_dict = {"userid": discorduser.id, "portfolio": result}
             userdatadb.insert_portfolio_data(discorduser.id, new_dict)
         await interaction.response.send_message(" ".join(result)+f" added to {discordusername}", ephemeral=True, delete_after=60)
 
@@ -67,7 +67,7 @@ class Watchlist(app_commands.Group):
     async def view(self, interaction: discord.Interaction):
         userdata = userdatadb.get_portfolio_data(interaction.user.id)
         try:
-            await interaction.response.send_message("found list of "+" ".join(userdata['watchlist']), ephemeral=True, delete_after=60)
+            await interaction.response.send_message("found list of "+" ".join(userdata['portfolio']), ephemeral=True, delete_after=60)
         except:
             await interaction.response.send_message("You have no list", ephemeral=True, delete_after=60)
 
@@ -99,8 +99,8 @@ class Watchlist(app_commands.Group):
             result.append(ticker['ticker'])
 
         for i in result:
-            if i in userdata['watchlist']:
-                userdata['watchlist'].remove(i)
+            if i in userdata['portfolio']:
+                userdata['portfolio'].remove(i)
             else:
                 logger.info(f"{i} not in list")
         userdatadb.insert_portfolio_data(userid=discorduser.id, json_data=userdata)
@@ -110,15 +110,15 @@ class Watchlist(app_commands.Group):
     # async def report(self, interaction: discord.Interaction):
     #     await interaction.response.send_message("Building Report", ephemeral=True, delete_after=60)
     #     map = get_ticker_map()
-    #     data = get_watchlist()
+    #     data = get_portfolio()
     #     user = next(item for item in data['users'] if item['userid'] == interaction.user.id)
     #     userlist = user['tickers']
     #     userlist.sort()
-    #     watchlist = []
+    #     portfolio = []
     #     for i in userlist:
     #         ticker = next(item for item in map['stocks'] if item['ticker'].lower() == i.lower())
-    #         watchlist.append(ticker)
-    #     embeds,embed_images = report_simple(watchlist)
+    #         portfolio.append(ticker)
+    #     embeds,embed_images = report_simple(portfolio)
     #     print(len(embeds))
     #     await interaction.edit_original_response(content="report in DM")
     #     length = 6
@@ -134,8 +134,8 @@ class Watchlist(app_commands.Group):
         await interaction.response.send_message("Building Report", ephemeral=True, delete_after=60)
         userdata = userdatadb.get_portfolio_data(interaction.user.id) 
         if userdata == None:
-            await interaction.response.send_message("No watchlist found", ephemeral=True, delete_after=60)
-        userlist = userdata['watchlist']
+            await interaction.response.send_message("No portfolio found", ephemeral=True, delete_after=60)
+        userlist = userdata['portfolio']
         userlist.sort()
         embeds,images,embeds2,images2 = await report_db(userlist)
         print("got the stuff")
@@ -164,5 +164,5 @@ class Watchlist(app_commands.Group):
 
 
 async def setup(bot):
-    bot.tree.add_command(Watchlist(name="watchlist", description="Access watchlist"), guild=settings.GUILD_ID)
-    print("watchlist added")
+    bot.tree.add_command(Portfolio(name="portfolio", description="Access portfolio"), guild=settings.GUILD_ID)
+    print("portfolio added")
