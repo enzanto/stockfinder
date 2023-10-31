@@ -25,6 +25,7 @@ def run():
     async def on_ready():
         logger.info(f"user: {bot.user} (userID: {bot.user.id})")
         logger.info(f"Guild: {bot.guilds[0]} (guild ID: {bot.guilds[0].id})")
+        logger.info(settings.engine)
         
         for cog_file in settings.COGS_DIR.glob("*.py"):
             if cog_file.name != "__init__.py":

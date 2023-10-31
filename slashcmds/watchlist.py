@@ -87,14 +87,14 @@ class Watchlist(app_commands.Group):
         result = []
         for i in inputs:
             try:
-                ticker = tickermapdb.get_map_data(ticker)
+                ticker = tickermapdb.get_map_data(i)
                 if ticker == None:
-                    raise Exception(f"{ticker} not found in tickermap. trying .ol extension")
+                    raise Exception(f"{i} not found in tickermap. trying .ol extension")
             except Exception as e:
                 print(e)
-                ticker = tickermapdb.get_map_data(ticker+".ol")
+                ticker = tickermapdb.get_map_data(i+".ol")
             if ticker == None:
-                logger.warning(f"{ticker} not in tickermap")
+                logger.warning(f"{i} not in tickermap")
                 return
             result.append(ticker['ticker'])
 
@@ -165,4 +165,4 @@ class Watchlist(app_commands.Group):
 
 async def setup(bot):
     bot.tree.add_command(Watchlist(name="watchlist", description="Says hello"), guild=settings.GUILD_ID)
-    print("watchlist added")
+    logger.info("watchlist added")
