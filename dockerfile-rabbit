@@ -1,0 +1,29 @@
+from debian
+
+run apt update \
+    && apt upgrade -y \
+    && apt install openvpn -y \
+    && apt install ufw -y \
+    && apt install python3-pip -y \
+    && mkdir /var/app 
+# for testing
+run apt install curl -y \
+    && apt install iputils-ping -y \
+    && apt install dnsutils -y
+#setup ufw
+run ufw allow out 5672 \
+    && ufw default deny outgoing \
+    && ufw default deny incoming \
+    && ufw allow out 1194/udp \
+    && ufw allow out 53/udp \
+    && ufw allow out 5432/tcp \
+    && ufw allow out on tun0 
+run echo "net.ipv6.conf.all.disable_ipv6=1\nnet.ipv6.conf.default.disable_ipv6=1\nnet.ipv6.conf.lo.disable_ipv6=1" >> /etc/sysctl.conf
+workdir /var/app
+copy requirements.txt requirements.txt
+RUN rm -f /usr/lib/python3.11/EXTERNALLY-MANAGED
+run pip install -r requirements.txt
+copy . .
+run chmod +x start.sh
+ENV TZ='Europe/Oslo'
+cmd /var/app/start.sh
