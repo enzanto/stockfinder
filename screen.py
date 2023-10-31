@@ -399,7 +399,7 @@ async def main():
     db_tasks = []
     for ticker in ticker_dict_list:
         ticker['rsi'] = testing.indexRSI
-        db_tasks.append(asyncio.create_task(testing.rabbit.build_report(ticker)))
+        db_tasks.append(asyncio.create_task(testing.rabbit.build_report(ticker, testing.indexRSI)))
     try:
         result = await asyncio.shield(asyncio.wait_for(asyncio.gather(*db_tasks), timeout=600))
     except asyncio.TimeoutError:
