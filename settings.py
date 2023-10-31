@@ -3,6 +3,7 @@ import logging
 from logging.config import dictConfig
 import discord
 from sqlalchemy import create_engine
+import pytz
 
 try:
     discord_token=os.environ['discord_token']
@@ -27,6 +28,11 @@ try:#database
 except KeyError as err:
     print("DB variables not present, using sqlite local db")
     engine = create_engine('sqlite:///data/TEST_DB.db')
+
+try:
+    tz = pytz.timezone(os.environ['TZ'])
+except KeyError:
+    tz = pytz.timezone('Europe/Oslo')
 
 BASE_DIR = pathlib.Path(__file__).parent
 
