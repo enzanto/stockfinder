@@ -40,14 +40,14 @@ class Watchlist(app_commands.Group):
         result = []
         for i in inputs:
             try:
-                ticker = tickermapdb.get_map_data(ticker)
+                ticker = tickermapdb.get_map_data(i)
                 if ticker == None:
-                    raise Exception(f"{ticker} not found in tickermap. trying .ol extension")
+                    raise Exception(f"{i} not found in tickermap. trying .ol extension")
             except Exception as e:
                 print(e)
-                ticker = tickermapdb.get_map_data(ticker+".ol")
+                ticker = tickermapdb.get_map_data(i+".ol")
             if ticker == None:
-                logger.warning(f"{ticker} not in tickermap")
+                logger.warning(f"{i} not in tickermap")
                 return
             result.append(ticker['ticker'])
         if present == True:
@@ -103,7 +103,7 @@ class Watchlist(app_commands.Group):
                 userdata['watchlist'].remove(i)
             else:
                 logger.info(f"{i} not in list")
-        userdatadb.insert_portfolio_data(userdata)
+        userdatadb.insert_portfolio_data(userid=discorduser.id, json_data=userdata)
         await interaction.response.send_message(" ".join(result)+f" removed from {discordusername}", ephemeral=True, delete_after=60)
     
     # @app_commands.command()
