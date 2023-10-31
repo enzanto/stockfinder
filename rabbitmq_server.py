@@ -1,7 +1,8 @@
 # imports neded for async connection
+import io
 import yfinance as yf
 import pandas
-from datetime import datetime,timedelta
+from datetime import datetime,timedelta,date
 import base64
 from bs4 import BeautifulSoup
 import re
@@ -11,14 +12,17 @@ import logging
 import requests
 from requests.adapters import HTTPAdapter
 from urllib3.util.retry import Retry
-from datetime import datetime, timedelta
 from aio_pika import Message, connect
 from aio_pika.abc import AbstractIncomingMessage
 import time
 import os
+import localdb, screen, settings
+logger = settings.logging.getLogger("bot")
 
-
-hostname = os.environ['HOSTNAME']
+try:
+    hostname = os.environ['HOSTNAME']
+except KeyError:
+    hostname = "No hostname found"
 
 #simple class object to fetch information from nordnet, with cookie and headers.
 class webscrape_nordnet(object):
@@ -35,7 +39,6 @@ class webscrape_nordnet(object):
     def get_cookie(self, url):
         self.session.get(url)
         self.cookie = self.session.cookies.get_dict()
-        print(self.cookie)
         cookie_csrf = self.cookie['_csrf']
         cookie_next = self.cookie['NEXT']
         headers = {
@@ -90,7 +93,6 @@ class webscrape_investtech(object):
     def get_cookie(self, url):
         self.session.get(url)
         self.cookie = self.session.cookies.get_dict()
-        print(self.cookie)
         cookie_sid = self.cookie['sid']
         headers = {
                 "cookie": f"sid={cookie_sid}",
@@ -122,10 +124,9 @@ class webscrape_investtech(object):
             await rabbit_logger(f"{ticker['ticker']} failed to get header and body")
             header=None
             body=None
-        # print(body)
         return header,body
 
-    async def get_image(self, ticker):
+    async def get_image(self, ticker, b64=True):
         await asyncio.sleep(0.5)
         if self.cookie == "" or self.cookie_time + timedelta(hours=12) > datetime.now():
             self.get_cookie("https://www.investtech.com")
@@ -138,8 +139,10 @@ class webscrape_investtech(object):
         except Exception as e:
             await rabbit_logger(f"{ticker['ticker']} failed to get image")
             imageb64=None
-        return imageb64
-
+        if b64:
+            return imageb64
+        else:
+            return response.content
 
 async def get_yahoo_data(ticker, start):
     if start == None:
@@ -170,7 +173,11 @@ class rabbitcon(object):
         self.exchange_log = None
 
     async def connect(self):
-        self.connection = await connect("amqp://pod:pod@rabbit-cluster.default/")
+        try:
+            self.connection = await connect("amqp://pod:pod@rabbit-cluster.default/")
+        except:
+            self.connection = await connect("amqp://pod:pod@192.168.1.204:31394/?heartbeat=900")
+
         self.channel = await self.connection.channel()
         await self.channel.set_qos(prefetch_count=1)
         self.exchange = self.channel.default_exchange
@@ -184,7 +191,7 @@ async def rabbit_logger(log):
 
 async def main(conn) -> None:
 # 
-# In the main loop i look for a Json string which contains two main keys: order and request
+# In the main loop i look for a Json string which contains two main keys: orget_yahoo_datader and request
 # example:  {'order': 'get logo', 'request': 'the json to work on'}
 # I could have multiple queues running. But for now i just want to do one task and move on to the next.
 #
@@ -199,9 +206,11 @@ async def main(conn) -> None:
     print(" [x] Awaiting RPC requests")
     scrape_nordnet = webscrape_nordnet()
     scrape_investtech = webscrape_investtech()
+    update_report = localdb.scanReport()
     async with conn.queue.iterator() as qiterator:
         message: AbstractIncomingMessage
         async for message in qiterator:
+            print("test")
             try:
                 async with message.process(requeue=False):
                     assert message.reply_to is not None
@@ -216,7 +225,27 @@ async def main(conn) -> None:
                         response = json.dumps(response_dict)
                     elif n['order'] == "yahoo":
                         response = await asyncio.wait_for(get_yahoo_data(n['request'], n['start']),timeout=10)
+                    elif n['order'] == "build report":
+                        ticker=n['request']['ticker']
+                        logger.info(f"starting {ticker}")
+                        await localdb.db_updater(ticker,serverside=True)
+                        screener = screen.MarketScreener()
+                        if n['rsi'] == None:
+                            screener.get_osebx_rsi()
+                        else:
+                            screener.indexRSI = n['rsi']
+                        json_result, image= await screener.scan(n['request'], return_text=True)
+                        header,body = await asyncio.wait_for(scrape_investtech.get_text(n['request']), timeout=20)
+                        investtech_image = await asyncio.wait_for(scrape_investtech.get_image(n['request'], b64=False), timeout=20)
+                        json_result['header'] = header
+                        json_result['body'] = body
+                        #get json from screen
+                        
+                        response = json.dumps({'ticker': ticker, 'status': 'complete'})
+                        #have function here to add data to database
+                        update_report.insert_report_data(ticker,json_result, image, investtech_image)
                     else:
+                        await message.reject(requeue=True)
                         continue
                     await conn.exchange.publish(
                         Message(
@@ -227,11 +256,29 @@ async def main(conn) -> None:
                     )
                     print("Request complete")
             except asyncio.TimeoutError:
-                await message.reject()
+                await message.reject(requeue=True)
                 print("Message was timed out and requeued")
             except Exception:
                 logging.exception("Processing error for message %r", message)
 
+async def test():
+    tickermap = {"test": {"innertest": "innervalue"},"name": "EQUINOR", "ticker": "eqnr.ol", "investech": "https://www.investtech.com/no/market.php?CompanyID=100820", "investechID": "100820", "nordnet": "https://www.nordnet.no/market/stocks/16105420-equinor", "sektor": "energi", "bransje": "olje & gass - integrert", "icon": "https://images.ctfassets.net/6xe8ehctp75g/1g0ykLy6DuEW29ZDoCgtKF/e200733fbeb962a1fa24bea48acab31c/image.png", "nordnetID": "16105420", "nordnetName": "EQUINOR"}
+    scrape_investtech = webscrape_investtech()
+    header,body = await asyncio.wait_for(scrape_investtech.get_text(tickermap), timeout=10)
+    investtech_image = await asyncio.wait_for(scrape_investtech.get_image(tickermap, b64=False), timeout=10)
+    screener = screen.MarketScreener()
+    screener.get_osebx_rsi()
+    json_result, image= await screener.scan(tickermap, return_text=True)
+    savereport = localdb.saveReport()
+    # savereport.insert_report_data(ticker=tickermap['ticker'], json_data=json_result, image=image, investtech_img=investtech_image)
+    dbDate, dbJson, dbInvesttech, dbimg = savereport.get_report_data(ticker=tickermap['ticker'])
+    print(dbDate)
+    imagefile = io.BytesIO(dbInvesttech)
+    imagefile.seek(0)
+    with open("testfile.png", 'wb') as file:
+        file.write(imagefile.getvalue())
+
 if __name__ == "__main__":
     conn = rabbitcon()
     asyncio.run(main(conn))
+    # asyncio.run(test())

@@ -1,21 +1,23 @@
 import pandas as pd
 import asyncio
-import rabbitmq.rabbitmq_client as rabbitmq_client
-from sqlalchemy import create_engine, Column, Integer, JSON, BigInteger, String
+import rabbitmq_client as rabbitmq_client
+from sqlalchemy import create_engine, Column, Integer, JSON, BigInteger, String, DateTime, LargeBinary
 from sqlalchemy.orm import sessionmaker,declarative_base
+from sqlalchemy.types import TypeDecorator
 import yfinance as yf
 from datetime import date, timedelta, datetime
 import settings
 import json
 logger2 = settings.logging.getLogger("discord")
+tz = settings.tz
 
 Base = declarative_base()
 engine = settings.engine
 start_date = date.today() - timedelta(days= 365*3)
-async def db_updater(symbol, engine=engine, start=start_date, rabbit=None,logger=logger2):
+async def db_updater(symbol, engine=engine, start=start_date, rabbit=None, serverside=False,logger=logger2):
     tableName = "ticker_" + symbol.lower().replace(".","_")
     logger.info(f"Updating table for {symbol}")
-    if rabbit == None:
+    if rabbit == None and serverside == False:
         rabbit = rabbitmq_client.rabbitmq()
         await rabbit.connect()
     try:
@@ -24,7 +26,10 @@ async def db_updater(symbol, engine=engine, start=start_date, rabbit=None,logger
         last_volume = pd.read_sql(f'SELECT * FROM {tableName} WHERE "Date"=(SELECT max("Date") FROM {tableName})',engine)
         last_volume = last_volume['Volume'][0]
         try:
-            new_data = await rabbit.get_yahoo(symbol, max_date)
+            if serverside == True:
+                new_data = yf.download(symbol, max_date)
+            else:
+                new_data = await rabbit.get_yahoo(symbol, max_date)
             logger.info(f"max date {max_date} for {symbol}")
             new_volume = new_data['Volume'].iloc[0]
             new_data.index.name = "Date"
@@ -38,7 +43,10 @@ async def db_updater(symbol, engine=engine, start=start_date, rabbit=None,logger
         except Exception as e:
             if str(e)== f"Todays volume is not equal, updating {symbol}":
                 print(e)
-                new_data = await rabbit.get_yahoo(symbol, start=start)
+                if serverside == True:
+                    new_data = yf.download(symbol, max_date)
+                else:
+                    new_data = await rabbit.get_yahoo(symbol, max_date)
                 new_data.index.name = "Date"
                 new_data.to_sql(tableName, engine, if_exists='replace')
                 return
@@ -52,7 +60,10 @@ async def db_updater(symbol, engine=engine, start=start_date, rabbit=None,logger
     except Exception as e:
         print(symbol,e)
         try:
-            new_data = await rabbit.get_yahoo(symbol, start=start)
+            if serverside == True:
+                new_data = yf.download(symbol, max_date)
+            else:
+                new_data = await rabbit.get_yahoo(symbol, max_date)
             new_data.index.name = "Date"
             new_data.to_sql(tableName, engine)
             print(f'New table created for {tableName} with {str(len(new_data))} rows')
@@ -66,8 +77,7 @@ def get_table(symbol, engine=engine):
     tableName = "ticker_" + symbol.lower().replace(".","_")
     df = pd.read_sql(tableName,engine, index_col="Date")
     return df
-
-# set and get tickermapclass jsonMap(Base):
+# set and get tickermap
 class tickermap:
     class jsonMap(Base):
         __tablename__ = 'tickermap'
@@ -87,7 +97,7 @@ class tickermap:
             self.session.add(new_record)
         self.session.commit()
     def get_map_data(self,ticker):
-        record = self.session.query(self.jsonMap).filter_by(ticker=ticker.lower()).first()
+        record = self.session.query(self.jsonMap).filter_by(ticker=ticker).first()
         if record:
             return record.json_data
         else:
@@ -120,6 +130,39 @@ class userdata:
             return record.json_data
         else:
             return None
+class AwareDateTime(TypeDecorator):
+    impl = DateTime(timezone=True)
+class scanReport:
+    class report(Base):
+        __tablename__ = 'report_test2'
+        ticker = Column(String, primary_key=True)
+        date_col = Column(DateTime, AwareDateTime(timezone=True), name="date")
+        json_data = Column(JSON)
+        investtech = Column(LargeBinary)
+        pivots = Column(LargeBinary)
+
+    def __init__(self):
+        Base.metadata.create_all(engine)
+        Session = sessionmaker(bind=engine)
+        self.session=Session()
+
+    def insert_report_data(self,ticker, json_data, image, investtech_img = None):
+        record = self.session.query(self.report).filter_by(ticker=ticker).first()
+        if record:
+            record.json_data = json_data
+            record.date_col = datetime.now(tz)
+            record.investtech = investtech_img
+            record.pivots = image
+        else:
+            new_record = self.report(ticker=ticker, json_data=json_data, date_col=datetime.now(tz), investtech=investtech_img, pivots=image)
+            self.session.add(new_record)
+        self.session.commit()
+    def get_report_data(self, ticker):
+        record = self.session.query(self.report).filter_by(ticker=ticker).first()
+        if record:
+            return record.date_col, record.json_data, record.investtech, record.pivots
+        else:
+            return None, None, None, None
 # for testing
 if __name__ == "__main__":
     loop = asyncio.get_event_loop()

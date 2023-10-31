@@ -5,6 +5,8 @@ import uuid
 import aio_pika
 import json
 from typing import MutableMapping
+# import screen
+# from localdb import db_updater,tickermap,scanReport,userdata
 from aio_pika.abc import (
     AbstractChannel, AbstractConnection, AbstractIncomingMessage, AbstractQueue,
 )
@@ -26,9 +28,9 @@ class rabbitmq(object):
 
     async def connect(self):
         try:
-            self.connection = await aio_pika.connect_robust("amqp://pod:pod@rabbit-cluster.default/", loop=self.loop)
+            self.connection = await aio_pika.connect_robust("amqp://pod:pod@rabbit-cluster.default/?heartbeat=900", loop=self.loop)
         except:
-            self.connection = await aio_pika.connect_robust("amqp://pod:pod@192.168.1.204:31597/", loop=self.loop)
+            self.connection = await aio_pika.connect_robust("amqp://pod:pod@192.168.1.204:31394/?heartbeat=900", loop=self.loop)
         self.channel = await self.connection.channel()
         self.callback_queue = await self.channel.declare_queue(name=self.rpc_queue,exclusive=True)
         await self.callback_queue.consume(self.on_response, no_ack=True)
@@ -72,11 +74,6 @@ class rabbitmq(object):
         print(f"Sent RPC request: {i}")
         print(int(await future))
 
-    def read_json(self):
-        with open('map.json', 'r') as mapfile:
-            data=json.load(mapfile)
-            self.data = data
-            self.dictlist = data['stocks']
 
     async def send_json(self, i):
         try:
@@ -87,7 +84,7 @@ class rabbitmq(object):
             json_object = json.dumps(order, indent=4)
             await self.channel.default_exchange.publish(
                 aio_pika.Message(
-                    body=json_object.encode()   ,
+                    body=json_object.encode(),
                     content_type="text/plain",
                     correlation_id=correlation_id,
                     reply_to=self.callback_queue.name
@@ -95,6 +92,7 @@ class rabbitmq(object):
                 routing_key="rpc_queue"
             )
             json_return = json.loads(await future)
+            print(json_return)
             for d in self.data['stocks']:
                 if d['ticker'] == json_return['ticker']:
                     if 'icon' in json_return:
@@ -116,7 +114,7 @@ class rabbitmq(object):
             json_object = json.dumps(order, indent=4)
             await self.channel.default_exchange.publish(
                 aio_pika.Message(
-                    body=json_object.encode()   ,
+                    body=json_object.encode(),
                     content_type="text/plain",
                     correlation_id=correlation_id,
                     reply_to=self.callback_queue.name
@@ -135,6 +133,29 @@ class rabbitmq(object):
         except asyncio.CancelledError:
             print(f"task {i} was cancelled: {i['ticker']}")
             raise
+    
+    async def build_report(self,request_dict, rsi = None):
+        try:
+            correlation_id = str(uuid.uuid4())
+            future = self.loop.create_future()
+            self.futures[correlation_id] = future
+            order = {'order': 'build report', 'request': request_dict, 'rsi': rsi}
+            json_object = json.dumps(order, indent=4)
+            await self.channel.default_exchange.publish(
+                aio_pika.Message(
+                    body=json_object.encode(),
+                    content_type="text/plain",
+                    correlation_id=correlation_id,
+                    reply_to=self.callback_queue.name
+                ),
+                routing_key="rpc_queue"
+            )
+            json_return = json.loads(await future)
+            print(json_return)
+            return json_return 
+        except asyncio.CancelledError:
+            print(f"task was cancelled: {request_dict}")
+            raise
 
 
     async def get_yahoo(self, i, start=None):
@@ -150,7 +171,7 @@ class rabbitmq(object):
             json_object = json.dumps(order, indent=4)
             await self.channel.default_exchange.publish(
                 aio_pika.Message(
-                    body=json_object.encode()   ,
+                    body=json_object.encode(),
                     content_type="text/plain",
                     correlation_id=correlation_id,
                     reply_to=self.callback_queue.name
@@ -160,6 +181,7 @@ class rabbitmq(object):
             json_return = json.loads(await future)
             df = pd.DataFrame.from_dict(json_return)
             df.index = pd.to_datetime(df.index)
+            print(df.head())
             return df
         except asyncio.CancelledError:
             print(f"task was cancelled: {ticker}")
@@ -173,24 +195,9 @@ class rabbitmq(object):
         #     except Exception as e:
         #         print(e)
 
-
+# main is used for testing new features during development
 async def main():
-    work = await rabbitmq().connect()
-    work.read_json()
-    tasks = []
-    for i in work.dictlist[100:102]:
-        tasks.append(asyncio.create_task(work.get_yahoo(i)))
-    try:
-        await asyncio.wait_for(asyncio.gather(*tasks), timeout=90)
-    except asyncio.TimeoutError:
-        print("timed out")
-        for task in tasks:
-            if not task.done():
-                task.cancel()
-
-    json_dump = json.dumps(work.data, indent=4)
-    with open('output.json', 'w') as json_file:
-        json_file.write(json_dump)
+    print("not in use at the moment")
 if __name__ == "__main__":
     loop = asyncio.get_event_loop()
     loop.run_until_complete(main())

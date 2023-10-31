@@ -1,8 +1,9 @@
 import pandas as pd
-import rabbitmq.rabbitmq_client as rabbitmq
+import rabbitmq_client as rabbitmq
 import asyncio
 from sqlalchemy import create_engine
-from localdb import db_updater,tickermap
+# from localdb import db_updater,tickermap,scanReport
+import localdb
 from indicators import macd,new_20day_high,bollinger_band,trend_template,pivot_point,trailing_stop
 # from investech_scrape import get_img,get_text
 import numpy as np
@@ -21,7 +22,7 @@ from gspread_dataframe import set_with_dataframe
 import json
 import time
 import settings
-
+import io
 logger = settings.logging.getLogger("discord")
 # setup
 try: #discord
@@ -70,11 +71,12 @@ class MarketScreener:
         # with open('data/map.json','r') as mapfile:
         #     data = json.load(mapfile)
         #     self.tickermap = data['stocks']
-        self.tickermapdb = tickermap()
+        self.tickermapdb = localdb.tickermap()
         self.result = {"result": [], "metadata": {"time": None}}
-        self.indexRSI = 0
+        self.indexRSI = None
         self.stocklist = pd.DataFrame(columns = ['Name', 'Symbol', 'Market'])
         self.exportdf = pd.DataFrame(columns = ['Stock', 'Ticker', 'Adj Close', 'Change', 'Closing range', 'vwap', 'Volume vs sma20', 'RS', 'Market', 'Yahoo'])
+        self.json_response = None
         self.missing = []
         self.rabbit = rabbitmq.rabbitmq()
         self.loop = asyncio.get_event_loop()
@@ -132,7 +134,7 @@ class MarketScreener:
             self.indexRSI = 50
 
 
-    def create_chart(self,stock=None, df=pd.DataFrame()):
+    def create_chart(self,stock=None, df=pd.DataFrame(), save=True):
         today = dt.datetime.now()
         start = today - dt.timedelta(days=365)
         filename = "images/" + stock.lower().replace(".","_")+".jpg"
@@ -188,7 +190,13 @@ class MarketScreener:
                     hline_type.append("red")
         kwargs = dict(type='candle',volume=True,figratio=(16,8),figscale=1.8, tight_layout=True,hlines=dict(hlines=hlines, linestyle='dotted',colors=hline_type))
         apdict = mpf.make_addplot(df['SMA_50'])
-        mpf.plot(df,**kwargs,style='yahoo',addplot=apdict, alines=dict(alines=pivotlines), savefig=filename)
+        if save:
+            mpf.plot(df,**kwargs,style='yahoo',addplot=apdict, alines=dict(alines=pivotlines), savefig=filename)
+        else:
+            image_bytes = io.BytesIO()
+            mpf.plot(df,**kwargs,style='yahoo',addplot=apdict, alines=dict(alines=pivotlines), savefig=image_bytes)
+            image_bytes.seek(0)
+            return image_bytes.getvalue()
 
     async def database(self, engine=engine):
         self.get_osebx_tickers()
@@ -196,7 +204,7 @@ class MarketScreener:
         update_tasks = []
         for i in self.stocklist.index:
             stock = str(self.stocklist["Symbol"][i])
-            update_tasks.append(asyncio.create_task(db_updater(stock, engine, rabbit=self.rabbit,logger=logger)))
+            update_tasks.append(asyncio.create_task(localdb.db_updater(stock, engine, rabbit=self.rabbit,logger=logger)))
         try:
             result = await asyncio.shield(asyncio.wait_for(asyncio.gather(*update_tasks), timeout=600))
         except asyncio.TimeoutError:
@@ -232,26 +240,35 @@ class MarketScreener:
         
 
 
-    async def scan(self, i):
+    async def scan(self, i, return_text=False):
             x = i
-            notfound=True
+            notfound=False
             watchlist = False
+            if self.indexRSI == None:
+                self.get_osebx_rsi()
             # get from stocklist when doing full scan
-            try:
-                stock = self.stocklist["Symbol"][i]
-                market = self.stocklist["Market"][i]
-                stockname = self.stocklist["Name"][i]
-            except: #if called from watchlist
-                stock = i['ticker']
-                market = "placeholder"
-                stockname = i['name']
-                watchlist = True
+            if type(i) == int:
+                    stock = self.stocklist["Symbol"][i]
+                    market = self.stocklist["Market"][i]
+                    stockname = self.stocklist["Name"][i]
+
+            else:
+                try:
+                    stock = i["Symbol"]
+                    market = i["Market"]
+                    stockname = i["Name"]
+                except:
+                    stock = i['ticker']
+                    market = "placeholder"
+                    stockname = i['name']
+                    watchlist = True
+                
             stock_db = "ticker_" + stock.lower().replace(".","_")
             filename = stock.lower().replace(".","_")+".jpg"
             filename_investtech = stock.lower().replace(".","_")+"-investtech.png"
             df = pd.read_sql(stock_db,engine, index_col="Date", parse_dates={"Date": {"format": "%d/%m/%y"}})
             if len(df) < 200 and watchlist == False:
-                logger.warning(f"Under 200 days of data on {stockname}, skipping")
+                logger.warning(f"Under 200 days of data on {stock} - {stockname}, skipping")
                 return
             df['Volume_SMA_20'] = round(df['Volume'].rolling(window=20).mean(),2)
             ap = (df['High'].iloc[-1] + df['Low'].iloc[-1] + df['Close'].iloc[-1])/3
@@ -271,7 +288,7 @@ class MarketScreener:
             #     if stock.lower() == tickers['ticker']:
             #         mapped_ticker = tickers
             #         notfound=False
-            mapped_ticker = self.tickermapdb.get_map_data(stock)
+            mapped_ticker = self.tickermapdb.get_map_data(ticker=stock)
             if mapped_ticker == None:
                 notfound = True
             if notfound:
@@ -280,7 +297,10 @@ class MarketScreener:
                 logger.warning(f"{stockname}, {stock}, not in tickermap!")
                 return
             # await asyncio.sleep(5)
-            self.create_chart(stock=stock, df=df)
+            if return_text:
+                image = self.create_chart(stock=stock, df=df, save=False)
+            else:
+                self.create_chart(stock=stock, df=df)
             df['RSI'] = ta.momentum.rsi(df["Close"], window=6)
             rs = (df['RSI'].iloc[-1] / self.indexRSI) * 100
             macd_out = macd(df)
@@ -288,86 +308,128 @@ class MarketScreener:
             bollinger_band_out = bollinger_band(df)
             pivotPoint = pivot_point(df)
             trailing = trailing_stop(df)
-            export_dict = {'Stock': '=hyperlink(\"https://finance.yahoo.com/chart/'+stock+'\",\"'+stockname+'\")', 'Ticker': stock, 'Adj Close' : df["Adj Close"].iloc[-1].round(2), 'Change': str(priceChange)+"%", 'Closing range': closingRange, \
-                        'vwap': vwap, 'Volume vs sma20': str(volumeChange)+"%", 'RS': rs.round(2), 'Market': market, 'Yahoo': "https://finance.yahoo.com/chart/"+stock, \
-                        'PivotPoint': False, 'MACD': False, '20Day high': False, 'Minervini': trend}
-            #################################################################### discord embed ###############################
-            
-            if rs >= 100:
-                color=discord.Color.green()
-            elif rs >= 50:
-                color=discord.Color.orange()
-            else:
-                color=discord.Color.red()
-            if "investechID" in mapped_ticker:
+            if "investechID" in mapped_ticker and return_text == False:
                 header,body= await self.rabbit.get_investtech(mapped_ticker)
             else:
                 header = "header"
                 body = "Body"
-            # header,body = get_text(mapped_ticker)
-            img = discord.File("images/"+filename, filename=filename)
-            mbd=discord.Embed(title=stockname, url="https://finance.yahoo.com/chart/"+stock, description=body,color=color)
-            mbd.set_image(url="attachment://"+filename)
-            try:
-                mbd2=discord.Embed(url="https://finance.yahoo.com/chart/"+stock)
-                img_investtech = discord.File("images/"+filename_investtech, filename=filename_investtech)
-                mbd2.set_image(url="attachment://"+filename_investtech)
-            except Exception as e:
-                print(e)
-            mbd.set_author(name=header, url=mapped_ticker['investech'])
-            mbd.add_field(name="price", value=str(df["Adj Close"].iloc[-1].round(1))+"kr\n"+str(priceChange)+"%")
-            mbd.add_field(name="Closing Range", value=str(closingRange)+"%")
-            mbd.add_field(name="vwap", value=str(vwap)+"mNOK")
-            mbd.add_field(name="Volume sma20", value=str(volumeChange)+"%")
-            mbd.add_field(name="RS", value=rs.round(2))
+            gsheet_dict = {'Stock': '=hyperlink(\"https://finance.yahoo.com/chart/'+stock+'\",\"'+stockname+'\")', 'Ticker': stock, 'Adj Close' : df["Adj Close"].iloc[-1].round(2), 'Change': str(priceChange)+"%", 'Closing range': closingRange, \
+                        'vwap': vwap, 'Volume vs sma20': str(volumeChange)+"%", 'RS': rs.round(2), 'Market': market, 'Yahoo': "https://finance.yahoo.com/chart/"+stock, \
+                        'PivotPoint': False, 'MACD': False, '20Day high': False, 'Minervini': trend}
+            self.json_response = {'ticker': stock, 'name': stockname, 'rs': rs, 'header': header, 'header url': mapped_ticker['nordnet'], 'body': body, 'fields': [ {'title': 'Adj Close', 'field': str(df["Adj Close"].iloc[-1].round(2))+"kr\n"+str(priceChange)+"%"}, {'title': 'Closing Range', 'field': str(closingRange)}, {'title': 'vwap', 'field': str(vwap)},\
+                        {'title': 'Volume SMA20', 'field': str(volumeChange)+'%'}, {'title': 'RS', 'field': str(rs.round(2))}], \
+                        'market': market, 'yahoo': "https://finance.yahoo.com/chart/"+stock, \
+                        'minervini': trend}
+            #################################################################### discord embed ###############################
             if pivotPoint != None:
-                export_dict['PivotPoint'] = True
-                mbd.add_field(name="Pivot point breached", value=pivotPoint)
+                gsheet_dict['PivotPoint'] = True
+                self.json_response['fields'].append({'title': 'pivot point', 'field': pivotPoint})
             if macd_out != None:
                 if "climb" in macd_out:
-                    export_dict['MACD'] = "Climb"
-                    mbd.add_field(name="MACD", value=macd_out)
+                    gsheet_dict['MACD'] = "Climb"
+                    self.json_response['fields'].append({'title': 'macd', 'field': macd_out})
                 elif "decline" in macd_out:
-                    export_dict['MACD'] = "Decline"
-                    mbd.add_field(name="MACD", value=macd_out)
+                    gsheet_dict['MACD'] = "Decline"
+                    self.json_response['fields'].append({'title': 'macd', 'field': macd_out})
             if new_high != None:
-                export_dict['20Day high'] = True
-                mbd.add_field(name="20-Day High", value=new_high)
+                gsheet_dict['20Day high'] = True
+                self.json_response['fields'].append({'title': '20day high', 'field': new_high})
             if bollinger_band_out != None:
-                mbd.add_field(name="Bollinger Band", value=bollinger_band_out)
+                self.json_response['fields'].append({'title': 'bollinger', 'field': bollinger_band_out})
             if trailing != None:
-                export_dict['Trailing'] = True
-                mbd.add_field(name="Trailing stop", value=trailing)
-            mbd.set_footer(text=market)
+                gsheet_dict['Trailing'] = True
+                self.json_response['fields'].append({'title': 'trailing stop', 'field': trailing})
+            new_row = pd.Series(gsheet_dict)
+            self.exportdf = pd.concat([self.exportdf, new_row.to_frame().T], ignore_index=True)
+            if return_text:
+                return self.json_response, image 
+            # await self.rabbit.disconnect()
+    async def create_embeds(self, image, investtech_image=None, json_data=None):
+            # fetch data from 
+            if json_data == None:
+                json_data = self.json_response
+            stock = json_data['ticker']
+            stockname = json_data['name']
+            header = json_data['header']
+            header_url = json_data['header url']
+            body = json_data['body']
+            market = json_data['market']
+            fields = json_data['fields']
+            trend = json_data['minervini']
+            url = json_data['yahoo']
+            rs = json_data['rs']
+            imagename = json_data['ticker'].replace('.','_')
+            imageIO = io.BytesIO(image)
+            color = discord.Color.green() if rs >= 100 else discord.Color.orange() if rs >= 50 else discord.Color.red()
+
+            # header,body = get_text(mapped_ticker)
+            img = discord.File(imageIO, filename=imagename+'.png')
+            mbd=discord.Embed(title=stockname, url=url, description=body,color=color)
+            mbd.set_image(url="attachment://"+imagename+'.png')
+            logger.info("waypoint")
             try:
-                self.result['result'].append({"stock":stock,"market": market, "embed": [mbd,mbd2], "image": [img,img_investtech], "image investtech": img_investtech, "trend": trend})
+                mbd2=discord.Embed(url=url)
+                investtech_imageIO = io.BytesIO(investtech_image)
+                img_investtech = discord.File(investtech_imageIO, filename=imagename+'_investtech.png')
+                mbd2.set_image(url="attachment://"+imagename+'_investtech.png')
             except Exception as e:
                 print(e)
-                self.result['result'].append({"stock":stock,"market": market, "embed": [mbd], "image": [img], "trend": trend})
-            new_row = pd.Series(export_dict)
-            self.exportdf = pd.concat([self.exportdf, new_row.to_frame().T], ignore_index=True)
-            # await self.rabbit.disconnect()
+            mbd.set_author(name=header, url=header_url)
+            for i in fields:
+                mbd.add_field(name=i['title'], value=i['field'])
+            mbd.set_footer(text=market)
+            try:
+                response_dict = {"stock":stock,"market": market, "embed": [mbd,mbd2], "image": [img,img_investtech], "image investtech": img_investtech, "trend": trend}
+            except Exception as e:
+                print(e)
+                response_dict = {"stock":stock,"market": market, "embed": [mbd], "image": [img], "trend": trend}
+            self.result['result'].append(response_dict)
+            # return response_dict
 
 
-#main is striclty used as local debugging. As this file is called by other files
+
+#main is for running a minervini scan as a kubernetes cronjob 
 async def main():
     testing = MarketScreener()
+    testing.get_osebx_tickers()
+    testing.get_osebx_rsi()
+    scanreport = localdb.scanReport()
     await testing.rabbit.connect()
-    await testing.database() 
-    await testing.fullscan()
-    global finished_result
-    finished_result = sorted(testing.result['result'], key=lambda x: x['stock'])
+    ticker_dict_list = testing.stocklist.to_dict(orient='records')
+    db_tasks = []
+    for ticker in ticker_dict_list:
+        ticker['rsi'] = testing.indexRSI
+        db_tasks.append(asyncio.create_task(testing.rabbit.build_report(ticker)))
+    try:
+        result = await asyncio.shield(asyncio.wait_for(asyncio.gather(*db_tasks), timeout=600))
+    except asyncio.TimeoutError:
+        print("timed out of gather")
+        cancel = 0
+        for task in db_tasks:
+            if not task.done():
+                cancel += 1
+                task.cancel()
+        print(f"{cancel} tasks canceled")
+    minervini_above_seven_list = []
+
+    for json_return in result:
+        minervini_result = json_return.get('minervini')
+        if minervini_result is not None and minervini_result >= 7:
+            minervini_above_seven_list.append(json_return['ticker'])
+    for i in minervini_above_seven_list: #get report from db and create embeds
+        reportdate, json_data, investtech, pivots = scanreport.get_report_data(ticker=i)
+        testing.create_embeds(json_data=json_data, image=pivots, investtech_image=investtech)
+
 
     @bot.event
     async def on_ready():
-        global finished_result
         channel = bot.get_channel(channel_id)
         logger.info("Bot is ready")
         embeds = []
         embeds2 = []
         images = []
         images2 = []
-        for i in finished_result:
+        for i in testing.result:
             if i['trend'] >= 7 and "image investtech" in i:
                 embeds2.extend(i['embed'])
                 images2.extend(i['image'])

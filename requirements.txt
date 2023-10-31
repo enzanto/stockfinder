@@ -16,3 +16,7 @@ aiocron
 mplfinance
 aio_pika
 asyncio
+requests
+yfinance
+bs4
+typing
