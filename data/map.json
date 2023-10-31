@@ -7,7 +7,10 @@
             "investechID": "100883",
             "nordnet": "https://www.nordnet.no/market/stocks/16786171-2020-bulkers",
             "sektor": "sj\u00f8fart",
-            "bransje": "sj\u00f8fart"
+            "bransje": "sj\u00f8fart",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/4mrybJWXetRCC0fcdR8Wm/b63f9250f93063f066b6db7f723683f2/image.png",
+            "nordnetID": "16786171",
+            "nordnetName": "2020 BULKERS"
         },
         {
             "name": "5TH PLANET GAMES",
@@ -16,7 +19,10 @@
             "investechID": "101121",
             "nordnet": "https://www.nordnet.no/market/stocks/16783956-5th-planet-games",
             "sektor": "kommunikasjonstjenester",
-            "bransje": "elektronisk gaming & multimedia"
+            "bransje": "elektronisk gaming & multimedia",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/1ma81lF63ACkJKAl5szbwS/01a823f04604576da8bfa99734c58e8b/image.png",
+            "nordnetID": "16783956",
+            "nordnetName": "5TH PLANET GAMES"
         },
         {
             "name": "AASEN SPAREBANK",
@@ -25,7 +31,10 @@
             "investechID": "101047",
             "nordnet": "https://www.nordnet.no/market/stocks/16198955-aasen-sparebank",
             "sektor": "finansielle tjenester",
-            "bransje": "banker - regionale"
+            "bransje": "banker - regionale",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/kbST9XV2mFmQx3dhL57MV/42ce346008b3dc2a6a5b696a3efe3f5d/image.png",
+            "nordnetID": "16198955",
+            "nordnetName": "AASEN SPAREBANK"
         },
         {
             "name": "ABG SUNDAL COLLIER",
@@ -34,7 +43,10 @@
             "investechID": "101025",
             "nordnet": "https://www.nordnet.no/market/stocks/16105648-abg-sundal-collier",
             "sektor": "finansielle tjenester",
-            "bransje": "kapitalmarkeder"
+            "bransje": "kapitalmarkeder",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/3sxDzPjRfrB4odjNCcEdyy/ca30b0c18f7a2dc8280610f7de75ddac/image.png",
+            "nordnetID": "16105648",
+            "nordnetName": "ABG SUNDAL COLLIER HOLDING"
         },
         {
             "name": "ABL GROUP",
@@ -43,7 +55,10 @@
             "investechID": "100709",
             "nordnet": "https://www.nordnet.no/market/stocks/16311903-abl-group-asa",
             "sektor": "energi",
-            "bransje": "olje & gass - utstyr og tjenester"
+            "bransje": "olje & gass - utstyr og tjenester",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/1TvUvrFK5eWXswDCuV1r67/605dad87b2aec65e1adc13c8481e7081/image.png",
+            "nordnetID": "16311903",
+            "nordnetName": "ABL GROUP ASA"
         },
         {
             "name": "ADEVINTA",
@@ -52,7 +67,10 @@
             "investechID": "100905",
             "nordnet": "https://www.nordnet.no/market/stocks/17029243-adevinta",
             "sektor": "kommunikasjonstjenester",
-            "bransje": "internettinnhold og -informasjon"
+            "bransje": "internettinnhold og -informasjon",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/2xMK1tP3InhO5gsTKOdywN/bea616a064c2165b142ca476f2c21248/image.png",
+            "nordnetID": "17029243",
+            "nordnetName": "ADEVINTA"
         },
         {
             "name": "ADS MARITIME HOLD",
@@ -61,7 +79,10 @@
             "investechID": "101014",
             "nordnet": "https://www.nordnet.no/market/stocks/16916507-ads-maritime-holding",
             "sektor": "sj\u00f8fart",
-            "bransje": "sj\u00f8fart"
+            "bransje": "sj\u00f8fart",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/65kMsKC76YNOmSD9MT3bzJ/780fba71a285f0f9a9d8c4955d67088f/ADS_Maritime_Holding.png",
+            "nordnetID": "16916507",
+            "nordnetName": "ADS MARITIME HOLDING PLC"
         },
         {
             "name": "AEGA",
@@ -70,7 +91,9 @@
             "investechID": "100751",
             "nordnet": "https://www.nordnet.no/market/stocks/18079987-aega",
             "sektor": "infrastruktur",
-            "bransje": "nytte - fornybar"
+            "bransje": "nytte - fornybar",
+            "nordnetID": "18079987",
+            "nordnetName": "AEGA"
         },
         {
             "name": "AF GRUPPEN",
@@ -79,7 +102,10 @@
             "investechID": "100093",
             "nordnet": "https://www.nordnet.no/market/stocks/16105572-af-gruppen",
             "sektor": "industri",
-            "bransje": "bygg og anlegg"
+            "bransje": "bygg og anlegg",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/5UVP0H3G1WmyDzhLwyBjNh/2b7ae97f2a7082823b687c0a99435bed/image.png",
+            "nordnetID": "16105572",
+            "nordnetName": "AF GRUPPEN"
         },
         {
             "name": "AGILYX",
@@ -88,7 +114,10 @@
             "investechID": "101083",
             "nordnet": "https://www.nordnet.no/market/stocks/17188095-agilyx-asa",
             "sektor": "industri",
-            "bransje": "avfallsh\u00e5ndtering"
+            "bransje": "avfallsh\u00e5ndtering",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/2wCk6C2g30Zwyk3oWUhVB5/1eb7fb3668784515a2767064c9862d93/image.png",
+            "nordnetID": "17188095",
+            "nordnetName": "AGILYX ASA"
         },
         {
             "name": "AIRTHINGS",
@@ -97,7 +126,10 @@
             "investechID": "101104",
             "nordnet": "https://www.nordnet.no/market/stocks/17373662-airthings",
             "sektor": "industri",
-            "bransje": "elektronisk utstyr og deler"
+            "bransje": "elektronisk utstyr og deler",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/294qsJUKknVHEAJOJCnwyq/a6a90646692169b55d4d7e04d185b2f9/image.png",
+            "nordnetID": "17373662",
+            "nordnetName": "AIRTHINGS"
         },
         {
             "name": "AKASTOR",
@@ -106,7 +138,10 @@
             "investechID": "101035",
             "nordnet": "https://www.nordnet.no/market/stocks/16105609-akastor",
             "sektor": "energi",
-            "bransje": "olje & gass - utstyr og tjenester"
+            "bransje": "olje & gass - utstyr og tjenester",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/4rTyq2ENNvtSgbrGM45ems/3f49a85b2c1d3004c8d1bea8a013393b/image.png",
+            "nordnetID": "16105609",
+            "nordnetName": "AKASTOR"
         },
         {
             "name": "AKER",
@@ -115,7 +150,10 @@
             "investechID": "100363",
             "nordnet": "https://www.nordnet.no/market/stocks/16105613-aker",
             "sektor": "industri",
-            "bransje": "konglomerater"
+            "bransje": "konglomerater",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/2TEvKFFNbQbDYH5CewKZIT/2ff86e32c69bf12bceaac11bc920f27a/image.png",
+            "nordnetID": "16105613",
+            "nordnetName": "AKER"
         },
         {
             "name": "AKER BIOMARINE",
@@ -124,7 +162,10 @@
             "investechID": "101089",
             "nordnet": "https://www.nordnet.no/market/stocks/17299778-aker-biomarine-asa",
             "sektor": "konsument defensive",
-            "bransje": "pakket mat"
+            "bransje": "pakket mat",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/2LFTQLzpdqm38QXmw9q08g/53ee134c122b0c36f32a85aa8982132f/Aker_BioMarine.jpeg",
+            "nordnetID": "17299778",
+            "nordnetName": "AKER BIOMARINE ASA"
         },
         {
             "name": "AKER BP",
@@ -133,7 +174,10 @@
             "investechID": "101038",
             "nordnet": "https://www.nordnet.no/market/stocks/16105717-aker-bp",
             "sektor": "energi",
-            "bransje": "olje & gass - e&p"
+            "bransje": "olje & gass - e&p",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/3t12zmTom9LM7EYPais9Rn/dcc531ccda48bd37ec71d5b8a2d8cf22/image.png",
+            "nordnetID": "16105717",
+            "nordnetName": "AKER BP"
         },
         {
             "name": "AKER CARBON CAPTUR",
@@ -142,7 +186,10 @@
             "investechID": "101093",
             "nordnet": "https://www.nordnet.no/market/stocks/17332926-aker-carbon-capture",
             "sektor": "industri",
-            "bransje": "forurensnings- og behandlingskontroll"
+            "bransje": "forurensnings- og behandlingskontroll",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/74d4modxHnPi85amjwTdUm/80ca14e2bde5d76774d337b1ecd9cd51/image.png",
+            "nordnetID": "17332926",
+            "nordnetName": "AKER CARBON CAPTURE ASA"
         },
         {
             "name": "AKER HORIZONS",
@@ -151,7 +198,10 @@
             "investechID": "101158",
             "nordnet": "https://www.nordnet.no/market/stocks/17434301-aker-horizons-asa",
             "sektor": "finansielle tjenester",
-            "bransje": "kapitalforvaltning"
+            "bransje": "kapitalforvaltning",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/7hu9WHL6FwFYpKO2BCQ4OJ/aaef0f71ecdfcff5b546c313c68e2c87/image.png",
+            "nordnetID": "17434301",
+            "nordnetName": "AKER HORIZONS ASA"
         },
         {
             "name": "AKER SOLUTIONS",
@@ -160,7 +210,10 @@
             "investechID": "100539",
             "nordnet": "https://www.nordnet.no/market/stocks/16323787-aker-solutions",
             "sektor": "energi",
-            "bransje": "olje & gass - utstyr og tjenester"
+            "bransje": "olje & gass - utstyr og tjenester",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/2hUQYNexPbxxV2KJZZN06j/6104ae28375ff4f11561a8a93f176905/image.png",
+            "nordnetID": "16323787",
+            "nordnetName": "AKER SOLUTIONS"
         },
         {
             "name": "AKOBO MINERALS",
@@ -169,7 +222,10 @@
             "investechID": "101217",
             "nordnet": "https://www.nordnet.no/market/stocks/17428878-akobo-minerals-pub",
             "sektor": "innsatsvarer",
-            "bransje": "gull"
+            "bransje": "gull",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/3K71B7OtrQdaxCG8ih1jWS/3b514fb5e5c7a2f67c5db1d85c6a48f9/image.png",
+            "nordnetID": "17428878",
+            "nordnetName": "AKOBO MINERALS AB (PUB)"
         },
         {
             "name": "AKVA GROUP",
@@ -178,7 +234,10 @@
             "investechID": "100452",
             "nordnet": "https://www.nordnet.no/market/stocks/16105694-akva-group",
             "sektor": "industri",
-            "bransje": "landbruks- og anleggsmaskineri"
+            "bransje": "landbruks- og anleggsmaskineri",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/8s2mpNoFQj3Clfob14ELN/314a9600eaccb414ae4a13e3e0fb0a01/image.png",
+            "nordnetID": "16105694",
+            "nordnetName": "AKVA GROUP"
         },
         {
             "name": "ALTERNUS ENERGY GR",
@@ -187,7 +246,9 @@
             "investechID": "101213",
             "nordnet": "https://www.nordnet.no/market/stocks/17425271-alternus-energy-group",
             "sektor": "infrastruktur",
-            "bransje": "nytte - fornybar"
+            "bransje": "nytte - fornybar",
+            "nordnetID": "17425271",
+            "nordnetName": "ALTERNUS ENERGY GROUP PLC"
         },
         {
             "name": "AMSC",
@@ -196,7 +257,10 @@
             "investechID": "100550",
             "nordnet": "https://www.nordnet.no/market/stocks/16105629-amsc-asa",
             "sektor": "sj\u00f8fart",
-            "bransje": "sj\u00f8fart"
+            "bransje": "sj\u00f8fart",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/5RkFeyYYNsgBqsiYDQbg6g/09c238c42eabc2b69b58c136c10fc572/image.png",
+            "nordnetID": "16105629",
+            "nordnetName": "AMSC ASA"
         },
         {
             "name": "ANDFJORD SALMON",
@@ -205,7 +269,10 @@
             "investechID": "101076",
             "nordnet": "https://www.nordnet.no/market/stocks/16902828-andfjord-salmon",
             "sektor": "konsument defensive",
-            "bransje": "landbruksprodukter"
+            "bransje": "landbruksprodukter",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/7Jid6mbsYIo1ddhm13iPF5/6f88a07361077ab482de04997cb20322/Andfjord_Salmon.png",
+            "nordnetID": "16902828",
+            "nordnetName": "ANDFJORD SALMON"
         },
         {
             "name": "AQUA BIO TECHNO",
@@ -214,7 +281,10 @@
             "investechID": "101289",
             "nordnet": "https://www.nordnet.no/market/stocks/16105727-aqua-bio-technology",
             "sektor": "helse",
-            "bransje": "bioteknologi"
+            "bransje": "bioteknologi",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/3nYA447EhcH0GqRMY22vMJ/6540d13d41a634d0cfc92babc2568f3e/image.png",
+            "nordnetID": "16105727",
+            "nordnetName": "AQUA BIO TECHNOLOGY"
         },
         {
             "name": "AQUILA HOLDINGS",
@@ -223,7 +293,10 @@
             "investechID": "101223",
             "nordnet": "https://www.nordnet.no/market/stocks/16626849-aquila-holdings-asa",
             "sektor": "energi",
-            "bransje": "olje & gass - utstyr og tjenester"
+            "bransje": "olje & gass - utstyr og tjenester",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/3mpKjhJz4FZ2nDQCoX39Hq/34349697dea9e717b290088e6481d0e7/image.png",
+            "nordnetID": "16626849",
+            "nordnetName": "AQUILA HOLDINGS ASA"
         },
         {
             "name": "ARCHER",
@@ -232,7 +305,10 @@
             "investechID": "101007",
             "nordnet": "https://www.nordnet.no/market/stocks/16459923-archer",
             "sektor": "energi",
-            "bransje": "olje & gass - borring"
+            "bransje": "olje & gass - borring",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/78iwwoprJ4OlCZkIIjgsnd/2ba58edc8745bf4b9da85ce84ad1f18d/image.png",
+            "nordnetID": "16459923",
+            "nordnetName": "ARCHER"
         },
         {
             "name": "ARCTIC BIOSCIENCE",
@@ -241,7 +317,9 @@
             "investechID": "101161",
             "nordnet": "https://www.nordnet.no/market/stocks/17085267-arctic-bioscience",
             "sektor": "helse",
-            "bransje": "bioteknologi"
+            "bransje": "bioteknologi",
+            "nordnetID": "17085267",
+            "nordnetName": "ARCTIC BIOSCIENCE AS"
         },
         {
             "name": "ARCTIC FISH HOLDIN",
@@ -250,7 +328,10 @@
             "investechID": "101167",
             "nordnet": "https://www.nordnet.no/market/stocks/17447494-arctic-fish-holding",
             "sektor": "konsument defensive",
-            "bransje": "landbruksprodukter"
+            "bransje": "landbruksprodukter",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/28si0jdYYPtrdbpGM50lZI/6ec5afefae90060baabec6fe79ecb0b4/Screenshot_2023-01-28_at_22.20.55.png",
+            "nordnetID": "17447494",
+            "nordnetName": "ARCTIC FISH HOLDING AS"
         },
         {
             "name": "ARCTICZYMES TECHNO",
@@ -259,7 +340,10 @@
             "investechID": "100956",
             "nordnet": "https://www.nordnet.no/market/stocks/16105633-arcticzymes-technologies",
             "sektor": "helse",
-            "bransje": "bioteknologi"
+            "bransje": "bioteknologi",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/5CWxJOtqANppENWTYwwk4U/7c0f771d1f49dbb2eea87dc244844d2c/ARCTICZYMES_TECHNOLOGIES.png",
+            "nordnetID": "16105633",
+            "nordnetName": "ARCTICZYMES TECHNOLOGIES"
         },
         {
             "name": "ARENDALS FOSSEKOMP",
@@ -268,7 +352,10 @@
             "investechID": "100209",
             "nordnet": "https://www.nordnet.no/market/stocks/16105630-arendals-fossekompani",
             "sektor": "industri",
-            "bransje": "konglomerater"
+            "bransje": "konglomerater",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/1FJVK6CPutupxTbncjLhgf/1b8d6c5703460f6b23dc65f74b4766dd/image.png",
+            "nordnetID": "16105630",
+            "nordnetName": "ARENDALS FOSSEKOMPANI"
         },
         {
             "name": "ARGEO",
@@ -277,7 +364,9 @@
             "investechID": "101193",
             "nordnet": "https://www.nordnet.no/market/stocks/17457719-argeo",
             "sektor": "energi",
-            "bransje": "olje & gass - utstyr og tjenester"
+            "bransje": "olje & gass - utstyr og tjenester",
+            "nordnetID": "17457719",
+            "nordnetName": "ARGEO AS"
         },
         {
             "name": "ARRIBATEC GROUP",
@@ -286,7 +375,9 @@
             "investechID": "100982",
             "nordnet": "https://www.nordnet.no/market/stocks/17995119-arribatec-group-asa",
             "sektor": "teknologi",
-            "bransje": "it - tjenester"
+            "bransje": "it - tjenester",
+            "nordnetID": "17995119",
+            "nordnetName": "ARRIBATEC GROUP ASA"
         },
         {
             "name": "ASETEK",
@@ -295,7 +386,10 @@
             "investechID": "101015",
             "nordnet": "https://www.nordnet.no/market/stocks/16186672-asetek",
             "sektor": "teknologi",
-            "bransje": "datamaskin (hardware)"
+            "bransje": "datamaskin (hardware)",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/5SEVk7z7vuvvjbDorVklyo/6e801d8a25c5e8fe30f20b74970a58d3/image.png",
+            "nordnetID": "16186672",
+            "nordnetName": "ASETEK"
         },
         {
             "name": "ASTROCAST",
@@ -304,7 +398,9 @@
             "investechID": "101224",
             "nordnet": "https://www.nordnet.no/market/stocks/17556167-astrocast",
             "sektor": "teknologi",
-            "bransje": "kommunikasjonsutstyr"
+            "bransje": "kommunikasjonsutstyr",
+            "nordnetID": "17556167",
+            "nordnetName": "ASTROCAST SA"
         },
         {
             "name": "ATEA",
@@ -313,7 +409,10 @@
             "investechID": "100561",
             "nordnet": "https://www.nordnet.no/market/stocks/16105662-atea",
             "sektor": "teknologi",
-            "bransje": "it - tjenester"
+            "bransje": "it - tjenester",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/uebGA7Whr6SVnfEYjADBb/af17d0765514f2094b02e55e7db8b211/image.png",
+            "nordnetID": "16105662",
+            "nordnetName": "ATEA"
         },
         {
             "name": "ATLANTIC SAPPHIRE",
@@ -322,7 +421,10 @@
             "investechID": "100947",
             "nordnet": "https://www.nordnet.no/market/stocks/16700544-atlantic-sapphire",
             "sektor": "konsument defensive",
-            "bransje": "landbruksprodukter"
+            "bransje": "landbruksprodukter",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/2d6iqNNOOsu7Lyzg2U7J1v/4b64915f9587dff1a381ca52c648eba2/Atlantic_Sapphire.jpeg",
+            "nordnetID": "16700544",
+            "nordnetName": "ATLANTIC SAPPHIRE"
         },
         {
             "name": "AURORA EIENDOM",
@@ -331,7 +433,9 @@
             "investechID": "101243",
             "nordnet": "https://www.nordnet.no/market/stocks/17538552-aurora-eiendom",
             "sektor": "eiendom",
-            "bransje": "eiendomstjenester"
+            "bransje": "eiendomstjenester",
+            "nordnetID": "17538552",
+            "nordnetName": "AURORA EIENDOM AS"
         },
         {
             "name": "AURSKOG SPAREBANK",
@@ -340,7 +444,10 @@
             "investechID": "100279",
             "nordnet": "https://www.nordnet.no/market/stocks/16105582-aurskog-sparebank",
             "sektor": "finansielle tjenester",
-            "bransje": "banker - regionale"
+            "bransje": "banker - regionale",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/7bBP8EK7X5LvUlnLcxjKQ9/aa201ed3900f2c43fc748be4b9c10f9b/image.png",
+            "nordnetID": "16105582",
+            "nordnetName": "AURSKOG SPAREBANK"
         },
         {
             "name": "AUSTEVOLL SEAFOOD",
@@ -349,7 +456,10 @@
             "investechID": "100446",
             "nordnet": "https://www.nordnet.no/market/stocks/16105687-austevoll-seafood",
             "sektor": "konsument defensive",
-            "bransje": "landbruksprodukter"
+            "bransje": "landbruksprodukter",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/6Y8MuODYKvKwour2FZIe3c/cdb8a055b5d59ed32a8b54d29520f610/image.png",
+            "nordnetID": "16105687",
+            "nordnetName": "AUSTEVOLL SEAFOOD"
         },
         {
             "name": "AUTOSTORE HOLDINGS",
@@ -358,7 +468,10 @@
             "investechID": "101236",
             "nordnet": "https://www.nordnet.no/market/stocks/17602486-autostore-holdings",
             "sektor": "teknologi",
-            "bransje": "programvare - infrastruktur"
+            "bransje": "programvare - infrastruktur",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/2m6DaPM0pwrp4itzBUPR22/99371b6ebe80011d7f07eb7e7f9fa084/image.png",
+            "nordnetID": "17602486",
+            "nordnetName": "AUTOSTORE HOLDINGS LTD."
         },
         {
             "name": "AVANCE GAS HOLDING",
@@ -367,7 +480,10 @@
             "investechID": "101008",
             "nordnet": "https://www.nordnet.no/market/stocks/16281382-avance-gas-holding",
             "sektor": "energi",
-            "bransje": "olje & gass - midstream"
+            "bransje": "olje & gass - midstream",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/4iGV1slYuCmzrBaeYxJYrO/d0ade382284c1bb194b418eb9ee2bd95/image.png",
+            "nordnetID": "16281382",
+            "nordnetName": "AVANCE GAS HOLDING"
         },
         {
             "name": "AWILCO DRILLING",
@@ -376,7 +492,10 @@
             "investechID": "100632",
             "nordnet": "https://www.nordnet.no/market/stocks/17943233-awilco-drilling",
             "sektor": "energi",
-            "bransje": "olje & gass - borring"
+            "bransje": "olje & gass - borring",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/5uU1rbuh2cwsAylCUY1sgv/8a7604041d6b753288d3b5b2de105a97/awilco.png",
+            "nordnetID": "17943233",
+            "nordnetName": "AWILCO DRILLING PLC"
         },
         {
             "name": "AWILCO LNG",
@@ -385,7 +504,10 @@
             "investechID": "100636",
             "nordnet": "https://www.nordnet.no/market/stocks/16105327-awilco-lng",
             "sektor": "sj\u00f8fart",
-            "bransje": "sj\u00f8fart"
+            "bransje": "sj\u00f8fart",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/2sPmsiSh8F3ml3DBj40gAi/a7c3eda20d1d070fabfb217b32a51f49/Awilco_LNG.png",
+            "nordnetID": "16105327",
+            "nordnetName": "AWILCO LNG"
         },
         {
             "name": "AXACTOR",
@@ -394,7 +516,10 @@
             "investechID": "101155",
             "nordnet": "https://www.nordnet.no/market/stocks/16978420-axactor-asa",
             "sektor": "finansielle tjenester",
-            "bransje": "kredittjenester"
+            "bransje": "kredittjenester",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/4XY7gUikSTwksWQghCjuHg/4844fc6e6371869f8a03d6f7e98d868f/image.png",
+            "nordnetID": "16978420",
+            "nordnetName": "AXACTOR ASA"
         },
         {
             "name": "AYFIE GROUP",
@@ -403,16 +528,21 @@
             "investechID": "101068",
             "nordnet": "https://www.nordnet.no/market/stocks/17993690-ayfie-group",
             "sektor": "teknologi",
-            "bransje": "programvare - applikasjoner"
+            "bransje": "programvare - applikasjoner",
+            "nordnetID": "17993690",
+            "nordnetName": "AYFIE GROUP"
         },
         {
             "name": "B2HOLDING",
-            "ticker": "b2h.ol",
+            "ticker": "b2i.ol",
             "investech": "https://www.investtech.com/no/market.php?CompanyID=100755",
             "investechID": "100755",
             "nordnet": "https://www.nordnet.no/market/stocks/16252558-b-2-holding",
             "sektor": "finansielle tjenester",
-            "bransje": "kredittjenester"
+            "bransje": "kredittjenester",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/2MZhQ8FfDyBWP9v8iy0s69/bbf5312ca9e927867a0bb783aac4dcee/image.png",
+            "nordnetID": "16252558",
+            "nordnetName": "B2 Impact ASA"
         },
         {
             "name": "BAKKAFROST",
@@ -421,7 +551,10 @@
             "investechID": "100591",
             "nordnet": "https://www.nordnet.no/market/stocks/16105763-bakkafrost",
             "sektor": "konsument defensive",
-            "bransje": "landbruksprodukter"
+            "bransje": "landbruksprodukter",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/fSWTF9ajMB5YtFkmSwHcP/38ed75446f48b1a27e4bf2a6f53260bf/image.png",
+            "nordnetID": "16105763",
+            "nordnetName": "BAKKAFROST"
         },
         {
             "name": "BALTIC SEA PROP",
@@ -430,7 +563,9 @@
             "investechID": "101071",
             "nordnet": "https://www.nordnet.no/market/stocks/16781835-baltic-sea-properties",
             "sektor": "eiendom",
-            "bransje": "eiendomstjenester"
+            "bransje": "eiendomstjenester",
+            "nordnetID": "16781835",
+            "nordnetName": "BALTIC SEA PROPERTIES"
         },
         {
             "name": "BARRAMUNDI GROUP",
@@ -439,7 +574,10 @@
             "investechID": "101225",
             "nordnet": "https://www.nordnet.no/market/stocks/17558407-barramundi-group",
             "sektor": "konsument defensive",
-            "bransje": "landbruksprodukter"
+            "bransje": "landbruksprodukter",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/7gl67iYfR6QfVzKjCJCKES/61dba1683855f88b648d71d9eaa9c174/Barramundi_Group.png",
+            "nordnetID": "17558407",
+            "nordnetName": "BARRAMUNDI GROUP LTD."
         },
         {
             "name": "BELSHIPS",
@@ -448,7 +586,10 @@
             "investechID": "101026",
             "nordnet": "https://www.nordnet.no/market/stocks/16105635-belships",
             "sektor": "sj\u00f8fart",
-            "bransje": "sj\u00f8fart"
+            "bransje": "sj\u00f8fart",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/6ziRUF08ysoMne3nq3Zzv4/f62c4d9f6ce242f6491c0f2e613d13b4/image.png",
+            "nordnetID": "16105635",
+            "nordnetName": "BELSHIPS"
         },
         {
             "name": "BENCHMARK HOLDINGS",
@@ -457,7 +598,9 @@
             "investechID": "101284",
             "nordnet": "https://www.nordnet.no/market/stocks/17940813-benchmark-holdings",
             "sektor": "helse",
-            "bransje": "medsinprodusenter - spesialist og generell"
+            "bransje": "medsinprodusenter - spesialist og generell",
+            "nordnetID": "17940813",
+            "nordnetName": "BENCHMARK HOLDINGS PLC"
         },
         {
             "name": "BERGEN CARBON SOL",
@@ -466,7 +609,10 @@
             "investechID": "101190",
             "nordnet": "https://www.nordnet.no/market/stocks/17471378-bergen-carbon-solutions",
             "sektor": "innsatsvarer",
-            "bransje": "spesialkjemikalier"
+            "bransje": "spesialkjemikalier",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/2NKb92bt62Hm8kjWyZSL8h/ef0bc133e9e37bdd1cecc817060ca909/image.png",
+            "nordnetID": "17471378",
+            "nordnetName": "BERGEN CARBON SOLUTIONS AS"
         },
         {
             "name": "BERGENBIO",
@@ -475,7 +621,10 @@
             "investechID": "100782",
             "nordnet": "https://www.nordnet.no/market/stocks/16263887-bergenbio",
             "sektor": "helse",
-            "bransje": "bioteknologi"
+            "bransje": "bioteknologi",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/6OYPzL3BHpBno5a7WnBolY/d1f6702374e022b3d905d2a0924e1c49/image.png",
+            "nordnetID": "16263887",
+            "nordnetName": "BERGENBIO"
         },
         {
             "name": "BEWI",
@@ -484,7 +633,10 @@
             "investechID": "101096",
             "nordnet": "https://www.nordnet.no/market/stocks/17335294-bewi",
             "sektor": "sykliske forbruksvarer",
-            "bransje": "emballasje og containere"
+            "bransje": "emballasje og containere",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/4MqBr7qa8uaMnk1IfhTs8G/1e3fd252ae5eb0d1f9886faa8155b271/image.png",
+            "nordnetID": "17335294",
+            "nordnetName": "BEWI"
         },
         {
             "name": "BIEN SPAREBANK",
@@ -493,7 +645,10 @@
             "investechID": "101282",
             "nordnet": "https://www.nordnet.no/market/stocks/17940192-bien-sparebank-asa",
             "sektor": "finansielle tjenester",
-            "bransje": "banker - regionale"
+            "bransje": "banker - regionale",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/5LrXBefRzFfXvanALXYMuL/fe14e881145a678f6a7b09f9b1eabb98/image.png",
+            "nordnetID": "17940192",
+            "nordnetName": "BIEN SPAREBANK ASA"
         },
         {
             "name": "BIOFISH HOLDING",
@@ -502,7 +657,10 @@
             "investechID": "101222",
             "nordnet": "https://www.nordnet.no/market/stocks/17544700-biofish-holding",
             "sektor": "konsument defensive",
-            "bransje": "landbruksprodukter"
+            "bransje": "landbruksprodukter",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/35EOOwaHSP1qR5Hzvwbrik/d87a092d329b3b36e7ff99dcd65c428b/BioFish_logo_favicon.svg",
+            "nordnetID": "17544700",
+            "nordnetName": "BIOFISH HOLDING AS"
         },
         {
             "name": "BLACK SEA PROPERTY",
@@ -511,7 +669,9 @@
             "investechID": "101061",
             "nordnet": "https://www.nordnet.no/market/stocks/16497514-black-sea-property",
             "sektor": "sykliske forbruksvarer",
-            "bransje": "losji"
+            "bransje": "losji",
+            "nordnetID": "16497514",
+            "nordnetName": "BLACK SEA PROPERTY"
         },
         {
             "name": "BLUENORD",
@@ -520,7 +680,10 @@
             "investechID": "100522",
             "nordnet": "https://www.nordnet.no/market/stocks/16105726-bluenord-asa",
             "sektor": "energi",
-            "bransje": "olje & gass - e&p"
+            "bransje": "olje & gass - e&p",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/6qetj5Ret6jbPQtounLa1v/80c98eaeac0996932f9ef5f79532f672/Norwegian_Energy_Company.jpeg",
+            "nordnetID": "16105726",
+            "nordnetName": "BLUENORD ASA"
         },
         {
             "name": "BONHEUR",
@@ -529,7 +692,10 @@
             "investechID": "101027",
             "nordnet": "https://www.nordnet.no/market/stocks/16105637-bonheur",
             "sektor": "industri",
-            "bransje": "konglomerater"
+            "bransje": "konglomerater",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/44YFdnOSmNv11fPPb0lJvx/12287be3e7d629486b532ed867347ee0/image.png",
+            "nordnetID": "16105637",
+            "nordnetName": "BONHEUR"
         },
         {
             "name": "BORGESTAD",
@@ -538,7 +704,9 @@
             "investechID": "100094",
             "nordnet": "https://www.nordnet.no/market/stocks/16105638-borgestad",
             "sektor": "industri",
-            "bransje": "byggevarer og -utstyr"
+            "bransje": "byggevarer og -utstyr",
+            "nordnetID": "16105638",
+            "nordnetName": "BORGESTAD"
         },
         {
             "name": "BORR DRILLING",
@@ -547,7 +715,10 @@
             "investechID": "101009",
             "nordnet": "https://www.nordnet.no/market/stocks/17652973-borr-drilling",
             "sektor": "energi",
-            "bransje": "olje & gass - borring"
+            "bransje": "olje & gass - borring",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/4I7CLrCYmDuPa4e5LiNPUm/0a6e26ed05b9fe115ca3a6dca9425564/image.png",
+            "nordnetID": "17652973",
+            "nordnetName": "BORR DRILLING"
         },
         {
             "name": "BORREGAARD",
@@ -556,7 +727,10 @@
             "investechID": "100674",
             "nordnet": "https://www.nordnet.no/market/stocks/16105414-borregaard",
             "sektor": "innsatsvarer",
-            "bransje": "spesialkjemikalier"
+            "bransje": "spesialkjemikalier",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/F1KTxejhksyp33BvQB05m/7ce56902221d5f663c3e9ed34f395c07/image.png",
+            "nordnetID": "16105414",
+            "nordnetName": "BORREGAARD"
         },
         {
             "name": "BOUVET",
@@ -565,7 +739,10 @@
             "investechID": "101040",
             "nordnet": "https://www.nordnet.no/market/stocks/16105711-bouvet",
             "sektor": "teknologi",
-            "bransje": "it - tjenester"
+            "bransje": "it - tjenester",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/5c9vkQcIhsCaJb1D40yUYZ/106418fc3ceda9b24312dafbe6c67536/image.png",
+            "nordnetID": "16105711",
+            "nordnetName": "BOUVET"
         },
         {
             "name": "BW ENERGY LIMITED",
@@ -574,7 +751,10 @@
             "investechID": "100939",
             "nordnet": "https://www.nordnet.no/market/stocks/17195893-bw-energy-limited",
             "sektor": "energi",
-            "bransje": "olje & gass - e&p"
+            "bransje": "olje & gass - e&p",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/2aGCUYcjxQMlDu5kJsSsvI/61feaf301220267d7bd7dc0ddd424393/BW_Energy_Limited.jpeg",
+            "nordnetID": "17195893",
+            "nordnetName": "BW ENERGY LIMITED"
         },
         {
             "name": "BW Epic Kosan",
@@ -583,7 +763,10 @@
             "investechID": "101182",
             "nordnet": "https://www.nordnet.no/market/stocks/17458498-bw-epic-kosan",
             "sektor": "sj\u00f8fart",
-            "bransje": "sj\u00f8fart"
+            "bransje": "sj\u00f8fart",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/5rQcmGZxjnAVqvIUlWuNl0/cffc0054dde2097bb4b994c87580efc6/BW_Epic_Kosan.jpeg",
+            "nordnetID": "17458498",
+            "nordnetName": "BW Epic Kosan Ltd."
         },
         {
             "name": "BW IDEOL",
@@ -592,7 +775,9 @@
             "investechID": "101183",
             "nordnet": "https://www.nordnet.no/market/stocks/17468281-bw-ideol",
             "sektor": "industri",
-            "bransje": "bygg og anlegg"
+            "bransje": "bygg og anlegg",
+            "nordnetID": "17468281",
+            "nordnetName": "BW IDEOL AS"
         },
         {
             "name": "BW LPG",
@@ -601,7 +786,10 @@
             "investechID": "100690",
             "nordnet": "https://www.nordnet.no/market/stocks/16247917-bw-lpg",
             "sektor": "sj\u00f8fart",
-            "bransje": "sj\u00f8fart"
+            "bransje": "sj\u00f8fart",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/7fyTgnxPHaEl3nPHAnGV7h/4f99f681d8ea7deb9c687f940654bbab/image.png",
+            "nordnetID": "16247917",
+            "nordnetName": "BW LPG"
         },
         {
             "name": "BW OFFSHORE LTD",
@@ -610,7 +798,10 @@
             "investechID": "100436",
             "nordnet": "https://www.nordnet.no/market/stocks/16634542-bw-offshore-limited",
             "sektor": "energi",
-            "bransje": "olje & gass - utstyr og tjenester"
+            "bransje": "olje & gass - utstyr og tjenester",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/59kESddLtKeP42MHIDWxH7/c02b0efd1b1c779dae57d914ad905636/BW.png",
+            "nordnetID": "16634542",
+            "nordnetName": "BW OFFSHORE LIMITED"
         },
         {
             "name": "BYGGMA",
@@ -619,7 +810,10 @@
             "investechID": "100306",
             "nordnet": "https://www.nordnet.no/market/stocks/16105571-byggma",
             "sektor": "industri",
-            "bransje": "byggevarer og -utstyr"
+            "bransje": "byggevarer og -utstyr",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/37JqkShMVa2yimaclEUBat/2b2a9cc0bdc7bf6f55a321b974a3e767/image.png",
+            "nordnetID": "16105571",
+            "nordnetName": "BYGGMA"
         },
         {
             "name": "BerGenBio TR",
@@ -628,7 +822,9 @@
             "investechID": "",
             "nordnet": "https://www.nordnet.no/market/stocks/18075211-ber-gen-bio-tr",
             "sektor": "-",
-            "bransje": "-"
+            "bransje": "-",
+            "nordnetID": "18075211",
+            "nordnetName": "BerGenBio TR"
         },
         {
             "name": "CADELER",
@@ -637,7 +833,10 @@
             "investechID": "101006",
             "nordnet": "https://www.nordnet.no/market/stocks/17393950-cadeler",
             "sektor": "sj\u00f8fart",
-            "bransje": "sj\u00f8fart"
+            "bransje": "sj\u00f8fart",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/PRwoKxEcVLh1WXVZ4j5e2/a8f5b3f68afd5db4c08d8ac7e245ed11/image.png",
+            "nordnetID": "17393950",
+            "nordnetName": "CADELER A/S"
         },
         {
             "name": "CAMBI",
@@ -646,7 +845,10 @@
             "investechID": "101160",
             "nordnet": "https://www.nordnet.no/market/stocks/16167284-cambi-asa",
             "sektor": "industri",
-            "bransje": "avfallsh\u00e5ndtering"
+            "bransje": "avfallsh\u00e5ndtering",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/FvqbBqZwEPCTVuGrZNw78/3ca61a57e76ed0acc9d1f3d5f3459a0c/image.png",
+            "nordnetID": "16167284",
+            "nordnetName": "CAMBI ASA"
         },
         {
             "name": "CAPSOL TECHNOLOGI",
@@ -655,7 +857,9 @@
             "investechID": "101241",
             "nordnet": "https://www.nordnet.no/market/stocks/17446262-capsol-technologies",
             "sektor": "industri",
-            "bransje": "forurensnings- og behandlingskontroll"
+            "bransje": "forurensnings- og behandlingskontroll",
+            "nordnetID": "17446262",
+            "nordnetName": "CAPSOL TECHNOLOGIES ASA"
         },
         {
             "name": "CARASENT",
@@ -664,7 +868,10 @@
             "investechID": "100866",
             "nordnet": "https://www.nordnet.no/market/stocks/16105603-carasent",
             "sektor": "helse",
-            "bransje": "helseinformasjonstjenester"
+            "bransje": "helseinformasjonstjenester",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/WsP4GZFYIVYrBJhO51h2A/0d43f11e709f7bd711d2842efe8e21b2/image.png",
+            "nordnetID": "16105603",
+            "nordnetName": "CARASENT"
         },
         {
             "name": "CIRCA GROUP",
@@ -673,7 +880,10 @@
             "investechID": "101164",
             "nordnet": "https://www.nordnet.no/market/stocks/17441646-circa-group",
             "sektor": "helse",
-            "bransje": "bioteknologi"
+            "bransje": "bioteknologi",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/515dRWKRXUs8A4smeAcI7S/b4668ec80e961d699aa90b2d6b21cb7f/image.png",
+            "nordnetID": "17441646",
+            "nordnetName": "CIRCA GROUP AS"
         },
         {
             "name": "CIRCIO HOLDING",
@@ -682,7 +892,9 @@
             "investechID": "100758",
             "nordnet": "https://www.nordnet.no/market/stocks/16298994-circio-holding-asa",
             "sektor": "helse",
-            "bransje": "bioteknologi"
+            "bransje": "bioteknologi",
+            "nordnetID": "18146149",
+            "nordnetName": "CIRCIO HOLDING ASA"
         },
         {
             "name": "CLEAN SEAS SEAFOOD",
@@ -691,7 +903,10 @@
             "investechID": "101198",
             "nordnet": "https://www.nordnet.no/market/stocks/17509324-clean-seas-seafood",
             "sektor": "konsument defensive",
-            "bransje": "landbruksprodukter"
+            "bransje": "landbruksprodukter",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/3B1x07Ob6qN4mS4ZTQbncm/74b66adc8cc28f8bb6ced2832c1bd0ff/image.png",
+            "nordnetID": "17509324",
+            "nordnetName": "CLEAN SEAS SEAFOOD LIMITED"
         },
         {
             "name": "CLOUDBERRY CLEAN",
@@ -700,7 +915,10 @@
             "investechID": "101085",
             "nordnet": "https://www.nordnet.no/market/stocks/17237727-cloudberry-clean-energy",
             "sektor": "infrastruktur",
-            "bransje": "nytte - fornybar"
+            "bransje": "nytte - fornybar",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/1vY5yOrYRQrhb08FOh3BcF/bf6ce66bdf75982c5f77ebac57660291/image.png",
+            "nordnetID": "17237727",
+            "nordnetName": "CLOUDBERRY CLEAN ENERGY ASA"
         },
         {
             "name": "CODELAB CAPITAL",
@@ -709,7 +927,10 @@
             "investechID": "101105",
             "nordnet": "https://www.nordnet.no/market/stocks/17371183-codelab-capital",
             "sektor": "helse",
-            "bransje": "helseinformasjonstjenester"
+            "bransje": "helseinformasjonstjenester",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/2bfPzgn0mVocv0BbBppyIK/a571aaad7e2e084e93e9dc0d39b8733f/image.png",
+            "nordnetID": "17371183",
+            "nordnetName": "CODELAB CAPITAL AS"
         },
         {
             "name": "CONTEXTVISION",
@@ -718,7 +939,10 @@
             "investechID": "101112",
             "nordnet": "https://www.nordnet.no/market/stocks/17331825-contextvision",
             "sektor": "helse",
-            "bransje": "helseinformasjonstjenester"
+            "bransje": "helseinformasjonstjenester",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/3aP6DW9NxFNZuqnzx763Kf/4214cb725efd33a7bee7b4ba7044b280/image.png",
+            "nordnetID": "17331825",
+            "nordnetName": "CONTEXTVISION"
         },
         {
             "name": "COOL COMPANY",
@@ -727,7 +951,10 @@
             "investechID": "101246",
             "nordnet": "https://www.nordnet.no/market/stocks/17683928-cool-company",
             "sektor": "energi",
-            "bransje": "olje & gass - midstream"
+            "bransje": "olje & gass - midstream",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/nmqBAECjN7ah6DUL0olmx/62b25d42cccddc91dce9a0a292ee7069/Cool_Company.png",
+            "nordnetID": "17683928",
+            "nordnetName": "COOL COMPANY LTD."
         },
         {
             "name": "CRAYON GROUP HOLD",
@@ -736,7 +963,10 @@
             "investechID": "101070",
             "nordnet": "https://www.nordnet.no/market/stocks/16770487-crayon-group-holding",
             "sektor": "teknologi",
-            "bransje": "it - tjenester"
+            "bransje": "it - tjenester",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/52NkOiGFvUQKpc6QxCkAnW/13a339a4f0fb6ebe9b64e43aea5b09a1/image.png",
+            "nordnetID": "16770487",
+            "nordnetName": "CRAYON GROUP HOLDING"
         },
         {
             "name": "CSAM HEALTH GROUP",
@@ -754,7 +984,10 @@
             "investechID": "101149",
             "nordnet": "https://www.nordnet.no/market/stocks/16167187-cyviz",
             "sektor": "teknologi",
-            "bransje": "datamaskin (hardware)"
+            "bransje": "datamaskin (hardware)",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/4P8LVFcsdLASaZlKgqlEgx/1eb5011c41a3590673648d09e8965824/image.png",
+            "nordnetID": "16167187",
+            "nordnetName": "CYVIZ AS"
         },
         {
             "name": "DEEP VALUE DRILLER",
@@ -763,7 +996,10 @@
             "investechID": "101177",
             "nordnet": "https://www.nordnet.no/market/stocks/17467584-deep-value-driller",
             "sektor": "energi",
-            "bransje": "olje & gass - borring"
+            "bransje": "olje & gass - borring",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/5FqGHN2jKKmHuUerpXvU5A/4f31d004ad52b0404cfb7b15632019cf/image.png",
+            "nordnetID": "17467584",
+            "nordnetName": "DEEP VALUE DRILLER AS"
         },
         {
             "name": "DESERT CONTROL",
@@ -772,7 +1008,10 @@
             "investechID": "101188",
             "nordnet": "https://www.nordnet.no/market/stocks/17473891-desert-control",
             "sektor": "innsatsvarer",
-            "bransje": "jorbruksinnsatser"
+            "bransje": "jorbruksinnsatser",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/1K3tf2bXbwn0Ub7lCh5ygL/0413c83ab8b4a4777a86bdd069ae5fea/image.png",
+            "nordnetID": "17473891",
+            "nordnetName": "DESERT CONTROL AS"
         },
         {
             "name": "DNB BANK",
@@ -781,7 +1020,10 @@
             "investechID": "100640",
             "nordnet": "https://www.nordnet.no/market/stocks/17534483-dnb-bank-asa",
             "sektor": "finansielle tjenester",
-            "bransje": "banker - regionale"
+            "bransje": "banker - regionale",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/2StaOBzndLnsZgWNpcn0qd/f75659cf988bfb17d51610a6ab2a0d94/image.png",
+            "nordnetID": "17534483",
+            "nordnetName": "DNB BANK ASA"
         },
         {
             "name": "DNO",
@@ -790,7 +1032,10 @@
             "investechID": "100053",
             "nordnet": "https://www.nordnet.no/market/stocks/16105641-dno",
             "sektor": "energi",
-            "bransje": "olje & gass - e&p"
+            "bransje": "olje & gass - e&p",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/73wzQ4zfaLczHFmSwTYrRT/b528aac004696ab71e0c27757c856a6e/DNO.jpg",
+            "nordnetID": "16105641",
+            "nordnetName": "DNO"
         },
         {
             "name": "DOF GROUP",
@@ -799,7 +1044,9 @@
             "investechID": "101297",
             "nordnet": "https://www.nordnet.no/market/stocks/18016488-dof-group-asa",
             "sektor": "industri",
-            "bransje": "bygg og anlegg"
+            "bransje": "bygg og anlegg",
+            "nordnetID": "18016488",
+            "nordnetName": "DOF GROUP ASA"
         },
         {
             "name": "DOLPHIN DRILLING",
@@ -808,7 +1055,10 @@
             "investechID": "101266",
             "nordnet": "https://www.nordnet.no/market/stocks/17866437-dolphin-drilling",
             "sektor": "energi",
-            "bransje": "olje & gass - borring"
+            "bransje": "olje & gass - borring",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/3kaEFjTZ0ZVr46HRHBk17g/72f6d5e42bef110faca7860a7866b9f3/image.png",
+            "nordnetID": "17866437",
+            "nordnetName": "DOLPHIN DRILLING AS"
         },
         {
             "name": "EAM SOLAR",
@@ -817,7 +1067,10 @@
             "investechID": "100678",
             "nordnet": "https://www.nordnet.no/market/stocks/16186854-eam-solar",
             "sektor": "infrastruktur",
-            "bransje": "nytte - fornybar"
+            "bransje": "nytte - fornybar",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/4aKaIUSlj0enqvvh4w3Apk/ca362ce03aee51090cf01d8abc8b85af/image.png",
+            "nordnetID": "16186854",
+            "nordnetName": "EAM SOLAR"
         },
         {
             "name": "ECIT AS B-AKSJER",
@@ -826,7 +1079,9 @@
             "investechID": "101199",
             "nordnet": "https://www.nordnet.no/market/stocks/17509325-ecit-baksjer",
             "sektor": "teknologi",
-            "bransje": "it - tjenester"
+            "bransje": "it - tjenester",
+            "nordnetID": "17509325",
+            "nordnetName": "ECIT AS B-AKSJER"
         },
         {
             "name": "EDDA WIND",
@@ -835,7 +1090,10 @@
             "investechID": "101237",
             "nordnet": "https://www.nordnet.no/market/stocks/17630125-edda-wind-asa",
             "sektor": "energi",
-            "bransje": "olje & gass - utstyr og tjenester"
+            "bransje": "olje & gass - utstyr og tjenester",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/3FEC4iGMVVeItNYA5FgMLM/d2753f53ed78f4934b062bf0fad94c8c/image.png",
+            "nordnetID": "17630125",
+            "nordnetName": "EDDA WIND ASA"
         },
         {
             "name": "EIDESVIK OFFSHORE",
@@ -844,7 +1102,10 @@
             "investechID": "100391",
             "nordnet": "https://www.nordnet.no/market/stocks/16105627-eidesvik-offshore",
             "sektor": "energi",
-            "bransje": "olje & gass - utstyr og tjenester"
+            "bransje": "olje & gass - utstyr og tjenester",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/1Xc5fdGmbRvQSKeyLhFKxl/1533360ff68bbfd97f3baf5ad0885710/image.png",
+            "nordnetID": "16105627",
+            "nordnetName": "EIDESVIK OFFSHORE"
         },
         {
             "name": "ELECTROMAGNET GEO",
@@ -853,7 +1114,10 @@
             "investechID": "100477",
             "nordnet": "https://www.nordnet.no/market/stocks/16105704-electromagnetic-geoservices",
             "sektor": "energi",
-            "bransje": "olje & gass - utstyr og tjenester"
+            "bransje": "olje & gass - utstyr og tjenester",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/1mzuO7YuyXIQQ1ZsjGVNNT/94255313fe836602f8a3a81a261b32a3/image.png",
+            "nordnetID": "16105704",
+            "nordnetName": "ELECTROMAGNETIC GEOSERVICES"
         },
         {
             "name": "ELEKTROIMPORT\u00d8REN",
@@ -862,7 +1126,10 @@
             "investechID": "101150",
             "nordnet": "https://www.nordnet.no/market/stocks/17407629-elektroimpor-to-ren",
             "sektor": "sykliske forbruksvarer",
-            "bransje": "spesialist detaljhandel"
+            "bransje": "spesialist detaljhandel",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/7F3QFQ8KIfRqOILTr3DnAc/ffc3629d4b3684437bdd0217bee96e63/image.png",
+            "nordnetID": "17407629",
+            "nordnetName": "ELEKTROIMPORT\u00d8REN AS"
         },
         {
             "name": "ELKEM",
@@ -871,7 +1138,10 @@
             "investechID": "100086",
             "nordnet": "https://www.nordnet.no/market/stocks/16845391-elkem",
             "sektor": "innsatsvarer",
-            "bransje": "spesialkjemikalier"
+            "bransje": "spesialkjemikalier",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/2RaJXvZ2tp2PyZCgHccwNo/1c5443145bc275f061f3c88786825c46/image.png",
+            "nordnetID": "16845391",
+            "nordnetName": "ELKEM"
         },
         {
             "name": "ELLIPTIC LABORATOR",
@@ -880,7 +1150,10 @@
             "investechID": "101053",
             "nordnet": "https://www.nordnet.no/market/stocks/16335883-elliptic-laboratories-asa",
             "sektor": "teknologi",
-            "bransje": "programvare - infrastruktur"
+            "bransje": "programvare - infrastruktur",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/3mc2pknCG3cXuQZkTz0vYf/bb574a51e53c20d1c3adc0c9da56bb04/image.png",
+            "nordnetID": "16335883",
+            "nordnetName": "ELLIPTIC LABORATORIES ASA"
         },
         {
             "name": "ELMERA GROUP",
@@ -889,7 +1162,10 @@
             "investechID": "101074",
             "nordnet": "https://www.nordnet.no/market/stocks/16845081-elmera-group-asa",
             "sektor": "infrastruktur",
-            "bransje": "nytte - regulert elektrisk"
+            "bransje": "nytte - regulert elektrisk",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/4jZzqFmH4fXwntzZ73rz3M/eb84ce49f2ed046b346a977d04283e2f/image.png",
+            "nordnetID": "16845081",
+            "nordnetName": "ELMERA GROUP ASA"
         },
         {
             "name": "ELOPAK",
@@ -898,7 +1174,10 @@
             "investechID": "101209",
             "nordnet": "https://www.nordnet.no/market/stocks/17519997-elopak-asa",
             "sektor": "sykliske forbruksvarer",
-            "bransje": "emballasje og containere"
+            "bransje": "emballasje og containere",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/1CTUna2Aw8ks9AbmKKF3Eg/7f72f491ae95aa54c5401dccdf24415c/image.png",
+            "nordnetID": "17519997",
+            "nordnetName": "ELOPAK ASA"
         },
         {
             "name": "END\u00daR",
@@ -907,7 +1186,10 @@
             "investechID": "100857",
             "nordnet": "https://www.nordnet.no/market/stocks/17789880-endr",
             "sektor": "industri",
-            "bransje": "konglomerater"
+            "bransje": "konglomerater",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/4xOTO1gtzkwWcowQ1a0Ab5/513f1058fa21e1a8b5b699947af708dc/image.png",
+            "nordnetID": "17789880",
+            "nordnetName": "END\u00daR"
         },
         {
             "name": "ENERGEIA",
@@ -916,7 +1198,10 @@
             "investechID": "101281",
             "nordnet": "https://www.nordnet.no/market/stocks/17864570-energeia",
             "sektor": "teknologi",
-            "bransje": "solceller"
+            "bransje": "solceller",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/vY9ER5MLggn8VwYOAX1zc/23e8d0315d3c73120dd70716786dabc8/image.png",
+            "nordnetID": "17864570",
+            "nordnetName": "ENERGEIA AS"
         },
         {
             "name": "ENSURGE MICROPOWER",
@@ -925,7 +1210,10 @@
             "investechID": "101206",
             "nordnet": "https://www.nordnet.no/market/stocks/17727415-ensurge-micropower-asa",
             "sektor": "teknologi",
-            "bransje": "elektroniske komponenter"
+            "bransje": "elektroniske komponenter",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/3EQuEFVSSORJxhep5IzqAF/8dc738ac1722fba737195d91217f0fb7/image.png",
+            "nordnetID": "17727415",
+            "nordnetName": "ENSURGE MICROPOWER ASA"
         },
         {
             "name": "ENTRA",
@@ -934,7 +1222,10 @@
             "investechID": "100717",
             "nordnet": "https://www.nordnet.no/market/stocks/16330511-entra",
             "sektor": "eiendom",
-            "bransje": "eiendomstjenester"
+            "bransje": "eiendomstjenester",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/1QlkpyWvI157L2wHHgowbC/227fe7ab2ede525b0d45550c40d495a4/image.png",
+            "nordnetID": "16330511",
+            "nordnetName": "ENTRA"
         },
         {
             "name": "ENVIPCO HOLDING",
@@ -943,7 +1234,9 @@
             "investechID": "101168",
             "nordnet": "https://www.nordnet.no/market/stocks/17533229-envipco-holding",
             "sektor": "industri",
-            "bransje": "forurensnings- og behandlingskontroll"
+            "bransje": "forurensnings- og behandlingskontroll",
+            "nordnetID": "17533229",
+            "nordnetName": "ENVIPCO HOLDING N.V."
         },
         {
             "name": "EQUINOR",
@@ -952,7 +1245,10 @@
             "investechID": "100820",
             "nordnet": "https://www.nordnet.no/market/stocks/16105420-equinor",
             "sektor": "energi",
-            "bransje": "olje & gass - integrert"
+            "bransje": "olje & gass - integrert",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/1g0ykLy6DuEW29ZDoCgtKF/e200733fbeb962a1fa24bea48acab31c/image.png",
+            "nordnetID": "16105420",
+            "nordnetName": "EQUINOR"
         },
         {
             "name": "EQVA",
@@ -961,7 +1257,10 @@
             "investechID": "100707",
             "nordnet": "https://www.nordnet.no/market/stocks/16301245-eqva-asa",
             "sektor": "industri",
-            "bransje": "luftfart- og forsvar"
+            "bransje": "luftfart- og forsvar",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/6kWmmpqrHRI6XrjBnj0FmR/189e41748bab5d886bec4603feac1433/image.png",
+            "nordnetID": "16301245",
+            "nordnetName": "EQVA ASA"
         },
         {
             "name": "EUROPRIS",
@@ -970,7 +1269,10 @@
             "investechID": "100734",
             "nordnet": "https://www.nordnet.no/market/stocks/16418421-europris",
             "sektor": "konsument defensive",
-            "bransje": "lavprisbutikker"
+            "bransje": "lavprisbutikker",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/3fe7zX03YhWUbj2Dlayh1v/98d9e8aac50fe943ed7ea42123874b26/image.png",
+            "nordnetID": "16418421",
+            "nordnetName": "EUROPRIS"
         },
         {
             "name": "EVERFUEL",
@@ -979,7 +1281,10 @@
             "investechID": "101018",
             "nordnet": "https://www.nordnet.no/market/stocks/17374921-everfuel",
             "sektor": "innsatsvarer",
-            "bransje": "spesialkjemikalier"
+            "bransje": "spesialkjemikalier",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/pvC3lSUyrHQGzvbgbbyNd/4172d3893a9253f25e3cda89166e1ede/image.png",
+            "nordnetID": "17374921",
+            "nordnetName": "EVERFUEL"
         },
         {
             "name": "EXACT THERAPEUTICS",
@@ -988,7 +1293,9 @@
             "investechID": "101078",
             "nordnet": "https://www.nordnet.no/market/stocks/17302989-exact-therapeutics",
             "sektor": "helse",
-            "bransje": "bioteknologi"
+            "bransje": "bioteknologi",
+            "nordnetID": "17302989",
+            "nordnetName": "EXACT THERAPEUTICS"
         },
         {
             "name": "FLEX LNG",
@@ -997,7 +1304,10 @@
             "investechID": "100570",
             "nordnet": "https://www.nordnet.no/market/stocks/17011550-flex-lng",
             "sektor": "energi",
-            "bransje": "olje & gass - midstream"
+            "bransje": "olje & gass - midstream",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/1soeJXdIjV1ZvlnS1PDZUc/7462d5f083277c1a061b4cfd32f44d3a/image.png",
+            "nordnetID": "17011550",
+            "nordnetName": "FLEX LNG"
         },
         {
             "name": "FRONTLINE",
@@ -1006,7 +1316,10 @@
             "investechID": "100129",
             "nordnet": "https://www.nordnet.no/market/stocks/17951057-frontline",
             "sektor": "energi",
-            "bransje": "olje & gass - midstream"
+            "bransje": "olje & gass - midstream",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/7axRCOqmG0sadPV5C9LPSS/a4a806c220270f5a8b54a382eb2f7185/image.png",
+            "nordnetID": "17951057",
+            "nordnetName": "FRONTLINE PLC"
         },
         {
             "name": "FR\u00d8Y",
@@ -1024,7 +1337,10 @@
             "investechID": "100730",
             "nordnet": "https://www.nordnet.no/market/stocks/16976873-gaming-innovation-group",
             "sektor": "sykliske forbruksvarer",
-            "bransje": "gambling"
+            "bransje": "gambling",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/1nfXagbYeCT3PpT2Qyv3is/6affc096a19aef2ff90bba508c0eb0bd/image.png",
+            "nordnetID": "16976873",
+            "nordnetName": "GAMING INNOVATION GROUP"
         },
         {
             "name": "GC RIEBER SHIPPING",
@@ -1033,7 +1349,10 @@
             "investechID": "100395",
             "nordnet": "https://www.nordnet.no/market/stocks/16105618-gc-rieber-shipping",
             "sektor": "sj\u00f8fart",
-            "bransje": "sj\u00f8fart"
+            "bransje": "sj\u00f8fart",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/EgYM4rWJYAQU34UHbTPlH/d74f282d26fdfa585a1c1075c339df0a/GC_Rieber_Shipping.jpeg",
+            "nordnetID": "16105618",
+            "nordnetName": "GC RIEBER SHIPPING"
         },
         {
             "name": "GENTIAN DIAGNOSTIC",
@@ -1042,7 +1361,9 @@
             "investechID": "101060",
             "nordnet": "https://www.nordnet.no/market/stocks/16467431-gentian-diagnostics-asa",
             "sektor": "helse",
-            "bransje": "medisinsk utstyr"
+            "bransje": "medisinsk utstyr",
+            "nordnetID": "16467431",
+            "nordnetName": "GENTIAN DIAGNOSTICS ASA"
         },
         {
             "name": "GIGANTE SALMON",
@@ -1051,7 +1372,10 @@
             "investechID": "101215",
             "nordnet": "https://www.nordnet.no/market/stocks/17529462-gigante-salmon",
             "sektor": "konsument defensive",
-            "bransje": "landbruksprodukter"
+            "bransje": "landbruksprodukter",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/3ZyCHq5BcRSiRLdU0vvaZ7/9be7d9c4db97e2d61e9b9ef283a9f1c9/Gigante_Salmon.jpeg",
+            "nordnetID": "17529462",
+            "nordnetName": "GIGANTE SALMON AS"
         },
         {
             "name": "GJENSIDIGE FORSIKR",
@@ -1060,7 +1384,10 @@
             "investechID": "100601",
             "nordnet": "https://www.nordnet.no/market/stocks/16105269-gjensidige-forsikring",
             "sektor": "finansielle tjenester",
-            "bransje": "forsikring - eiendom og skader"
+            "bransje": "forsikring - eiendom og skader",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/773BguwZuBuBdKr66RvTKO/69364030f37fc3a394d46b70c7713b07/image.png",
+            "nordnetID": "16105269",
+            "nordnetName": "GJENSIDIGE FORSIKRING"
         },
         {
             "name": "GOLDEN ENERGY OFF",
@@ -1069,7 +1396,10 @@
             "investechID": "101073",
             "nordnet": "https://www.nordnet.no/market/stocks/16850151-golden-energy-offshore",
             "sektor": "sj\u00f8fart",
-            "bransje": "sj\u00f8fart"
+            "bransje": "sj\u00f8fart",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/4QReh3dBiItvIVTVOOqBFf/d1583defcb4c2278fe5bceab2781b57f/image.png",
+            "nordnetID": "16850151",
+            "nordnetName": "GOLDEN ENERGY OFFSHORE SERVICES"
         },
         {
             "name": "GOLDEN OCEAN GROUP",
@@ -1078,7 +1408,10 @@
             "investechID": "100727",
             "nordnet": "https://www.nordnet.no/market/stocks/16586207-golden-ocean-group",
             "sektor": "sj\u00f8fart",
-            "bransje": "sj\u00f8fart"
+            "bransje": "sj\u00f8fart",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/mF5v8ZfSIuIhxzNDR5mit/249ce6b70940790a3e8e325da6dfd575/image.png",
+            "nordnetID": "16586207",
+            "nordnetName": "GOLDEN OCEAN GROUP"
         },
         {
             "name": "GOODTECH",
@@ -1087,7 +1420,10 @@
             "investechID": "100096",
             "nordnet": "https://www.nordnet.no/market/stocks/16105650-goodtech",
             "sektor": "industri",
-            "bransje": "bygg og anlegg"
+            "bransje": "bygg og anlegg",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/2cHZ7Q9H4tGnj148SLw6xT/acb4ca576df56486426481c638f7565d/image.png",
+            "nordnetID": "16105650",
+            "nordnetName": "GOODTECH"
         },
         {
             "name": "GRAM CAR CARRIERS",
@@ -1096,7 +1432,10 @@
             "investechID": "101247",
             "nordnet": "https://www.nordnet.no/market/stocks/17682459-gram-car-carriers",
             "sektor": "sj\u00f8fart",
-            "bransje": "sj\u00f8fart"
+            "bransje": "sj\u00f8fart",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/6x16LBGTw3Phu5FgPmPZRz/28244b3c111e13fde5748679d8337202/Gram_Car_Carriers.jpeg",
+            "nordnetID": "17682459",
+            "nordnetName": "GRAM CAR CARRIERS ASA"
         },
         {
             "name": "GREEN MINERALS",
@@ -1105,7 +1444,10 @@
             "investechID": "101178",
             "nordnet": "https://www.nordnet.no/market/stocks/17440469-green-minerals",
             "sektor": "innsatsvarer",
-            "bransje": "andre industrielle metaller og gruvedrift"
+            "bransje": "andre industrielle metaller og gruvedrift",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/1hbTe4u9zcnaoxCA5yMURI/f7817d2a46bc7116e56c0d702457c4eb/image.png",
+            "nordnetID": "17440469",
+            "nordnetName": "GREEN MINERALS AS"
         },
         {
             "name": "GRIEG SEAFOOD",
@@ -1114,7 +1456,10 @@
             "investechID": "100503",
             "nordnet": "https://www.nordnet.no/market/stocks/16105714-grieg-seafood",
             "sektor": "konsument defensive",
-            "bransje": "landbruksprodukter"
+            "bransje": "landbruksprodukter",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/3Nxz83mwytSpe4xSrLU66r/7ccf787d55106b108104cc0b51632160/Grieg_Seafood.jpeg",
+            "nordnetID": "16105714",
+            "nordnetName": "GRIEG SEAFOOD"
         },
         {
             "name": "GRONG SPAREBANK",
@@ -1123,7 +1468,10 @@
             "investechID": "101046",
             "nordnet": "https://www.nordnet.no/market/stocks/16161939-grong-sparebank",
             "sektor": "finansielle tjenester",
-            "bransje": "banker - regionale"
+            "bransje": "banker - regionale",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/28wSRxsLfY2CTWwvU3n3kG/d8aefb5ff6b85e3aff3b45063402c461/image.png",
+            "nordnetID": "16161939",
+            "nordnetName": "GRONG SPAREBANK"
         },
         {
             "name": "GYLDENDAL",
@@ -1132,7 +1480,9 @@
             "investechID": "100173",
             "nordnet": "https://www.nordnet.no/market/stocks/16105653-gyldendal",
             "sektor": "kommunikasjonstjenester",
-            "bransje": "publisering"
+            "bransje": "publisering",
+            "nordnetID": "16105653",
+            "nordnetName": "GYLDENDAL"
         },
         {
             "name": "HAFNIA LIMITED",
@@ -1141,7 +1491,10 @@
             "investechID": "101010",
             "nordnet": "https://www.nordnet.no/market/stocks/16994482-hafnia-limited",
             "sektor": "sj\u00f8fart",
-            "bransje": "sj\u00f8fart"
+            "bransje": "sj\u00f8fart",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/s87uRrbGKb1efpHo0HOad/c71fd90a525a8da50688024dbc6f8c92/Hafnia_Limited.jpeg",
+            "nordnetID": "16994482",
+            "nordnetName": "HAFNIA LIMITED"
         },
         {
             "name": "HARMONYCHAIN",
@@ -1150,7 +1503,10 @@
             "investechID": "101203",
             "nordnet": "https://www.nordnet.no/market/stocks/17436489-harmonychain",
             "sektor": "teknologi",
-            "bransje": "programvare - infrastruktur"
+            "bransje": "programvare - infrastruktur",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/7bHBXZo2ibTzFvxWK2WxIf/4aa58b640b8599929da1c2e02077a0b9/Frame_14736.png",
+            "nordnetID": "17436489",
+            "nordnetName": "HARMONYCHAIN AS"
         },
         {
             "name": "HAV GROUP",
@@ -1159,7 +1515,10 @@
             "investechID": "101163",
             "nordnet": "https://www.nordnet.no/market/stocks/17454724-hav-group-asa",
             "sektor": "sj\u00f8fart",
-            "bransje": "sj\u00f8fart"
+            "bransje": "sj\u00f8fart",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/4ECO1FVD4gDNaHbZkRO8Fo/a6c985437fda36109b2d08c55dc29c5c/image.png",
+            "nordnetID": "17454724",
+            "nordnetName": "HAV GROUP ASA"
         },
         {
             "name": "HAVILA KYSTRUTEN",
@@ -1168,7 +1527,9 @@
             "investechID": "101221",
             "nordnet": "https://www.nordnet.no/market/stocks/17551146-havila-kystruten",
             "sektor": "sykliske forbruksvarer",
-            "bransje": "reiselivstjenester"
+            "bransje": "reiselivstjenester",
+            "nordnetID": "17551146",
+            "nordnetName": "HAVILA KYSTRUTEN AS"
         },
         {
             "name": "HAVILA SHIPPING",
@@ -1177,7 +1538,10 @@
             "investechID": "100382",
             "nordnet": "https://www.nordnet.no/market/stocks/16105624-havila-shipping",
             "sektor": "sj\u00f8fart",
-            "bransje": "sj\u00f8fart"
+            "bransje": "sj\u00f8fart",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/1CwSJQVnLxoPuFSCdp0uRr/0e57f5b8e41698a507bcea3a79b0ac95/Havila_Shipping.png",
+            "nordnetID": "16105624",
+            "nordnetName": "HAVILA SHIPPING"
         },
         {
             "name": "HEXAGON COMPOSITES",
@@ -1186,7 +1550,10 @@
             "investechID": "100255",
             "nordnet": "https://www.nordnet.no/market/stocks/16105432-hexagon-composites",
             "sektor": "sykliske forbruksvarer",
-            "bransje": "emballasje og containere"
+            "bransje": "emballasje og containere",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/2P5gvaTNQpCKyCguVBXGtF/7c80b8d7720fdad038244ffa37f16ced/image.png",
+            "nordnetID": "16105432",
+            "nordnetName": "HEXAGON COMPOSITES"
         },
         {
             "name": "HEXAGON PURUS",
@@ -1195,7 +1562,10 @@
             "investechID": "101146",
             "nordnet": "https://www.nordnet.no/market/stocks/17399412-hexagon-purus-asa",
             "sektor": "industri",
-            "bransje": "industriell distribusjon"
+            "bransje": "industriell distribusjon",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/2xYnhkx0iukiqINt1VTbn3/ed94d7480217fbea410ede8f30a9c3b9/Hexagon_Purus.jpeg",
+            "nordnetID": "17399412",
+            "nordnetName": "HEXAGON PURUS ASA"
         },
         {
             "name": "HIMALAYA SHIPPING",
@@ -1204,7 +1574,10 @@
             "investechID": "101219",
             "nordnet": "https://www.nordnet.no/market/stocks/17546262-himalaya-shipping",
             "sektor": "sj\u00f8fart",
-            "bransje": "sj\u00f8fart"
+            "bransje": "sj\u00f8fart",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/1j8uQsy9F0rIoRd4fgytwI/133cf4edb1e1a06b699f4a1d5a9c42df/Himalaya_Shipping.png",
+            "nordnetID": "17546262",
+            "nordnetName": "HIMALAYA SHIPPING LTD"
         },
         {
             "name": "HOFSETH BIOCARE",
@@ -1213,7 +1586,10 @@
             "investechID": "100642",
             "nordnet": "https://www.nordnet.no/market/stocks/16105329-hofseth-biocare",
             "sektor": "helse",
-            "bransje": "bioteknologi"
+            "bransje": "bioteknologi",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/71OEeNRnvi2HsF2OXe4wTq/9e23b907852fa374c1bf41a6087ecd5d/image.png",
+            "nordnetID": "16105329",
+            "nordnetName": "HOFSETH BIOCARE"
         },
         {
             "name": "HORISONT ENERGI",
@@ -1222,7 +1598,10 @@
             "investechID": "101156",
             "nordnet": "https://www.nordnet.no/market/stocks/17430327-horisont-energi",
             "sektor": "innsatsvarer",
-            "bransje": "spesialkjemikalier"
+            "bransje": "spesialkjemikalier",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/3dnjnktKIbexRjVJPIRhp/883a75adb9efc2b21bbc6a8fb3448085/image.png",
+            "nordnetID": "17430327",
+            "nordnetName": "HORISONT ENERGI AS"
         },
         {
             "name": "HUDDLESTOCK FINTEC",
@@ -1231,7 +1610,10 @@
             "investechID": "101115",
             "nordnet": "https://www.nordnet.no/market/stocks/17084633-huddlestock-fintech",
             "sektor": "teknologi",
-            "bransje": "programvare - applikasjoner"
+            "bransje": "programvare - applikasjoner",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/1ETSOzzQ0tRcxAOCAZedHg/cd9f27692acc36a30025245db3f1ed72/image.png",
+            "nordnetID": "17084633",
+            "nordnetName": "HUDDLESTOCK FINTECH"
         },
         {
             "name": "HUDDLY",
@@ -1240,7 +1622,10 @@
             "investechID": "101169",
             "nordnet": "https://www.nordnet.no/market/stocks/16798371-huddly",
             "sektor": "teknologi",
-            "bransje": "kommunikasjonsutstyr"
+            "bransje": "kommunikasjonsutstyr",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/7BO72JsO7XXqMcEvo2fMJ6/8f52e61cdb05959ea32513736c53476b/image.png",
+            "nordnetID": "16798371",
+            "nordnetName": "HUDDLY AS"
         },
         {
             "name": "HUNTER GROUP",
@@ -1249,7 +1634,9 @@
             "investechID": "100783",
             "nordnet": "https://www.nordnet.no/market/stocks/18078478-hunter-group",
             "sektor": "energi",
-            "bransje": "olje & gass - midstream"
+            "bransje": "olje & gass - midstream",
+            "nordnetID": "18078478",
+            "nordnetName": "HUNTER GROUP"
         },
         {
             "name": "HYDROGENPRO",
@@ -1258,7 +1645,10 @@
             "investechID": "101098",
             "nordnet": "https://www.nordnet.no/market/stocks/17367824-hydrogenpro-asa",
             "sektor": "industri",
-            "bransje": "spesialindustrimaskiner"
+            "bransje": "spesialindustrimaskiner",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/6DaUxSB5DdsUnfjFbzKF5Q/fdb57225356888230d208096aae51151/image.png",
+            "nordnetID": "17367824",
+            "nordnetName": "HYDROGENPRO ASA"
         },
         {
             "name": "HYNION",
@@ -1267,7 +1657,10 @@
             "investechID": "101189",
             "nordnet": "https://www.nordnet.no/market/stocks/17469323-hynion",
             "sektor": "sykliske forbruksvarer",
-            "bransje": "spesialist detaljhandel"
+            "bransje": "spesialist detaljhandel",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/7tcpqKG4P4MjUaEV7e6DY0/de2e6e59ef6e4e8b4b5f74b1e86bfe30/image.png",
+            "nordnetID": "17469323",
+            "nordnetName": "HYNION AS"
         },
         {
             "name": "HYON",
@@ -1276,7 +1669,9 @@
             "investechID": "101248",
             "nordnet": "https://www.nordnet.no/market/stocks/17690598-hyon",
             "sektor": "sj\u00f8fart",
-            "bransje": "sj\u00f8fart"
+            "bransje": "sj\u00f8fart",
+            "nordnetID": "17690598",
+            "nordnetName": "HYON AS"
         },
         {
             "name": "H\u00d6EGH AUTOLINERS",
@@ -1285,7 +1680,10 @@
             "investechID": "101238",
             "nordnet": "https://www.nordnet.no/market/stocks/17636942-hoegh-autoliners-asa",
             "sektor": "sj\u00f8fart",
-            "bransje": "sj\u00f8fart"
+            "bransje": "sj\u00f8fart",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/5bUTCnfuMU0dOKXpi8wNBh/8290abfdbe1d254bc73754b8c6b34a18/Ho__egh_Autoliners.jpeg",
+            "nordnetID": "17636942",
+            "nordnetName": "HOEGH AUTOLINERS ASA"
         },
         {
             "name": "H\u00d8LAND OG SETSKOG",
@@ -1294,7 +1692,10 @@
             "investechID": "100283",
             "nordnet": "https://www.nordnet.no/market/stocks/16105589-ho-land-og-setskog",
             "sektor": "finansielle tjenester",
-            "bransje": "banker - regionale"
+            "bransje": "banker - regionale",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/3dB5Rhx61VerYnnFhV256E/debd562b703ac85f3246f5a8337c8a7a/spare.png",
+            "nordnetID": "16105589",
+            "nordnetName": "H\u00d8LAND OG SETSKOG SPAREBANK"
         },
         {
             "name": "ICE FISH FARM",
@@ -1303,7 +1704,10 @@
             "investechID": "101087",
             "nordnet": "https://www.nordnet.no/market/stocks/17283497-ice-fish-farm",
             "sektor": "konsument defensive",
-            "bransje": "landbruksprodukter"
+            "bransje": "landbruksprodukter",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/2owip9Gg5gdpW64Qid8WNm/393c0b9f6c5c04554431f10cd06e00d2/Ice_Fish_Farm.jpeg",
+            "nordnetID": "17283497",
+            "nordnetName": "ICE FISH FARM"
         },
         {
             "name": "ICELANDIC SALMON",
@@ -1312,7 +1716,10 @@
             "investechID": "101054",
             "nordnet": "https://www.nordnet.no/market/stocks/17053643-icelandic-salmon",
             "sektor": "konsument defensive",
-            "bransje": "landbruksprodukter"
+            "bransje": "landbruksprodukter",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/2izco7vR61dHnkuEp0JN47/1408027bde153f54c92c88f865994a49/Screenshot_2023-01-28_at_21.26.15.png",
+            "nordnetID": "17053643",
+            "nordnetName": "ICELANDIC SALMON"
         },
         {
             "name": "IDEX BIOMETRICS",
@@ -1321,7 +1728,10 @@
             "investechID": "100577",
             "nordnet": "https://www.nordnet.no/market/stocks/16105761-idex-biometrics",
             "sektor": "teknologi",
-            "bransje": "programvare - applikasjoner"
+            "bransje": "programvare - applikasjoner",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/11iIya9Wd03hGEQMH58dPJ/5b94d73530359f0d883e8045e3aa4214/image.png",
+            "nordnetID": "16105761",
+            "nordnetName": "IDEX BIOMETRICS"
         },
         {
             "name": "INDUCT",
@@ -1330,7 +1740,9 @@
             "investechID": "101041",
             "nordnet": "https://www.nordnet.no/market/stocks/16151160-induct",
             "sektor": "helse",
-            "bransje": "helseinformasjonstjenester"
+            "bransje": "helseinformasjonstjenester",
+            "nordnetID": "16151160",
+            "nordnetName": "INDUCT"
         },
         {
             "name": "INIFY LABORATORIES",
@@ -1339,7 +1751,10 @@
             "investechID": "101262",
             "nordnet": "https://www.nordnet.no/market/stocks/17707030-inify-laboratories",
             "sektor": "helse",
-            "bransje": "diagnostikk & forskning"
+            "bransje": "diagnostikk & forskning",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/4zOpjSUd8BVtMj2yNyzWUw/00821c8d5c9a05cadc066e1a85918f8e/image.png",
+            "nordnetID": "17707030",
+            "nordnetName": "INIFY LABORATORIES AB"
         },
         {
             "name": "ININ GROUP",
@@ -1348,7 +1763,10 @@
             "investechID": "101273",
             "nordnet": "https://www.nordnet.no/market/stocks/17134903-inin-group",
             "sektor": "teknologi",
-            "bransje": "vitenskapelige og tekniske instrumenter"
+            "bransje": "vitenskapelige og tekniske instrumenter",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/01grzAX5z2tMec2kKdLYha/16e6bcd8c46c6937d6e54114a83b089a/image.png",
+            "nordnetID": "17134903",
+            "nordnetName": "ININ GROUP AS"
         },
         {
             "name": "INSTABANK",
@@ -1357,7 +1775,9 @@
             "investechID": "101063",
             "nordnet": "https://www.nordnet.no/market/stocks/16605236-instabank",
             "sektor": "finansielle tjenester",
-            "bransje": "banker - regionale"
+            "bransje": "banker - regionale",
+            "nordnetID": "16605236",
+            "nordnetName": "INSTABANK"
         },
         {
             "name": "INTEGRATED WIND SO",
@@ -1366,7 +1786,9 @@
             "investechID": "101180",
             "nordnet": "https://www.nordnet.no/market/stocks/17470401-integrated-wind-solutions",
             "sektor": "infrastruktur",
-            "bransje": "nytte - fornybar"
+            "bransje": "nytte - fornybar",
+            "nordnetID": "17470401",
+            "nordnetName": "INTEGRATED WIND SOLUTIONS ASA"
         },
         {
             "name": "INTEROIL EXPL PROD",
@@ -1375,7 +1797,10 @@
             "investechID": "100442",
             "nordnet": "https://www.nordnet.no/market/stocks/16105677-interoil-exploration-production",
             "sektor": "energi",
-            "bransje": "olje & gass - e&p"
+            "bransje": "olje & gass - e&p",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/7atNwHahK4iBnEVgutmyf1/157971e2a1b2905b2890324bc28e87f0/Screenshot_2023-01-28_at_21.48.04.png",
+            "nordnetID": "16105677",
+            "nordnetName": "INTEROIL EXPLORATION AND PRODUCTION"
         },
         {
             "name": "ITERA",
@@ -1384,7 +1809,10 @@
             "investechID": "101028",
             "nordnet": "https://www.nordnet.no/market/stocks/16105588-itera",
             "sektor": "teknologi",
-            "bransje": "it - tjenester"
+            "bransje": "it - tjenester",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/26MjlztPB0qMwRjwPluxHC/16acad41dadb4d6112520725c5e0ec12/image.png",
+            "nordnetID": "16105588",
+            "nordnetName": "ITERA"
         },
         {
             "name": "JINHUI SHIPP TRANS",
@@ -1393,7 +1821,10 @@
             "investechID": "100133",
             "nordnet": "https://www.nordnet.no/market/stocks/16105418-jinhui-shipping-transportation",
             "sektor": "sj\u00f8fart",
-            "bransje": "sj\u00f8fart"
+            "bransje": "sj\u00f8fart",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/4HsWTLDfREQBv8kAMZfi7h/6109634442f49a5f329f98ec5fa559f1/Screenshot_2023-01-28_at_21.58.39.png",
+            "nordnetID": "16105418",
+            "nordnetName": "JINHUI SHIPPING AND TRANSPORTATION"
         },
         {
             "name": "J\u00c6REN SPAREBANK",
@@ -1402,7 +1833,10 @@
             "investechID": "101039",
             "nordnet": "https://www.nordnet.no/market/stocks/16105710-ja-ren-sparebank",
             "sektor": "finansielle tjenester",
-            "bransje": "banker - regionale"
+            "bransje": "banker - regionale",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/7L8lZRB1Kzk0BnSXZh7dhx/e0c6426fd69c89e9328d100943b629df/image.png",
+            "nordnetID": "16105710",
+            "nordnetName": "J\u00c6REN SPAREBANK"
         },
         {
             "name": "KAHOOT!",
@@ -1411,7 +1845,10 @@
             "investechID": "101122",
             "nordnet": "https://www.nordnet.no/market/stocks/16874165-kahoot-asa",
             "sektor": "teknologi",
-            "bransje": "programvare - applikasjoner"
+            "bransje": "programvare - applikasjoner",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/Jj9RL82z0kRVVCfnebpEU/6cceeef4cd142694fc215a0ac310a302/image.png",
+            "nordnetID": "16874165",
+            "nordnetName": "KAHOOT! ASA"
         },
         {
             "name": "KID",
@@ -1420,7 +1857,10 @@
             "investechID": "100738",
             "nordnet": "https://www.nordnet.no/market/stocks/16467192-kid",
             "sektor": "sykliske forbruksvarer",
-            "bransje": "spesialist detaljhandel"
+            "bransje": "spesialist detaljhandel",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/3PErdshWyNiR5Jv4B2LfR8/0e5f1223e8e4ca6bb663f4ddd78e22f7/Screenshot_2023-01-27_at_09.10.42.png",
+            "nordnetID": "16467192",
+            "nordnetName": "KID"
         },
         {
             "name": "KITRON",
@@ -1429,7 +1869,10 @@
             "investechID": "100257",
             "nordnet": "https://www.nordnet.no/market/stocks/16105579-kitron",
             "sektor": "teknologi",
-            "bransje": "elektroniske komponenter"
+            "bransje": "elektroniske komponenter",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/1bV6EovJxwmj1ZyuuFkHSt/6b0443e328a4616f087b5028863448e9/image.png",
+            "nordnetID": "16105579",
+            "nordnetName": "KITRON"
         },
         {
             "name": "KLAVENESS COMBINAT",
@@ -1438,7 +1881,10 @@
             "investechID": "100865",
             "nordnet": "https://www.nordnet.no/market/stocks/16951374-klaveness-combination-carriers",
             "sektor": "sj\u00f8fart",
-            "bransje": "sj\u00f8fart"
+            "bransje": "sj\u00f8fart",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/6wXLy57Gd8DQa9ofCgq7YN/e1458f372141389c7a6d6b4a52a1b26b/Klaveness_Combination_Carriers.png",
+            "nordnetID": "16951374",
+            "nordnetName": "KLAVENESS COMBINATION CARRIERS"
         },
         {
             "name": "KMC PROPERTIES",
@@ -1447,7 +1893,10 @@
             "investechID": "101153",
             "nordnet": "https://www.nordnet.no/market/stocks/16105257-kmc-properties-asa",
             "sektor": "eiendom",
-            "bransje": "eiendomstjenester"
+            "bransje": "eiendomstjenester",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/66aUTcFBEzKPrz5YrTYMBo/41e4c5d6d919af2fc47fc2ef8274d2d8/image.png",
+            "nordnetID": "16105257",
+            "nordnetName": "KMC PROPERTIES ASA"
         },
         {
             "name": "KOMPLETT",
@@ -1456,7 +1905,10 @@
             "investechID": "101210",
             "nordnet": "https://www.nordnet.no/market/stocks/17520505-komplett-asa",
             "sektor": "sykliske forbruksvarer",
-            "bransje": "netthandel"
+            "bransje": "netthandel",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/1gaKily9StCYt2LKkIVPDc/e34e53d8ff1d8acdb8c64886468d138f/image.png",
+            "nordnetID": "17520505",
+            "nordnetName": "KOMPLETT ASA"
         },
         {
             "name": "KONGSBERG AUTOMOT",
@@ -1465,7 +1917,10 @@
             "investechID": "100392",
             "nordnet": "https://www.nordnet.no/market/stocks/16105626-kongsberg-automotive",
             "sektor": "sykliske forbruksvarer",
-            "bransje": "bildeler"
+            "bransje": "bildeler",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/BNGHRTpU13XKOqSzh8R8y/26d90d8c44ae7b4dbf7b1a6a70ceaf7d/image.png",
+            "nordnetID": "16105626",
+            "nordnetName": "KONGSBERG AUTOMOTIVE"
         },
         {
             "name": "KONGSBERG GRUPPEN",
@@ -1474,7 +1929,10 @@
             "investechID": "100098",
             "nordnet": "https://www.nordnet.no/market/stocks/16105666-kongsberg-gruppen",
             "sektor": "industri",
-            "bransje": "luftfart- og forsvar"
+            "bransje": "luftfart- og forsvar",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/6rNZAx3aZtooPlcUOKUBmx/a35f0607fd6d9a94e9ac7dfba1feb01c/image.png",
+            "nordnetID": "16105666",
+            "nordnetName": "KONGSBERG GRUPPEN"
         },
         {
             "name": "KRAFT BANK",
@@ -1483,7 +1941,10 @@
             "investechID": "101145",
             "nordnet": "https://www.nordnet.no/market/stocks/16857989-kraft-bank-asa",
             "sektor": "finansielle tjenester",
-            "bransje": "banker - regionale"
+            "bransje": "banker - regionale",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/1UQQfM0AjyVjJ1xRw2B1i9/a4c2cb46a1601f6577c7f9c6ebe6fab4/image.png",
+            "nordnetID": "16857989",
+            "nordnetName": "KRAFT BANK ASA"
         },
         {
             "name": "KYOTO GROUP",
@@ -1492,7 +1953,10 @@
             "investechID": "101184",
             "nordnet": "https://www.nordnet.no/market/stocks/17461377-kyoto-group",
             "sektor": "industri",
-            "bransje": "spesialindustrimaskiner"
+            "bransje": "spesialindustrimaskiner",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/7tbBmvfZXMb9HG2eABVr8e/2ac6b886da382177900024e0b733ed9b/image.png",
+            "nordnetID": "17461377",
+            "nordnetName": "KYOTO GROUP AS"
         },
         {
             "name": "LEA BANK",
@@ -1501,7 +1965,10 @@
             "investechID": "101033",
             "nordnet": "https://www.nordnet.no/market/stocks/16167144-lea-bank-asa",
             "sektor": "finansielle tjenester",
-            "bransje": "banker - regionale"
+            "bransje": "banker - regionale",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/qSsdMGkiu1yKNNFo9vLjd/1ff1601087386ac5dc2ef7ed6ce3b7ae/image.png",
+            "nordnetID": "16167144",
+            "nordnetName": "LEA BANK ASA"
         },
         {
             "name": "LER\u00d8Y SEAFOOD GP",
@@ -1510,7 +1977,10 @@
             "investechID": "100320",
             "nordnet": "https://www.nordnet.no/market/stocks/16105604-le-ro-y-seafood-group",
             "sektor": "konsument defensive",
-            "bransje": "pakket mat"
+            "bransje": "pakket mat",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/3v4NHuWV7t6uYkYtYsinlW/3f9c3c538cae82d4c335d91090453b6f/image.png",
+            "nordnetID": "16105604",
+            "nordnetName": "LER\u00d8Y SEAFOOD GROUP"
         },
         {
             "name": "LIFECARE",
@@ -1519,7 +1989,10 @@
             "investechID": "101043",
             "nordnet": "https://www.nordnet.no/market/stocks/16155620-lifecare",
             "sektor": "helse",
-            "bransje": "medisinsk utstyr"
+            "bransje": "medisinsk utstyr",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/66ryALDQRdBQIYh7fAMN9L/23adb0a877228fc732afff806f4163ab/image.png",
+            "nordnetID": "16155620",
+            "nordnetName": "LIFECARE"
         },
         {
             "name": "LINK MOBILITY GRP",
@@ -1528,7 +2001,10 @@
             "investechID": "100992",
             "nordnet": "https://www.nordnet.no/market/stocks/17371187-link-mobility-group",
             "sektor": "kommunikasjonstjenester",
-            "bransje": "telekommunikasjon"
+            "bransje": "telekommunikasjon",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/6bTJXiz130A6m96d05oJRc/7d661d9ea1d4249b22f662313720ff3e/image.png",
+            "nordnetID": "17371187",
+            "nordnetName": "LINK MOBILITY GROUP HOLDING"
         },
         {
             "name": "LUMI GRUPPEN",
@@ -1537,7 +2013,9 @@
             "investechID": "101173",
             "nordnet": "https://www.nordnet.no/market/stocks/17445516-lumi-gruppen",
             "sektor": "konsument defensive",
-            "bransje": "utdanningstjenester"
+            "bransje": "utdanningstjenester",
+            "nordnetID": "17445516",
+            "nordnetName": "LUMI GRUPPEN AS"
         },
         {
             "name": "LYTIX BIOPHARMA",
@@ -1546,7 +2024,9 @@
             "investechID": "101207",
             "nordnet": "https://www.nordnet.no/market/stocks/16145419-lytix-biopharma",
             "sektor": "helse",
-            "bransje": "bioteknologi"
+            "bransje": "bioteknologi",
+            "nordnetID": "16145419",
+            "nordnetName": "LYTIX BIOPHARMA AS"
         },
         {
             "name": "M VEST WATER",
@@ -1555,7 +2035,9 @@
             "investechID": "101204",
             "nordnet": "https://www.nordnet.no/market/stocks/17513495-m-vest-water",
             "sektor": "industri",
-            "bransje": "forurensnings- og behandlingskontroll"
+            "bransje": "forurensnings- og behandlingskontroll",
+            "nordnetID": "17513495",
+            "nordnetName": "M VEST WATER AS"
         },
         {
             "name": "MAGNORA",
@@ -1564,7 +2046,10 @@
             "investechID": "100851",
             "nordnet": "https://www.nordnet.no/market/stocks/16105614-magnora",
             "sektor": "infrastruktur",
-            "bransje": "nytte - fornybar"
+            "bransje": "nytte - fornybar",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/5z2zQOtJcW7PRhmokpMqFi/434621495e899b8c41dd628d16493cc9/image.png",
+            "nordnetID": "16105614",
+            "nordnetName": "MAGNORA"
         },
         {
             "name": "MEDISTIM",
@@ -1573,7 +2058,10 @@
             "investechID": "100351",
             "nordnet": "https://www.nordnet.no/market/stocks/16105610-medistim",
             "sektor": "helse",
-            "bransje": "medisinsk utstyr"
+            "bransje": "medisinsk utstyr",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/2PZD176CqzZfXPjmD09aks/1a20f33b223b85c67fa610ef45285786/image.png",
+            "nordnetID": "16105610",
+            "nordnetName": "MEDISTIM"
         },
         {
             "name": "MELHUS SPAREBANK",
@@ -1582,7 +2070,10 @@
             "investechID": "100285",
             "nordnet": "https://www.nordnet.no/market/stocks/16105586-melhus-sparebank",
             "sektor": "finansielle tjenester",
-            "bransje": "banker - regionale"
+            "bransje": "banker - regionale",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/5e7evof32Pvd9zNpuxqpO4/4bf3ad54c4604566c02dda880b76f8ae/image.png",
+            "nordnetID": "16105586",
+            "nordnetName": "MELHUS SPAREBANK"
         },
         {
             "name": "MINTRA HOLDING",
@@ -1591,7 +2082,9 @@
             "investechID": "101103",
             "nordnet": "https://www.nordnet.no/market/stocks/17360232-mintra-holding",
             "sektor": "industri",
-            "bransje": "personal- og arbeidskraftformidling"
+            "bransje": "personal- og arbeidskraftformidling",
+            "nordnetID": "17360232",
+            "nordnetName": "MINTRA HOLDING"
         },
         {
             "name": "MORROW BANK",
@@ -1600,7 +2093,10 @@
             "investechID": "100800",
             "nordnet": "https://www.nordnet.no/market/stocks/16275895-morrow-bank-asa",
             "sektor": "finansielle tjenester",
-            "bransje": "banker - regionale"
+            "bransje": "banker - regionale",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/2SG9wbEhTPUAnbkuP4MLAO/c0361402151718029dbf9b67a28cf949/image.png",
+            "nordnetID": "16275895",
+            "nordnetName": "MORROW BANK ASA"
         },
         {
             "name": "MOWI",
@@ -1609,7 +2105,10 @@
             "investechID": "100855",
             "nordnet": "https://www.nordnet.no/market/stocks/16105427-mowi",
             "sektor": "konsument defensive",
-            "bransje": "landbruksprodukter"
+            "bransje": "landbruksprodukter",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/4UbQoOx9CAaEpjFKJtIjnQ/2c51285e39bfcc273a299bdf58623968/image.png",
+            "nordnetID": "16105427",
+            "nordnetName": "MOWI"
         },
         {
             "name": "MPC CONTAINER SHIP",
@@ -1618,7 +2117,10 @@
             "investechID": "100806",
             "nordnet": "https://www.nordnet.no/market/stocks/16697810-mpc-container-ships",
             "sektor": "sj\u00f8fart",
-            "bransje": "sj\u00f8fart"
+            "bransje": "sj\u00f8fart",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/1qCl2rLjooytKiUQhBdeOD/42df2a27fc9641d26ff92b95e8e0db05/image.png",
+            "nordnetID": "16697810",
+            "nordnetName": "MPC CONTAINER SHIPS"
         },
         {
             "name": "MPC ENERGY SOLUTIO",
@@ -1627,7 +2129,10 @@
             "investechID": "101157",
             "nordnet": "https://www.nordnet.no/market/stocks/17430294-mpc-energy-solutions",
             "sektor": "infrastruktur",
-            "bransje": "nytte - fornybar"
+            "bransje": "nytte - fornybar",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/45X9IWANA5AgXOCFwghmQh/d79d2ac0f92f0f83a2fe3db2b1eb30ed/image.png",
+            "nordnetID": "17430294",
+            "nordnetName": "MPC ENERGY SOLUTIONS N.V."
         },
         {
             "name": "MULTICONSULT",
@@ -1636,7 +2141,10 @@
             "investechID": "100728",
             "nordnet": "https://www.nordnet.no/market/stocks/16407289-multiconsult",
             "sektor": "industri",
-            "bransje": "bygg og anlegg"
+            "bransje": "bygg og anlegg",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/QUahIUGvrWlYKDzEHA8rE/6e5b6a6478f961b1a9c4c8919053822d/image.png",
+            "nordnetID": "16407289",
+            "nordnetName": "MULTICONSULT"
         },
         {
             "name": "M\u00c5S\u00d8VAL",
@@ -1645,7 +2153,10 @@
             "investechID": "101208",
             "nordnet": "https://www.nordnet.no/market/stocks/17528187-ma-so-val",
             "sektor": "konsument defensive",
-            "bransje": "landbruksprodukter"
+            "bransje": "landbruksprodukter",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/6cObXUuVC03HCzD4dzl0DZ/cd91b2264bf4cdeb10d71811b38cc800/Ma__s__val.png",
+            "nordnetID": "17528187",
+            "nordnetName": "M\u00c5S\u00d8VAL AS"
         },
         {
             "name": "NAPATECH",
@@ -1654,7 +2165,10 @@
             "investechID": "100691",
             "nordnet": "https://www.nordnet.no/market/stocks/16250823-napatech",
             "sektor": "teknologi",
-            "bransje": "kommunikasjonsutstyr"
+            "bransje": "kommunikasjonsutstyr",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/6G45uBEplzkTfwH3YtxpyR/b19eeb86a332e5a166f10c9dfd90b1ce/image.png",
+            "nordnetID": "16250823",
+            "nordnetName": "NAPATECH"
         },
         {
             "name": "NAVAMEDIC",
@@ -1663,7 +2177,10 @@
             "investechID": "100429",
             "nordnet": "https://www.nordnet.no/market/stocks/16105660-navamedic",
             "sektor": "helse",
-            "bransje": "medisinsk distribusjon"
+            "bransje": "medisinsk distribusjon",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/AGbM0M3Eiuj1lCKHrJP3t/b2ac52c2496b3bf022bd01ad845d25f5/image.png",
+            "nordnetID": "16105660",
+            "nordnetName": "NAVAMEDIC"
         },
         {
             "name": "NEKKAR",
@@ -1672,7 +2189,10 @@
             "investechID": "100884",
             "nordnet": "https://www.nordnet.no/market/stocks/16105423-nekkar",
             "sektor": "industri",
-            "bransje": "spesialindustrimaskiner"
+            "bransje": "spesialindustrimaskiner",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/4ezOEdiB4OMRCbwqcZqWDa/2db35fed495d58788b814d45fe697ede/NEKKAR.webp",
+            "nordnetID": "16105423",
+            "nordnetName": "NEKKAR"
         },
         {
             "name": "NEL",
@@ -1681,7 +2201,10 @@
             "investechID": "100718",
             "nordnet": "https://www.nordnet.no/market/stocks/16105612-nel",
             "sektor": "industri",
-            "bransje": "spesialindustrimaskiner"
+            "bransje": "spesialindustrimaskiner",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/53QMvhS9xZGjUWpxzjPnRg/53f9c087f075eaba16e26d65c39180fc/image.png",
+            "nordnetID": "16105612",
+            "nordnetName": "NEL"
         },
         {
             "name": "NEXT BIOMETRICS GP",
@@ -1690,7 +2213,10 @@
             "investechID": "100706",
             "nordnet": "https://www.nordnet.no/market/stocks/16300344-next-biometrics-group",
             "sektor": "teknologi",
-            "bransje": "vitenskapelige og tekniske instrumenter"
+            "bransje": "vitenskapelige og tekniske instrumenter",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/1N2v86gSMJHXcHGc51BmzL/4b461ef86e6abea9408a44e4c3742ff1/image.png",
+            "nordnetID": "16300344",
+            "nordnetName": "NEXT BIOMETRICS GROUP"
         },
         {
             "name": "NIDAROS SPAREBANK",
@@ -1699,7 +2225,10 @@
             "investechID": "101126",
             "nordnet": "https://www.nordnet.no/market/stocks/16404891-nidaros-sparebank",
             "sektor": "finansielle tjenester",
-            "bransje": "banker - regionale"
+            "bransje": "banker - regionale",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/6LxBxnpIfb8BxpMQHsbruz/7d7c672ff4667cbaf0c40484216008e8/image.png",
+            "nordnetID": "16404891",
+            "nordnetName": "NIDAROS SPAREBANK"
         },
         {
             "name": "NORAM DRILLING",
@@ -1708,7 +2237,10 @@
             "investechID": "101268",
             "nordnet": "https://www.nordnet.no/market/stocks/16142512-noram-drilling",
             "sektor": "energi",
-            "bransje": "olje & gass - utstyr og tjenester"
+            "bransje": "olje & gass - utstyr og tjenester",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/7yn0VwREE0ccAYG2KcYAfr/d623a926e4a0a3bb9be9e6db07a87636/Frame_14736.png",
+            "nordnetID": "16142512",
+            "nordnetName": "NORAM DRILLING AS"
         },
         {
             "name": "NORBIT",
@@ -1717,7 +2249,10 @@
             "investechID": "101079",
             "nordnet": "https://www.nordnet.no/market/stocks/17071206-norbit",
             "sektor": "teknologi",
-            "bransje": "vitenskapelige og tekniske instrumenter"
+            "bransje": "vitenskapelige og tekniske instrumenter",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/3T8VlSpgMKoaiCwbJjwOqP/47544f49738e2e08a1974dc7a4d9c3be/image.png",
+            "nordnetID": "17071206",
+            "nordnetName": "NORBIT"
         },
         {
             "name": "NORCOD",
@@ -1726,7 +2261,10 @@
             "investechID": "101099",
             "nordnet": "https://www.nordnet.no/market/stocks/17354182-norcod",
             "sektor": "konsument defensive",
-            "bransje": "landbruksprodukter"
+            "bransje": "landbruksprodukter",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/2T4NMyKTnUs9ru931a6VuZ/0382ada57e38bd9f30edabe6143d4c65/Norcod.jpeg",
+            "nordnetID": "17354182",
+            "nordnetName": "NORCOD"
         },
         {
             "name": "NORDHEALTH A-AKSJE",
@@ -1735,7 +2273,9 @@
             "investechID": "101202",
             "nordnet": "https://www.nordnet.no/market/stocks/17513034-nordhealth-aaksjer",
             "sektor": "helse",
-            "bransje": "helseinformasjonstjenester"
+            "bransje": "helseinformasjonstjenester",
+            "nordnetID": "17513034",
+            "nordnetName": "NORDHEALTH AS A-AKSJER"
         },
         {
             "name": "NORDIC AQUA PART",
@@ -1744,7 +2284,9 @@
             "investechID": "101118",
             "nordnet": "https://www.nordnet.no/market/stocks/18116197-nordic-aqua-partners",
             "sektor": "konsument defensive",
-            "bransje": "landbruksprodukter"
+            "bransje": "landbruksprodukter",
+            "nordnetID": "18116197",
+            "nordnetName": "NORDIC AQUA PARTNERS AS"
         },
         {
             "name": "NORDIC HALIBUT",
@@ -1753,7 +2295,10 @@
             "investechID": "101194",
             "nordnet": "https://www.nordnet.no/market/stocks/16165305-nordic-halibut",
             "sektor": "konsument defensive",
-            "bransje": "landbruksprodukter"
+            "bransje": "landbruksprodukter",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/7A8pVBtwyhrN5rVEOQNMUu/c033ed62529a806425d8c0af550ae0f7/Nordic_Halibut.jpeg",
+            "nordnetID": "16165305",
+            "nordnetName": "NORDIC HALIBUT AS"
         },
         {
             "name": "NORDIC MINING",
@@ -1762,7 +2307,10 @@
             "investechID": "100504",
             "nordnet": "https://www.nordnet.no/market/stocks/16105722-nordic-mining",
             "sektor": "innsatsvarer",
-            "bransje": "andre industrielle metaller og gruvedrift"
+            "bransje": "andre industrielle metaller og gruvedrift",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/5gFQe8rLUBouadbkMdn7rC/98b5f1715bb8cea0a2945d79f06f1b5c/image.png",
+            "nordnetID": "16105722",
+            "nordnetName": "NORDIC MINING"
         },
         {
             "name": "NORDIC SEMICONDUC",
@@ -1771,7 +2319,10 @@
             "investechID": "100260",
             "nordnet": "https://www.nordnet.no/market/stocks/16105429-nordic-semiconductor",
             "sektor": "teknologi",
-            "bransje": "halvledere"
+            "bransje": "halvledere",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/3SwNQOoOZQd8UBuR16BnH9/aeddfd1d7c50d16162f4a7830d8a8a6d/image.png",
+            "nordnetID": "16105429",
+            "nordnetName": "NORDIC SEMICONDUCTOR"
         },
         {
             "name": "NORDIC TECHNOLOGY",
@@ -1780,7 +2331,9 @@
             "investechID": "101263",
             "nordnet": "https://www.nordnet.no/market/stocks/17803823-nordic-technology-group",
             "sektor": "teknologi",
-            "bransje": "vitenskapelige og tekniske instrumenter"
+            "bransje": "vitenskapelige og tekniske instrumenter",
+            "nordnetID": "17803823",
+            "nordnetName": "NORDIC TECHNOLOGY GROUP AS"
         },
         {
             "name": "NORDIC UNMANNED",
@@ -1789,7 +2342,10 @@
             "investechID": "101151",
             "nordnet": "https://www.nordnet.no/market/stocks/17397247-nordic-unmanned-asa",
             "sektor": "industri",
-            "bransje": "luftfart- og forsvar"
+            "bransje": "luftfart- og forsvar",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/0hr9d2QGdims47ln95ZCb/6bc65987349d67a3322c2b9244ff7799/image.png",
+            "nordnetID": "17397247",
+            "nordnetName": "NORDIC UNMANNED ASA"
         },
         {
             "name": "NORSE ATLANTIC",
@@ -1798,7 +2354,10 @@
             "investechID": "101195",
             "nordnet": "https://www.nordnet.no/market/stocks/18032874-norse-atlantic-asa",
             "sektor": "industri",
-            "bransje": "flyselskaper"
+            "bransje": "flyselskaper",
+            "icon": "https://cdn.prod.nntech.io/cms-proxy/6xe8ehctp75g/1dfra7TycZ6VEcdlyfZBQp/ef2d1ba8416b80437a95279866eb7f6c/image.png",
+            "nordnetID": "18032874",
+            "nordnetName": "NORSE ATLANTIC ASA"
         },
         {
             "name": "NORSK HYDRO",
@@ -1807,7 +2366,10 @@
             "investechID": "100103",
             "nordnet": "https://www.nordnet.no/market/stocks/16105667-norsk-hydro",
             "sektor": "innsatsvarer",
-            "bransje": "aluminium"
+            "bransje": "aluminium",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/5h1GKQGDmqwJHlNBObCXmX/002456ffaf8ae6aaf6e1fd47368dfadd/image.png",
+            "nordnetID": "16105667",
+            "nordnetName": "NORSK HYDRO"
         },
         {
             "name": "NORSK SOLAR",
@@ -1816,7 +2378,10 @@
             "investechID": "101191",
             "nordnet": "https://www.nordnet.no/market/stocks/17471416-norsk-solar",
             "sektor": "infrastruktur",
-            "bransje": "uavhengige energiprodusenter"
+            "bransje": "uavhengige energiprodusenter",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/4rTEdL6z5BUu25xJATgObg/1087332061c18bd31f33ac587be3b188/image.png",
+            "nordnetID": "17471416",
+            "nordnetName": "NORSK SOLAR AS"
         },
         {
             "name": "NORSK TITANIUM",
@@ -1825,7 +2390,9 @@
             "investechID": "101197",
             "nordnet": "https://www.nordnet.no/market/stocks/17505767-norsk-titanium",
             "sektor": "industri",
-            "bransje": "luftfart- og forsvar"
+            "bransje": "luftfart- og forsvar",
+            "nordnetID": "17505767",
+            "nordnetName": "NORSK TITANIUM AS"
         },
         {
             "name": "NORSKE SKOG",
@@ -1834,7 +2401,10 @@
             "investechID": "100891",
             "nordnet": "https://www.nordnet.no/market/stocks/17134373-norske-skog",
             "sektor": "innsatsvarer",
-            "bransje": "papir & papirprodukter"
+            "bransje": "papir & papirprodukter",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/3IIXjbegOQYqw2DXN9eEgh/4f24744d4eaa31161be56b7131e9423f/image.png",
+            "nordnetID": "17134373",
+            "nordnetName": "NORSKE SKOG"
         },
         {
             "name": "NORTEL",
@@ -1852,7 +2422,10 @@
             "investechID": "100581",
             "nordnet": "https://www.nordnet.no/market/stocks/16105760-north-energy",
             "sektor": "finansielle tjenester",
-            "bransje": "kapitalforvaltning"
+            "bransje": "kapitalforvaltning",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/63wfbMDZnozpYCvhbmRqtm/1578994a80e0d5a101dd64ea29a39bdc/image.png",
+            "nordnetID": "16105760",
+            "nordnetName": "NORTH ENERGY"
         },
         {
             "name": "NORTHERN DRILLING",
@@ -1861,7 +2434,10 @@
             "investechID": "100794",
             "nordnet": "https://www.nordnet.no/market/stocks/16682289-northern-drilling",
             "sektor": "energi",
-            "bransje": "olje & gass - borring"
+            "bransje": "olje & gass - borring",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/718v1mWlVN3B74PQmtoYfV/531ab506b56084360b03f5787b83153e/image.png",
+            "nordnetID": "16682289",
+            "nordnetName": "NORTHERN DRILLING"
         },
         {
             "name": "NORTHERN OCEAN LTD",
@@ -1870,7 +2446,10 @@
             "investechID": "100941",
             "nordnet": "https://www.nordnet.no/market/stocks/17156980-northern-ocean",
             "sektor": "energi",
-            "bransje": "olje & gass - borring"
+            "bransje": "olje & gass - borring",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/5HKlw6G9qXO6E4KBloCEVG/2f5fc12e1fd74b447cf7b94111634a0f/image.png",
+            "nordnetID": "17156980",
+            "nordnetName": "NORTHERN OCEAN LTD."
         },
         {
             "name": "NORWEGIAN AIR SHUT",
@@ -1879,7 +2458,10 @@
             "investechID": "100343",
             "nordnet": "https://www.nordnet.no/market/stocks/16105606-norwegian-air-shuttle",
             "sektor": "industri",
-            "bransje": "flyselskaper"
+            "bransje": "flyselskaper",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/BdwuiLlOfqsGY4zLJsg6e/f6ee48139a1670d62f52c07ffcaf758d/image.png",
+            "nordnetID": "16105606",
+            "nordnetName": "NORWEGIAN AIR SHUTTLE"
         },
         {
             "name": "NORWEGIAN BLOCK EX",
@@ -1888,7 +2470,10 @@
             "investechID": "101239",
             "nordnet": "https://www.nordnet.no/market/stocks/17489440-norwegian-block-exchange",
             "sektor": "finansielle tjenester",
-            "bransje": "kapitalmarkeder"
+            "bransje": "kapitalmarkeder",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/7wgpaADdoyDInSnQuExb03/d044e35321adfb9279e37a23f18890f8/image.png",
+            "nordnetID": "17489440",
+            "nordnetName": "NORWEGIAN BLOCK EXCHANGE AS"
         },
         {
             "name": "NRC GROUP",
@@ -1897,7 +2482,10 @@
             "investechID": "100732",
             "nordnet": "https://www.nordnet.no/market/stocks/16105636-nrc-group",
             "sektor": "industri",
-            "bransje": "jernbane"
+            "bransje": "jernbane",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/6bKCZ0clvk3jQYz91Ejdbq/462f822af32f9984524dba6ebbdf8ca2/image.png",
+            "nordnetID": "16105636",
+            "nordnetName": "NRC GROUP"
         },
         {
             "name": "NYKODE THERAPEUTIC",
@@ -1906,7 +2494,10 @@
             "investechID": "101050",
             "nordnet": "https://www.nordnet.no/market/stocks/16312532-nykode-therapeutics-asa",
             "sektor": "helse",
-            "bransje": "bioteknologi"
+            "bransje": "bioteknologi",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/6bZLW6zqif7G4UbqbWlFd3/45dfeff0276f2f7c46192f53fb7fa9c6/image.png",
+            "nordnetID": "16312532",
+            "nordnetName": "NYKODE THERAPEUTICS ASA"
         },
         {
             "name": "OBSERVE MEDICAL",
@@ -1915,7 +2506,10 @@
             "investechID": "101082",
             "nordnet": "https://www.nordnet.no/market/stocks/17141054-observe-medical",
             "sektor": "helse",
-            "bransje": "medisinsk utstyr"
+            "bransje": "medisinsk utstyr",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/7a02XtFVxFmaiuoBJ9zRsq/9272bcee399a1ca6b54ceca2f44eedb9/image.png",
+            "nordnetID": "17141054",
+            "nordnetName": "OBSERVE MEDICAL"
         },
         {
             "name": "OCEAN GEOLOOP",
@@ -1924,7 +2518,9 @@
             "investechID": "101251",
             "nordnet": "https://www.nordnet.no/market/stocks/17432356-ocean-geoloop",
             "sektor": "industri",
-            "bransje": "forurensnings- og behandlingskontroll"
+            "bransje": "forurensnings- og behandlingskontroll",
+            "nordnetID": "17432356",
+            "nordnetName": "OCEAN GEOLOOP AS"
         },
         {
             "name": "OCEAN SUN",
@@ -1933,7 +2529,10 @@
             "investechID": "101092",
             "nordnet": "https://www.nordnet.no/market/stocks/17373357-ocean-sun",
             "sektor": "infrastruktur",
-            "bransje": "nytte - fornybar"
+            "bransje": "nytte - fornybar",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/7F6uvof6nCoIPz4WDFcGfF/97aa41cc2ef42127e056c0e7cef76f89/image.png",
+            "nordnetID": "17373357",
+            "nordnetName": "OCEAN SUN"
         },
         {
             "name": "OCEANTEAM",
@@ -1942,7 +2541,10 @@
             "investechID": "100603",
             "nordnet": "https://www.nordnet.no/market/stocks/16105699-oceanteam",
             "sektor": "sj\u00f8fart",
-            "bransje": "sj\u00f8fart"
+            "bransje": "sj\u00f8fart",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/5zCBEsJefVKR5MQnUbssLa/1bf75d36bbd40b360c9ae0e5d7bb7c71/image.png",
+            "nordnetID": "16105699",
+            "nordnetName": "OCEANTEAM"
         },
         {
             "name": "ODFJELL DRILLING",
@@ -1951,7 +2553,10 @@
             "investechID": "100683",
             "nordnet": "https://www.nordnet.no/market/stocks/16237838-odfjell-drilling",
             "sektor": "energi",
-            "bransje": "olje & gass - borring"
+            "bransje": "olje & gass - borring",
+            "icon": "https://cdn.prod.nntech.io/cms-proxy/6xe8ehctp75g/1JGaL52l4hILP7E0fPXozy/c7648c92514693df616a9d8d05d5d7c1/Screenshot_2023-08-17_at_15.05.19.png",
+            "nordnetID": "16237838",
+            "nordnetName": "ODFJELL DRILLING"
         },
         {
             "name": "ODFJELL SER. A",
@@ -1960,7 +2565,10 @@
             "investechID": "100143",
             "nordnet": "https://www.nordnet.no/market/stocks/16105682-odfjell-a",
             "sektor": "sj\u00f8fart",
-            "bransje": "sj\u00f8fart"
+            "bransje": "sj\u00f8fart",
+            "icon": "https://cdn.prod.nntech.io/cms-proxy/6xe8ehctp75g/3uwqsBG9aOTWLGqyUoPchy/36dda4ff0194c501c1777e86b400420f/image.png",
+            "nordnetID": "16105682",
+            "nordnetName": "ODFJELL SER. A"
         },
         {
             "name": "ODFJELL SER. B",
@@ -1969,7 +2577,10 @@
             "investechID": "100144",
             "nordnet": "https://www.nordnet.no/market/stocks/16105683-odfjell-b",
             "sektor": "sj\u00f8fart",
-            "bransje": "sj\u00f8fart"
+            "bransje": "sj\u00f8fart",
+            "icon": "https://cdn.prod.nntech.io/cms-proxy/6xe8ehctp75g/3uwqsBG9aOTWLGqyUoPchy/36dda4ff0194c501c1777e86b400420f/image.png",
+            "nordnetID": "16105683",
+            "nordnetName": "ODFJELL SER. B"
         },
         {
             "name": "ODFJELL TECHNOLOGY",
@@ -1978,7 +2589,10 @@
             "investechID": "101252",
             "nordnet": "https://www.nordnet.no/market/stocks/17736586-odfjell-technology",
             "sektor": "energi",
-            "bransje": "olje & gass - borring"
+            "bransje": "olje & gass - borring",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/260duFbHAtNNVieptcHgc9/bcbb05dfa3efff1acea90494a31a4562/image.png",
+            "nordnetID": "17736586",
+            "nordnetName": "ODFJELL TECHNOLOGY LTD"
         },
         {
             "name": "OKEA",
@@ -1987,7 +2601,10 @@
             "investechID": "100880",
             "nordnet": "https://www.nordnet.no/market/stocks/17069504-okea",
             "sektor": "energi",
-            "bransje": "olje & gass - e&p"
+            "bransje": "olje & gass - e&p",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/2aRIL1E84Ypc5u0VwVbyS/d413f42d1530ca3ed0cbba7638555e19/OKEA.png",
+            "nordnetID": "17069504",
+            "nordnetName": "OKEA"
         },
         {
             "name": "OKEANIS ECO TANKER",
@@ -1996,7 +2613,10 @@
             "investechID": "100858",
             "nordnet": "https://www.nordnet.no/market/stocks/16893906-okeanis-eco-tankers",
             "sektor": "sj\u00f8fart",
-            "bransje": "sj\u00f8fart"
+            "bransje": "sj\u00f8fart",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/6SEfZz9Zsiua4lbOAoOYGT/8f563d704fd8a847948d93d2d0332057/Okeanis_Eco_Tankers.jpeg",
+            "nordnetID": "16893906",
+            "nordnetName": "OKEANIS ECO TANKERS"
         },
         {
             "name": "OLAV THON EIENDOMS",
@@ -2005,7 +2625,10 @@
             "investechID": "100221",
             "nordnet": "https://www.nordnet.no/market/stocks/16105673-olav-thon-eiendomsselskap",
             "sektor": "eiendom",
-            "bransje": "eiendomstjenester"
+            "bransje": "eiendomstjenester",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/4N8nFJLLsE3udpEqPK6hDj/99f813bd94a2ec66d00e47d6e84222b1/image.png",
+            "nordnetID": "16105673",
+            "nordnetName": "OLAV THON EIENDOMSSELSKAP"
         },
         {
             "name": "ORKLA",
@@ -2014,7 +2637,10 @@
             "investechID": "100186",
             "nordnet": "https://www.nordnet.no/market/stocks/16105674-orkla",
             "sektor": "konsument defensive",
-            "bransje": "pakket mat"
+            "bransje": "pakket mat",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/3niFDZZRyQaoOJEk85Mxpm/92cd18c7ae1e37afade0c4f8129ca5c2/image.png",
+            "nordnetID": "16105674",
+            "nordnetName": "ORKLA"
         },
         {
             "name": "OTELLO CORPORATION",
@@ -2023,7 +2649,10 @@
             "investechID": "101029",
             "nordnet": "https://www.nordnet.no/market/stocks/16105607-otello-corporation",
             "sektor": "kommunikasjonstjenester",
-            "bransje": "reklamebyr\u00e5er"
+            "bransje": "reklamebyr\u00e5er",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/7JfTi0vLkgGA8zUPM7BDZo/f7ba9a46837af5b6461340602fbe39c2/image.png",
+            "nordnetID": "16105607",
+            "nordnetName": "OTELLO CORPORATION"
         },
         {
             "name": "OTOVO",
@@ -2032,7 +2661,10 @@
             "investechID": "101170",
             "nordnet": "https://www.nordnet.no/market/stocks/16857988-otovo-asa",
             "sektor": "teknologi",
-            "bransje": "solceller"
+            "bransje": "solceller",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/7083OiAjHjFicPSOUDnQVE/cabcf63d0b8721cc92fd06c38c6d4296/image.png",
+            "nordnetID": "16857988",
+            "nordnetName": "OTOVO ASA"
         },
         {
             "name": "PANORO ENERGY",
@@ -2041,7 +2673,10 @@
             "investechID": "100589",
             "nordnet": "https://www.nordnet.no/market/stocks/16105762-panoro-energy",
             "sektor": "energi",
-            "bransje": "olje & gass - e&p"
+            "bransje": "olje & gass - e&p",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/BhTEvbW7l25WUDXkmgknj/8518d640584756acf2372932eda0a852/Panoro_Energy.png",
+            "nordnetID": "16105762",
+            "nordnetName": "PANORO ENERGY"
         },
         {
             "name": "PARETO BANK",
@@ -2050,7 +2685,10 @@
             "investechID": "100760",
             "nordnet": "https://www.nordnet.no/market/stocks/16145070-pareto-bank",
             "sektor": "finansielle tjenester",
-            "bransje": "banker - regionale"
+            "bransje": "banker - regionale",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/2svL8Lx8FMOlOenyEvI7XT/efd2c851218050ce1b14b1f6aeec77bb/image.png",
+            "nordnetID": "16145070",
+            "nordnetName": "PARETO BANK"
         },
         {
             "name": "PCI BIOTECH HOLD",
@@ -2059,7 +2697,10 @@
             "investechID": "100544",
             "nordnet": "https://www.nordnet.no/market/stocks/16105737-pci-biotech-holding",
             "sektor": "helse",
-            "bransje": "bioteknologi"
+            "bransje": "bioteknologi",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/5wQ25P7b226Bb4ue6ZaRnH/ed9bb403c2f843b842326a85e31a61ed/image.png",
+            "nordnetID": "16105737",
+            "nordnetName": "PCI BIOTECH HOLDING"
         },
         {
             "name": "PETROLIA",
@@ -2068,7 +2709,10 @@
             "investechID": "100843",
             "nordnet": "https://www.nordnet.no/market/stocks/16105568-petrolia",
             "sektor": "energi",
-            "bransje": "olje & gass - utstyr og tjenester"
+            "bransje": "olje & gass - utstyr og tjenester",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/4iCgfGVm5XuEq5r0Gy45MC/9b96543bdd3a5a6cf637c88b5ad005a2/image.png",
+            "nordnetID": "16105568",
+            "nordnetName": "PETROLIA"
         },
         {
             "name": "PETRONOR E&P",
@@ -2077,7 +2721,9 @@
             "investechID": "100885",
             "nordnet": "https://www.nordnet.no/market/stocks/18070363-petronor-ep-asa",
             "sektor": "energi",
-            "bransje": "olje & gass - e&p"
+            "bransje": "olje & gass - e&p",
+            "nordnetID": "18070363",
+            "nordnetName": "PETRONOR E&P ASA"
         },
         {
             "name": "PEXIP HOLDING",
@@ -2086,7 +2732,10 @@
             "investechID": "100949",
             "nordnet": "https://www.nordnet.no/market/stocks/16981769-pexip-holding",
             "sektor": "teknologi",
-            "bransje": "programvare - applikasjoner"
+            "bransje": "programvare - applikasjoner",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/4gtiDseywhmBhPHro9NyLM/0e9aefffdec6b2275d584ea33859c496/PEXIP_HOLDING.jpeg",
+            "nordnetID": "16981769",
+            "nordnetName": "PEXIP HOLDING"
         },
         {
             "name": "PGS",
@@ -2095,7 +2744,10 @@
             "investechID": "100068",
             "nordnet": "https://www.nordnet.no/market/stocks/16105675-pgs",
             "sektor": "energi",
-            "bransje": "olje & gass - utstyr og tjenester"
+            "bransje": "olje & gass - utstyr og tjenester",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/46w0AzaQplV0kPvUvx14gO/404fc2b2f05d6ca6d82fc3b1b0f43ff0/image.png",
+            "nordnetID": "16105675",
+            "nordnetName": "PGS"
         },
         {
             "name": "PHILLY SHIPYARD",
@@ -2104,7 +2756,10 @@
             "investechID": "100743",
             "nordnet": "https://www.nordnet.no/market/stocks/16105731-philly-shipyard",
             "sektor": "industri",
-            "bransje": "luftfart- og forsvar"
+            "bransje": "luftfart- og forsvar",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/4GCl8Um4CMnXELz0hhdLAG/a8f2bad6a215f689d9dd07ce04885ec0/image.png",
+            "nordnetID": "16105731",
+            "nordnetName": "PHILLY SHIPYARD"
         },
         {
             "name": "PHOTOCURE",
@@ -2113,7 +2768,10 @@
             "investechID": "100199",
             "nordnet": "https://www.nordnet.no/market/stocks/16105593-photocure",
             "sektor": "helse",
-            "bransje": "medsinprodusenter - spesialist og generell"
+            "bransje": "medsinprodusenter - spesialist og generell",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/2vxqZWsdQTgPdCj83AyPbF/a8d4cfdc99ecc0031737ed4839c7b906/PHOTOCURE.png",
+            "nordnetID": "16105593",
+            "nordnetName": "PHOTOCURE"
         },
         {
             "name": "PIONEER PROPERTY",
@@ -2122,7 +2780,10 @@
             "investechID": "101058",
             "nordnet": "https://www.nordnet.no/market/stocks/16418422-pioneer-property-group",
             "sektor": "eiendom",
-            "bransje": "eiendomstjenester"
+            "bransje": "eiendomstjenester",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/13re3yfEFWMjvcklCkb1eF/79ceccf3f3f06d3d6b60733b4efef94b/image.png",
+            "nordnetID": "16418422",
+            "nordnetName": "PIONEER PROPERTY GROUP"
         },
         {
             "name": "POLARIS MEDIA",
@@ -2131,7 +2792,10 @@
             "investechID": "100554",
             "nordnet": "https://www.nordnet.no/market/stocks/16105742-polaris-media",
             "sektor": "kommunikasjonstjenester",
-            "bransje": "publisering"
+            "bransje": "publisering",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/4kiYrSu9XBbEGND8OGVvnB/9ef973580fb56ea7ec547f688838fae2/Screenshot_2023-01-27_at_09.08.44.png",
+            "nordnetID": "16105742",
+            "nordnetName": "POLARIS MEDIA"
         },
         {
             "name": "POLIGHT",
@@ -2140,7 +2804,10 @@
             "investechID": "100844",
             "nordnet": "https://www.nordnet.no/market/stocks/17775474-polight",
             "sektor": "teknologi",
-            "bransje": "elektroniske komponenter"
+            "bransje": "elektroniske komponenter",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/3hpeyy2zlkNo9yvVz8P2Ma/0d11826b9ba472d9a9d7260f179a62fb/image.png",
+            "nordnetID": "17775474",
+            "nordnetName": "POLIGHT"
         },
         {
             "name": "PROSAFE",
@@ -2149,7 +2816,10 @@
             "investechID": "100071",
             "nordnet": "https://www.nordnet.no/market/stocks/17107917-prosafe",
             "sektor": "energi",
-            "bransje": "olje & gass - utstyr og tjenester"
+            "bransje": "olje & gass - utstyr og tjenester",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/4gKIpXQGfWMhCyMhj9MTqY/4f8f604ee0882e92b00b2181c585cf82/image.png",
+            "nordnetID": "17107917",
+            "nordnetName": "PROSAFE"
         },
         {
             "name": "PROTECTOR FORSIKRG",
@@ -2158,7 +2828,10 @@
             "investechID": "101034",
             "nordnet": "https://www.nordnet.no/market/stocks/16105707-protector-forsikring",
             "sektor": "finansielle tjenester",
-            "bransje": "forsikring - spesialiteter"
+            "bransje": "forsikring - spesialiteter",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/6GaLEaqjgF9zufkNUQ3Fjk/30cdd05aa8dc400f8545b0dce490f118/image.png",
+            "nordnetID": "16105707",
+            "nordnetName": "PROTECTOR FORSIKRING"
         },
         {
             "name": "PROXIMAR SEAFOOD",
@@ -2167,7 +2840,10 @@
             "investechID": "101159",
             "nordnet": "https://www.nordnet.no/market/stocks/17376002-proximar-seafood",
             "sektor": "konsument defensive",
-            "bransje": "landbruksprodukter"
+            "bransje": "landbruksprodukter",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/BmRaLF8ekf7bFOx3bkImR/ff9430ec9b9a988367842477a0329dcd/Proximar_Seafood.png",
+            "nordnetID": "17376002",
+            "nordnetName": "PROXIMAR SEAFOOD AS"
         },
         {
             "name": "PRYME",
@@ -2176,7 +2852,10 @@
             "investechID": "101171",
             "nordnet": "https://www.nordnet.no/market/stocks/17436486-pryme",
             "sektor": "industri",
-            "bransje": "avfallsh\u00e5ndtering"
+            "bransje": "avfallsh\u00e5ndtering",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/3O2b8UiJIYmDewRxe8VS52/fb9e07f4ff36f3337e2e840dfd5fada4/image.png",
+            "nordnetID": "17436486",
+            "nordnetName": "PRYME N.V."
         },
         {
             "name": "PYRUM INNOVATIONS",
@@ -2185,7 +2864,9 @@
             "investechID": "101233",
             "nordnet": "https://www.nordnet.no/market/stocks/17594785-pyrum-innovations",
             "sektor": "industri",
-            "bransje": "forurensnings- og behandlingskontroll"
+            "bransje": "forurensnings- og behandlingskontroll",
+            "nordnetID": "17594785",
+            "nordnetName": "PYRUM INNOVATIONS AG"
         },
         {
             "name": "Q-FREE",
@@ -2194,7 +2875,10 @@
             "investechID": "100301",
             "nordnet": "https://www.nordnet.no/market/stocks/16105602-qfree",
             "sektor": "industri",
-            "bransje": "drift infrastruktur"
+            "bransje": "drift infrastruktur",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/olvqO2FTpnQjfwlG2T8ry/41ce7ceed7d0fedb9aeabb46b8ceefb2/image.png",
+            "nordnetID": "16105602",
+            "nordnetName": "Q-FREE"
         },
         {
             "name": "QUANTAFUEL",
@@ -2203,7 +2887,10 @@
             "investechID": "101066",
             "nordnet": "https://www.nordnet.no/market/stocks/16665923-quantafuel",
             "sektor": "industri",
-            "bransje": "avfallsh\u00e5ndtering"
+            "bransje": "avfallsh\u00e5ndtering",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/5GRIReP2gSurWNIL6eyhuJ/11d07d5af5fc330efe9b7a7ff9a1d5e3/image.png",
+            "nordnetID": "16665923",
+            "nordnetName": "QUANTAFUEL AS"
         },
         {
             "name": "QUESTBACK GROUP",
@@ -2212,7 +2899,9 @@
             "investechID": "100393",
             "nordnet": "https://www.nordnet.no/market/stocks/17567368-questback-group",
             "sektor": "teknologi",
-            "bransje": "programvare - infrastruktur"
+            "bransje": "programvare - infrastruktur",
+            "nordnetID": "17567368",
+            "nordnetName": "QUESTBACK GROUP AS"
         },
         {
             "name": "QUESTERRE ENERGY",
@@ -2221,7 +2910,10 @@
             "investechID": "100393",
             "nordnet": "https://www.nordnet.no/market/stocks/16105625-questerre-energy-corporation",
             "sektor": "energi",
-            "bransje": "olje & gass - e&p"
+            "bransje": "olje & gass - e&p",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/4gG0kqu011TQdGeeUK6aAg/e177f188bad269854f45f327c526b355/Questerre_Energy_Corporation.png",
+            "nordnetID": "16105625",
+            "nordnetName": "QUESTERRE ENERGY CORPORATION"
         },
         {
             "name": "RANA GRUBER",
@@ -2230,7 +2922,10 @@
             "investechID": "101166",
             "nordnet": "https://www.nordnet.no/market/stocks/17447523-rana-gruber-asa",
             "sektor": "innsatsvarer",
-            "bransje": "st\u00e5l"
+            "bransje": "st\u00e5l",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/umsCzsQccT94SaHypuZna/5d23f74ff7e1f361fed9b09a69179514/image.png",
+            "nordnetID": "17447523",
+            "nordnetName": "RANA GRUBER ASA"
         },
         {
             "name": "REACH SUBSEA",
@@ -2239,7 +2934,10 @@
             "investechID": "100676",
             "nordnet": "https://www.nordnet.no/market/stocks/16105668-reach-subsea",
             "sektor": "energi",
-            "bransje": "olje & gass - utstyr og tjenester"
+            "bransje": "olje & gass - utstyr og tjenester",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/2mpURvr5LoaPTqdXDhdBBz/133333d019c8ece2211f3d36cd0dd722/image.png",
+            "nordnetID": "16105668",
+            "nordnetName": "REACH SUBSEA"
         },
         {
             "name": "REC SILICON",
@@ -2248,7 +2946,10 @@
             "investechID": "101031",
             "nordnet": "https://www.nordnet.no/market/stocks/16105665-rec-silicon",
             "sektor": "teknologi",
-            "bransje": "halvlederutstyr og -materialer"
+            "bransje": "halvlederutstyr og -materialer",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/4D6vhbgmkcSaYYLnQ9vBXu/49727232887114d8c236e96124a2a173/image.png",
+            "nordnetID": "16105665",
+            "nordnetName": "REC SILICON"
         },
         {
             "name": "RECREATE",
@@ -2257,7 +2958,9 @@
             "investechID": "101205",
             "nordnet": "https://www.nordnet.no/market/stocks/17089171-recreate-asa",
             "sektor": "eiendom",
-            "bransje": "eiendomstjenester"
+            "bransje": "eiendomstjenester",
+            "nordnetID": "17089171",
+            "nordnetName": "RECREATE ASA"
         },
         {
             "name": "REFUELS",
@@ -2266,7 +2969,9 @@
             "investechID": "101293",
             "nordnet": "https://www.nordnet.no/market/stocks/18043859-refuels",
             "sektor": "sykliske forbruksvarer",
-            "bransje": "spesialist detaljhandel"
+            "bransje": "spesialist detaljhandel",
+            "nordnetID": "18043859",
+            "nordnetName": "REFUELS N.V."
         },
         {
             "name": "RIVER TECH",
@@ -2275,7 +2980,9 @@
             "investechID": "101023",
             "nordnet": "https://www.nordnet.no/market/stocks/16847400-river-tech",
             "sektor": "teknologi",
-            "bransje": "it - tjenester"
+            "bransje": "it - tjenester",
+            "nordnetID": "16847400",
+            "nordnetName": "RIVER TECH"
         },
         {
             "name": "ROMERIKE SPAREBK",
@@ -2284,7 +2991,10 @@
             "investechID": "101232",
             "nordnet": "https://www.nordnet.no/market/stocks/16786639-romerike-sparebank",
             "sektor": "finansielle tjenester",
-            "bransje": "banker - regionale"
+            "bransje": "banker - regionale",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/6FieqksqEiEX0yuJDXlKzd/4c31a32c91975abfaab879d466861d47/image.png",
+            "nordnetID": "16786639",
+            "nordnetName": "ROMERIKE SPAREBANK"
         },
         {
             "name": "ROMREAL",
@@ -2293,7 +3003,9 @@
             "investechID": "100492",
             "nordnet": "https://www.nordnet.no/market/stocks/16105715-romreal",
             "sektor": "eiendom",
-            "bransje": "eiendomstjenester"
+            "bransje": "eiendomstjenester",
+            "nordnetID": "16105715",
+            "nordnetName": "ROMREAL"
         },
         {
             "name": "ROMSDAL SPAREBANK",
@@ -2302,7 +3014,10 @@
             "investechID": "101154",
             "nordnet": "https://www.nordnet.no/market/stocks/16548266-romsdal-sparebank",
             "sektor": "finansielle tjenester",
-            "bransje": "finansielle konglomerater"
+            "bransje": "finansielle konglomerater",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/70S2ItMvwwUx2pfhEDeb4f/cf343414a525ad510560b71dad008d15/image.png",
+            "nordnetID": "16548266",
+            "nordnetName": "ROMSDAL SPAREBANK"
         },
         {
             "name": "S.D. STANDARD ETC",
@@ -2311,7 +3026,10 @@
             "investechID": "100608",
             "nordnet": "https://www.nordnet.no/market/stocks/16105293-sd-standard-etc",
             "sektor": "energi",
-            "bransje": "olje & gass - utstyr og tjenester"
+            "bransje": "olje & gass - utstyr og tjenester",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/6w7jAo2Y8jGYQiOjEn5y5e/a39eed9cc61a9b392ca68701b45971f4/image.png",
+            "nordnetID": "16105293",
+            "nordnetName": "S.D. STANDARD ETC PLC"
         },
         {
             "name": "SAGA PURE",
@@ -2320,7 +3038,10 @@
             "investechID": "100587",
             "nordnet": "https://www.nordnet.no/market/stocks/16105256-saga-pure",
             "sektor": "innsatsvarer",
-            "bransje": "spesialkjemikalier"
+            "bransje": "spesialkjemikalier",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/4noxMiXMqbLl1mcwjCESQT/2ee1bfc5756fb1d22f3a9b76190e161d/image.png",
+            "nordnetID": "16105256",
+            "nordnetName": "SAGA PURE"
         },
         {
             "name": "SALMAR",
@@ -2329,7 +3050,10 @@
             "investechID": "100481",
             "nordnet": "https://www.nordnet.no/market/stocks/16105712-salmar",
             "sektor": "konsument defensive",
-            "bransje": "landbruksprodukter"
+            "bransje": "landbruksprodukter",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/4WpO5UcbaeTBmgpAUdQnBf/998b5fe2beb92cd6929b0ff5206e274f/image.png",
+            "nordnetID": "16105712",
+            "nordnetName": "SALMAR"
         },
         {
             "name": "SALMON EVOLUTION",
@@ -2338,7 +3062,10 @@
             "investechID": "101097",
             "nordnet": "https://www.nordnet.no/market/stocks/17350508-salmon-evolution-asa",
             "sektor": "konsument defensive",
-            "bransje": "landbruksprodukter"
+            "bransje": "landbruksprodukter",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/4BoYjinmAKwvXqBwopDITg/a7318e61e53e8f87c191fd7c07af5a58/Salmon_Evolution.jpeg",
+            "nordnetID": "17350508",
+            "nordnetName": "SALMON EVOLUTION ASA"
         },
         {
             "name": "SALMONES CAMANCHAC",
@@ -2347,7 +3074,10 @@
             "investechID": "101013",
             "nordnet": "https://www.nordnet.no/market/stocks/17701612-salmones-camanchac",
             "sektor": "konsument defensive",
-            "bransje": "landbruksprodukter"
+            "bransje": "landbruksprodukter",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/3rf86iRYvDNe6nGil0oHlG/e504fcb9db33b8ec15b72dfa8081c505/Salmones_Camanchaca.jpeg",
+            "nordnetID": "17701612",
+            "nordnetName": "SALMONES CAMANCHAC"
         },
         {
             "name": "SANDNES SPAREBANK",
@@ -2356,7 +3086,10 @@
             "investechID": "100288",
             "nordnet": "https://www.nordnet.no/market/stocks/16105424-sandnes-sparebank",
             "sektor": "finansielle tjenester",
-            "bransje": "banker - regionale"
+            "bransje": "banker - regionale",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/ZBjkKelbRh8uq24dhO0uP/9b4b398efeac190e0668d1ad4985bb16/image.png",
+            "nordnetID": "16105424",
+            "nordnetName": "SANDNES SPAREBANK"
         },
         {
             "name": "SAS AB",
@@ -2365,7 +3098,10 @@
             "investechID": "101108",
             "nordnet": "https://www.nordnet.no/market/stocks/16105600-sas",
             "sektor": "industri",
-            "bransje": "flyselskaper"
+            "bransje": "flyselskaper",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/4J580hjXqzLfcI80Sj6y8x/1b60830cc764c59ec62cfade9cb2535b/image.png",
+            "nordnetID": "16105600",
+            "nordnetName": "SAS AB"
         },
         {
             "name": "SATS",
@@ -2374,7 +3110,10 @@
             "investechID": "100892",
             "nordnet": "https://www.nordnet.no/market/stocks/17134374-sats",
             "sektor": "sykliske forbruksvarer",
-            "bransje": "fritid"
+            "bransje": "fritid",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/1zjD0jB4EArogcJGAmNdQO/6778edc219bf1ea48de9f006a9533637/image.png",
+            "nordnetID": "17134374",
+            "nordnetName": "SATS"
         },
         {
             "name": "SCANA",
@@ -2383,7 +3122,10 @@
             "investechID": "100948",
             "nordnet": "https://www.nordnet.no/market/stocks/16105426-scana",
             "sektor": "industri",
-            "bransje": "industriell distribusjon"
+            "bransje": "industriell distribusjon",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/157EA4yrHsXDID1x4AhNQM/178b034158e2423fb99e141865b95165/image.png",
+            "nordnetID": "16105426",
+            "nordnetName": "SCANA"
         },
         {
             "name": "SCATEC",
@@ -2392,7 +3134,10 @@
             "investechID": "101152",
             "nordnet": "https://www.nordnet.no/market/stocks/16324395-scatec-asa",
             "sektor": "infrastruktur",
-            "bransje": "nytte - fornybar"
+            "bransje": "nytte - fornybar",
+            "icon": "https://cdn.prod.nntech.io/cms-proxy/6xe8ehctp75g/CkBL0ZoTuLIQWyyDF9NkE/6162baa66f32865100c32aba5126ce83/image.png",
+            "nordnetID": "16324395",
+            "nordnetName": "SCATEC ASA"
         },
         {
             "name": "SCHIBSTED SER. A",
@@ -2401,7 +3146,10 @@
             "investechID": "100731",
             "nordnet": "https://www.nordnet.no/market/stocks/16105679-schibsted-a",
             "sektor": "kommunikasjonstjenester",
-            "bransje": "publisering"
+            "bransje": "publisering",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/7DRArY0EYR3z2X1gbawIGJ/1eefe753f60d72ba71cba0edd1074ad8/image.png",
+            "nordnetID": "16105679",
+            "nordnetName": "SCHIBSTED SER. A"
         },
         {
             "name": "SCHIBSTED SER. B",
@@ -2410,7 +3158,10 @@
             "investechID": "100733",
             "nordnet": "https://www.nordnet.no/market/stocks/16408915-schibsted-b",
             "sektor": "kommunikasjonstjenester",
-            "bransje": "publisering"
+            "bransje": "publisering",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/7DRArY0EYR3z2X1gbawIGJ/1eefe753f60d72ba71cba0edd1074ad8/image.png",
+            "nordnetID": "16408915",
+            "nordnetName": "SCHIBSTED SER. B"
         },
         {
             "name": "SEABIRD EXPLORAT",
@@ -2419,7 +3170,10 @@
             "investechID": "101227",
             "nordnet": "https://www.nordnet.no/market/stocks/16105654-seabird-exploration",
             "sektor": "energi",
-            "bransje": "olje & gass - utstyr og tjenester"
+            "bransje": "olje & gass - utstyr og tjenester",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/2ncsuQdAxOTSSFpWRCgoRE/2a68ab78b63112c2a4ac293fd9a79a7d/image.png",
+            "nordnetID": "16105654",
+            "nordnetName": "SEABIRD EXPLORATION"
         },
         {
             "name": "SEACREST PETROLEO",
@@ -2428,7 +3182,9 @@
             "investechID": "101285",
             "nordnet": "https://www.nordnet.no/market/stocks/18016486-seacrest-petroleo-bermuda",
             "sektor": "energi",
-            "bransje": "olje & gass - e&p"
+            "bransje": "olje & gass - e&p",
+            "nordnetID": "18016486",
+            "nordnetName": "SEACREST PETROLEO BERMUDA LIMITED"
         },
         {
             "name": "SEADRILL",
@@ -2437,7 +3193,10 @@
             "investechID": "101256",
             "nordnet": "https://www.nordnet.no/market/stocks/17716663-seadrill-limited",
             "sektor": "energi",
-            "bransje": "olje & gass - borring"
+            "bransje": "olje & gass - borring",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/5LWseALORoNI9BiJF4AZBg/9f118eab915d776b7b06111260f747ae/image.png",
+            "nordnetID": "17716663",
+            "nordnetName": "SEADRILL LIMITED"
         },
         {
             "name": "SELF STORAGE GROUP",
@@ -2446,7 +3205,10 @@
             "investechID": "100802",
             "nordnet": "https://www.nordnet.no/market/stocks/16700587-self-storage-group",
             "sektor": "industri",
-            "bransje": "spesialtjenester"
+            "bransje": "spesialtjenester",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/720GYsXoBpm0IBjoNU2LlQ/cd17aad46a0bed2f26cd85d3a74da9e5/image.png",
+            "nordnetID": "16700587",
+            "nordnetName": "SELF STORAGE GROUP"
         },
         {
             "name": "SELVAAG BOLIG",
@@ -2455,7 +3217,10 @@
             "investechID": "100649",
             "nordnet": "https://www.nordnet.no/market/stocks/16105342-selvaag-bolig",
             "sektor": "eiendom",
-            "bransje": "eiendomstjenester"
+            "bransje": "eiendomstjenester",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/4FIpZUs8SsVGtgnK71WJe5/a70c5f9074a6ed80d3802ee1b4cd6c95/image.png",
+            "nordnetID": "16105342",
+            "nordnetName": "SELVAAG BOLIG"
         },
         {
             "name": "SHELF DRILLING",
@@ -2464,7 +3229,10 @@
             "investechID": "100835",
             "nordnet": "https://www.nordnet.no/market/stocks/16698390-shelf-drilling",
             "sektor": "energi",
-            "bransje": "olje & gass - borring"
+            "bransje": "olje & gass - borring",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/10xoIUyi4eDLzqLWOpps14/6f19f81c37a18166db6f4344d26ec329/image.png",
+            "nordnetID": "16698390",
+            "nordnetName": "SHELF DRILLING"
         },
         {
             "name": "SHELF DRILLING NO",
@@ -2473,7 +3241,10 @@
             "investechID": "101267",
             "nordnet": "https://www.nordnet.no/market/stocks/17884399-shelf-drilling-north",
             "sektor": "energi",
-            "bransje": "olje & gass - utstyr og tjenester"
+            "bransje": "olje & gass - utstyr og tjenester",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/10xoIUyi4eDLzqLWOpps14/6f19f81c37a18166db6f4344d26ec329/image.png",
+            "nordnetID": "17884399",
+            "nordnetName": "SHELF DRILLING (NORTH SEA), LTD."
         },
         {
             "name": "SIEM OFFSHORE",
@@ -2482,7 +3253,10 @@
             "investechID": "100421",
             "nordnet": "https://www.nordnet.no/market/stocks/17515778-siem-offshore",
             "sektor": "energi",
-            "bransje": "olje & gass - utstyr og tjenester"
+            "bransje": "olje & gass - utstyr og tjenester",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/7rX6WGicClisCzIWM7TGg3/da881eea70397a6e0ed9010a6c7636bd/image.png",
+            "nordnetID": "17515778",
+            "nordnetName": "SIEM OFFSHORE"
         },
         {
             "name": "SIKRI GROUP",
@@ -2491,7 +3265,9 @@
             "investechID": "101086",
             "nordnet": "https://www.nordnet.no/market/stocks/17788215-sikri-group-asa",
             "sektor": "teknologi",
-            "bransje": "it - tjenester"
+            "bransje": "it - tjenester",
+            "nordnetID": "17788215",
+            "nordnetName": "SIKRI GROUP ASA"
         },
         {
             "name": "SKANDIA GREENPOWER",
@@ -2500,7 +3276,9 @@
             "investechID": "101172",
             "nordnet": "https://www.nordnet.no/market/stocks/17441647-skandia-greenpower",
             "sektor": "infrastruktur",
-            "bransje": "nytte - fornybar"
+            "bransje": "nytte - fornybar",
+            "nordnetID": "17441647",
+            "nordnetName": "SKANDIA GREENPOWER AS"
         },
         {
             "name": "SKUE SPAREBANK",
@@ -2509,7 +3287,10 @@
             "investechID": "100685",
             "nordnet": "https://www.nordnet.no/market/stocks/16105585-skue-sparebank",
             "sektor": "finansielle tjenester",
-            "bransje": "banker - regionale"
+            "bransje": "banker - regionale",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/6niX4Bx2GuUM6r6S3q6K7d/186416394a079d7aa23555a7303d2c17/skue.png",
+            "nordnetID": "16105585",
+            "nordnetName": "SKUE SPAREBANK"
         },
         {
             "name": "SMARTCRAFT",
@@ -2518,7 +3299,9 @@
             "investechID": "101212",
             "nordnet": "https://www.nordnet.no/market/stocks/17520015-smartcraft-asa",
             "sektor": "teknologi",
-            "bransje": "programvare - applikasjoner"
+            "bransje": "programvare - applikasjoner",
+            "nordnetID": "17520015",
+            "nordnetName": "SMARTCRAFT ASA"
         },
         {
             "name": "SMARTOPTICS GROUP",
@@ -2527,7 +3310,10 @@
             "investechID": "101201",
             "nordnet": "https://www.nordnet.no/market/stocks/17516278-smartoptics-group",
             "sektor": "teknologi",
-            "bransje": "kommunikasjonsutstyr"
+            "bransje": "kommunikasjonsutstyr",
+            "icon": "https://cdn.prod.nntech.io/cms-proxy/6xe8ehctp75g/64qOeWgXDkb3NngE1voFt/536ecacd90469f22419b4b1cd9e79298/image.png",
+            "nordnetID": "17516278",
+            "nordnetName": "SMARTOPTICS GROUP AS"
         },
         {
             "name": "SOFTOX SOLUTIONS",
@@ -2536,7 +3322,10 @@
             "investechID": "101072",
             "nordnet": "https://www.nordnet.no/market/stocks/16857982-softox-solutions",
             "sektor": "helse",
-            "bransje": "bioteknologi"
+            "bransje": "bioteknologi",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/1lpXied0yGAJLbQdDgKURY/05a8dbc3671ca0426bfc396d9d44b60b/image.png",
+            "nordnetID": "16857982",
+            "nordnetName": "SOFTOX SOLUTIONS"
         },
         {
             "name": "SOGN SPAREBANK",
@@ -2545,7 +3334,10 @@
             "investechID": "100861",
             "nordnet": "https://www.nordnet.no/market/stocks/16105431-sogn-sparebank",
             "sektor": "finansielle tjenester",
-            "bransje": "banker - regionale"
+            "bransje": "banker - regionale",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/7cMV6dxLSbirtHy3KQ4fQb/141194072453382b70cdf90c420da1e3/image.png",
+            "nordnetID": "16105431",
+            "nordnetName": "SOGN SPAREBANK"
         },
         {
             "name": "SOLSTAD OFFSHORE",
@@ -2554,7 +3346,10 @@
             "investechID": "100312",
             "nordnet": "https://www.nordnet.no/market/stocks/16105574-solstad-offshore",
             "sektor": "sj\u00f8fart",
-            "bransje": "sj\u00f8fart"
+            "bransje": "sj\u00f8fart",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/22Gr7a5xXRXpg65y03dVTm/62e87e830c26d4310dc9a4dc0c630b4d/image.png",
+            "nordnetID": "16105574",
+            "nordnetName": "SOLSTAD OFFSHORE"
         },
         {
             "name": "SPARBNK 68 GR NORD",
@@ -2563,7 +3358,10 @@
             "investechID": "101226",
             "nordnet": "https://www.nordnet.no/market/stocks/17311345-sparebank-68-grader",
             "sektor": "finansielle tjenester",
-            "bransje": "banker - regionale"
+            "bransje": "banker - regionale",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/1o7OGWA37qGpr7va28A8B2/2f43e312b316edf53d706ce3dd95f0d2/image.png",
+            "nordnetID": "17311345",
+            "nordnetName": "SPAREBANK 68 GRADER NORD"
         },
         {
             "name": "SPAREBANK 1 SMN",
@@ -2572,7 +3370,10 @@
             "investechID": "100291",
             "nordnet": "https://www.nordnet.no/market/stocks/16105415-sparebank-1-smn",
             "sektor": "finansielle tjenester",
-            "bransje": "banker - regionale"
+            "bransje": "banker - regionale",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/3j7HBuu20BQs8i4gUjj40Z/a0f00ddb7f98a305104ca32e1c30a681/image.png",
+            "nordnetID": "16105415",
+            "nordnetName": "SPAREBANK 1 SMN"
         },
         {
             "name": "SPAREBANK 1 SR-BK",
@@ -2581,7 +3382,10 @@
             "investechID": "101045",
             "nordnet": "https://www.nordnet.no/market/stocks/16105330-sparebank-1-srbank",
             "sektor": "finansielle tjenester",
-            "bransje": "banker - regionale"
+            "bransje": "banker - regionale",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/3j7HBuu20BQs8i4gUjj40Z/a0f00ddb7f98a305104ca32e1c30a681/image.png",
+            "nordnetID": "16105330",
+            "nordnetName": "SPAREBANK 1 SR-BANK"
         },
         {
             "name": "SPAREBANK 1 S\u00d8R\u00d8",
@@ -2590,7 +3394,10 @@
             "investechID": "101200",
             "nordnet": "https://www.nordnet.no/market/stocks/16105417-sparebank-1-so-ro-stnorge",
             "sektor": "finansielle tjenester",
-            "bransje": "banker - regionale"
+            "bransje": "banker - regionale",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/3j7HBuu20BQs8i4gUjj40Z/a0f00ddb7f98a305104ca32e1c30a681/image.png",
+            "nordnetID": "16105417",
+            "nordnetName": "SPAREBANK 1 S\u00d8R\u00d8ST-NORGE"
         },
         {
             "name": "SPAREBANKEN M\u00d8RE",
@@ -2599,7 +3406,10 @@
             "investechID": "100292",
             "nordnet": "https://www.nordnet.no/market/stocks/17739816-sparebanken-mo-re",
             "sektor": "finansielle tjenester",
-            "bransje": "banker - regionale"
+            "bransje": "banker - regionale",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/4zHaRfFgRXpsytQSMkcSqI/dc4790adc5d3fe6e232839cb340d5ec6/image.png",
+            "nordnetID": "17739816",
+            "nordnetName": "SPAREBANKEN M\u00d8RE"
         },
         {
             "name": "SPAREBANKEN S\u00d8R",
@@ -2608,7 +3418,10 @@
             "investechID": "100696",
             "nordnet": "https://www.nordnet.no/market/stocks/16105581-sparebanken-so-r",
             "sektor": "finansielle tjenester",
-            "bransje": "banker - regionale"
+            "bransje": "banker - regionale",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/2LgEfPtoSnePfC1qjMHjur/5070fcfb661ec37b98c1f48228e55bbd/image.png",
+            "nordnetID": "16105581",
+            "nordnetName": "SPAREBANKEN S\u00d8R"
         },
         {
             "name": "SPAREBANKEN VEST",
@@ -2617,7 +3430,10 @@
             "investechID": "100297",
             "nordnet": "https://www.nordnet.no/market/stocks/16105421-sparebanken-vest",
             "sektor": "finansielle tjenester",
-            "bransje": "banker - regionale"
+            "bransje": "banker - regionale",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/2bKeHQcUXPFO3H5BLcMb7M/a0a4eeb1d3057d9b19c32c97b008f476/image.png",
+            "nordnetID": "16105421",
+            "nordnetName": "SPAREBANKEN VEST"
         },
         {
             "name": "SPAREBANKEN \u00d8ST",
@@ -2626,7 +3442,10 @@
             "investechID": "100298",
             "nordnet": "https://www.nordnet.no/market/stocks/16105645-sparebanken-o-st",
             "sektor": "finansielle tjenester",
-            "bransje": "banker - regionale"
+            "bransje": "banker - regionale",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/2P7L7441hJ5HQIXuxZuJzr/ded25eb36b5582955168b4616cd52ffe/image.png",
+            "nordnetID": "16105645",
+            "nordnetName": "SPAREBANKEN \u00d8ST"
         },
         {
             "name": "SPBK 1 NORDM\u00d8RE",
@@ -2635,7 +3454,10 @@
             "investechID": "100793",
             "nordnet": "https://www.nordnet.no/market/stocks/16256376-sparebank-1-nord-mo-re",
             "sektor": "finansielle tjenester",
-            "bransje": "banker - regionale"
+            "bransje": "banker - regionale",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/3j7HBuu20BQs8i4gUjj40Z/a0f00ddb7f98a305104ca32e1c30a681/image.png",
+            "nordnetID": "16256376",
+            "nordnetName": "SPAREBANK 1 NORDM\u00d8RE"
         },
         {
             "name": "SPBK 1 \u00d8STLANDET",
@@ -2644,7 +3466,10 @@
             "investechID": "100787",
             "nordnet": "https://www.nordnet.no/market/stocks/16719249-sparebank-1-o-stlandet",
             "sektor": "finansielle tjenester",
-            "bransje": "banker - regionale"
+            "bransje": "banker - regionale",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/3j7HBuu20BQs8i4gUjj40Z/a0f00ddb7f98a305104ca32e1c30a681/image.png",
+            "nordnetID": "16719249",
+            "nordnetName": "SPAREBANK 1 \u00d8STLANDET"
         },
         {
             "name": "SPBK1 HELGELAND",
@@ -2653,7 +3478,10 @@
             "investechID": "100281",
             "nordnet": "https://www.nordnet.no/market/stocks/16105591-sparebank-1-helgeland",
             "sektor": "finansielle tjenester",
-            "bransje": "banker - regionale"
+            "bransje": "banker - regionale",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/3j7HBuu20BQs8i4gUjj40Z/a0f00ddb7f98a305104ca32e1c30a681/image.png",
+            "nordnetID": "16105591",
+            "nordnetName": "SPAREBANK 1 HELGELAND"
         },
         {
             "name": "SPBK1 NORD-NORGE",
@@ -2662,7 +3490,10 @@
             "investechID": "100293",
             "nordnet": "https://www.nordnet.no/market/stocks/16105416-sparebank-1-nordnorge",
             "sektor": "finansielle tjenester",
-            "bransje": "banker - regionale"
+            "bransje": "banker - regionale",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/3j7HBuu20BQs8i4gUjj40Z/a0f00ddb7f98a305104ca32e1c30a681/image.png",
+            "nordnetID": "16105416",
+            "nordnetName": "SPAREBANK 1 NORD-NORGE"
         },
         {
             "name": "SPBK1 RINGERIKE",
@@ -2671,7 +3502,10 @@
             "investechID": "100287",
             "nordnet": "https://www.nordnet.no/market/stocks/16105430-sparebank-1-ringerike",
             "sektor": "finansielle tjenester",
-            "bransje": "banker - regionale"
+            "bransje": "banker - regionale",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/3j7HBuu20BQs8i4gUjj40Z/a0f00ddb7f98a305104ca32e1c30a681/image.png",
+            "nordnetID": "16105430",
+            "nordnetName": "SPAREBANK 1 RINGERIKE HADELAND"
         },
         {
             "name": "SPBK1 \u00d8STFOLD AKE",
@@ -2680,7 +3514,10 @@
             "investechID": "100637",
             "nordnet": "https://www.nordnet.no/market/stocks/16105639-sparebank-1-o-stfold",
             "sektor": "finansielle tjenester",
-            "bransje": "banker - regionale"
+            "bransje": "banker - regionale",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/3j7HBuu20BQs8i4gUjj40Z/a0f00ddb7f98a305104ca32e1c30a681/image.png",
+            "nordnetID": "16105639",
+            "nordnetName": "SPAREBANK 1 \u00d8STFOLD AKERSHUS"
         },
         {
             "name": "SPOTLIO",
@@ -2689,7 +3526,10 @@
             "investechID": "101148",
             "nordnet": "https://www.nordnet.no/market/stocks/17400032-spotlio",
             "sektor": "teknologi",
-            "bransje": "programvare - applikasjoner"
+            "bransje": "programvare - applikasjoner",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/4MkksuqQfcFL5iAkq6xY4I/0e653d7565508610c0e3748d57de39ff/image.png",
+            "nordnetID": "17400032",
+            "nordnetName": "SPOTLIO AS"
         },
         {
             "name": "STAINLESS TANKERS",
@@ -2698,7 +3538,9 @@
             "investechID": "101287",
             "nordnet": "https://www.nordnet.no/market/stocks/18010214-stainless-tankers-asa",
             "sektor": "-",
-            "bransje": "-"
+            "bransje": "-",
+            "nordnetID": "18010214",
+            "nordnetName": "STAINLESS TANKERS ASA"
         },
         {
             "name": "STANDARD SUPPLY",
@@ -2707,7 +3549,10 @@
             "investechID": "101261",
             "nordnet": "https://www.nordnet.no/market/stocks/17790875-standard-supply",
             "sektor": "sj\u00f8fart",
-            "bransje": "sj\u00f8fart"
+            "bransje": "sj\u00f8fart",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/2k5Ed63MTexEliNlTiRhwn/960011b228281cda8ce52b39223887bf/Standard_Supply.webp",
+            "nordnetID": "17790875",
+            "nordnetName": "STANDARD SUPPLY AS"
         },
         {
             "name": "STATT TORSK",
@@ -2716,7 +3561,10 @@
             "investechID": "101192",
             "nordnet": "https://www.nordnet.no/market/stocks/16700542-statt-torsk-asa",
             "sektor": "konsument defensive",
-            "bransje": "landbruksprodukter"
+            "bransje": "landbruksprodukter",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/4Rnufk3dIh0WtcTG8Kpa5I/79c23e72a8f1da620d471a04bb37d3c2/Statt_Torsk.jpeg",
+            "nordnetID": "16700542",
+            "nordnetName": "STATT TORSK ASA"
         },
         {
             "name": "STOLT-NIELSEN",
@@ -2725,7 +3573,10 @@
             "investechID": "100150",
             "nordnet": "https://www.nordnet.no/market/stocks/16105428-stoltnielsen",
             "sektor": "sj\u00f8fart",
-            "bransje": "sj\u00f8fart"
+            "bransje": "sj\u00f8fart",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/DtRdQViTShdFJ1aowSdrd/624df5efbb4688ed70daf5f0626cd64c/image.png",
+            "nordnetID": "16105428",
+            "nordnetName": "STOLT-NIELSEN"
         },
         {
             "name": "STOREBRAND",
@@ -2734,7 +3585,10 @@
             "investechID": "100215",
             "nordnet": "https://www.nordnet.no/market/stocks/16105685-storebrand",
             "sektor": "finansielle tjenester",
-            "bransje": "finansielle konglomerater"
+            "bransje": "finansielle konglomerater",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/1NDu5Xi5ntVlFMo9I06TKe/270d06a4a5193bf1fa076fc5258ab2a7/Storebrand.jpg",
+            "nordnetID": "16105685",
+            "nordnetName": "STOREBRAND"
         },
         {
             "name": "STRONGPOINT",
@@ -2743,7 +3597,10 @@
             "investechID": "101030",
             "nordnet": "https://www.nordnet.no/market/stocks/16105598-strongpoint",
             "sektor": "industri",
-            "bransje": "forretningsutstyr"
+            "bransje": "forretningsutstyr",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/4R4Mu91QUM6AJrWqUMSOhQ/e80ac6763a707a68e1380e990aab03d6/image.png",
+            "nordnetID": "16105598",
+            "nordnetName": "STRONGPOINT"
         },
         {
             "name": "SUBSEA 7",
@@ -2752,7 +3609,10 @@
             "investechID": "100602",
             "nordnet": "https://www.nordnet.no/market/stocks/16105569-subsea-7",
             "sektor": "energi",
-            "bransje": "olje & gass - utstyr og tjenester"
+            "bransje": "olje & gass - utstyr og tjenester",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/1P8fH7WO0ATPyg8uVHfMH5/974bc360b09e7454f4d46060ad8267cf/image.png",
+            "nordnetID": "16105569",
+            "nordnetName": "SUBSEA 7"
         },
         {
             "name": "SUNNDAL SPAREBANK",
@@ -2761,7 +3621,10 @@
             "investechID": "101048",
             "nordnet": "https://www.nordnet.no/market/stocks/16199579-sunndal-sparebank",
             "sektor": "finansielle tjenester",
-            "bransje": "banker - regionale"
+            "bransje": "banker - regionale",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/6eKcJvAQq3rNskjELTZLNb/eefde6f13e6d884e58b890b981ae8cfe/image.png",
+            "nordnetID": "16199579",
+            "nordnetName": "SUNNDAL SPAREBANK"
         },
         {
             "name": "TECHSTEP",
@@ -2770,7 +3633,9 @@
             "investechID": "100754",
             "nordnet": "https://www.nordnet.no/market/stocks/18054417-techstep",
             "sektor": "teknologi",
-            "bransje": "programvare - applikasjoner"
+            "bransje": "programvare - applikasjoner",
+            "nordnetID": "18054417",
+            "nordnetName": "TECHSTEP"
         },
         {
             "name": "TECO 2030",
@@ -2779,7 +3644,10 @@
             "investechID": "101091",
             "nordnet": "https://www.nordnet.no/market/stocks/17363130-teco-2030",
             "sektor": "industri",
-            "bransje": "spesialindustrimaskiner"
+            "bransje": "spesialindustrimaskiner",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/746hnCUvbKI3Bmzldxxq8N/34a0cc1aae4813717c95013a2db15005/image.png",
+            "nordnetID": "17363130",
+            "nordnetName": "TECO 2030"
         },
         {
             "name": "TEKNA HOLDING",
@@ -2788,7 +3656,10 @@
             "investechID": "101186",
             "nordnet": "https://www.nordnet.no/market/stocks/17473119-tekna-holding-asa",
             "sektor": "innsatsvarer",
-            "bransje": "spesialkjemikalier"
+            "bransje": "spesialkjemikalier",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/6faYJdpKbqUaINyF5zmBcw/9e42b29cee8d866df115e7d1d8e3cd58/tekna.png",
+            "nordnetID": "17473119",
+            "nordnetName": "TEKNA HOLDING ASA"
         },
         {
             "name": "TELENOR",
@@ -2797,7 +3668,10 @@
             "investechID": "100275",
             "nordnet": "https://www.nordnet.no/market/stocks/16105595-telenor",
             "sektor": "kommunikasjonstjenester",
-            "bransje": "telekommunikasjon"
+            "bransje": "telekommunikasjon",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/4x7ruz4V8IMVAGAKIrVdku/03f9b57ab4963350cb5768b693249186/image.png",
+            "nordnetID": "16105595",
+            "nordnetName": "TELENOR"
         },
         {
             "name": "TGS",
@@ -2806,7 +3680,10 @@
             "investechID": "100082",
             "nordnet": "https://www.nordnet.no/market/stocks/16105575-tgs-asa",
             "sektor": "energi",
-            "bransje": "olje & gass - utstyr og tjenester"
+            "bransje": "olje & gass - utstyr og tjenester",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/quLo4LaSmK8MrBfZE0h4G/2a41587e1bc0d2d0e90acdf28cdada03/image.png",
+            "nordnetID": "16105575",
+            "nordnetName": "TGS ASA"
         },
         {
             "name": "THE KINGFISH COMP",
@@ -2815,7 +3692,10 @@
             "investechID": "101024",
             "nordnet": "https://www.nordnet.no/market/stocks/17392206-the-kingfish-company",
             "sektor": "konsument defensive",
-            "bransje": "pakket mat"
+            "bransje": "pakket mat",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/7ao0yN1KwT5NTeoJuKHIQP/edb35c26ec885c00939a52078951befa/The_Kingfish_Company.jpeg",
+            "nordnetID": "17392206",
+            "nordnetName": "THE KINGFISH COMPANY"
         },
         {
             "name": "THOR MEDICAL",
@@ -2824,7 +3704,10 @@
             "investechID": "101044",
             "nordnet": "https://www.nordnet.no/market/stocks/16156313-thor-medical-asa",
             "sektor": "helse",
-            "bransje": "bioteknologi"
+            "bransje": "bioteknologi",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/B8dP74m2NRCTIibYeMbGd/d00ad2597aa7c5e51ca1ccc331d49fce/Screenshot_2023-01-27_at_12.42.39.png",
+            "nordnetID": "16156313",
+            "nordnetName": "THOR MEDICAL ASA"
         },
         {
             "name": "TIETOEVRY",
@@ -2833,7 +3716,10 @@
             "investechID": "101019",
             "nordnet": "https://www.nordnet.no/market/stocks/17156779-tietoevry",
             "sektor": "teknologi",
-            "bransje": "it - tjenester"
+            "bransje": "it - tjenester",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/5t03R6ILWpvA5HYJwJiTBE/80e5fda0e9f38af6760d1e13780166b7/image.png",
+            "nordnetID": "16100871",
+            "nordnetName": "TietoEVRY Corporation"
         },
         {
             "name": "TOMRA SYSTEMS",
@@ -2842,7 +3728,10 @@
             "investechID": "100107",
             "nordnet": "https://www.nordnet.no/market/stocks/17775123-tomra-systems",
             "sektor": "industri",
-            "bransje": "avfallsh\u00e5ndtering"
+            "bransje": "avfallsh\u00e5ndtering",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/2TX8onwqIucLNJTyATgIKL/9f1763720e720e6ebad146c624f6bfd9/image.png",
+            "nordnetID": "17775123",
+            "nordnetName": "TOMRA SYSTEMS"
         },
         {
             "name": "TOTENS SPAREBANK",
@@ -2851,7 +3740,10 @@
             "investechID": "100299",
             "nordnet": "https://www.nordnet.no/market/stocks/16105425-totens-sparebank",
             "sektor": "finansielle tjenester",
-            "bransje": "banker - regionale"
+            "bransje": "banker - regionale",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/CUROdm5nzW5uaiTldfcOq/b9beaa4e24ebf5a867ff577d06d0e627/image.png",
+            "nordnetID": "16105425",
+            "nordnetName": "TOTENS SPAREBANK"
         },
         {
             "name": "TREASURE",
@@ -2860,7 +3752,10 @@
             "investechID": "100756",
             "nordnet": "https://www.nordnet.no/market/stocks/16561379-treasure",
             "sektor": "finansielle tjenester",
-            "bransje": "kapitalforvaltning"
+            "bransje": "kapitalforvaltning",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/4jnC46RE5dU7jQerSO1SlU/20f458e89f2240e2f74dbbc69695e36a/image.png",
+            "nordnetID": "16561379",
+            "nordnetName": "TREASURE"
         },
         {
             "name": "TYSNES SPAREBANK",
@@ -2869,7 +3764,10 @@
             "investechID": "101055",
             "nordnet": "https://www.nordnet.no/market/stocks/16391948-tysnes-sparebank",
             "sektor": "finansielle tjenester",
-            "bransje": "banker - regionale"
+            "bransje": "banker - regionale",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/4hROWAJ7sfJwfavzg7hQuU/54c57f9009566f76e67b6b2a705158a6/image.png",
+            "nordnetID": "16391948",
+            "nordnetName": "TYSNES SPAREBANK"
         },
         {
             "name": "ULTIMOVACS",
@@ -2878,7 +3776,10 @@
             "investechID": "101077",
             "nordnet": "https://www.nordnet.no/market/stocks/17058977-ultimovacs",
             "sektor": "helse",
-            "bransje": "bioteknologi"
+            "bransje": "bioteknologi",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/2iahAN8UWUlMk5YOFPwlvR/5a7daf89901674e183c8922cd6259765/image.png",
+            "nordnetID": "17058977",
+            "nordnetName": "ULTIMOVACS"
         },
         {
             "name": "UNIVID",
@@ -2887,7 +3788,10 @@
             "investechID": "101187",
             "nordnet": "https://www.nordnet.no/market/stocks/16105696-univid-asa",
             "sektor": "teknologi",
-            "bransje": "programvare - infrastruktur"
+            "bransje": "programvare - infrastruktur",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/ftl7kuC8OCUOKHCVUlSFf/bd9e01d283047f5bb211c3066fe9181d/image.png",
+            "nordnetID": "16105696",
+            "nordnetName": "UNIVID ASA"
         },
         {
             "name": "VEIDEKKE",
@@ -2896,7 +3800,10 @@
             "investechID": "100109",
             "nordnet": "https://www.nordnet.no/market/stocks/16105686-veidekke",
             "sektor": "industri",
-            "bransje": "bygg og anlegg"
+            "bransje": "bygg og anlegg",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/3NoFaG2w1SgV0O2Tj0Gb0l/61ef428c3b4cff7877821ba4dcfc6118/image.png",
+            "nordnetID": "16105686",
+            "nordnetName": "VEIDEKKE"
         },
         {
             "name": "VISTIN PHARMA",
@@ -2905,7 +3812,10 @@
             "investechID": "101056",
             "nordnet": "https://www.nordnet.no/market/stocks/16411097-vistin-pharma",
             "sektor": "helse",
-            "bransje": "medsinprodusenter - spesialist og generell"
+            "bransje": "medsinprodusenter - spesialist og generell",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/2PPso8w1ETkRV9KjKiqZmF/8bbce23d2710cb3ceb07b56dd568281d/image.png",
+            "nordnetID": "16411097",
+            "nordnetName": "VISTIN PHARMA"
         },
         {
             "name": "VOLUE",
@@ -2914,7 +3824,10 @@
             "investechID": "101102",
             "nordnet": "https://www.nordnet.no/market/stocks/17367126-volue-asa",
             "sektor": "teknologi",
-            "bransje": "programvare - applikasjoner"
+            "bransje": "programvare - applikasjoner",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/5H39f5jiDC3rqcD316yEiA/1a2e006af96836a03978d21ce636d9e4/image.png",
+            "nordnetID": "17367126",
+            "nordnetName": "VOLUE ASA"
         },
         {
             "name": "VOSS VEKSEL OGLAND",
@@ -2923,7 +3836,9 @@
             "investechID": "100206",
             "nordnet": "https://www.nordnet.no/market/stocks/16105690-voss-veksel-og",
             "sektor": "finansielle tjenester",
-            "bransje": "banker - regionale"
+            "bransje": "banker - regionale",
+            "nordnetID": "16105690",
+            "nordnetName": "VOSS VEKSEL- OG LANDMANDSBANK"
         },
         {
             "name": "VOW",
@@ -2932,7 +3847,10 @@
             "investechID": "100933",
             "nordnet": "https://www.nordnet.no/market/stocks/16280186-vow",
             "sektor": "industri",
-            "bransje": "forurensnings- og behandlingskontroll"
+            "bransje": "forurensnings- og behandlingskontroll",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/27ulAEf2f1AS6k4EYZP8zE/a9aa55d4113238a4c0926fb7cb8da812/image.png",
+            "nordnetID": "16280186",
+            "nordnetName": "VOW"
         },
         {
             "name": "VOW GREEN METALS",
@@ -2941,7 +3859,10 @@
             "investechID": "101218",
             "nordnet": "https://www.nordnet.no/market/stocks/17539752-vow-green-metals",
             "sektor": "industri",
-            "bransje": "avfallsh\u00e5ndtering"
+            "bransje": "avfallsh\u00e5ndtering",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/6nFzJhp4z7N1CvwjD9qS2Q/66323c7f802965b0d85c16ac6d2ca8e2/image.png",
+            "nordnetID": "17539752",
+            "nordnetName": "VOW GREEN METALS AS"
         },
         {
             "name": "V\u00c5R ENERGI",
@@ -2950,7 +3871,10 @@
             "investechID": "101249",
             "nordnet": "https://www.nordnet.no/market/stocks/17686528-va-r-energi-asa",
             "sektor": "energi",
-            "bransje": "olje & gass - e&p"
+            "bransje": "olje & gass - e&p",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/CADlRxr76FvYkHzlyV9K4/f65c9427b674ea0542c7f84b6a26f9d3/image.png",
+            "nordnetID": "17686528",
+            "nordnetName": "V\u00c5R ENERGI ASA"
         },
         {
             "name": "WALLENIUS WILHELMS",
@@ -2959,7 +3883,10 @@
             "investechID": "101042",
             "nordnet": "https://www.nordnet.no/market/stocks/16105255-wallenius-wilhelmsen",
             "sektor": "sj\u00f8fart",
-            "bransje": "sj\u00f8fart"
+            "bransje": "sj\u00f8fart",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/1JFQkm7gTNhkpVmtoyhh90/553459c0f683c430138d1483ea898e9b/image.png",
+            "nordnetID": "16105255",
+            "nordnetName": "WALLENIUS WILHELMSEN"
         },
         {
             "name": "WEBSTEP",
@@ -2968,7 +3895,10 @@
             "investechID": "100803",
             "nordnet": "https://www.nordnet.no/market/stocks/16159227-webstep",
             "sektor": "teknologi",
-            "bransje": "it - tjenester"
+            "bransje": "it - tjenester",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/5VTGcKZosnx8KTYT1Aczpu/52bc78de6d4037b466d1f6083a521c52/image.png",
+            "nordnetID": "16159227",
+            "nordnetName": "WEBSTEP"
         },
         {
             "name": "WESTERN BULK CHART",
@@ -2977,7 +3907,10 @@
             "investechID": "101229",
             "nordnet": "https://www.nordnet.no/market/stocks/16606769-western-bulk-chartering",
             "sektor": "sj\u00f8fart",
-            "bransje": "sj\u00f8fart"
+            "bransje": "sj\u00f8fart",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/2yicbUX5DWQcctoeexrbXx/ba25016d799a48242bf3b4340d5b1793/image.png",
+            "nordnetID": "16606769",
+            "nordnetName": "WESTERN BULK CHARTERING AS"
         },
         {
             "name": "WILH. WILHELMSEN A",
@@ -2986,7 +3919,10 @@
             "investechID": "100160",
             "nordnet": "https://www.nordnet.no/market/stocks/16105691-wilh-wilhelmsen-holding",
             "sektor": "sj\u00f8fart",
-            "bransje": "sj\u00f8fart"
+            "bransje": "sj\u00f8fart",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/6VZ4nEf6dnCVsoUkF1mAOU/83984601de28fc9351c02a3f52a7c589/Screenshot_2023-01-28_at_20.55.29.png",
+            "nordnetID": "16105691",
+            "nordnetName": "WILH. WILHELMSEN HOLDING SER. A"
         },
         {
             "name": "WILH. WILHELMSEN B",
@@ -2995,7 +3931,10 @@
             "investechID": "100161",
             "nordnet": "https://www.nordnet.no/market/stocks/16105692-wilh-wilhelmsen-holding",
             "sektor": "sj\u00f8fart",
-            "bransje": "sj\u00f8fart"
+            "bransje": "sj\u00f8fart",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/6VZ4nEf6dnCVsoUkF1mAOU/83984601de28fc9351c02a3f52a7c589/Screenshot_2023-01-28_at_20.55.29.png",
+            "nordnetID": "16105692",
+            "nordnetName": "WILH. WILHELMSEN HOLDING SER. B"
         },
         {
             "name": "WPU - WASTE PLASTI",
@@ -3004,7 +3943,9 @@
             "investechID": "101255",
             "nordnet": "https://www.nordnet.no/market/stocks/17593738-wpu-waste-plastic",
             "sektor": "industri",
-            "bransje": "avfallsh\u00e5ndtering"
+            "bransje": "avfallsh\u00e5ndtering",
+            "nordnetID": "17593738",
+            "nordnetName": "WPU - WASTE PLASTIC UPCYCLING A/S"
         },
         {
             "name": "XPLORA TECHNOLOGIE",
@@ -3013,7 +3954,10 @@
             "investechID": "101106",
             "nordnet": "https://www.nordnet.no/market/stocks/17383198-xplora-technologies",
             "sektor": "sykliske forbruksvarer",
-            "bransje": "netthandel"
+            "bransje": "netthandel",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/5vTSjXS2y4DpZNSfMzkWW/3a0e07022662ac5f53d2dbb9de4368f9/image.png",
+            "nordnetID": "17383198",
+            "nordnetName": "XPLORA TECHNOLOGIES"
         },
         {
             "name": "XXL",
@@ -3022,7 +3966,10 @@
             "investechID": "100716",
             "nordnet": "https://www.nordnet.no/market/stocks/16325339-xxl",
             "sektor": "sykliske forbruksvarer",
-            "bransje": "spesialist detaljhandel"
+            "bransje": "spesialist detaljhandel",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/7bBlF8PORQ6EoMo7vNubS3/c0cdcc1b9307b222c7fcddaa405c0211/image.png",
+            "nordnetID": "16325339",
+            "nordnetName": "XXL"
         },
         {
             "name": "YARA INTERNATIONAL",
@@ -3031,7 +3978,10 @@
             "investechID": "100346",
             "nordnet": "https://www.nordnet.no/market/stocks/16105608-yara-international",
             "sektor": "innsatsvarer",
-            "bransje": "jorbruksinnsatser"
+            "bransje": "jorbruksinnsatser",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/46gwdAXGGVqahid9DtQ3e3/a167a204c11ff86753e92ac9615eb6d0/image.png",
+            "nordnetID": "16105608",
+            "nordnetName": "YARA INTERNATIONAL"
         },
         {
             "name": "ZALARIS",
@@ -3040,7 +3990,10 @@
             "investechID": "100705",
             "nordnet": "https://www.nordnet.no/market/stocks/16299948-zalaris",
             "sektor": "industri",
-            "bransje": "personal- og arbeidskraftformidling"
+            "bransje": "personal- og arbeidskraftformidling",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/73wtJNrFD0UgB2mtdSHr0I/bc6d27d5c659b2c164aafa4fef4f2061/image.png",
+            "nordnetID": "16299948",
+            "nordnetName": "ZALARIS"
         },
         {
             "name": "ZAPTEC",
@@ -3049,7 +4002,10 @@
             "investechID": "101049",
             "nordnet": "https://www.nordnet.no/market/stocks/16478530-zaptec-asa",
             "sektor": "sykliske forbruksvarer",
-            "bransje": "bildeler"
+            "bransje": "bildeler",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/HC6HEobqxUCq4KZPkfCol/e821249848499b713fa980b40af383e0/image.png",
+            "nordnetID": "16478530",
+            "nordnetName": "ZAPTEC ASA"
         },
         {
             "name": "ZENITH ENERGY",
@@ -3058,7 +4014,9 @@
             "investechID": "101012",
             "nordnet": "https://www.nordnet.no/market/stocks/16952978-zenith-energy",
             "sektor": "energi",
-            "bransje": "olje & gass - e&p"
+            "bransje": "olje & gass - e&p",
+            "nordnetID": "18141360",
+            "nordnetName": "ZENITH ENERGY"
         },
         {
             "name": "ZWIPE",
@@ -3067,7 +4025,10 @@
             "investechID": "101052",
             "nordnet": "https://www.nordnet.no/market/stocks/16335884-zwipe",
             "sektor": "teknologi",
-            "bransje": "programvare - infrastruktur"
+            "bransje": "programvare - infrastruktur",
+            "icon": "https://images.ctfassets.net/6xe8ehctp75g/59qtYLKDg40taCDZVoN4cF/8ce15446a996a66928b9241ee5b5f95d/image.png",
+            "nordnetID": "16335884",
+            "nordnetName": "ZWIPE"
         }
     ]
 }

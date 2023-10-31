@@ -8,3 +8,6 @@ data/watchlist.json
 rabbitmq/*.sh
 rabbitmq/*.json
 rabbitmq/dockerfile-rabbit
+*.tar
+test*
+dockerfile*

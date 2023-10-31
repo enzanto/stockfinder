@@ -4,3 +4,6 @@ data/TEST_DB.db
 images/*
 logs/*.log
 data/watchlist.json
+*.ipynb
+test*
+build-and-export.sh
