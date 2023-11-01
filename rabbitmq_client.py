@@ -151,12 +151,39 @@ class rabbitmq(object):
                 routing_key="rpc_queue"
             )
             json_return = json.loads(await future)
-            print(json_return)
+            if 'status' in json_return:
+                print(json_return['ticker'], json_return['status'])
+            else:
+                print(json_return['ticker'])
             return json_return 
         except asyncio.CancelledError:
             print(f"task was cancelled: {request_dict}")
             raise
 
+
+    async def portfolio_report(self,request_dict, rsi = None):
+        try:
+            correlation_id = str(uuid.uuid4())
+            future = self.loop.create_future()
+            self.futures[correlation_id] = future
+            order = {'order': 'build report', 'request': request_dict, 'rsi': rsi}
+            json_object = json.dumps(order, indent=4)
+            await self.channel.default_exchange.publish(
+                aio_pika.Message(
+                    body=json_object.encode(),
+                    content_type="text/plain",
+                    correlation_id=correlation_id,
+                    reply_to=self.callback_queue.name
+                ),
+                routing_key="rpc_queue"
+            )
+            json_return = json.loads(await future)
+            if 'status' in json_return:
+                print(json_return['ticker'], json_return['status'])
+            return json_return 
+        except asyncio.CancelledError:
+            print(f"task was cancelled: {request_dict}")
+            raise
 
     async def get_yahoo(self, i, start=None):
         if type(i) == dict:

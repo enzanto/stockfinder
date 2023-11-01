@@ -238,3 +238,5 @@ def trailing_stop(df, return_df = False):
     elif df['trend'].iloc[-1] != df['trend'].iloc[-2]:
         trend = df['trend'].iloc[-1]
         return f"Broke trailing stop. Now in: {trend}"
+    else:
+        return round(df['stop'].iloc[-1], 2)

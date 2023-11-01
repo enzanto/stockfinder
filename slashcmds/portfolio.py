@@ -137,7 +137,7 @@ class Portfolio(app_commands.Group):
             await interaction.response.send_message("No portfolio found", ephemeral=True, delete_after=60)
         userlist = userdata['portfolio']
         userlist.sort()
-        embeds,images,embeds2,images2 = await report_db(userlist)
+        embeds,images,embeds2,images2 = await report_portfolio(userlist)
         print("got the stuff")
         print("length: " ,len(embeds))
         await interaction.edit_original_response(content="report in DM")

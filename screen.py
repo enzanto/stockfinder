@@ -23,6 +23,7 @@ import json
 import time
 import settings
 import io
+import datetime
 logger = settings.logging.getLogger("discord")
 # setup
 try: #discord
@@ -63,6 +64,7 @@ if discord_chk:
     intents = discord.Intents.default()
     bot = discord.Client(intents=intents)
     channel_id = 1161668764341907556
+    # channel_id = 1156506339019857920
 today = dt.date.today()
 today = str(today)
 
@@ -77,6 +79,7 @@ class MarketScreener:
         self.stocklist = pd.DataFrame(columns = ['Name', 'Symbol', 'Market'])
         self.exportdf = pd.DataFrame(columns = ['Stock', 'Ticker', 'Adj Close', 'Change', 'Closing range', 'vwap', 'Volume vs sma20', 'RS', 'Market', 'Yahoo'])
         self.json_response = None
+        self.json_portfolio = None
         self.missing = []
         self.rabbit = rabbitmq.rabbitmq()
         self.loop = asyncio.get_event_loop()
@@ -239,7 +242,58 @@ class MarketScreener:
                 print(f"An exception occurred in one of the tasks: {task_result}")
         
 
+    #json response, with header and body. fields: ema 8, ema21, sma50, trailing stop, volume sma
+    async def portfolio_scan(self, i, return_text=False):
+            x = i
+            notfound=False
+            watchlist = False
+            if self.indexRSI == None:
+                self.get_osebx_rsi()
+            today = datetime.date.today()
+            # get from stocklist when doing full scan
+            if type(i) == int:
+                    stock = self.stocklist["Symbol"][i]
+                    market = self.stocklist["Market"][i]
+                    stockname = self.stocklist["Name"][i]
 
+            else:
+                try:
+                    stock = i["Symbol"]
+                    market = i["Market"]
+                    stockname = i["Name"]
+                except:
+                    stock = i['ticker']
+                    market = "placeholder"
+                    stockname = i['name']
+                    watchlist = True
+            mapped_ticker = self.tickermapdb.get_map_data(ticker=stock)
+            stock_db = "ticker_" + stock.lower().replace(".","_")
+            filename = stock.lower().replace(".","_")+".jpg"
+            filename_investtech = stock.lower().replace(".","_")+"-investtech.png"
+            df = pd.read_sql(stock_db,engine, index_col="Date", parse_dates={"Date": {"format": "%d/%m/%y"}})
+            emas = [8,21]
+            smas = [50]
+            fields = []
+            for ema in emas:
+                df[f"EMA_{ema}"]=round(df["Adj Close"].ewm(span=ema,min_periods=ema).mean())
+                fields.append({'title': f"EMA {ema}", "field": df[f"EMA_{ema}"].iloc[-1]})
+            for sma in smas:
+                df[f"SMA_{sma}"]=round(df['Adj Close'].rolling(window=sma).mean(),2)
+                fields.append({'title': f"SMA {sma}", "field": df[f"SMA_{sma}"].iloc[-1]})
+            df['Volume_SMA_20'] = round(df['Volume'].rolling(window=20).mean(),2)
+            price = round(df['Adj Close'].iloc[-1])
+            volumeChange = round(((df['Volume'].iloc[-1] / df['Volume_SMA_20'].iloc[-1]))*100,2)
+            priceChange = round(((df['Adj Close'].iloc[-1] / df['Adj Close'].iloc[-2]) -1)*100,2)
+            trailing = trailing_stop(df)
+
+
+            header = f"{today} - {stockname} - {stock}: {price}  {priceChange}%"
+            body = f"Daily portfolio report \nchecking against indicators. see fields"
+            self.json_portfolio = {'ticker': stock, 'name': stockname, 'header': header, 'header url': mapped_ticker['nordnet'], 'body': body, 'fields': [ \
+                                    {'title': 'Volume SMA20', 'field': str(volumeChange)+'%'}, {'title': 'Trailing Stop', 'field': {trailing}}],\
+                                    'yahoo': "https://finance.yahoo.com/chart/"+stock}
+            for field in fields:
+                self.json_portfolio['fields'].append(field)
     async def scan(self, i, return_text=False):
             x = i
             notfound=False
@@ -390,53 +444,24 @@ class MarketScreener:
 
 #main is for running a minervini scan as a kubernetes cronjob 
 async def main():
+    from reports import report_db
     testing = MarketScreener()
     testing.get_osebx_tickers()
     testing.get_osebx_rsi()
     scanreport = localdb.scanReport()
     await testing.rabbit.connect()
     ticker_dict_list = testing.stocklist.to_dict(orient='records')
-    db_tasks = []
-    for ticker in ticker_dict_list:
-        ticker['rsi'] = testing.indexRSI
-        db_tasks.append(asyncio.create_task(testing.rabbit.build_report(ticker, testing.indexRSI)))
-    try:
-        result = await asyncio.shield(asyncio.wait_for(asyncio.gather(*db_tasks), timeout=600))
-    except asyncio.TimeoutError:
-        print("timed out of gather")
-        cancel = 0
-        for task in db_tasks:
-            if not task.done():
-                cancel += 1
-                task.cancel()
-        print(f"{cancel} tasks canceled")
-    minervini_above_seven_list = []
-
-    for json_return in result:
-        minervini_result = json_return.get('minervini')
-        if minervini_result is not None and minervini_result >= 7:
-            minervini_above_seven_list.append(json_return['ticker'])
-    for i in minervini_above_seven_list: #get report from db and create embeds
-        reportdate, json_data, investtech, pivots = scanreport.get_report_data(ticker=i)
-        testing.create_embeds(json_data=json_data, image=pivots, investtech_image=investtech)
+    tickers = []
+    for i in ticker_dict_list:
+        tickers.append(i['Symbol'])
+    embeds,images,embeds2,images2 = await(report_db(tickers, minervini=True))
+    print(len(embeds2))
 
 
     @bot.event
     async def on_ready():
         channel = bot.get_channel(channel_id)
         logger.info("Bot is ready")
-        embeds = []
-        embeds2 = []
-        images = []
-        images2 = []
-        for i in testing.result:
-            if i['trend'] >= 7 and "image investtech" in i:
-                embeds2.extend(i['embed'])
-                images2.extend(i['image'])
-            elif i['trend'] >= 7 and "image investtech" not in i:
-                embeds.append(i['embed'])
-                images.append(i['image'])
-        logger.info(embeds)
         length=6
         for i in range(0, len(embeds2), length):
             x=i
@@ -456,6 +481,7 @@ async def main():
     await bot.start(discord_token)
     await testing.rabbit.disconnect()
     print("ALL DONE GOING TO BED")
+
 if __name__ == "__main__":
     logger = settings.logging.getLogger("bot")
     logger.info("test")

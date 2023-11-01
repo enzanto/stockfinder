@@ -7,7 +7,7 @@ from sqlalchemy import create_engine
 from indicators import *
 from osebx import *
 import asyncio
-from localdb import userdata, tickermap, scanReport
+from localdb import userdata, tickermap, scanReport, portfolioReport
 from datetime import datetime, time
 import rabbitmq_client
 
@@ -63,7 +63,7 @@ async def report_full(tickers):
     print("done with report")
     return embeds,images,embeds2,images2
 
-async def report_db(tickers):
+async def report_db(tickers, minervini=False):
     today = datetime.now()
     work = await rabbitmq_client.rabbitmq().connect()
     map_db = tickermap()
@@ -75,24 +75,36 @@ async def report_db(tickers):
     await screener.rabbit.connect()
     screener.get_osebx_rsi()
     for i in tickers:
-        mapped = map_db.get_map_data(i)
-        mapped_tickers.append(mapped)
+        try:
+            mapped = map_db.get_map_data(i)
+            mapped_tickers.append(mapped)
+        except:
+            print('ticker not in map')
+            return
     async def fetch_embeds(i):
-        ticker = i['ticker']
-        reportdate, json_data, investtech, pivots = report_db.get_report_data(ticker=ticker)
-        print(reportdate)
-        if reportdate == None or today.date() > reportdate.date():
-            print("today is not newest")
-            await work.build_report(i, screener.indexRSI)
+        try:
+            ticker = i['ticker']
             reportdate, json_data, investtech, pivots = report_db.get_report_data(ticker=ticker)
-        elif reportdate.time() < time(17,15):
-            print("updating report,")
-            await work.build_report(i, screener.indexRSI)
-            reportdate, json_data, investtech, pivots = report_db.get_report_data(ticker=ticker)
-        else:
-            print("today is newest")
-
-        await screener.create_embeds(json_data=json_data, image=pivots, investtech_image=investtech)
+            # print(reportdate)
+            if reportdate == None or today.date() > reportdate.date():
+                # print("today is not newest")
+                await work.build_report(i, screener.indexRSI)
+                reportdate, json_data, investtech, pivots = report_db.get_report_data(ticker=ticker)
+            elif reportdate.time() < time(17,15):
+                # print("updating report,")
+                await work.build_report(i, screener.indexRSI)
+                reportdate, json_data, investtech, pivots = report_db.get_report_data(ticker=ticker)
+            # else:
+                # print("today is newest")
+            if minervini:
+                if json_data['minervini'] < 7:
+                    # print(f"{json_data['ticker']} skipped. minervini score: {json_data['minervini']}")
+                    return
+                else:
+                    print(f"{ticker} added with a score of {json_data['minervini']}")
+            await screener.create_embeds(json_data=json_data, image=pivots, investtech_image=investtech)
+        except Exception as e:
+            print(i)
     db_tasks = []
     for i in mapped_tickers:
         db_tasks.append(asyncio.create_task(fetch_embeds(i)))
@@ -121,6 +133,66 @@ async def report_db(tickers):
     await screener.rabbit.disconnect()
     print("done with report")
     return embeds,images,embeds2,images2
+
+async def report_portfolio(tickers):
+    today = datetime.now()
+    work = await rabbitmq_client.rabbitmq().connect()
+    map_db = tickermap()
+    report_db = portfolioReport()
+    mapped_tickers = []
+    if isinstance(tickers, list) == False:
+            tickers = [tickers]
+    screener = MarketScreener()
+    await screener.rabbit.connect()
+    screener.get_osebx_rsi()
+    for i in tickers:
+        mapped = map_db.get_map_data(i)
+        mapped_tickers.append(mapped)
+    async def fetch_embeds(i):
+        ticker = i['ticker']
+        reportdate, json_data = report_db.get_report_data(ticker=ticker)
+        print(reportdate)
+        if reportdate == None or today.date() > reportdate.date():
+            print("today is not newest")
+            await work.portfolio_report(i)
+            reportdate, json_data = report_db.get_report_data(ticker=ticker)
+        elif reportdate.time() < time(17,15):
+            print("updating report,")
+            await work.portfolio_report(i)
+            reportdate, json_data = report_db.get_report_data(ticker=ticker)
+        else:
+            print("today is newest")
+        print(json_data)
+        # await screener.create_embeds(json_data=json_data, image=pivots, investtech_image=investtech)
+    db_tasks = []
+    for i in mapped_tickers:
+        db_tasks.append(asyncio.create_task(fetch_embeds(i)))
+    try:
+        result = await asyncio.shield(asyncio.wait_for(asyncio.gather(*db_tasks), timeout=600))
+    except asyncio.TimeoutError:
+        print("timed out of gather")
+        cancel = 0
+        for task in db_tasks:
+            if not task.done():
+                cancel += 1
+                task.cancel()
+        print(f"{cancel} tasks canceled")
+    embeds = []
+    embeds2 = []
+    images = []
+    images2 = []
+    # finished_result = sorted(screener.json_portfolio['result'], key=lambda x: x['stock'])
+    # for i in finished_result:
+    #     if "image investtech" in i:
+    #         embeds2.extend(i['embed'])
+    #         images2.extend(i['image'])
+    #     elif "image investtech" not in i:
+    #         embeds.append(i['embed'])
+    #         images.append(i['image'])
+    await screener.rabbit.disconnect()
+    print("done with report")
+    return embeds,images,embeds2,images2
+
 
 
 
