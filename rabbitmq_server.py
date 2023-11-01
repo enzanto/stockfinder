@@ -207,6 +207,8 @@ async def main(conn) -> None:
     scrape_nordnet = webscrape_nordnet()
     scrape_investtech = webscrape_investtech()
     update_report = localdb.scanReport()
+    portfolio_report = localdb.portfolioReport()
+    map_db = localdb.tickermap()
     async with conn.queue.iterator() as qiterator:
         message: AbstractIncomingMessage
         async for message in qiterator:
@@ -226,6 +228,37 @@ async def main(conn) -> None:
                     elif n['order'] == "yahoo":
                         response = await asyncio.wait_for(get_yahoo_data(n['request'], n['start']),timeout=10)
                     elif n['order'] == "build report":
+                        try:
+                            try:
+                                mapped_ticker = n['request']
+                                ticker = n['request']['ticker']
+                            except:
+                                ticker=n['request']['Symbol']
+                                mapped_ticker = map_db.get_map_data(ticker)
+                            if mapped_ticker == None:
+                                raise "Mapped ticker not found"
+                            logger.info(f"starting {ticker}")
+                            await localdb.db_updater(ticker,serverside=True)
+                            screener = screen.MarketScreener()
+                            if n['rsi'] == None:
+                                screener.get_osebx_rsi()
+                            else:
+                                screener.indexRSI = n['rsi']
+                            json_result, image= await screener.scan(mapped_ticker, return_text=True)
+                            header,body = await asyncio.wait_for(scrape_investtech.get_text(mapped_ticker), timeout=120)
+                            investtech_image = await asyncio.wait_for(scrape_investtech.get_image(mapped_ticker, b64=False), timeout=120)
+                            json_result['header'] = header
+                            json_result['body'] = body
+                            #get json from screen
+                            response = json.dumps(json_result)
+                            # response = json.dumps({'ticker': ticker, 'status': 'complete'})
+                            #have function here to add data to database
+                            update_report.insert_report_data(ticker,json_result, image, investtech_image)
+                        except Exception as e:
+                            print(e)
+                            response = json.dumps({'ticker': ticker, 'status': "an error occured", 'minervini': 0})
+
+                    elif n['order'] == "portfolio report":
                         ticker=n['request']['ticker']
                         logger.info(f"starting {ticker}")
                         await localdb.db_updater(ticker,serverside=True)
@@ -234,16 +267,11 @@ async def main(conn) -> None:
                             screener.get_osebx_rsi()
                         else:
                             screener.indexRSI = n['rsi']
-                        json_result, image= await screener.scan(n['request'], return_text=True)
-                        header,body = await asyncio.wait_for(scrape_investtech.get_text(n['request']), timeout=20)
-                        investtech_image = await asyncio.wait_for(scrape_investtech.get_image(n['request'], b64=False), timeout=20)
-                        json_result['header'] = header
-                        json_result['body'] = body
-                        #get json from screen
-                        
+                        #json response, with header and body. fields: ema 8, ema21, sma50, trailing stop, volume sma
+                        json_result = await screener.portfolio_scan(['request'], return_text=True)
+                        print(json_result)
                         response = json.dumps({'ticker': ticker, 'status': 'complete'})
-                        #have function here to add data to database
-                        update_report.insert_report_data(ticker,json_result, image, investtech_image)
+                        portfolio_report.insert_report_data(ticker,json_result)
                     else:
                         await message.reject(requeue=True)
                         continue
