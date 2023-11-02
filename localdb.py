@@ -12,9 +12,11 @@ logger2 = settings.logging.getLogger("discord")
 tz = settings.tz
 
 Base = declarative_base()
-engine = settings.engine
+def connect_db():
+    engine = create_engine(settings.db_connect_address)
+    return engine
 start_date = date.today() - timedelta(days= 365*3)
-async def db_updater(symbol, engine=engine, start=start_date, rabbit=None, serverside=False,logger=logger2):
+async def db_updater(symbol, engine=connect_db(), start=start_date, rabbit=None, serverside=False,logger=logger2):
     tableName = "ticker_" + symbol.lower().replace(".","_")
     logger.info(f"Updating table for {symbol}")
     if rabbit == None and serverside == False:
@@ -73,7 +75,7 @@ async def db_updater(symbol, engine=engine, start=start_date, rabbit=None, serve
             return
     # await rabbit.disconnect()
 
-def get_table(symbol, engine=engine):
+def get_table(symbol, engine=connect_db()):
     tableName = "ticker_" + symbol.lower().replace(".","_")
     df = pd.read_sql(tableName,engine, index_col="Date")
     return df
@@ -85,6 +87,7 @@ class tickermap:
         json_data = Column(JSON)
 
     def __init__(self):
+        engine=create_engine()
         Base.metadata.create_all(engine)
         Session = sessionmaker(bind=engine)
         self.session=Session()
@@ -109,6 +112,7 @@ class userdata:
         json_data = Column(JSON)
 
     def __init__(self):
+        engine=create_engine()
         Base.metadata.create_all(engine)
         Session = sessionmaker(bind=engine)
         self.session=Session()
@@ -142,6 +146,7 @@ class scanReport:
         pivots = Column(LargeBinary)
 
     def __init__(self):
+        engine=create_engine()
         Base.metadata.create_all(engine)
         Session = sessionmaker(bind=engine)
         self.session=Session()
@@ -174,6 +179,7 @@ class portfolioReport:
         pivots = Column(LargeBinary)
 
     def __init__(self):
+        engine=create_engine()
         Base.metadata.create_all(engine)
         Session = sessionmaker(bind=engine)
         self.session=Session()

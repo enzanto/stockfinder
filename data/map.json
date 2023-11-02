@@ -10,7 +10,8 @@
             "bransje": "sj\u00f8fart",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/4mrybJWXetRCC0fcdR8Wm/b63f9250f93063f066b6db7f723683f2/image.png",
             "nordnetID": "16786171",
-            "nordnetName": "2020 BULKERS"
+            "nordnetName": "2020 BULKERS",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "5TH PLANET GAMES",
@@ -22,7 +23,8 @@
             "bransje": "elektronisk gaming & multimedia",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/1ma81lF63ACkJKAl5szbwS/01a823f04604576da8bfa99734c58e8b/image.png",
             "nordnetID": "16783956",
-            "nordnetName": "5TH PLANET GAMES"
+            "nordnetName": "5TH PLANET GAMES",
+            "market": "Euronext Expand Oslo"
         },
         {
             "name": "AASEN SPAREBANK",
@@ -34,7 +36,8 @@
             "bransje": "banker - regionale",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/kbST9XV2mFmQx3dhL57MV/42ce346008b3dc2a6a5b696a3efe3f5d/image.png",
             "nordnetID": "16198955",
-            "nordnetName": "AASEN SPAREBANK"
+            "nordnetName": "AASEN SPAREBANK",
+            "market": "Euronext Growth Oslo"
         },
         {
             "name": "ABG SUNDAL COLLIER",
@@ -46,7 +49,8 @@
             "bransje": "kapitalmarkeder",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/3sxDzPjRfrB4odjNCcEdyy/ca30b0c18f7a2dc8280610f7de75ddac/image.png",
             "nordnetID": "16105648",
-            "nordnetName": "ABG SUNDAL COLLIER HOLDING"
+            "nordnetName": "ABG SUNDAL COLLIER HOLDING",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "ABL GROUP",
@@ -58,7 +62,8 @@
             "bransje": "olje & gass - utstyr og tjenester",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/1TvUvrFK5eWXswDCuV1r67/605dad87b2aec65e1adc13c8481e7081/image.png",
             "nordnetID": "16311903",
-            "nordnetName": "ABL GROUP ASA"
+            "nordnetName": "ABL GROUP ASA",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "ADEVINTA",
@@ -70,7 +75,8 @@
             "bransje": "internettinnhold og -informasjon",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/2xMK1tP3InhO5gsTKOdywN/bea616a064c2165b142ca476f2c21248/image.png",
             "nordnetID": "17029243",
-            "nordnetName": "ADEVINTA"
+            "nordnetName": "ADEVINTA",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "ADS MARITIME HOLD",
@@ -82,7 +88,8 @@
             "bransje": "sj\u00f8fart",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/65kMsKC76YNOmSD9MT3bzJ/780fba71a285f0f9a9d8c4955d67088f/ADS_Maritime_Holding.png",
             "nordnetID": "16916507",
-            "nordnetName": "ADS MARITIME HOLDING PLC"
+            "nordnetName": "ADS MARITIME HOLDING PLC",
+            "market": "Euronext Growth Oslo"
         },
         {
             "name": "AEGA",
@@ -93,7 +100,8 @@
             "sektor": "infrastruktur",
             "bransje": "nytte - fornybar",
             "nordnetID": "18079987",
-            "nordnetName": "AEGA"
+            "nordnetName": "AEGA",
+            "market": "Euronext Expand Oslo"
         },
         {
             "name": "AF GRUPPEN",
@@ -105,7 +113,8 @@
             "bransje": "bygg og anlegg",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/5UVP0H3G1WmyDzhLwyBjNh/2b7ae97f2a7082823b687c0a99435bed/image.png",
             "nordnetID": "16105572",
-            "nordnetName": "AF GRUPPEN"
+            "nordnetName": "AF GRUPPEN",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "AGILYX",
@@ -117,7 +126,8 @@
             "bransje": "avfallsh\u00e5ndtering",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/2wCk6C2g30Zwyk3oWUhVB5/1eb7fb3668784515a2767064c9862d93/image.png",
             "nordnetID": "17188095",
-            "nordnetName": "AGILYX ASA"
+            "nordnetName": "AGILYX ASA",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "AIRTHINGS",
@@ -129,7 +139,8 @@
             "bransje": "elektronisk utstyr og deler",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/294qsJUKknVHEAJOJCnwyq/a6a90646692169b55d4d7e04d185b2f9/image.png",
             "nordnetID": "17373662",
-            "nordnetName": "AIRTHINGS"
+            "nordnetName": "AIRTHINGS",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "AKASTOR",
@@ -141,7 +152,8 @@
             "bransje": "olje & gass - utstyr og tjenester",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/4rTyq2ENNvtSgbrGM45ems/3f49a85b2c1d3004c8d1bea8a013393b/image.png",
             "nordnetID": "16105609",
-            "nordnetName": "AKASTOR"
+            "nordnetName": "AKASTOR",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "AKER",
@@ -153,7 +165,8 @@
             "bransje": "konglomerater",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/2TEvKFFNbQbDYH5CewKZIT/2ff86e32c69bf12bceaac11bc920f27a/image.png",
             "nordnetID": "16105613",
-            "nordnetName": "AKER"
+            "nordnetName": "AKER",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "AKER BIOMARINE",
@@ -165,7 +178,8 @@
             "bransje": "pakket mat",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/2LFTQLzpdqm38QXmw9q08g/53ee134c122b0c36f32a85aa8982132f/Aker_BioMarine.jpeg",
             "nordnetID": "17299778",
-            "nordnetName": "AKER BIOMARINE ASA"
+            "nordnetName": "AKER BIOMARINE ASA",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "AKER BP",
@@ -177,7 +191,8 @@
             "bransje": "olje & gass - e&p",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/3t12zmTom9LM7EYPais9Rn/dcc531ccda48bd37ec71d5b8a2d8cf22/image.png",
             "nordnetID": "16105717",
-            "nordnetName": "AKER BP"
+            "nordnetName": "AKER BP",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "AKER CARBON CAPTUR",
@@ -189,7 +204,8 @@
             "bransje": "forurensnings- og behandlingskontroll",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/74d4modxHnPi85amjwTdUm/80ca14e2bde5d76774d337b1ecd9cd51/image.png",
             "nordnetID": "17332926",
-            "nordnetName": "AKER CARBON CAPTURE ASA"
+            "nordnetName": "AKER CARBON CAPTURE ASA",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "AKER HORIZONS",
@@ -201,7 +217,8 @@
             "bransje": "kapitalforvaltning",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/7hu9WHL6FwFYpKO2BCQ4OJ/aaef0f71ecdfcff5b546c313c68e2c87/image.png",
             "nordnetID": "17434301",
-            "nordnetName": "AKER HORIZONS ASA"
+            "nordnetName": "AKER HORIZONS ASA",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "AKER SOLUTIONS",
@@ -213,7 +230,8 @@
             "bransje": "olje & gass - utstyr og tjenester",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/2hUQYNexPbxxV2KJZZN06j/6104ae28375ff4f11561a8a93f176905/image.png",
             "nordnetID": "16323787",
-            "nordnetName": "AKER SOLUTIONS"
+            "nordnetName": "AKER SOLUTIONS",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "AKOBO MINERALS",
@@ -225,7 +243,8 @@
             "bransje": "gull",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/3K71B7OtrQdaxCG8ih1jWS/3b514fb5e5c7a2f67c5db1d85c6a48f9/image.png",
             "nordnetID": "17428878",
-            "nordnetName": "AKOBO MINERALS AB (PUB)"
+            "nordnetName": "AKOBO MINERALS AB (PUB)",
+            "market": "Euronext Growth Oslo"
         },
         {
             "name": "AKVA GROUP",
@@ -237,7 +256,8 @@
             "bransje": "landbruks- og anleggsmaskineri",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/8s2mpNoFQj3Clfob14ELN/314a9600eaccb414ae4a13e3e0fb0a01/image.png",
             "nordnetID": "16105694",
-            "nordnetName": "AKVA GROUP"
+            "nordnetName": "AKVA GROUP",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "ALTERNUS ENERGY GR",
@@ -248,7 +268,8 @@
             "sektor": "infrastruktur",
             "bransje": "nytte - fornybar",
             "nordnetID": "17425271",
-            "nordnetName": "ALTERNUS ENERGY GROUP PLC"
+            "nordnetName": "ALTERNUS ENERGY GROUP PLC",
+            "market": "Euronext Growth Oslo"
         },
         {
             "name": "AMSC",
@@ -260,7 +281,8 @@
             "bransje": "sj\u00f8fart",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/5RkFeyYYNsgBqsiYDQbg6g/09c238c42eabc2b69b58c136c10fc572/image.png",
             "nordnetID": "16105629",
-            "nordnetName": "AMSC ASA"
+            "nordnetName": "AMSC ASA",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "ANDFJORD SALMON",
@@ -272,7 +294,8 @@
             "bransje": "landbruksprodukter",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/7Jid6mbsYIo1ddhm13iPF5/6f88a07361077ab482de04997cb20322/Andfjord_Salmon.png",
             "nordnetID": "16902828",
-            "nordnetName": "ANDFJORD SALMON"
+            "nordnetName": "ANDFJORD SALMON",
+            "market": "Euronext Growth Oslo"
         },
         {
             "name": "AQUA BIO TECHNO",
@@ -284,7 +307,8 @@
             "bransje": "bioteknologi",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/3nYA447EhcH0GqRMY22vMJ/6540d13d41a634d0cfc92babc2568f3e/image.png",
             "nordnetID": "16105727",
-            "nordnetName": "AQUA BIO TECHNOLOGY"
+            "nordnetName": "AQUA BIO TECHNOLOGY",
+            "market": "Euronext Expand Oslo"
         },
         {
             "name": "AQUILA HOLDINGS",
@@ -296,7 +320,8 @@
             "bransje": "olje & gass - utstyr og tjenester",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/3mpKjhJz4FZ2nDQCoX39Hq/34349697dea9e717b290088e6481d0e7/image.png",
             "nordnetID": "16626849",
-            "nordnetName": "AQUILA HOLDINGS ASA"
+            "nordnetName": "AQUILA HOLDINGS ASA",
+            "market": "Euronext Expand Oslo"
         },
         {
             "name": "ARCHER",
@@ -308,7 +333,8 @@
             "bransje": "olje & gass - borring",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/78iwwoprJ4OlCZkIIjgsnd/2ba58edc8745bf4b9da85ce84ad1f18d/image.png",
             "nordnetID": "16459923",
-            "nordnetName": "ARCHER"
+            "nordnetName": "ARCHER",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "ARCTIC BIOSCIENCE",
@@ -319,7 +345,8 @@
             "sektor": "helse",
             "bransje": "bioteknologi",
             "nordnetID": "17085267",
-            "nordnetName": "ARCTIC BIOSCIENCE AS"
+            "nordnetName": "ARCTIC BIOSCIENCE AS",
+            "market": "Euronext Growth Oslo"
         },
         {
             "name": "ARCTIC FISH HOLDIN",
@@ -331,7 +358,8 @@
             "bransje": "landbruksprodukter",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/28si0jdYYPtrdbpGM50lZI/6ec5afefae90060baabec6fe79ecb0b4/Screenshot_2023-01-28_at_22.20.55.png",
             "nordnetID": "17447494",
-            "nordnetName": "ARCTIC FISH HOLDING AS"
+            "nordnetName": "ARCTIC FISH HOLDING AS",
+            "market": "Euronext Growth Oslo"
         },
         {
             "name": "ARCTICZYMES TECHNO",
@@ -343,7 +371,8 @@
             "bransje": "bioteknologi",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/5CWxJOtqANppENWTYwwk4U/7c0f771d1f49dbb2eea87dc244844d2c/ARCTICZYMES_TECHNOLOGIES.png",
             "nordnetID": "16105633",
-            "nordnetName": "ARCTICZYMES TECHNOLOGIES"
+            "nordnetName": "ARCTICZYMES TECHNOLOGIES",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "ARENDALS FOSSEKOMP",
@@ -355,7 +384,8 @@
             "bransje": "konglomerater",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/1FJVK6CPutupxTbncjLhgf/1b8d6c5703460f6b23dc65f74b4766dd/image.png",
             "nordnetID": "16105630",
-            "nordnetName": "ARENDALS FOSSEKOMPANI"
+            "nordnetName": "ARENDALS FOSSEKOMPANI",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "ARGEO",
@@ -366,7 +396,8 @@
             "sektor": "energi",
             "bransje": "olje & gass - utstyr og tjenester",
             "nordnetID": "17457719",
-            "nordnetName": "ARGEO AS"
+            "nordnetName": "ARGEO AS",
+            "market": "Euronext Growth Oslo"
         },
         {
             "name": "ARRIBATEC GROUP",
@@ -377,7 +408,8 @@
             "sektor": "teknologi",
             "bransje": "it - tjenester",
             "nordnetID": "17995119",
-            "nordnetName": "ARRIBATEC GROUP ASA"
+            "nordnetName": "ARRIBATEC GROUP ASA",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "ASETEK",
@@ -389,7 +421,8 @@
             "bransje": "datamaskin (hardware)",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/5SEVk7z7vuvvjbDorVklyo/6e801d8a25c5e8fe30f20b74970a58d3/image.png",
             "nordnetID": "16186672",
-            "nordnetName": "ASETEK"
+            "nordnetName": "ASETEK",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "ASTROCAST",
@@ -400,7 +433,8 @@
             "sektor": "teknologi",
             "bransje": "kommunikasjonsutstyr",
             "nordnetID": "17556167",
-            "nordnetName": "ASTROCAST SA"
+            "nordnetName": "ASTROCAST SA",
+            "market": "Euronext Growth Oslo"
         },
         {
             "name": "ATEA",
@@ -412,7 +446,8 @@
             "bransje": "it - tjenester",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/uebGA7Whr6SVnfEYjADBb/af17d0765514f2094b02e55e7db8b211/image.png",
             "nordnetID": "16105662",
-            "nordnetName": "ATEA"
+            "nordnetName": "ATEA",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "ATLANTIC SAPPHIRE",
@@ -424,7 +459,8 @@
             "bransje": "landbruksprodukter",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/2d6iqNNOOsu7Lyzg2U7J1v/4b64915f9587dff1a381ca52c648eba2/Atlantic_Sapphire.jpeg",
             "nordnetID": "16700544",
-            "nordnetName": "ATLANTIC SAPPHIRE"
+            "nordnetName": "ATLANTIC SAPPHIRE",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "AURORA EIENDOM",
@@ -435,7 +471,8 @@
             "sektor": "eiendom",
             "bransje": "eiendomstjenester",
             "nordnetID": "17538552",
-            "nordnetName": "AURORA EIENDOM AS"
+            "nordnetName": "AURORA EIENDOM AS",
+            "market": "Euronext Growth Oslo"
         },
         {
             "name": "AURSKOG SPAREBANK",
@@ -447,7 +484,8 @@
             "bransje": "banker - regionale",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/7bBP8EK7X5LvUlnLcxjKQ9/aa201ed3900f2c43fc748be4b9c10f9b/image.png",
             "nordnetID": "16105582",
-            "nordnetName": "AURSKOG SPAREBANK"
+            "nordnetName": "AURSKOG SPAREBANK",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "AUSTEVOLL SEAFOOD",
@@ -459,7 +497,8 @@
             "bransje": "landbruksprodukter",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/6Y8MuODYKvKwour2FZIe3c/cdb8a055b5d59ed32a8b54d29520f610/image.png",
             "nordnetID": "16105687",
-            "nordnetName": "AUSTEVOLL SEAFOOD"
+            "nordnetName": "AUSTEVOLL SEAFOOD",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "AUTOSTORE HOLDINGS",
@@ -471,7 +510,8 @@
             "bransje": "programvare - infrastruktur",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/2m6DaPM0pwrp4itzBUPR22/99371b6ebe80011d7f07eb7e7f9fa084/image.png",
             "nordnetID": "17602486",
-            "nordnetName": "AUTOSTORE HOLDINGS LTD."
+            "nordnetName": "AUTOSTORE HOLDINGS LTD.",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "AVANCE GAS HOLDING",
@@ -483,7 +523,8 @@
             "bransje": "olje & gass - midstream",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/4iGV1slYuCmzrBaeYxJYrO/d0ade382284c1bb194b418eb9ee2bd95/image.png",
             "nordnetID": "16281382",
-            "nordnetName": "AVANCE GAS HOLDING"
+            "nordnetName": "AVANCE GAS HOLDING",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "AWILCO DRILLING",
@@ -495,7 +536,8 @@
             "bransje": "olje & gass - borring",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/5uU1rbuh2cwsAylCUY1sgv/8a7604041d6b753288d3b5b2de105a97/awilco.png",
             "nordnetID": "17943233",
-            "nordnetName": "AWILCO DRILLING PLC"
+            "nordnetName": "AWILCO DRILLING PLC",
+            "market": "Euronext Growth Oslo"
         },
         {
             "name": "AWILCO LNG",
@@ -507,7 +549,8 @@
             "bransje": "sj\u00f8fart",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/2sPmsiSh8F3ml3DBj40gAi/a7c3eda20d1d070fabfb217b32a51f49/Awilco_LNG.png",
             "nordnetID": "16105327",
-            "nordnetName": "AWILCO LNG"
+            "nordnetName": "AWILCO LNG",
+            "market": "Euronext Expand Oslo"
         },
         {
             "name": "AXACTOR",
@@ -519,7 +562,8 @@
             "bransje": "kredittjenester",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/4XY7gUikSTwksWQghCjuHg/4844fc6e6371869f8a03d6f7e98d868f/image.png",
             "nordnetID": "16978420",
-            "nordnetName": "AXACTOR ASA"
+            "nordnetName": "AXACTOR ASA",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "AYFIE GROUP",
@@ -530,7 +574,8 @@
             "sektor": "teknologi",
             "bransje": "programvare - applikasjoner",
             "nordnetID": "17993690",
-            "nordnetName": "AYFIE GROUP"
+            "nordnetName": "AYFIE GROUP",
+            "market": "Euronext Growth Oslo"
         },
         {
             "name": "B2HOLDING",
@@ -542,7 +587,8 @@
             "bransje": "kredittjenester",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/2MZhQ8FfDyBWP9v8iy0s69/bbf5312ca9e927867a0bb783aac4dcee/image.png",
             "nordnetID": "16252558",
-            "nordnetName": "B2 Impact ASA"
+            "nordnetName": "B2 Impact ASA",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "BAKKAFROST",
@@ -554,7 +600,8 @@
             "bransje": "landbruksprodukter",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/fSWTF9ajMB5YtFkmSwHcP/38ed75446f48b1a27e4bf2a6f53260bf/image.png",
             "nordnetID": "16105763",
-            "nordnetName": "BAKKAFROST"
+            "nordnetName": "BAKKAFROST",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "BALTIC SEA PROP",
@@ -565,7 +612,8 @@
             "sektor": "eiendom",
             "bransje": "eiendomstjenester",
             "nordnetID": "16781835",
-            "nordnetName": "BALTIC SEA PROPERTIES"
+            "nordnetName": "BALTIC SEA PROPERTIES",
+            "market": "Euronext Growth Oslo"
         },
         {
             "name": "BARRAMUNDI GROUP",
@@ -577,7 +625,8 @@
             "bransje": "landbruksprodukter",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/7gl67iYfR6QfVzKjCJCKES/61dba1683855f88b648d71d9eaa9c174/Barramundi_Group.png",
             "nordnetID": "17558407",
-            "nordnetName": "BARRAMUNDI GROUP LTD."
+            "nordnetName": "BARRAMUNDI GROUP LTD.",
+            "market": "Euronext Growth Oslo"
         },
         {
             "name": "BELSHIPS",
@@ -589,7 +638,8 @@
             "bransje": "sj\u00f8fart",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/6ziRUF08ysoMne3nq3Zzv4/f62c4d9f6ce242f6491c0f2e613d13b4/image.png",
             "nordnetID": "16105635",
-            "nordnetName": "BELSHIPS"
+            "nordnetName": "BELSHIPS",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "BENCHMARK HOLDINGS",
@@ -600,7 +650,8 @@
             "sektor": "helse",
             "bransje": "medsinprodusenter - spesialist og generell",
             "nordnetID": "17940813",
-            "nordnetName": "BENCHMARK HOLDINGS PLC"
+            "nordnetName": "BENCHMARK HOLDINGS PLC",
+            "market": "Euronext Growth Oslo"
         },
         {
             "name": "BERGEN CARBON SOL",
@@ -612,7 +663,8 @@
             "bransje": "spesialkjemikalier",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/2NKb92bt62Hm8kjWyZSL8h/ef0bc133e9e37bdd1cecc817060ca909/image.png",
             "nordnetID": "17471378",
-            "nordnetName": "BERGEN CARBON SOLUTIONS AS"
+            "nordnetName": "BERGEN CARBON SOLUTIONS AS",
+            "market": "Euronext Growth Oslo"
         },
         {
             "name": "BERGENBIO",
@@ -624,7 +676,8 @@
             "bransje": "bioteknologi",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/6OYPzL3BHpBno5a7WnBolY/d1f6702374e022b3d905d2a0924e1c49/image.png",
             "nordnetID": "16263887",
-            "nordnetName": "BERGENBIO"
+            "nordnetName": "BERGENBIO",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "BEWI",
@@ -636,7 +689,8 @@
             "bransje": "emballasje og containere",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/4MqBr7qa8uaMnk1IfhTs8G/1e3fd252ae5eb0d1f9886faa8155b271/image.png",
             "nordnetID": "17335294",
-            "nordnetName": "BEWI"
+            "nordnetName": "BEWI",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "BIEN SPAREBANK",
@@ -648,7 +702,8 @@
             "bransje": "banker - regionale",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/5LrXBefRzFfXvanALXYMuL/fe14e881145a678f6a7b09f9b1eabb98/image.png",
             "nordnetID": "17940192",
-            "nordnetName": "BIEN SPAREBANK ASA"
+            "nordnetName": "BIEN SPAREBANK ASA",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "BIOFISH HOLDING",
@@ -660,7 +715,8 @@
             "bransje": "landbruksprodukter",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/35EOOwaHSP1qR5Hzvwbrik/d87a092d329b3b36e7ff99dcd65c428b/BioFish_logo_favicon.svg",
             "nordnetID": "17544700",
-            "nordnetName": "BIOFISH HOLDING AS"
+            "nordnetName": "BIOFISH HOLDING AS",
+            "market": "Euronext Growth Oslo"
         },
         {
             "name": "BLACK SEA PROPERTY",
@@ -671,7 +727,8 @@
             "sektor": "sykliske forbruksvarer",
             "bransje": "losji",
             "nordnetID": "16497514",
-            "nordnetName": "BLACK SEA PROPERTY"
+            "nordnetName": "BLACK SEA PROPERTY",
+            "market": "Euronext Growth Oslo"
         },
         {
             "name": "BLUENORD",
@@ -683,7 +740,8 @@
             "bransje": "olje & gass - e&p",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/6qetj5Ret6jbPQtounLa1v/80c98eaeac0996932f9ef5f79532f672/Norwegian_Energy_Company.jpeg",
             "nordnetID": "16105726",
-            "nordnetName": "BLUENORD ASA"
+            "nordnetName": "BLUENORD ASA",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "BONHEUR",
@@ -695,7 +753,8 @@
             "bransje": "konglomerater",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/44YFdnOSmNv11fPPb0lJvx/12287be3e7d629486b532ed867347ee0/image.png",
             "nordnetID": "16105637",
-            "nordnetName": "BONHEUR"
+            "nordnetName": "BONHEUR",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "BORGESTAD",
@@ -706,7 +765,8 @@
             "sektor": "industri",
             "bransje": "byggevarer og -utstyr",
             "nordnetID": "16105638",
-            "nordnetName": "BORGESTAD"
+            "nordnetName": "BORGESTAD",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "BORR DRILLING",
@@ -718,7 +778,8 @@
             "bransje": "olje & gass - borring",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/4I7CLrCYmDuPa4e5LiNPUm/0a6e26ed05b9fe115ca3a6dca9425564/image.png",
             "nordnetID": "17652973",
-            "nordnetName": "BORR DRILLING"
+            "nordnetName": "BORR DRILLING",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "BORREGAARD",
@@ -730,7 +791,8 @@
             "bransje": "spesialkjemikalier",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/F1KTxejhksyp33BvQB05m/7ce56902221d5f663c3e9ed34f395c07/image.png",
             "nordnetID": "16105414",
-            "nordnetName": "BORREGAARD"
+            "nordnetName": "BORREGAARD",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "BOUVET",
@@ -742,7 +804,8 @@
             "bransje": "it - tjenester",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/5c9vkQcIhsCaJb1D40yUYZ/106418fc3ceda9b24312dafbe6c67536/image.png",
             "nordnetID": "16105711",
-            "nordnetName": "BOUVET"
+            "nordnetName": "BOUVET",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "BW ENERGY LIMITED",
@@ -754,7 +817,8 @@
             "bransje": "olje & gass - e&p",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/2aGCUYcjxQMlDu5kJsSsvI/61feaf301220267d7bd7dc0ddd424393/BW_Energy_Limited.jpeg",
             "nordnetID": "17195893",
-            "nordnetName": "BW ENERGY LIMITED"
+            "nordnetName": "BW ENERGY LIMITED",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "BW Epic Kosan",
@@ -766,7 +830,8 @@
             "bransje": "sj\u00f8fart",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/5rQcmGZxjnAVqvIUlWuNl0/cffc0054dde2097bb4b994c87580efc6/BW_Epic_Kosan.jpeg",
             "nordnetID": "17458498",
-            "nordnetName": "BW Epic Kosan Ltd."
+            "nordnetName": "BW Epic Kosan Ltd.",
+            "market": "Euronext Growth Oslo"
         },
         {
             "name": "BW IDEOL",
@@ -777,7 +842,8 @@
             "sektor": "industri",
             "bransje": "bygg og anlegg",
             "nordnetID": "17468281",
-            "nordnetName": "BW IDEOL AS"
+            "nordnetName": "BW IDEOL AS",
+            "market": "Euronext Growth Oslo"
         },
         {
             "name": "BW LPG",
@@ -789,7 +855,8 @@
             "bransje": "sj\u00f8fart",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/7fyTgnxPHaEl3nPHAnGV7h/4f99f681d8ea7deb9c687f940654bbab/image.png",
             "nordnetID": "16247917",
-            "nordnetName": "BW LPG"
+            "nordnetName": "BW LPG",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "BW OFFSHORE LTD",
@@ -801,7 +868,8 @@
             "bransje": "olje & gass - utstyr og tjenester",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/59kESddLtKeP42MHIDWxH7/c02b0efd1b1c779dae57d914ad905636/BW.png",
             "nordnetID": "16634542",
-            "nordnetName": "BW OFFSHORE LIMITED"
+            "nordnetName": "BW OFFSHORE LIMITED",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "BYGGMA",
@@ -813,7 +881,8 @@
             "bransje": "byggevarer og -utstyr",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/37JqkShMVa2yimaclEUBat/2b2a9cc0bdc7bf6f55a321b974a3e767/image.png",
             "nordnetID": "16105571",
-            "nordnetName": "BYGGMA"
+            "nordnetName": "BYGGMA",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "BerGenBio TR",
@@ -824,7 +893,8 @@
             "sektor": "-",
             "bransje": "-",
             "nordnetID": "18075211",
-            "nordnetName": "BerGenBio TR"
+            "nordnetName": "BerGenBio TR",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "CADELER",
@@ -836,7 +906,8 @@
             "bransje": "sj\u00f8fart",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/PRwoKxEcVLh1WXVZ4j5e2/a8f5b3f68afd5db4c08d8ac7e245ed11/image.png",
             "nordnetID": "17393950",
-            "nordnetName": "CADELER A/S"
+            "nordnetName": "CADELER A/S",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "CAMBI",
@@ -848,7 +919,8 @@
             "bransje": "avfallsh\u00e5ndtering",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/FvqbBqZwEPCTVuGrZNw78/3ca61a57e76ed0acc9d1f3d5f3459a0c/image.png",
             "nordnetID": "16167284",
-            "nordnetName": "CAMBI ASA"
+            "nordnetName": "CAMBI ASA",
+            "market": "Euronext Growth Oslo"
         },
         {
             "name": "CAPSOL TECHNOLOGI",
@@ -859,7 +931,8 @@
             "sektor": "industri",
             "bransje": "forurensnings- og behandlingskontroll",
             "nordnetID": "17446262",
-            "nordnetName": "CAPSOL TECHNOLOGIES ASA"
+            "nordnetName": "CAPSOL TECHNOLOGIES ASA",
+            "market": "Euronext Growth Oslo"
         },
         {
             "name": "CARASENT",
@@ -871,7 +944,8 @@
             "bransje": "helseinformasjonstjenester",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/WsP4GZFYIVYrBJhO51h2A/0d43f11e709f7bd711d2842efe8e21b2/image.png",
             "nordnetID": "16105603",
-            "nordnetName": "CARASENT"
+            "nordnetName": "CARASENT",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "CIRCA GROUP",
@@ -883,7 +957,8 @@
             "bransje": "bioteknologi",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/515dRWKRXUs8A4smeAcI7S/b4668ec80e961d699aa90b2d6b21cb7f/image.png",
             "nordnetID": "17441646",
-            "nordnetName": "CIRCA GROUP AS"
+            "nordnetName": "CIRCA GROUP AS",
+            "market": "Euronext Growth Oslo"
         },
         {
             "name": "CIRCIO HOLDING",
@@ -894,7 +969,8 @@
             "sektor": "helse",
             "bransje": "bioteknologi",
             "nordnetID": "18146149",
-            "nordnetName": "CIRCIO HOLDING ASA"
+            "nordnetName": "CIRCIO HOLDING ASA",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "CLEAN SEAS SEAFOOD",
@@ -906,7 +982,8 @@
             "bransje": "landbruksprodukter",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/3B1x07Ob6qN4mS4ZTQbncm/74b66adc8cc28f8bb6ced2832c1bd0ff/image.png",
             "nordnetID": "17509324",
-            "nordnetName": "CLEAN SEAS SEAFOOD LIMITED"
+            "nordnetName": "CLEAN SEAS SEAFOOD LIMITED",
+            "market": "Euronext Growth Oslo"
         },
         {
             "name": "CLOUDBERRY CLEAN",
@@ -918,7 +995,8 @@
             "bransje": "nytte - fornybar",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/1vY5yOrYRQrhb08FOh3BcF/bf6ce66bdf75982c5f77ebac57660291/image.png",
             "nordnetID": "17237727",
-            "nordnetName": "CLOUDBERRY CLEAN ENERGY ASA"
+            "nordnetName": "CLOUDBERRY CLEAN ENERGY ASA",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "CODELAB CAPITAL",
@@ -930,7 +1008,8 @@
             "bransje": "helseinformasjonstjenester",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/2bfPzgn0mVocv0BbBppyIK/a571aaad7e2e084e93e9dc0d39b8733f/image.png",
             "nordnetID": "17371183",
-            "nordnetName": "CODELAB CAPITAL AS"
+            "nordnetName": "CODELAB CAPITAL AS",
+            "market": "Euronext Growth Oslo"
         },
         {
             "name": "CONTEXTVISION",
@@ -942,7 +1021,8 @@
             "bransje": "helseinformasjonstjenester",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/3aP6DW9NxFNZuqnzx763Kf/4214cb725efd33a7bee7b4ba7044b280/image.png",
             "nordnetID": "17331825",
-            "nordnetName": "CONTEXTVISION"
+            "nordnetName": "CONTEXTVISION",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "COOL COMPANY",
@@ -954,7 +1034,8 @@
             "bransje": "olje & gass - midstream",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/nmqBAECjN7ah6DUL0olmx/62b25d42cccddc91dce9a0a292ee7069/Cool_Company.png",
             "nordnetID": "17683928",
-            "nordnetName": "COOL COMPANY LTD."
+            "nordnetName": "COOL COMPANY LTD.",
+            "market": "Euronext Growth Oslo"
         },
         {
             "name": "CRAYON GROUP HOLD",
@@ -966,7 +1047,8 @@
             "bransje": "it - tjenester",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/52NkOiGFvUQKpc6QxCkAnW/13a339a4f0fb6ebe9b64e43aea5b09a1/image.png",
             "nordnetID": "16770487",
-            "nordnetName": "CRAYON GROUP HOLDING"
+            "nordnetName": "CRAYON GROUP HOLDING",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "CSAM HEALTH GROUP",
@@ -987,7 +1069,8 @@
             "bransje": "datamaskin (hardware)",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/4P8LVFcsdLASaZlKgqlEgx/1eb5011c41a3590673648d09e8965824/image.png",
             "nordnetID": "16167187",
-            "nordnetName": "CYVIZ AS"
+            "nordnetName": "CYVIZ AS",
+            "market": "Euronext Growth Oslo"
         },
         {
             "name": "DEEP VALUE DRILLER",
@@ -999,7 +1082,8 @@
             "bransje": "olje & gass - borring",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/5FqGHN2jKKmHuUerpXvU5A/4f31d004ad52b0404cfb7b15632019cf/image.png",
             "nordnetID": "17467584",
-            "nordnetName": "DEEP VALUE DRILLER AS"
+            "nordnetName": "DEEP VALUE DRILLER AS",
+            "market": "Euronext Growth Oslo"
         },
         {
             "name": "DESERT CONTROL",
@@ -1011,7 +1095,8 @@
             "bransje": "jorbruksinnsatser",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/1K3tf2bXbwn0Ub7lCh5ygL/0413c83ab8b4a4777a86bdd069ae5fea/image.png",
             "nordnetID": "17473891",
-            "nordnetName": "DESERT CONTROL AS"
+            "nordnetName": "DESERT CONTROL AS",
+            "market": "Euronext Growth Oslo"
         },
         {
             "name": "DNB BANK",
@@ -1023,7 +1108,8 @@
             "bransje": "banker - regionale",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/2StaOBzndLnsZgWNpcn0qd/f75659cf988bfb17d51610a6ab2a0d94/image.png",
             "nordnetID": "17534483",
-            "nordnetName": "DNB BANK ASA"
+            "nordnetName": "DNB BANK ASA",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "DNO",
@@ -1035,7 +1121,8 @@
             "bransje": "olje & gass - e&p",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/73wzQ4zfaLczHFmSwTYrRT/b528aac004696ab71e0c27757c856a6e/DNO.jpg",
             "nordnetID": "16105641",
-            "nordnetName": "DNO"
+            "nordnetName": "DNO",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "DOF GROUP",
@@ -1046,7 +1133,8 @@
             "sektor": "industri",
             "bransje": "bygg og anlegg",
             "nordnetID": "18016488",
-            "nordnetName": "DOF GROUP ASA"
+            "nordnetName": "DOF GROUP ASA",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "DOLPHIN DRILLING",
@@ -1058,7 +1146,8 @@
             "bransje": "olje & gass - borring",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/3kaEFjTZ0ZVr46HRHBk17g/72f6d5e42bef110faca7860a7866b9f3/image.png",
             "nordnetID": "17866437",
-            "nordnetName": "DOLPHIN DRILLING AS"
+            "nordnetName": "DOLPHIN DRILLING AS",
+            "market": "Euronext Growth Oslo"
         },
         {
             "name": "EAM SOLAR",
@@ -1070,7 +1159,8 @@
             "bransje": "nytte - fornybar",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/4aKaIUSlj0enqvvh4w3Apk/ca362ce03aee51090cf01d8abc8b85af/image.png",
             "nordnetID": "16186854",
-            "nordnetName": "EAM SOLAR"
+            "nordnetName": "EAM SOLAR",
+            "market": "Euronext Expand Oslo"
         },
         {
             "name": "ECIT AS B-AKSJER",
@@ -1081,7 +1171,8 @@
             "sektor": "teknologi",
             "bransje": "it - tjenester",
             "nordnetID": "17509325",
-            "nordnetName": "ECIT AS B-AKSJER"
+            "nordnetName": "ECIT AS B-AKSJER",
+            "market": "Euronext Growth Oslo"
         },
         {
             "name": "EDDA WIND",
@@ -1093,7 +1184,8 @@
             "bransje": "olje & gass - utstyr og tjenester",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/3FEC4iGMVVeItNYA5FgMLM/d2753f53ed78f4934b062bf0fad94c8c/image.png",
             "nordnetID": "17630125",
-            "nordnetName": "EDDA WIND ASA"
+            "nordnetName": "EDDA WIND ASA",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "EIDESVIK OFFSHORE",
@@ -1105,7 +1197,8 @@
             "bransje": "olje & gass - utstyr og tjenester",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/1Xc5fdGmbRvQSKeyLhFKxl/1533360ff68bbfd97f3baf5ad0885710/image.png",
             "nordnetID": "16105627",
-            "nordnetName": "EIDESVIK OFFSHORE"
+            "nordnetName": "EIDESVIK OFFSHORE",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "ELECTROMAGNET GEO",
@@ -1117,7 +1210,8 @@
             "bransje": "olje & gass - utstyr og tjenester",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/1mzuO7YuyXIQQ1ZsjGVNNT/94255313fe836602f8a3a81a261b32a3/image.png",
             "nordnetID": "16105704",
-            "nordnetName": "ELECTROMAGNETIC GEOSERVICES"
+            "nordnetName": "ELECTROMAGNETIC GEOSERVICES",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "ELEKTROIMPORT\u00d8REN",
@@ -1129,7 +1223,8 @@
             "bransje": "spesialist detaljhandel",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/7F3QFQ8KIfRqOILTr3DnAc/ffc3629d4b3684437bdd0217bee96e63/image.png",
             "nordnetID": "17407629",
-            "nordnetName": "ELEKTROIMPORT\u00d8REN AS"
+            "nordnetName": "ELEKTROIMPORT\u00d8REN AS",
+            "market": "Euronext Growth Oslo"
         },
         {
             "name": "ELKEM",
@@ -1141,7 +1236,8 @@
             "bransje": "spesialkjemikalier",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/2RaJXvZ2tp2PyZCgHccwNo/1c5443145bc275f061f3c88786825c46/image.png",
             "nordnetID": "16845391",
-            "nordnetName": "ELKEM"
+            "nordnetName": "ELKEM",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "ELLIPTIC LABORATOR",
@@ -1153,7 +1249,8 @@
             "bransje": "programvare - infrastruktur",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/3mc2pknCG3cXuQZkTz0vYf/bb574a51e53c20d1c3adc0c9da56bb04/image.png",
             "nordnetID": "16335883",
-            "nordnetName": "ELLIPTIC LABORATORIES ASA"
+            "nordnetName": "ELLIPTIC LABORATORIES ASA",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "ELMERA GROUP",
@@ -1165,7 +1262,8 @@
             "bransje": "nytte - regulert elektrisk",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/4jZzqFmH4fXwntzZ73rz3M/eb84ce49f2ed046b346a977d04283e2f/image.png",
             "nordnetID": "16845081",
-            "nordnetName": "ELMERA GROUP ASA"
+            "nordnetName": "ELMERA GROUP ASA",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "ELOPAK",
@@ -1177,7 +1275,8 @@
             "bransje": "emballasje og containere",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/1CTUna2Aw8ks9AbmKKF3Eg/7f72f491ae95aa54c5401dccdf24415c/image.png",
             "nordnetID": "17519997",
-            "nordnetName": "ELOPAK ASA"
+            "nordnetName": "ELOPAK ASA",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "END\u00daR",
@@ -1189,7 +1288,8 @@
             "bransje": "konglomerater",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/4xOTO1gtzkwWcowQ1a0Ab5/513f1058fa21e1a8b5b699947af708dc/image.png",
             "nordnetID": "17789880",
-            "nordnetName": "END\u00daR"
+            "nordnetName": "END\u00daR",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "ENERGEIA",
@@ -1201,7 +1301,8 @@
             "bransje": "solceller",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/vY9ER5MLggn8VwYOAX1zc/23e8d0315d3c73120dd70716786dabc8/image.png",
             "nordnetID": "17864570",
-            "nordnetName": "ENERGEIA AS"
+            "nordnetName": "ENERGEIA AS",
+            "market": "Euronext Growth Oslo"
         },
         {
             "name": "ENSURGE MICROPOWER",
@@ -1213,7 +1314,8 @@
             "bransje": "elektroniske komponenter",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/3EQuEFVSSORJxhep5IzqAF/8dc738ac1722fba737195d91217f0fb7/image.png",
             "nordnetID": "17727415",
-            "nordnetName": "ENSURGE MICROPOWER ASA"
+            "nordnetName": "ENSURGE MICROPOWER ASA",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "ENTRA",
@@ -1225,7 +1327,8 @@
             "bransje": "eiendomstjenester",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/1QlkpyWvI157L2wHHgowbC/227fe7ab2ede525b0d45550c40d495a4/image.png",
             "nordnetID": "16330511",
-            "nordnetName": "ENTRA"
+            "nordnetName": "ENTRA",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "ENVIPCO HOLDING",
@@ -1236,7 +1339,8 @@
             "sektor": "industri",
             "bransje": "forurensnings- og behandlingskontroll",
             "nordnetID": "17533229",
-            "nordnetName": "ENVIPCO HOLDING N.V."
+            "nordnetName": "ENVIPCO HOLDING N.V.",
+            "market": "Euronext Growth Oslo"
         },
         {
             "name": "EQUINOR",
@@ -1248,7 +1352,8 @@
             "bransje": "olje & gass - integrert",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/1g0ykLy6DuEW29ZDoCgtKF/e200733fbeb962a1fa24bea48acab31c/image.png",
             "nordnetID": "16105420",
-            "nordnetName": "EQUINOR"
+            "nordnetName": "EQUINOR",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "EQVA",
@@ -1260,7 +1365,8 @@
             "bransje": "luftfart- og forsvar",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/6kWmmpqrHRI6XrjBnj0FmR/189e41748bab5d886bec4603feac1433/image.png",
             "nordnetID": "16301245",
-            "nordnetName": "EQVA ASA"
+            "nordnetName": "EQVA ASA",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "EUROPRIS",
@@ -1272,7 +1378,8 @@
             "bransje": "lavprisbutikker",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/3fe7zX03YhWUbj2Dlayh1v/98d9e8aac50fe943ed7ea42123874b26/image.png",
             "nordnetID": "16418421",
-            "nordnetName": "EUROPRIS"
+            "nordnetName": "EUROPRIS",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "EVERFUEL",
@@ -1284,7 +1391,8 @@
             "bransje": "spesialkjemikalier",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/pvC3lSUyrHQGzvbgbbyNd/4172d3893a9253f25e3cda89166e1ede/image.png",
             "nordnetID": "17374921",
-            "nordnetName": "EVERFUEL"
+            "nordnetName": "EVERFUEL",
+            "market": "Euronext Growth Oslo"
         },
         {
             "name": "EXACT THERAPEUTICS",
@@ -1295,7 +1403,8 @@
             "sektor": "helse",
             "bransje": "bioteknologi",
             "nordnetID": "17302989",
-            "nordnetName": "EXACT THERAPEUTICS"
+            "nordnetName": "EXACT THERAPEUTICS",
+            "market": "Euronext Growth Oslo"
         },
         {
             "name": "FLEX LNG",
@@ -1307,7 +1416,8 @@
             "bransje": "olje & gass - midstream",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/1soeJXdIjV1ZvlnS1PDZUc/7462d5f083277c1a061b4cfd32f44d3a/image.png",
             "nordnetID": "17011550",
-            "nordnetName": "FLEX LNG"
+            "nordnetName": "FLEX LNG",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "FRONTLINE",
@@ -1319,7 +1429,8 @@
             "bransje": "olje & gass - midstream",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/7axRCOqmG0sadPV5C9LPSS/a4a806c220270f5a8b54a382eb2f7185/image.png",
             "nordnetID": "17951057",
-            "nordnetName": "FRONTLINE PLC"
+            "nordnetName": "FRONTLINE PLC",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "FR\u00d8Y",
@@ -1340,7 +1451,8 @@
             "bransje": "gambling",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/1nfXagbYeCT3PpT2Qyv3is/6affc096a19aef2ff90bba508c0eb0bd/image.png",
             "nordnetID": "16976873",
-            "nordnetName": "GAMING INNOVATION GROUP"
+            "nordnetName": "GAMING INNOVATION GROUP",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "GC RIEBER SHIPPING",
@@ -1352,7 +1464,8 @@
             "bransje": "sj\u00f8fart",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/EgYM4rWJYAQU34UHbTPlH/d74f282d26fdfa585a1c1075c339df0a/GC_Rieber_Shipping.jpeg",
             "nordnetID": "16105618",
-            "nordnetName": "GC RIEBER SHIPPING"
+            "nordnetName": "GC RIEBER SHIPPING",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "GENTIAN DIAGNOSTIC",
@@ -1363,7 +1476,8 @@
             "sektor": "helse",
             "bransje": "medisinsk utstyr",
             "nordnetID": "16467431",
-            "nordnetName": "GENTIAN DIAGNOSTICS ASA"
+            "nordnetName": "GENTIAN DIAGNOSTICS ASA",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "GIGANTE SALMON",
@@ -1375,7 +1489,8 @@
             "bransje": "landbruksprodukter",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/3ZyCHq5BcRSiRLdU0vvaZ7/9be7d9c4db97e2d61e9b9ef283a9f1c9/Gigante_Salmon.jpeg",
             "nordnetID": "17529462",
-            "nordnetName": "GIGANTE SALMON AS"
+            "nordnetName": "GIGANTE SALMON AS",
+            "market": "Euronext Growth Oslo"
         },
         {
             "name": "GJENSIDIGE FORSIKR",
@@ -1387,7 +1502,8 @@
             "bransje": "forsikring - eiendom og skader",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/773BguwZuBuBdKr66RvTKO/69364030f37fc3a394d46b70c7713b07/image.png",
             "nordnetID": "16105269",
-            "nordnetName": "GJENSIDIGE FORSIKRING"
+            "nordnetName": "GJENSIDIGE FORSIKRING",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "GOLDEN ENERGY OFF",
@@ -1399,7 +1515,8 @@
             "bransje": "sj\u00f8fart",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/4QReh3dBiItvIVTVOOqBFf/d1583defcb4c2278fe5bceab2781b57f/image.png",
             "nordnetID": "16850151",
-            "nordnetName": "GOLDEN ENERGY OFFSHORE SERVICES"
+            "nordnetName": "GOLDEN ENERGY OFFSHORE SERVICES",
+            "market": "Euronext Growth Oslo"
         },
         {
             "name": "GOLDEN OCEAN GROUP",
@@ -1411,7 +1528,8 @@
             "bransje": "sj\u00f8fart",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/mF5v8ZfSIuIhxzNDR5mit/249ce6b70940790a3e8e325da6dfd575/image.png",
             "nordnetID": "16586207",
-            "nordnetName": "GOLDEN OCEAN GROUP"
+            "nordnetName": "GOLDEN OCEAN GROUP",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "GOODTECH",
@@ -1423,7 +1541,8 @@
             "bransje": "bygg og anlegg",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/2cHZ7Q9H4tGnj148SLw6xT/acb4ca576df56486426481c638f7565d/image.png",
             "nordnetID": "16105650",
-            "nordnetName": "GOODTECH"
+            "nordnetName": "GOODTECH",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "GRAM CAR CARRIERS",
@@ -1435,7 +1554,8 @@
             "bransje": "sj\u00f8fart",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/6x16LBGTw3Phu5FgPmPZRz/28244b3c111e13fde5748679d8337202/Gram_Car_Carriers.jpeg",
             "nordnetID": "17682459",
-            "nordnetName": "GRAM CAR CARRIERS ASA"
+            "nordnetName": "GRAM CAR CARRIERS ASA",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "GREEN MINERALS",
@@ -1447,7 +1567,8 @@
             "bransje": "andre industrielle metaller og gruvedrift",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/1hbTe4u9zcnaoxCA5yMURI/f7817d2a46bc7116e56c0d702457c4eb/image.png",
             "nordnetID": "17440469",
-            "nordnetName": "GREEN MINERALS AS"
+            "nordnetName": "GREEN MINERALS AS",
+            "market": "Euronext Growth Oslo"
         },
         {
             "name": "GRIEG SEAFOOD",
@@ -1459,7 +1580,8 @@
             "bransje": "landbruksprodukter",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/3Nxz83mwytSpe4xSrLU66r/7ccf787d55106b108104cc0b51632160/Grieg_Seafood.jpeg",
             "nordnetID": "16105714",
-            "nordnetName": "GRIEG SEAFOOD"
+            "nordnetName": "GRIEG SEAFOOD",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "GRONG SPAREBANK",
@@ -1471,7 +1593,8 @@
             "bransje": "banker - regionale",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/28wSRxsLfY2CTWwvU3n3kG/d8aefb5ff6b85e3aff3b45063402c461/image.png",
             "nordnetID": "16161939",
-            "nordnetName": "GRONG SPAREBANK"
+            "nordnetName": "GRONG SPAREBANK",
+            "market": "Euronext Growth Oslo"
         },
         {
             "name": "GYLDENDAL",
@@ -1482,7 +1605,8 @@
             "sektor": "kommunikasjonstjenester",
             "bransje": "publisering",
             "nordnetID": "16105653",
-            "nordnetName": "GYLDENDAL"
+            "nordnetName": "GYLDENDAL",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "HAFNIA LIMITED",
@@ -1494,7 +1618,8 @@
             "bransje": "sj\u00f8fart",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/s87uRrbGKb1efpHo0HOad/c71fd90a525a8da50688024dbc6f8c92/Hafnia_Limited.jpeg",
             "nordnetID": "16994482",
-            "nordnetName": "HAFNIA LIMITED"
+            "nordnetName": "HAFNIA LIMITED",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "HARMONYCHAIN",
@@ -1518,7 +1643,8 @@
             "bransje": "sj\u00f8fart",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/4ECO1FVD4gDNaHbZkRO8Fo/a6c985437fda36109b2d08c55dc29c5c/image.png",
             "nordnetID": "17454724",
-            "nordnetName": "HAV GROUP ASA"
+            "nordnetName": "HAV GROUP ASA",
+            "market": "Euronext Growth Oslo"
         },
         {
             "name": "HAVILA KYSTRUTEN",
@@ -1529,7 +1655,8 @@
             "sektor": "sykliske forbruksvarer",
             "bransje": "reiselivstjenester",
             "nordnetID": "17551146",
-            "nordnetName": "HAVILA KYSTRUTEN AS"
+            "nordnetName": "HAVILA KYSTRUTEN AS",
+            "market": "Euronext Growth Oslo"
         },
         {
             "name": "HAVILA SHIPPING",
@@ -1541,7 +1668,8 @@
             "bransje": "sj\u00f8fart",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/1CwSJQVnLxoPuFSCdp0uRr/0e57f5b8e41698a507bcea3a79b0ac95/Havila_Shipping.png",
             "nordnetID": "16105624",
-            "nordnetName": "HAVILA SHIPPING"
+            "nordnetName": "HAVILA SHIPPING",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "HEXAGON COMPOSITES",
@@ -1553,7 +1681,8 @@
             "bransje": "emballasje og containere",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/2P5gvaTNQpCKyCguVBXGtF/7c80b8d7720fdad038244ffa37f16ced/image.png",
             "nordnetID": "16105432",
-            "nordnetName": "HEXAGON COMPOSITES"
+            "nordnetName": "HEXAGON COMPOSITES",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "HEXAGON PURUS",
@@ -1565,7 +1694,8 @@
             "bransje": "industriell distribusjon",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/2xYnhkx0iukiqINt1VTbn3/ed94d7480217fbea410ede8f30a9c3b9/Hexagon_Purus.jpeg",
             "nordnetID": "17399412",
-            "nordnetName": "HEXAGON PURUS ASA"
+            "nordnetName": "HEXAGON PURUS ASA",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "HIMALAYA SHIPPING",
@@ -1577,7 +1707,8 @@
             "bransje": "sj\u00f8fart",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/1j8uQsy9F0rIoRd4fgytwI/133cf4edb1e1a06b699f4a1d5a9c42df/Himalaya_Shipping.png",
             "nordnetID": "17546262",
-            "nordnetName": "HIMALAYA SHIPPING LTD"
+            "nordnetName": "HIMALAYA SHIPPING LTD",
+            "market": "Euronext Expand Oslo"
         },
         {
             "name": "HOFSETH BIOCARE",
@@ -1589,7 +1720,8 @@
             "bransje": "bioteknologi",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/71OEeNRnvi2HsF2OXe4wTq/9e23b907852fa374c1bf41a6087ecd5d/image.png",
             "nordnetID": "16105329",
-            "nordnetName": "HOFSETH BIOCARE"
+            "nordnetName": "HOFSETH BIOCARE",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "HORISONT ENERGI",
@@ -1601,7 +1733,8 @@
             "bransje": "spesialkjemikalier",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/3dnjnktKIbexRjVJPIRhp/883a75adb9efc2b21bbc6a8fb3448085/image.png",
             "nordnetID": "17430327",
-            "nordnetName": "HORISONT ENERGI AS"
+            "nordnetName": "HORISONT ENERGI AS",
+            "market": "Euronext Growth Oslo"
         },
         {
             "name": "HUDDLESTOCK FINTEC",
@@ -1613,7 +1746,8 @@
             "bransje": "programvare - applikasjoner",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/1ETSOzzQ0tRcxAOCAZedHg/cd9f27692acc36a30025245db3f1ed72/image.png",
             "nordnetID": "17084633",
-            "nordnetName": "HUDDLESTOCK FINTECH"
+            "nordnetName": "HUDDLESTOCK FINTECH",
+            "market": "Euronext Growth Oslo"
         },
         {
             "name": "HUDDLY",
@@ -1625,7 +1759,8 @@
             "bransje": "kommunikasjonsutstyr",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/7BO72JsO7XXqMcEvo2fMJ6/8f52e61cdb05959ea32513736c53476b/image.png",
             "nordnetID": "16798371",
-            "nordnetName": "HUDDLY AS"
+            "nordnetName": "HUDDLY AS",
+            "market": "Euronext Growth Oslo"
         },
         {
             "name": "HUNTER GROUP",
@@ -1636,7 +1771,8 @@
             "sektor": "energi",
             "bransje": "olje & gass - midstream",
             "nordnetID": "18078478",
-            "nordnetName": "HUNTER GROUP"
+            "nordnetName": "HUNTER GROUP",
+            "market": "Euronext Expand Oslo"
         },
         {
             "name": "HYDROGENPRO",
@@ -1648,7 +1784,8 @@
             "bransje": "spesialindustrimaskiner",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/6DaUxSB5DdsUnfjFbzKF5Q/fdb57225356888230d208096aae51151/image.png",
             "nordnetID": "17367824",
-            "nordnetName": "HYDROGENPRO ASA"
+            "nordnetName": "HYDROGENPRO ASA",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "HYNION",
@@ -1660,7 +1797,8 @@
             "bransje": "spesialist detaljhandel",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/7tcpqKG4P4MjUaEV7e6DY0/de2e6e59ef6e4e8b4b5f74b1e86bfe30/image.png",
             "nordnetID": "17469323",
-            "nordnetName": "HYNION AS"
+            "nordnetName": "HYNION AS",
+            "market": "Euronext Growth Oslo"
         },
         {
             "name": "HYON",
@@ -1671,7 +1809,8 @@
             "sektor": "sj\u00f8fart",
             "bransje": "sj\u00f8fart",
             "nordnetID": "17690598",
-            "nordnetName": "HYON AS"
+            "nordnetName": "HYON AS",
+            "market": "Euronext Growth Oslo"
         },
         {
             "name": "H\u00d6EGH AUTOLINERS",
@@ -1683,7 +1822,8 @@
             "bransje": "sj\u00f8fart",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/5bUTCnfuMU0dOKXpi8wNBh/8290abfdbe1d254bc73754b8c6b34a18/Ho__egh_Autoliners.jpeg",
             "nordnetID": "17636942",
-            "nordnetName": "HOEGH AUTOLINERS ASA"
+            "nordnetName": "HOEGH AUTOLINERS ASA",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "H\u00d8LAND OG SETSKOG",
@@ -1695,7 +1835,8 @@
             "bransje": "banker - regionale",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/3dB5Rhx61VerYnnFhV256E/debd562b703ac85f3246f5a8337c8a7a/spare.png",
             "nordnetID": "16105589",
-            "nordnetName": "H\u00d8LAND OG SETSKOG SPAREBANK"
+            "nordnetName": "H\u00d8LAND OG SETSKOG SPAREBANK",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "ICE FISH FARM",
@@ -1707,7 +1848,8 @@
             "bransje": "landbruksprodukter",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/2owip9Gg5gdpW64Qid8WNm/393c0b9f6c5c04554431f10cd06e00d2/Ice_Fish_Farm.jpeg",
             "nordnetID": "17283497",
-            "nordnetName": "ICE FISH FARM"
+            "nordnetName": "ICE FISH FARM",
+            "market": "Euronext Growth Oslo"
         },
         {
             "name": "ICELANDIC SALMON",
@@ -1719,7 +1861,8 @@
             "bransje": "landbruksprodukter",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/2izco7vR61dHnkuEp0JN47/1408027bde153f54c92c88f865994a49/Screenshot_2023-01-28_at_21.26.15.png",
             "nordnetID": "17053643",
-            "nordnetName": "ICELANDIC SALMON"
+            "nordnetName": "ICELANDIC SALMON",
+            "market": "Euronext Growth Oslo"
         },
         {
             "name": "IDEX BIOMETRICS",
@@ -1731,7 +1874,8 @@
             "bransje": "programvare - applikasjoner",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/11iIya9Wd03hGEQMH58dPJ/5b94d73530359f0d883e8045e3aa4214/image.png",
             "nordnetID": "16105761",
-            "nordnetName": "IDEX BIOMETRICS"
+            "nordnetName": "IDEX BIOMETRICS",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "INDUCT",
@@ -1742,7 +1886,8 @@
             "sektor": "helse",
             "bransje": "helseinformasjonstjenester",
             "nordnetID": "16151160",
-            "nordnetName": "INDUCT"
+            "nordnetName": "INDUCT",
+            "market": "Euronext Growth Oslo"
         },
         {
             "name": "INIFY LABORATORIES",
@@ -1754,7 +1899,8 @@
             "bransje": "diagnostikk & forskning",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/4zOpjSUd8BVtMj2yNyzWUw/00821c8d5c9a05cadc066e1a85918f8e/image.png",
             "nordnetID": "17707030",
-            "nordnetName": "INIFY LABORATORIES AB"
+            "nordnetName": "INIFY LABORATORIES AB",
+            "market": "Euronext Growth Oslo"
         },
         {
             "name": "ININ GROUP",
@@ -1766,7 +1912,8 @@
             "bransje": "vitenskapelige og tekniske instrumenter",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/01grzAX5z2tMec2kKdLYha/16e6bcd8c46c6937d6e54114a83b089a/image.png",
             "nordnetID": "17134903",
-            "nordnetName": "ININ GROUP AS"
+            "nordnetName": "ININ GROUP AS",
+            "market": "Euronext Growth Oslo"
         },
         {
             "name": "INSTABANK",
@@ -1777,7 +1924,8 @@
             "sektor": "finansielle tjenester",
             "bransje": "banker - regionale",
             "nordnetID": "16605236",
-            "nordnetName": "INSTABANK"
+            "nordnetName": "INSTABANK",
+            "market": "Euronext Growth Oslo"
         },
         {
             "name": "INTEGRATED WIND SO",
@@ -1788,7 +1936,8 @@
             "sektor": "infrastruktur",
             "bransje": "nytte - fornybar",
             "nordnetID": "17470401",
-            "nordnetName": "INTEGRATED WIND SOLUTIONS ASA"
+            "nordnetName": "INTEGRATED WIND SOLUTIONS ASA",
+            "market": "Euronext Growth Oslo"
         },
         {
             "name": "INTEROIL EXPL PROD",
@@ -1800,7 +1949,8 @@
             "bransje": "olje & gass - e&p",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/7atNwHahK4iBnEVgutmyf1/157971e2a1b2905b2890324bc28e87f0/Screenshot_2023-01-28_at_21.48.04.png",
             "nordnetID": "16105677",
-            "nordnetName": "INTEROIL EXPLORATION AND PRODUCTION"
+            "nordnetName": "INTEROIL EXPLORATION AND PRODUCTION",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "ITERA",
@@ -1812,7 +1962,8 @@
             "bransje": "it - tjenester",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/26MjlztPB0qMwRjwPluxHC/16acad41dadb4d6112520725c5e0ec12/image.png",
             "nordnetID": "16105588",
-            "nordnetName": "ITERA"
+            "nordnetName": "ITERA",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "JINHUI SHIPP TRANS",
@@ -1824,7 +1975,8 @@
             "bransje": "sj\u00f8fart",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/4HsWTLDfREQBv8kAMZfi7h/6109634442f49a5f329f98ec5fa559f1/Screenshot_2023-01-28_at_21.58.39.png",
             "nordnetID": "16105418",
-            "nordnetName": "JINHUI SHIPPING AND TRANSPORTATION"
+            "nordnetName": "JINHUI SHIPPING AND TRANSPORTATION",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "J\u00c6REN SPAREBANK",
@@ -1836,7 +1988,8 @@
             "bransje": "banker - regionale",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/7L8lZRB1Kzk0BnSXZh7dhx/e0c6426fd69c89e9328d100943b629df/image.png",
             "nordnetID": "16105710",
-            "nordnetName": "J\u00c6REN SPAREBANK"
+            "nordnetName": "J\u00c6REN SPAREBANK",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "KAHOOT!",
@@ -1848,7 +2001,8 @@
             "bransje": "programvare - applikasjoner",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/Jj9RL82z0kRVVCfnebpEU/6cceeef4cd142694fc215a0ac310a302/image.png",
             "nordnetID": "16874165",
-            "nordnetName": "KAHOOT! ASA"
+            "nordnetName": "KAHOOT! ASA",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "KID",
@@ -1860,7 +2014,8 @@
             "bransje": "spesialist detaljhandel",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/3PErdshWyNiR5Jv4B2LfR8/0e5f1223e8e4ca6bb663f4ddd78e22f7/Screenshot_2023-01-27_at_09.10.42.png",
             "nordnetID": "16467192",
-            "nordnetName": "KID"
+            "nordnetName": "KID",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "KITRON",
@@ -1872,7 +2027,8 @@
             "bransje": "elektroniske komponenter",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/1bV6EovJxwmj1ZyuuFkHSt/6b0443e328a4616f087b5028863448e9/image.png",
             "nordnetID": "16105579",
-            "nordnetName": "KITRON"
+            "nordnetName": "KITRON",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "KLAVENESS COMBINAT",
@@ -1884,7 +2040,8 @@
             "bransje": "sj\u00f8fart",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/6wXLy57Gd8DQa9ofCgq7YN/e1458f372141389c7a6d6b4a52a1b26b/Klaveness_Combination_Carriers.png",
             "nordnetID": "16951374",
-            "nordnetName": "KLAVENESS COMBINATION CARRIERS"
+            "nordnetName": "KLAVENESS COMBINATION CARRIERS",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "KMC PROPERTIES",
@@ -1896,7 +2053,8 @@
             "bransje": "eiendomstjenester",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/66aUTcFBEzKPrz5YrTYMBo/41e4c5d6d919af2fc47fc2ef8274d2d8/image.png",
             "nordnetID": "16105257",
-            "nordnetName": "KMC PROPERTIES ASA"
+            "nordnetName": "KMC PROPERTIES ASA",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "KOMPLETT",
@@ -1908,7 +2066,8 @@
             "bransje": "netthandel",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/1gaKily9StCYt2LKkIVPDc/e34e53d8ff1d8acdb8c64886468d138f/image.png",
             "nordnetID": "17520505",
-            "nordnetName": "KOMPLETT ASA"
+            "nordnetName": "KOMPLETT ASA",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "KONGSBERG AUTOMOT",
@@ -1920,7 +2079,8 @@
             "bransje": "bildeler",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/BNGHRTpU13XKOqSzh8R8y/26d90d8c44ae7b4dbf7b1a6a70ceaf7d/image.png",
             "nordnetID": "16105626",
-            "nordnetName": "KONGSBERG AUTOMOTIVE"
+            "nordnetName": "KONGSBERG AUTOMOTIVE",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "KONGSBERG GRUPPEN",
@@ -1932,7 +2092,8 @@
             "bransje": "luftfart- og forsvar",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/6rNZAx3aZtooPlcUOKUBmx/a35f0607fd6d9a94e9ac7dfba1feb01c/image.png",
             "nordnetID": "16105666",
-            "nordnetName": "KONGSBERG GRUPPEN"
+            "nordnetName": "KONGSBERG GRUPPEN",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "KRAFT BANK",
@@ -1944,7 +2105,8 @@
             "bransje": "banker - regionale",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/1UQQfM0AjyVjJ1xRw2B1i9/a4c2cb46a1601f6577c7f9c6ebe6fab4/image.png",
             "nordnetID": "16857989",
-            "nordnetName": "KRAFT BANK ASA"
+            "nordnetName": "KRAFT BANK ASA",
+            "market": "Euronext Growth Oslo"
         },
         {
             "name": "KYOTO GROUP",
@@ -1956,7 +2118,8 @@
             "bransje": "spesialindustrimaskiner",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/7tbBmvfZXMb9HG2eABVr8e/2ac6b886da382177900024e0b733ed9b/image.png",
             "nordnetID": "17461377",
-            "nordnetName": "KYOTO GROUP AS"
+            "nordnetName": "KYOTO GROUP AS",
+            "market": "Euronext Growth Oslo"
         },
         {
             "name": "LEA BANK",
@@ -1968,7 +2131,8 @@
             "bransje": "banker - regionale",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/qSsdMGkiu1yKNNFo9vLjd/1ff1601087386ac5dc2ef7ed6ce3b7ae/image.png",
             "nordnetID": "16167144",
-            "nordnetName": "LEA BANK ASA"
+            "nordnetName": "LEA BANK ASA",
+            "market": "Euronext Growth Oslo"
         },
         {
             "name": "LER\u00d8Y SEAFOOD GP",
@@ -1980,7 +2144,8 @@
             "bransje": "pakket mat",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/3v4NHuWV7t6uYkYtYsinlW/3f9c3c538cae82d4c335d91090453b6f/image.png",
             "nordnetID": "16105604",
-            "nordnetName": "LER\u00d8Y SEAFOOD GROUP"
+            "nordnetName": "LER\u00d8Y SEAFOOD GROUP",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "LIFECARE",
@@ -1992,7 +2157,8 @@
             "bransje": "medisinsk utstyr",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/66ryALDQRdBQIYh7fAMN9L/23adb0a877228fc732afff806f4163ab/image.png",
             "nordnetID": "16155620",
-            "nordnetName": "LIFECARE"
+            "nordnetName": "LIFECARE",
+            "market": "Euronext Growth Oslo"
         },
         {
             "name": "LINK MOBILITY GRP",
@@ -2004,7 +2170,8 @@
             "bransje": "telekommunikasjon",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/6bTJXiz130A6m96d05oJRc/7d661d9ea1d4249b22f662313720ff3e/image.png",
             "nordnetID": "17371187",
-            "nordnetName": "LINK MOBILITY GROUP HOLDING"
+            "nordnetName": "LINK MOBILITY GROUP HOLDING",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "LUMI GRUPPEN",
@@ -2015,7 +2182,8 @@
             "sektor": "konsument defensive",
             "bransje": "utdanningstjenester",
             "nordnetID": "17445516",
-            "nordnetName": "LUMI GRUPPEN AS"
+            "nordnetName": "LUMI GRUPPEN AS",
+            "market": "Euronext Growth Oslo"
         },
         {
             "name": "LYTIX BIOPHARMA",
@@ -2026,7 +2194,8 @@
             "sektor": "helse",
             "bransje": "bioteknologi",
             "nordnetID": "16145419",
-            "nordnetName": "LYTIX BIOPHARMA AS"
+            "nordnetName": "LYTIX BIOPHARMA AS",
+            "market": "Euronext Growth Oslo"
         },
         {
             "name": "M VEST WATER",
@@ -2037,7 +2206,8 @@
             "sektor": "industri",
             "bransje": "forurensnings- og behandlingskontroll",
             "nordnetID": "17513495",
-            "nordnetName": "M VEST WATER AS"
+            "nordnetName": "M VEST WATER AS",
+            "market": "Euronext Growth Oslo"
         },
         {
             "name": "MAGNORA",
@@ -2049,7 +2219,8 @@
             "bransje": "nytte - fornybar",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/5z2zQOtJcW7PRhmokpMqFi/434621495e899b8c41dd628d16493cc9/image.png",
             "nordnetID": "16105614",
-            "nordnetName": "MAGNORA"
+            "nordnetName": "MAGNORA",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "MEDISTIM",
@@ -2061,7 +2232,8 @@
             "bransje": "medisinsk utstyr",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/2PZD176CqzZfXPjmD09aks/1a20f33b223b85c67fa610ef45285786/image.png",
             "nordnetID": "16105610",
-            "nordnetName": "MEDISTIM"
+            "nordnetName": "MEDISTIM",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "MELHUS SPAREBANK",
@@ -2073,7 +2245,8 @@
             "bransje": "banker - regionale",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/5e7evof32Pvd9zNpuxqpO4/4bf3ad54c4604566c02dda880b76f8ae/image.png",
             "nordnetID": "16105586",
-            "nordnetName": "MELHUS SPAREBANK"
+            "nordnetName": "MELHUS SPAREBANK",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "MINTRA HOLDING",
@@ -2084,7 +2257,8 @@
             "sektor": "industri",
             "bransje": "personal- og arbeidskraftformidling",
             "nordnetID": "17360232",
-            "nordnetName": "MINTRA HOLDING"
+            "nordnetName": "MINTRA HOLDING",
+            "market": "Euronext Growth Oslo"
         },
         {
             "name": "MORROW BANK",
@@ -2096,7 +2270,8 @@
             "bransje": "banker - regionale",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/2SG9wbEhTPUAnbkuP4MLAO/c0361402151718029dbf9b67a28cf949/image.png",
             "nordnetID": "16275895",
-            "nordnetName": "MORROW BANK ASA"
+            "nordnetName": "MORROW BANK ASA",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "MOWI",
@@ -2108,7 +2283,8 @@
             "bransje": "landbruksprodukter",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/4UbQoOx9CAaEpjFKJtIjnQ/2c51285e39bfcc273a299bdf58623968/image.png",
             "nordnetID": "16105427",
-            "nordnetName": "MOWI"
+            "nordnetName": "MOWI",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "MPC CONTAINER SHIP",
@@ -2120,7 +2296,8 @@
             "bransje": "sj\u00f8fart",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/1qCl2rLjooytKiUQhBdeOD/42df2a27fc9641d26ff92b95e8e0db05/image.png",
             "nordnetID": "16697810",
-            "nordnetName": "MPC CONTAINER SHIPS"
+            "nordnetName": "MPC CONTAINER SHIPS",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "MPC ENERGY SOLUTIO",
@@ -2132,7 +2309,8 @@
             "bransje": "nytte - fornybar",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/45X9IWANA5AgXOCFwghmQh/d79d2ac0f92f0f83a2fe3db2b1eb30ed/image.png",
             "nordnetID": "17430294",
-            "nordnetName": "MPC ENERGY SOLUTIONS N.V."
+            "nordnetName": "MPC ENERGY SOLUTIONS N.V.",
+            "market": "Euronext Growth Oslo"
         },
         {
             "name": "MULTICONSULT",
@@ -2144,7 +2322,8 @@
             "bransje": "bygg og anlegg",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/QUahIUGvrWlYKDzEHA8rE/6e5b6a6478f961b1a9c4c8919053822d/image.png",
             "nordnetID": "16407289",
-            "nordnetName": "MULTICONSULT"
+            "nordnetName": "MULTICONSULT",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "M\u00c5S\u00d8VAL",
@@ -2156,7 +2335,8 @@
             "bransje": "landbruksprodukter",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/6cObXUuVC03HCzD4dzl0DZ/cd91b2264bf4cdeb10d71811b38cc800/Ma__s__val.png",
             "nordnetID": "17528187",
-            "nordnetName": "M\u00c5S\u00d8VAL AS"
+            "nordnetName": "M\u00c5S\u00d8VAL AS",
+            "market": "Euronext Growth Oslo"
         },
         {
             "name": "NAPATECH",
@@ -2168,7 +2348,8 @@
             "bransje": "kommunikasjonsutstyr",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/6G45uBEplzkTfwH3YtxpyR/b19eeb86a332e5a166f10c9dfd90b1ce/image.png",
             "nordnetID": "16250823",
-            "nordnetName": "NAPATECH"
+            "nordnetName": "NAPATECH",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "NAVAMEDIC",
@@ -2180,7 +2361,8 @@
             "bransje": "medisinsk distribusjon",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/AGbM0M3Eiuj1lCKHrJP3t/b2ac52c2496b3bf022bd01ad845d25f5/image.png",
             "nordnetID": "16105660",
-            "nordnetName": "NAVAMEDIC"
+            "nordnetName": "NAVAMEDIC",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "NEKKAR",
@@ -2192,7 +2374,8 @@
             "bransje": "spesialindustrimaskiner",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/4ezOEdiB4OMRCbwqcZqWDa/2db35fed495d58788b814d45fe697ede/NEKKAR.webp",
             "nordnetID": "16105423",
-            "nordnetName": "NEKKAR"
+            "nordnetName": "NEKKAR",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "NEL",
@@ -2204,7 +2387,8 @@
             "bransje": "spesialindustrimaskiner",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/53QMvhS9xZGjUWpxzjPnRg/53f9c087f075eaba16e26d65c39180fc/image.png",
             "nordnetID": "16105612",
-            "nordnetName": "NEL"
+            "nordnetName": "NEL",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "NEXT BIOMETRICS GP",
@@ -2216,7 +2400,8 @@
             "bransje": "vitenskapelige og tekniske instrumenter",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/1N2v86gSMJHXcHGc51BmzL/4b461ef86e6abea9408a44e4c3742ff1/image.png",
             "nordnetID": "16300344",
-            "nordnetName": "NEXT BIOMETRICS GROUP"
+            "nordnetName": "NEXT BIOMETRICS GROUP",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "NIDAROS SPAREBANK",
@@ -2228,7 +2413,8 @@
             "bransje": "banker - regionale",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/6LxBxnpIfb8BxpMQHsbruz/7d7c672ff4667cbaf0c40484216008e8/image.png",
             "nordnetID": "16404891",
-            "nordnetName": "NIDAROS SPAREBANK"
+            "nordnetName": "NIDAROS SPAREBANK",
+            "market": "Euronext Growth Oslo"
         },
         {
             "name": "NORAM DRILLING",
@@ -2240,7 +2426,8 @@
             "bransje": "olje & gass - utstyr og tjenester",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/7yn0VwREE0ccAYG2KcYAfr/d623a926e4a0a3bb9be9e6db07a87636/Frame_14736.png",
             "nordnetID": "16142512",
-            "nordnetName": "NORAM DRILLING AS"
+            "nordnetName": "NORAM DRILLING AS",
+            "market": "Euronext Growth Oslo"
         },
         {
             "name": "NORBIT",
@@ -2252,7 +2439,8 @@
             "bransje": "vitenskapelige og tekniske instrumenter",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/3T8VlSpgMKoaiCwbJjwOqP/47544f49738e2e08a1974dc7a4d9c3be/image.png",
             "nordnetID": "17071206",
-            "nordnetName": "NORBIT"
+            "nordnetName": "NORBIT",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "NORCOD",
@@ -2264,7 +2452,8 @@
             "bransje": "landbruksprodukter",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/2T4NMyKTnUs9ru931a6VuZ/0382ada57e38bd9f30edabe6143d4c65/Norcod.jpeg",
             "nordnetID": "17354182",
-            "nordnetName": "NORCOD"
+            "nordnetName": "NORCOD",
+            "market": "Euronext Growth Oslo"
         },
         {
             "name": "NORDHEALTH A-AKSJE",
@@ -2275,7 +2464,8 @@
             "sektor": "helse",
             "bransje": "helseinformasjonstjenester",
             "nordnetID": "17513034",
-            "nordnetName": "NORDHEALTH AS A-AKSJER"
+            "nordnetName": "NORDHEALTH AS A-AKSJER",
+            "market": "Euronext Growth Oslo"
         },
         {
             "name": "NORDIC AQUA PART",
@@ -2286,7 +2476,8 @@
             "sektor": "konsument defensive",
             "bransje": "landbruksprodukter",
             "nordnetID": "18116197",
-            "nordnetName": "NORDIC AQUA PARTNERS AS"
+            "nordnetName": "NORDIC AQUA PARTNERS AS",
+            "market": "Euronext Growth Oslo"
         },
         {
             "name": "NORDIC HALIBUT",
@@ -2298,7 +2489,8 @@
             "bransje": "landbruksprodukter",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/7A8pVBtwyhrN5rVEOQNMUu/c033ed62529a806425d8c0af550ae0f7/Nordic_Halibut.jpeg",
             "nordnetID": "16165305",
-            "nordnetName": "NORDIC HALIBUT AS"
+            "nordnetName": "NORDIC HALIBUT AS",
+            "market": "Euronext Growth Oslo"
         },
         {
             "name": "NORDIC MINING",
@@ -2310,7 +2502,8 @@
             "bransje": "andre industrielle metaller og gruvedrift",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/5gFQe8rLUBouadbkMdn7rC/98b5f1715bb8cea0a2945d79f06f1b5c/image.png",
             "nordnetID": "16105722",
-            "nordnetName": "NORDIC MINING"
+            "nordnetName": "NORDIC MINING",
+            "market": "Euronext Expand Oslo"
         },
         {
             "name": "NORDIC SEMICONDUC",
@@ -2322,7 +2515,8 @@
             "bransje": "halvledere",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/3SwNQOoOZQd8UBuR16BnH9/aeddfd1d7c50d16162f4a7830d8a8a6d/image.png",
             "nordnetID": "16105429",
-            "nordnetName": "NORDIC SEMICONDUCTOR"
+            "nordnetName": "NORDIC SEMICONDUCTOR",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "NORDIC TECHNOLOGY",
@@ -2333,7 +2527,8 @@
             "sektor": "teknologi",
             "bransje": "vitenskapelige og tekniske instrumenter",
             "nordnetID": "17803823",
-            "nordnetName": "NORDIC TECHNOLOGY GROUP AS"
+            "nordnetName": "NORDIC TECHNOLOGY GROUP AS",
+            "market": "Euronext Growth Oslo"
         },
         {
             "name": "NORDIC UNMANNED",
@@ -2345,7 +2540,8 @@
             "bransje": "luftfart- og forsvar",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/0hr9d2QGdims47ln95ZCb/6bc65987349d67a3322c2b9244ff7799/image.png",
             "nordnetID": "17397247",
-            "nordnetName": "NORDIC UNMANNED ASA"
+            "nordnetName": "NORDIC UNMANNED ASA",
+            "market": "Euronext Growth Oslo"
         },
         {
             "name": "NORSE ATLANTIC",
@@ -2357,7 +2553,8 @@
             "bransje": "flyselskaper",
             "icon": "https://cdn.prod.nntech.io/cms-proxy/6xe8ehctp75g/1dfra7TycZ6VEcdlyfZBQp/ef2d1ba8416b80437a95279866eb7f6c/image.png",
             "nordnetID": "18032874",
-            "nordnetName": "NORSE ATLANTIC ASA"
+            "nordnetName": "NORSE ATLANTIC ASA",
+            "market": "Euronext Expand Oslo"
         },
         {
             "name": "NORSK HYDRO",
@@ -2369,7 +2566,8 @@
             "bransje": "aluminium",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/5h1GKQGDmqwJHlNBObCXmX/002456ffaf8ae6aaf6e1fd47368dfadd/image.png",
             "nordnetID": "16105667",
-            "nordnetName": "NORSK HYDRO"
+            "nordnetName": "NORSK HYDRO",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "NORSK SOLAR",
@@ -2381,7 +2579,8 @@
             "bransje": "uavhengige energiprodusenter",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/4rTEdL6z5BUu25xJATgObg/1087332061c18bd31f33ac587be3b188/image.png",
             "nordnetID": "17471416",
-            "nordnetName": "NORSK SOLAR AS"
+            "nordnetName": "NORSK SOLAR AS",
+            "market": "Euronext Growth Oslo"
         },
         {
             "name": "NORSK TITANIUM",
@@ -2392,7 +2591,8 @@
             "sektor": "industri",
             "bransje": "luftfart- og forsvar",
             "nordnetID": "17505767",
-            "nordnetName": "NORSK TITANIUM AS"
+            "nordnetName": "NORSK TITANIUM AS",
+            "market": "Euronext Growth Oslo"
         },
         {
             "name": "NORSKE SKOG",
@@ -2404,7 +2604,8 @@
             "bransje": "papir & papirprodukter",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/3IIXjbegOQYqw2DXN9eEgh/4f24744d4eaa31161be56b7131e9423f/image.png",
             "nordnetID": "17134373",
-            "nordnetName": "NORSKE SKOG"
+            "nordnetName": "NORSKE SKOG",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "NORTEL",
@@ -2425,7 +2626,8 @@
             "bransje": "kapitalforvaltning",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/63wfbMDZnozpYCvhbmRqtm/1578994a80e0d5a101dd64ea29a39bdc/image.png",
             "nordnetID": "16105760",
-            "nordnetName": "NORTH ENERGY"
+            "nordnetName": "NORTH ENERGY",
+            "market": "Euronext Expand Oslo"
         },
         {
             "name": "NORTHERN DRILLING",
@@ -2437,7 +2639,8 @@
             "bransje": "olje & gass - borring",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/718v1mWlVN3B74PQmtoYfV/531ab506b56084360b03f5787b83153e/image.png",
             "nordnetID": "16682289",
-            "nordnetName": "NORTHERN DRILLING"
+            "nordnetName": "NORTHERN DRILLING",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "NORTHERN OCEAN LTD",
@@ -2449,7 +2652,8 @@
             "bransje": "olje & gass - borring",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/5HKlw6G9qXO6E4KBloCEVG/2f5fc12e1fd74b447cf7b94111634a0f/image.png",
             "nordnetID": "17156980",
-            "nordnetName": "NORTHERN OCEAN LTD."
+            "nordnetName": "NORTHERN OCEAN LTD.",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "NORWEGIAN AIR SHUT",
@@ -2461,7 +2665,8 @@
             "bransje": "flyselskaper",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/BdwuiLlOfqsGY4zLJsg6e/f6ee48139a1670d62f52c07ffcaf758d/image.png",
             "nordnetID": "16105606",
-            "nordnetName": "NORWEGIAN AIR SHUTTLE"
+            "nordnetName": "NORWEGIAN AIR SHUTTLE",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "NORWEGIAN BLOCK EX",
@@ -2473,7 +2678,8 @@
             "bransje": "kapitalmarkeder",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/7wgpaADdoyDInSnQuExb03/d044e35321adfb9279e37a23f18890f8/image.png",
             "nordnetID": "17489440",
-            "nordnetName": "NORWEGIAN BLOCK EXCHANGE AS"
+            "nordnetName": "NORWEGIAN BLOCK EXCHANGE AS",
+            "market": "Euronext Growth Oslo"
         },
         {
             "name": "NRC GROUP",
@@ -2485,7 +2691,8 @@
             "bransje": "jernbane",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/6bKCZ0clvk3jQYz91Ejdbq/462f822af32f9984524dba6ebbdf8ca2/image.png",
             "nordnetID": "16105636",
-            "nordnetName": "NRC GROUP"
+            "nordnetName": "NRC GROUP",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "NYKODE THERAPEUTIC",
@@ -2497,7 +2704,8 @@
             "bransje": "bioteknologi",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/6bZLW6zqif7G4UbqbWlFd3/45dfeff0276f2f7c46192f53fb7fa9c6/image.png",
             "nordnetID": "16312532",
-            "nordnetName": "NYKODE THERAPEUTICS ASA"
+            "nordnetName": "NYKODE THERAPEUTICS ASA",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "OBSERVE MEDICAL",
@@ -2509,7 +2717,8 @@
             "bransje": "medisinsk utstyr",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/7a02XtFVxFmaiuoBJ9zRsq/9272bcee399a1ca6b54ceca2f44eedb9/image.png",
             "nordnetID": "17141054",
-            "nordnetName": "OBSERVE MEDICAL"
+            "nordnetName": "OBSERVE MEDICAL",
+            "market": "Euronext Expand Oslo"
         },
         {
             "name": "OCEAN GEOLOOP",
@@ -2520,7 +2729,8 @@
             "sektor": "industri",
             "bransje": "forurensnings- og behandlingskontroll",
             "nordnetID": "17432356",
-            "nordnetName": "OCEAN GEOLOOP AS"
+            "nordnetName": "OCEAN GEOLOOP AS",
+            "market": "Euronext Growth Oslo"
         },
         {
             "name": "OCEAN SUN",
@@ -2532,7 +2742,8 @@
             "bransje": "nytte - fornybar",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/7F6uvof6nCoIPz4WDFcGfF/97aa41cc2ef42127e056c0e7cef76f89/image.png",
             "nordnetID": "17373357",
-            "nordnetName": "OCEAN SUN"
+            "nordnetName": "OCEAN SUN",
+            "market": "Euronext Growth Oslo"
         },
         {
             "name": "OCEANTEAM",
@@ -2544,7 +2755,8 @@
             "bransje": "sj\u00f8fart",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/5zCBEsJefVKR5MQnUbssLa/1bf75d36bbd40b360c9ae0e5d7bb7c71/image.png",
             "nordnetID": "16105699",
-            "nordnetName": "OCEANTEAM"
+            "nordnetName": "OCEANTEAM",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "ODFJELL DRILLING",
@@ -2556,7 +2768,8 @@
             "bransje": "olje & gass - borring",
             "icon": "https://cdn.prod.nntech.io/cms-proxy/6xe8ehctp75g/1JGaL52l4hILP7E0fPXozy/c7648c92514693df616a9d8d05d5d7c1/Screenshot_2023-08-17_at_15.05.19.png",
             "nordnetID": "16237838",
-            "nordnetName": "ODFJELL DRILLING"
+            "nordnetName": "ODFJELL DRILLING",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "ODFJELL SER. A",
@@ -2568,7 +2781,8 @@
             "bransje": "sj\u00f8fart",
             "icon": "https://cdn.prod.nntech.io/cms-proxy/6xe8ehctp75g/3uwqsBG9aOTWLGqyUoPchy/36dda4ff0194c501c1777e86b400420f/image.png",
             "nordnetID": "16105682",
-            "nordnetName": "ODFJELL SER. A"
+            "nordnetName": "ODFJELL SER. A",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "ODFJELL SER. B",
@@ -2580,7 +2794,8 @@
             "bransje": "sj\u00f8fart",
             "icon": "https://cdn.prod.nntech.io/cms-proxy/6xe8ehctp75g/3uwqsBG9aOTWLGqyUoPchy/36dda4ff0194c501c1777e86b400420f/image.png",
             "nordnetID": "16105683",
-            "nordnetName": "ODFJELL SER. B"
+            "nordnetName": "ODFJELL SER. B",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "ODFJELL TECHNOLOGY",
@@ -2592,7 +2807,8 @@
             "bransje": "olje & gass - borring",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/260duFbHAtNNVieptcHgc9/bcbb05dfa3efff1acea90494a31a4562/image.png",
             "nordnetID": "17736586",
-            "nordnetName": "ODFJELL TECHNOLOGY LTD"
+            "nordnetName": "ODFJELL TECHNOLOGY LTD",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "OKEA",
@@ -2604,7 +2820,8 @@
             "bransje": "olje & gass - e&p",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/2aRIL1E84Ypc5u0VwVbyS/d413f42d1530ca3ed0cbba7638555e19/OKEA.png",
             "nordnetID": "17069504",
-            "nordnetName": "OKEA"
+            "nordnetName": "OKEA",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "OKEANIS ECO TANKER",
@@ -2616,7 +2833,8 @@
             "bransje": "sj\u00f8fart",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/6SEfZz9Zsiua4lbOAoOYGT/8f563d704fd8a847948d93d2d0332057/Okeanis_Eco_Tankers.jpeg",
             "nordnetID": "16893906",
-            "nordnetName": "OKEANIS ECO TANKERS"
+            "nordnetName": "OKEANIS ECO TANKERS",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "OLAV THON EIENDOMS",
@@ -2628,7 +2846,8 @@
             "bransje": "eiendomstjenester",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/4N8nFJLLsE3udpEqPK6hDj/99f813bd94a2ec66d00e47d6e84222b1/image.png",
             "nordnetID": "16105673",
-            "nordnetName": "OLAV THON EIENDOMSSELSKAP"
+            "nordnetName": "OLAV THON EIENDOMSSELSKAP",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "ORKLA",
@@ -2640,7 +2859,8 @@
             "bransje": "pakket mat",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/3niFDZZRyQaoOJEk85Mxpm/92cd18c7ae1e37afade0c4f8129ca5c2/image.png",
             "nordnetID": "16105674",
-            "nordnetName": "ORKLA"
+            "nordnetName": "ORKLA",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "OTELLO CORPORATION",
@@ -2652,7 +2872,8 @@
             "bransje": "reklamebyr\u00e5er",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/7JfTi0vLkgGA8zUPM7BDZo/f7ba9a46837af5b6461340602fbe39c2/image.png",
             "nordnetID": "16105607",
-            "nordnetName": "OTELLO CORPORATION"
+            "nordnetName": "OTELLO CORPORATION",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "OTOVO",
@@ -2664,7 +2885,8 @@
             "bransje": "solceller",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/7083OiAjHjFicPSOUDnQVE/cabcf63d0b8721cc92fd06c38c6d4296/image.png",
             "nordnetID": "16857988",
-            "nordnetName": "OTOVO ASA"
+            "nordnetName": "OTOVO ASA",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "PANORO ENERGY",
@@ -2676,7 +2898,8 @@
             "bransje": "olje & gass - e&p",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/BhTEvbW7l25WUDXkmgknj/8518d640584756acf2372932eda0a852/Panoro_Energy.png",
             "nordnetID": "16105762",
-            "nordnetName": "PANORO ENERGY"
+            "nordnetName": "PANORO ENERGY",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "PARETO BANK",
@@ -2688,7 +2911,8 @@
             "bransje": "banker - regionale",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/2svL8Lx8FMOlOenyEvI7XT/efd2c851218050ce1b14b1f6aeec77bb/image.png",
             "nordnetID": "16145070",
-            "nordnetName": "PARETO BANK"
+            "nordnetName": "PARETO BANK",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "PCI BIOTECH HOLD",
@@ -2700,7 +2924,8 @@
             "bransje": "bioteknologi",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/5wQ25P7b226Bb4ue6ZaRnH/ed9bb403c2f843b842326a85e31a61ed/image.png",
             "nordnetID": "16105737",
-            "nordnetName": "PCI BIOTECH HOLDING"
+            "nordnetName": "PCI BIOTECH HOLDING",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "PETROLIA",
@@ -2712,7 +2937,8 @@
             "bransje": "olje & gass - utstyr og tjenester",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/4iCgfGVm5XuEq5r0Gy45MC/9b96543bdd3a5a6cf637c88b5ad005a2/image.png",
             "nordnetID": "16105568",
-            "nordnetName": "PETROLIA"
+            "nordnetName": "PETROLIA",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "PETRONOR E&P",
@@ -2723,7 +2949,8 @@
             "sektor": "energi",
             "bransje": "olje & gass - e&p",
             "nordnetID": "18070363",
-            "nordnetName": "PETRONOR E&P ASA"
+            "nordnetName": "PETRONOR E&P ASA",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "PEXIP HOLDING",
@@ -2735,7 +2962,8 @@
             "bransje": "programvare - applikasjoner",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/4gtiDseywhmBhPHro9NyLM/0e9aefffdec6b2275d584ea33859c496/PEXIP_HOLDING.jpeg",
             "nordnetID": "16981769",
-            "nordnetName": "PEXIP HOLDING"
+            "nordnetName": "PEXIP HOLDING",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "PGS",
@@ -2747,7 +2975,8 @@
             "bransje": "olje & gass - utstyr og tjenester",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/46w0AzaQplV0kPvUvx14gO/404fc2b2f05d6ca6d82fc3b1b0f43ff0/image.png",
             "nordnetID": "16105675",
-            "nordnetName": "PGS"
+            "nordnetName": "PGS",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "PHILLY SHIPYARD",
@@ -2759,7 +2988,8 @@
             "bransje": "luftfart- og forsvar",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/4GCl8Um4CMnXELz0hhdLAG/a8f2bad6a215f689d9dd07ce04885ec0/image.png",
             "nordnetID": "16105731",
-            "nordnetName": "PHILLY SHIPYARD"
+            "nordnetName": "PHILLY SHIPYARD",
+            "market": "Euronext Expand Oslo"
         },
         {
             "name": "PHOTOCURE",
@@ -2771,7 +3001,8 @@
             "bransje": "medsinprodusenter - spesialist og generell",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/2vxqZWsdQTgPdCj83AyPbF/a8d4cfdc99ecc0031737ed4839c7b906/PHOTOCURE.png",
             "nordnetID": "16105593",
-            "nordnetName": "PHOTOCURE"
+            "nordnetName": "PHOTOCURE",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "PIONEER PROPERTY",
@@ -2783,7 +3014,8 @@
             "bransje": "eiendomstjenester",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/13re3yfEFWMjvcklCkb1eF/79ceccf3f3f06d3d6b60733b4efef94b/image.png",
             "nordnetID": "16418422",
-            "nordnetName": "PIONEER PROPERTY GROUP"
+            "nordnetName": "PIONEER PROPERTY GROUP",
+            "market": "Euronext Expand Oslo"
         },
         {
             "name": "POLARIS MEDIA",
@@ -2795,7 +3027,8 @@
             "bransje": "publisering",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/4kiYrSu9XBbEGND8OGVvnB/9ef973580fb56ea7ec547f688838fae2/Screenshot_2023-01-27_at_09.08.44.png",
             "nordnetID": "16105742",
-            "nordnetName": "POLARIS MEDIA"
+            "nordnetName": "POLARIS MEDIA",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "POLIGHT",
@@ -2807,7 +3040,8 @@
             "bransje": "elektroniske komponenter",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/3hpeyy2zlkNo9yvVz8P2Ma/0d11826b9ba472d9a9d7260f179a62fb/image.png",
             "nordnetID": "17775474",
-            "nordnetName": "POLIGHT"
+            "nordnetName": "POLIGHT",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "PROSAFE",
@@ -2819,7 +3053,8 @@
             "bransje": "olje & gass - utstyr og tjenester",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/4gKIpXQGfWMhCyMhj9MTqY/4f8f604ee0882e92b00b2181c585cf82/image.png",
             "nordnetID": "17107917",
-            "nordnetName": "PROSAFE"
+            "nordnetName": "PROSAFE",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "PROTECTOR FORSIKRG",
@@ -2831,7 +3066,8 @@
             "bransje": "forsikring - spesialiteter",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/6GaLEaqjgF9zufkNUQ3Fjk/30cdd05aa8dc400f8545b0dce490f118/image.png",
             "nordnetID": "16105707",
-            "nordnetName": "PROTECTOR FORSIKRING"
+            "nordnetName": "PROTECTOR FORSIKRING",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "PROXIMAR SEAFOOD",
@@ -2843,7 +3079,8 @@
             "bransje": "landbruksprodukter",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/BmRaLF8ekf7bFOx3bkImR/ff9430ec9b9a988367842477a0329dcd/Proximar_Seafood.png",
             "nordnetID": "17376002",
-            "nordnetName": "PROXIMAR SEAFOOD AS"
+            "nordnetName": "PROXIMAR SEAFOOD AS",
+            "market": "Euronext Growth Oslo"
         },
         {
             "name": "PRYME",
@@ -2855,7 +3092,8 @@
             "bransje": "avfallsh\u00e5ndtering",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/3O2b8UiJIYmDewRxe8VS52/fb9e07f4ff36f3337e2e840dfd5fada4/image.png",
             "nordnetID": "17436486",
-            "nordnetName": "PRYME N.V."
+            "nordnetName": "PRYME N.V.",
+            "market": "Euronext Growth Oslo"
         },
         {
             "name": "PYRUM INNOVATIONS",
@@ -2866,7 +3104,8 @@
             "sektor": "industri",
             "bransje": "forurensnings- og behandlingskontroll",
             "nordnetID": "17594785",
-            "nordnetName": "PYRUM INNOVATIONS AG"
+            "nordnetName": "PYRUM INNOVATIONS AG",
+            "market": "Euronext Growth Oslo"
         },
         {
             "name": "Q-FREE",
@@ -2878,7 +3117,8 @@
             "bransje": "drift infrastruktur",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/olvqO2FTpnQjfwlG2T8ry/41ce7ceed7d0fedb9aeabb46b8ceefb2/image.png",
             "nordnetID": "16105602",
-            "nordnetName": "Q-FREE"
+            "nordnetName": "Q-FREE",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "QUANTAFUEL",
@@ -2890,7 +3130,8 @@
             "bransje": "avfallsh\u00e5ndtering",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/5GRIReP2gSurWNIL6eyhuJ/11d07d5af5fc330efe9b7a7ff9a1d5e3/image.png",
             "nordnetID": "16665923",
-            "nordnetName": "QUANTAFUEL AS"
+            "nordnetName": "QUANTAFUEL AS",
+            "market": "Euronext Growth Oslo"
         },
         {
             "name": "QUESTBACK GROUP",
@@ -2901,7 +3142,8 @@
             "sektor": "teknologi",
             "bransje": "programvare - infrastruktur",
             "nordnetID": "17567368",
-            "nordnetName": "QUESTBACK GROUP AS"
+            "nordnetName": "QUESTBACK GROUP AS",
+            "market": "Euronext Growth Oslo"
         },
         {
             "name": "QUESTERRE ENERGY",
@@ -2913,7 +3155,8 @@
             "bransje": "olje & gass - e&p",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/4gG0kqu011TQdGeeUK6aAg/e177f188bad269854f45f327c526b355/Questerre_Energy_Corporation.png",
             "nordnetID": "16105625",
-            "nordnetName": "QUESTERRE ENERGY CORPORATION"
+            "nordnetName": "QUESTERRE ENERGY CORPORATION",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "RANA GRUBER",
@@ -2925,7 +3168,8 @@
             "bransje": "st\u00e5l",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/umsCzsQccT94SaHypuZna/5d23f74ff7e1f361fed9b09a69179514/image.png",
             "nordnetID": "17447523",
-            "nordnetName": "RANA GRUBER ASA"
+            "nordnetName": "RANA GRUBER ASA",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "REACH SUBSEA",
@@ -2937,7 +3181,8 @@
             "bransje": "olje & gass - utstyr og tjenester",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/2mpURvr5LoaPTqdXDhdBBz/133333d019c8ece2211f3d36cd0dd722/image.png",
             "nordnetID": "16105668",
-            "nordnetName": "REACH SUBSEA"
+            "nordnetName": "REACH SUBSEA",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "REC SILICON",
@@ -2949,7 +3194,8 @@
             "bransje": "halvlederutstyr og -materialer",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/4D6vhbgmkcSaYYLnQ9vBXu/49727232887114d8c236e96124a2a173/image.png",
             "nordnetID": "16105665",
-            "nordnetName": "REC SILICON"
+            "nordnetName": "REC SILICON",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "RECREATE",
@@ -2960,7 +3206,8 @@
             "sektor": "eiendom",
             "bransje": "eiendomstjenester",
             "nordnetID": "17089171",
-            "nordnetName": "RECREATE ASA"
+            "nordnetName": "RECREATE ASA",
+            "market": "Euronext Growth Oslo"
         },
         {
             "name": "REFUELS",
@@ -2971,7 +3218,8 @@
             "sektor": "sykliske forbruksvarer",
             "bransje": "spesialist detaljhandel",
             "nordnetID": "18043859",
-            "nordnetName": "REFUELS N.V."
+            "nordnetName": "REFUELS N.V.",
+            "market": "Euronext Growth Oslo"
         },
         {
             "name": "RIVER TECH",
@@ -2982,7 +3230,8 @@
             "sektor": "teknologi",
             "bransje": "it - tjenester",
             "nordnetID": "16847400",
-            "nordnetName": "RIVER TECH"
+            "nordnetName": "RIVER TECH",
+            "market": "Euronext Growth Oslo"
         },
         {
             "name": "ROMERIKE SPAREBK",
@@ -2994,7 +3243,8 @@
             "bransje": "banker - regionale",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/6FieqksqEiEX0yuJDXlKzd/4c31a32c91975abfaab879d466861d47/image.png",
             "nordnetID": "16786639",
-            "nordnetName": "ROMERIKE SPAREBANK"
+            "nordnetName": "ROMERIKE SPAREBANK",
+            "market": "Euronext Growth Oslo"
         },
         {
             "name": "ROMREAL",
@@ -3005,7 +3255,8 @@
             "sektor": "eiendom",
             "bransje": "eiendomstjenester",
             "nordnetID": "16105715",
-            "nordnetName": "ROMREAL"
+            "nordnetName": "ROMREAL",
+            "market": "Euronext Expand Oslo"
         },
         {
             "name": "ROMSDAL SPAREBANK",
@@ -3017,7 +3268,8 @@
             "bransje": "finansielle konglomerater",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/70S2ItMvwwUx2pfhEDeb4f/cf343414a525ad510560b71dad008d15/image.png",
             "nordnetID": "16548266",
-            "nordnetName": "ROMSDAL SPAREBANK"
+            "nordnetName": "ROMSDAL SPAREBANK",
+            "market": "Euronext Growth Oslo"
         },
         {
             "name": "S.D. STANDARD ETC",
@@ -3029,7 +3281,8 @@
             "bransje": "olje & gass - utstyr og tjenester",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/6w7jAo2Y8jGYQiOjEn5y5e/a39eed9cc61a9b392ca68701b45971f4/image.png",
             "nordnetID": "16105293",
-            "nordnetName": "S.D. STANDARD ETC PLC"
+            "nordnetName": "S.D. STANDARD ETC PLC",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "SAGA PURE",
@@ -3041,7 +3294,8 @@
             "bransje": "spesialkjemikalier",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/4noxMiXMqbLl1mcwjCESQT/2ee1bfc5756fb1d22f3a9b76190e161d/image.png",
             "nordnetID": "16105256",
-            "nordnetName": "SAGA PURE"
+            "nordnetName": "SAGA PURE",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "SALMAR",
@@ -3053,7 +3307,8 @@
             "bransje": "landbruksprodukter",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/4WpO5UcbaeTBmgpAUdQnBf/998b5fe2beb92cd6929b0ff5206e274f/image.png",
             "nordnetID": "16105712",
-            "nordnetName": "SALMAR"
+            "nordnetName": "SALMAR",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "SALMON EVOLUTION",
@@ -3065,7 +3320,8 @@
             "bransje": "landbruksprodukter",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/4BoYjinmAKwvXqBwopDITg/a7318e61e53e8f87c191fd7c07af5a58/Salmon_Evolution.jpeg",
             "nordnetID": "17350508",
-            "nordnetName": "SALMON EVOLUTION ASA"
+            "nordnetName": "SALMON EVOLUTION ASA",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "SALMONES CAMANCHAC",
@@ -3077,7 +3333,8 @@
             "bransje": "landbruksprodukter",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/3rf86iRYvDNe6nGil0oHlG/e504fcb9db33b8ec15b72dfa8081c505/Salmones_Camanchaca.jpeg",
             "nordnetID": "17701612",
-            "nordnetName": "SALMONES CAMANCHAC"
+            "nordnetName": "SALMONES CAMANCHAC",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "SANDNES SPAREBANK",
@@ -3089,7 +3346,8 @@
             "bransje": "banker - regionale",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/ZBjkKelbRh8uq24dhO0uP/9b4b398efeac190e0668d1ad4985bb16/image.png",
             "nordnetID": "16105424",
-            "nordnetName": "SANDNES SPAREBANK"
+            "nordnetName": "SANDNES SPAREBANK",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "SAS AB",
@@ -3101,7 +3359,8 @@
             "bransje": "flyselskaper",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/4J580hjXqzLfcI80Sj6y8x/1b60830cc764c59ec62cfade9cb2535b/image.png",
             "nordnetID": "16105600",
-            "nordnetName": "SAS AB"
+            "nordnetName": "SAS AB",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "SATS",
@@ -3113,7 +3372,8 @@
             "bransje": "fritid",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/1zjD0jB4EArogcJGAmNdQO/6778edc219bf1ea48de9f006a9533637/image.png",
             "nordnetID": "17134374",
-            "nordnetName": "SATS"
+            "nordnetName": "SATS",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "SCANA",
@@ -3125,7 +3385,8 @@
             "bransje": "industriell distribusjon",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/157EA4yrHsXDID1x4AhNQM/178b034158e2423fb99e141865b95165/image.png",
             "nordnetID": "16105426",
-            "nordnetName": "SCANA"
+            "nordnetName": "SCANA",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "SCATEC",
@@ -3137,7 +3398,8 @@
             "bransje": "nytte - fornybar",
             "icon": "https://cdn.prod.nntech.io/cms-proxy/6xe8ehctp75g/CkBL0ZoTuLIQWyyDF9NkE/6162baa66f32865100c32aba5126ce83/image.png",
             "nordnetID": "16324395",
-            "nordnetName": "SCATEC ASA"
+            "nordnetName": "SCATEC ASA",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "SCHIBSTED SER. A",
@@ -3149,7 +3411,8 @@
             "bransje": "publisering",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/7DRArY0EYR3z2X1gbawIGJ/1eefe753f60d72ba71cba0edd1074ad8/image.png",
             "nordnetID": "16105679",
-            "nordnetName": "SCHIBSTED SER. A"
+            "nordnetName": "SCHIBSTED SER. A",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "SCHIBSTED SER. B",
@@ -3161,7 +3424,8 @@
             "bransje": "publisering",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/7DRArY0EYR3z2X1gbawIGJ/1eefe753f60d72ba71cba0edd1074ad8/image.png",
             "nordnetID": "16408915",
-            "nordnetName": "SCHIBSTED SER. B"
+            "nordnetName": "SCHIBSTED SER. B",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "SEABIRD EXPLORAT",
@@ -3173,7 +3437,8 @@
             "bransje": "olje & gass - utstyr og tjenester",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/2ncsuQdAxOTSSFpWRCgoRE/2a68ab78b63112c2a4ac293fd9a79a7d/image.png",
             "nordnetID": "16105654",
-            "nordnetName": "SEABIRD EXPLORATION"
+            "nordnetName": "SEABIRD EXPLORATION",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "SEACREST PETROLEO",
@@ -3184,7 +3449,8 @@
             "sektor": "energi",
             "bransje": "olje & gass - e&p",
             "nordnetID": "18016486",
-            "nordnetName": "SEACREST PETROLEO BERMUDA LIMITED"
+            "nordnetName": "SEACREST PETROLEO BERMUDA LIMITED",
+            "market": "Euronext Expand Oslo"
         },
         {
             "name": "SEADRILL",
@@ -3196,7 +3462,8 @@
             "bransje": "olje & gass - borring",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/5LWseALORoNI9BiJF4AZBg/9f118eab915d776b7b06111260f747ae/image.png",
             "nordnetID": "17716663",
-            "nordnetName": "SEADRILL LIMITED"
+            "nordnetName": "SEADRILL LIMITED",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "SELF STORAGE GROUP",
@@ -3208,7 +3475,8 @@
             "bransje": "spesialtjenester",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/720GYsXoBpm0IBjoNU2LlQ/cd17aad46a0bed2f26cd85d3a74da9e5/image.png",
             "nordnetID": "16700587",
-            "nordnetName": "SELF STORAGE GROUP"
+            "nordnetName": "SELF STORAGE GROUP",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "SELVAAG BOLIG",
@@ -3220,7 +3488,8 @@
             "bransje": "eiendomstjenester",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/4FIpZUs8SsVGtgnK71WJe5/a70c5f9074a6ed80d3802ee1b4cd6c95/image.png",
             "nordnetID": "16105342",
-            "nordnetName": "SELVAAG BOLIG"
+            "nordnetName": "SELVAAG BOLIG",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "SHELF DRILLING",
@@ -3232,7 +3501,8 @@
             "bransje": "olje & gass - borring",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/10xoIUyi4eDLzqLWOpps14/6f19f81c37a18166db6f4344d26ec329/image.png",
             "nordnetID": "16698390",
-            "nordnetName": "SHELF DRILLING"
+            "nordnetName": "SHELF DRILLING",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "SHELF DRILLING NO",
@@ -3244,7 +3514,8 @@
             "bransje": "olje & gass - utstyr og tjenester",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/10xoIUyi4eDLzqLWOpps14/6f19f81c37a18166db6f4344d26ec329/image.png",
             "nordnetID": "17884399",
-            "nordnetName": "SHELF DRILLING (NORTH SEA), LTD."
+            "nordnetName": "SHELF DRILLING (NORTH SEA), LTD.",
+            "market": "Euronext Growth Oslo"
         },
         {
             "name": "SIEM OFFSHORE",
@@ -3256,7 +3527,8 @@
             "bransje": "olje & gass - utstyr og tjenester",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/7rX6WGicClisCzIWM7TGg3/da881eea70397a6e0ed9010a6c7636bd/image.png",
             "nordnetID": "17515778",
-            "nordnetName": "SIEM OFFSHORE"
+            "nordnetName": "SIEM OFFSHORE",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "SIKRI GROUP",
@@ -3267,7 +3539,8 @@
             "sektor": "teknologi",
             "bransje": "it - tjenester",
             "nordnetID": "17788215",
-            "nordnetName": "SIKRI GROUP ASA"
+            "nordnetName": "SIKRI GROUP ASA",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "SKANDIA GREENPOWER",
@@ -3278,7 +3551,8 @@
             "sektor": "infrastruktur",
             "bransje": "nytte - fornybar",
             "nordnetID": "17441647",
-            "nordnetName": "SKANDIA GREENPOWER AS"
+            "nordnetName": "SKANDIA GREENPOWER AS",
+            "market": "Euronext Growth Oslo"
         },
         {
             "name": "SKUE SPAREBANK",
@@ -3290,7 +3564,8 @@
             "bransje": "banker - regionale",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/6niX4Bx2GuUM6r6S3q6K7d/186416394a079d7aa23555a7303d2c17/skue.png",
             "nordnetID": "16105585",
-            "nordnetName": "SKUE SPAREBANK"
+            "nordnetName": "SKUE SPAREBANK",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "SMARTCRAFT",
@@ -3301,7 +3576,8 @@
             "sektor": "teknologi",
             "bransje": "programvare - applikasjoner",
             "nordnetID": "17520015",
-            "nordnetName": "SMARTCRAFT ASA"
+            "nordnetName": "SMARTCRAFT ASA",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "SMARTOPTICS GROUP",
@@ -3313,7 +3589,8 @@
             "bransje": "kommunikasjonsutstyr",
             "icon": "https://cdn.prod.nntech.io/cms-proxy/6xe8ehctp75g/64qOeWgXDkb3NngE1voFt/536ecacd90469f22419b4b1cd9e79298/image.png",
             "nordnetID": "17516278",
-            "nordnetName": "SMARTOPTICS GROUP AS"
+            "nordnetName": "SMARTOPTICS GROUP AS",
+            "market": "Euronext Growth Oslo"
         },
         {
             "name": "SOFTOX SOLUTIONS",
@@ -3325,7 +3602,8 @@
             "bransje": "bioteknologi",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/1lpXied0yGAJLbQdDgKURY/05a8dbc3671ca0426bfc396d9d44b60b/image.png",
             "nordnetID": "16857982",
-            "nordnetName": "SOFTOX SOLUTIONS"
+            "nordnetName": "SOFTOX SOLUTIONS",
+            "market": "Euronext Growth Oslo"
         },
         {
             "name": "SOGN SPAREBANK",
@@ -3337,7 +3615,8 @@
             "bransje": "banker - regionale",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/7cMV6dxLSbirtHy3KQ4fQb/141194072453382b70cdf90c420da1e3/image.png",
             "nordnetID": "16105431",
-            "nordnetName": "SOGN SPAREBANK"
+            "nordnetName": "SOGN SPAREBANK",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "SOLSTAD OFFSHORE",
@@ -3349,7 +3628,8 @@
             "bransje": "sj\u00f8fart",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/22Gr7a5xXRXpg65y03dVTm/62e87e830c26d4310dc9a4dc0c630b4d/image.png",
             "nordnetID": "16105574",
-            "nordnetName": "SOLSTAD OFFSHORE"
+            "nordnetName": "SOLSTAD OFFSHORE",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "SPARBNK 68 GR NORD",
@@ -3361,7 +3641,8 @@
             "bransje": "banker - regionale",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/1o7OGWA37qGpr7va28A8B2/2f43e312b316edf53d706ce3dd95f0d2/image.png",
             "nordnetID": "17311345",
-            "nordnetName": "SPAREBANK 68 GRADER NORD"
+            "nordnetName": "SPAREBANK 68 GRADER NORD",
+            "market": "Euronext Growth Oslo"
         },
         {
             "name": "SPAREBANK 1 SMN",
@@ -3373,7 +3654,8 @@
             "bransje": "banker - regionale",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/3j7HBuu20BQs8i4gUjj40Z/a0f00ddb7f98a305104ca32e1c30a681/image.png",
             "nordnetID": "16105415",
-            "nordnetName": "SPAREBANK 1 SMN"
+            "nordnetName": "SPAREBANK 1 SMN",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "SPAREBANK 1 SR-BK",
@@ -3385,7 +3667,8 @@
             "bransje": "banker - regionale",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/3j7HBuu20BQs8i4gUjj40Z/a0f00ddb7f98a305104ca32e1c30a681/image.png",
             "nordnetID": "16105330",
-            "nordnetName": "SPAREBANK 1 SR-BANK"
+            "nordnetName": "SPAREBANK 1 SR-BANK",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "SPAREBANK 1 S\u00d8R\u00d8",
@@ -3397,7 +3680,8 @@
             "bransje": "banker - regionale",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/3j7HBuu20BQs8i4gUjj40Z/a0f00ddb7f98a305104ca32e1c30a681/image.png",
             "nordnetID": "16105417",
-            "nordnetName": "SPAREBANK 1 S\u00d8R\u00d8ST-NORGE"
+            "nordnetName": "SPAREBANK 1 S\u00d8R\u00d8ST-NORGE",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "SPAREBANKEN M\u00d8RE",
@@ -3409,7 +3693,8 @@
             "bransje": "banker - regionale",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/4zHaRfFgRXpsytQSMkcSqI/dc4790adc5d3fe6e232839cb340d5ec6/image.png",
             "nordnetID": "17739816",
-            "nordnetName": "SPAREBANKEN M\u00d8RE"
+            "nordnetName": "SPAREBANKEN M\u00d8RE",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "SPAREBANKEN S\u00d8R",
@@ -3421,7 +3706,8 @@
             "bransje": "banker - regionale",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/2LgEfPtoSnePfC1qjMHjur/5070fcfb661ec37b98c1f48228e55bbd/image.png",
             "nordnetID": "16105581",
-            "nordnetName": "SPAREBANKEN S\u00d8R"
+            "nordnetName": "SPAREBANKEN S\u00d8R",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "SPAREBANKEN VEST",
@@ -3433,7 +3719,8 @@
             "bransje": "banker - regionale",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/2bKeHQcUXPFO3H5BLcMb7M/a0a4eeb1d3057d9b19c32c97b008f476/image.png",
             "nordnetID": "16105421",
-            "nordnetName": "SPAREBANKEN VEST"
+            "nordnetName": "SPAREBANKEN VEST",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "SPAREBANKEN \u00d8ST",
@@ -3445,7 +3732,8 @@
             "bransje": "banker - regionale",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/2P7L7441hJ5HQIXuxZuJzr/ded25eb36b5582955168b4616cd52ffe/image.png",
             "nordnetID": "16105645",
-            "nordnetName": "SPAREBANKEN \u00d8ST"
+            "nordnetName": "SPAREBANKEN \u00d8ST",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "SPBK 1 NORDM\u00d8RE",
@@ -3457,7 +3745,8 @@
             "bransje": "banker - regionale",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/3j7HBuu20BQs8i4gUjj40Z/a0f00ddb7f98a305104ca32e1c30a681/image.png",
             "nordnetID": "16256376",
-            "nordnetName": "SPAREBANK 1 NORDM\u00d8RE"
+            "nordnetName": "SPAREBANK 1 NORDM\u00d8RE",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "SPBK 1 \u00d8STLANDET",
@@ -3469,7 +3758,8 @@
             "bransje": "banker - regionale",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/3j7HBuu20BQs8i4gUjj40Z/a0f00ddb7f98a305104ca32e1c30a681/image.png",
             "nordnetID": "16719249",
-            "nordnetName": "SPAREBANK 1 \u00d8STLANDET"
+            "nordnetName": "SPAREBANK 1 \u00d8STLANDET",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "SPBK1 HELGELAND",
@@ -3481,7 +3771,8 @@
             "bransje": "banker - regionale",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/3j7HBuu20BQs8i4gUjj40Z/a0f00ddb7f98a305104ca32e1c30a681/image.png",
             "nordnetID": "16105591",
-            "nordnetName": "SPAREBANK 1 HELGELAND"
+            "nordnetName": "SPAREBANK 1 HELGELAND",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "SPBK1 NORD-NORGE",
@@ -3493,7 +3784,8 @@
             "bransje": "banker - regionale",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/3j7HBuu20BQs8i4gUjj40Z/a0f00ddb7f98a305104ca32e1c30a681/image.png",
             "nordnetID": "16105416",
-            "nordnetName": "SPAREBANK 1 NORD-NORGE"
+            "nordnetName": "SPAREBANK 1 NORD-NORGE",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "SPBK1 RINGERIKE",
@@ -3505,7 +3797,8 @@
             "bransje": "banker - regionale",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/3j7HBuu20BQs8i4gUjj40Z/a0f00ddb7f98a305104ca32e1c30a681/image.png",
             "nordnetID": "16105430",
-            "nordnetName": "SPAREBANK 1 RINGERIKE HADELAND"
+            "nordnetName": "SPAREBANK 1 RINGERIKE HADELAND",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "SPBK1 \u00d8STFOLD AKE",
@@ -3517,7 +3810,8 @@
             "bransje": "banker - regionale",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/3j7HBuu20BQs8i4gUjj40Z/a0f00ddb7f98a305104ca32e1c30a681/image.png",
             "nordnetID": "16105639",
-            "nordnetName": "SPAREBANK 1 \u00d8STFOLD AKERSHUS"
+            "nordnetName": "SPAREBANK 1 \u00d8STFOLD AKERSHUS",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "SPOTLIO",
@@ -3529,7 +3823,8 @@
             "bransje": "programvare - applikasjoner",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/4MkksuqQfcFL5iAkq6xY4I/0e653d7565508610c0e3748d57de39ff/image.png",
             "nordnetID": "17400032",
-            "nordnetName": "SPOTLIO AS"
+            "nordnetName": "SPOTLIO AS",
+            "market": "Euronext Growth Oslo"
         },
         {
             "name": "STAINLESS TANKERS",
@@ -3540,7 +3835,8 @@
             "sektor": "-",
             "bransje": "-",
             "nordnetID": "18010214",
-            "nordnetName": "STAINLESS TANKERS ASA"
+            "nordnetName": "STAINLESS TANKERS ASA",
+            "market": "Euronext Growth Oslo"
         },
         {
             "name": "STANDARD SUPPLY",
@@ -3552,7 +3848,8 @@
             "bransje": "sj\u00f8fart",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/2k5Ed63MTexEliNlTiRhwn/960011b228281cda8ce52b39223887bf/Standard_Supply.webp",
             "nordnetID": "17790875",
-            "nordnetName": "STANDARD SUPPLY AS"
+            "nordnetName": "STANDARD SUPPLY AS",
+            "market": "Euronext Growth Oslo"
         },
         {
             "name": "STATT TORSK",
@@ -3564,7 +3861,8 @@
             "bransje": "landbruksprodukter",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/4Rnufk3dIh0WtcTG8Kpa5I/79c23e72a8f1da620d471a04bb37d3c2/Statt_Torsk.jpeg",
             "nordnetID": "16700542",
-            "nordnetName": "STATT TORSK ASA"
+            "nordnetName": "STATT TORSK ASA",
+            "market": "Euronext Growth Oslo"
         },
         {
             "name": "STOLT-NIELSEN",
@@ -3576,7 +3874,8 @@
             "bransje": "sj\u00f8fart",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/DtRdQViTShdFJ1aowSdrd/624df5efbb4688ed70daf5f0626cd64c/image.png",
             "nordnetID": "16105428",
-            "nordnetName": "STOLT-NIELSEN"
+            "nordnetName": "STOLT-NIELSEN",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "STOREBRAND",
@@ -3588,7 +3887,8 @@
             "bransje": "finansielle konglomerater",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/1NDu5Xi5ntVlFMo9I06TKe/270d06a4a5193bf1fa076fc5258ab2a7/Storebrand.jpg",
             "nordnetID": "16105685",
-            "nordnetName": "STOREBRAND"
+            "nordnetName": "STOREBRAND",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "STRONGPOINT",
@@ -3600,7 +3900,8 @@
             "bransje": "forretningsutstyr",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/4R4Mu91QUM6AJrWqUMSOhQ/e80ac6763a707a68e1380e990aab03d6/image.png",
             "nordnetID": "16105598",
-            "nordnetName": "STRONGPOINT"
+            "nordnetName": "STRONGPOINT",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "SUBSEA 7",
@@ -3612,7 +3913,8 @@
             "bransje": "olje & gass - utstyr og tjenester",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/1P8fH7WO0ATPyg8uVHfMH5/974bc360b09e7454f4d46060ad8267cf/image.png",
             "nordnetID": "16105569",
-            "nordnetName": "SUBSEA 7"
+            "nordnetName": "SUBSEA 7",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "SUNNDAL SPAREBANK",
@@ -3624,7 +3926,8 @@
             "bransje": "banker - regionale",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/6eKcJvAQq3rNskjELTZLNb/eefde6f13e6d884e58b890b981ae8cfe/image.png",
             "nordnetID": "16199579",
-            "nordnetName": "SUNNDAL SPAREBANK"
+            "nordnetName": "SUNNDAL SPAREBANK",
+            "market": "Euronext Growth Oslo"
         },
         {
             "name": "TECHSTEP",
@@ -3635,7 +3938,8 @@
             "sektor": "teknologi",
             "bransje": "programvare - applikasjoner",
             "nordnetID": "18054417",
-            "nordnetName": "TECHSTEP"
+            "nordnetName": "TECHSTEP",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "TECO 2030",
@@ -3647,7 +3951,8 @@
             "bransje": "spesialindustrimaskiner",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/746hnCUvbKI3Bmzldxxq8N/34a0cc1aae4813717c95013a2db15005/image.png",
             "nordnetID": "17363130",
-            "nordnetName": "TECO 2030"
+            "nordnetName": "TECO 2030",
+            "market": "Euronext Growth Oslo"
         },
         {
             "name": "TEKNA HOLDING",
@@ -3659,7 +3964,8 @@
             "bransje": "spesialkjemikalier",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/6faYJdpKbqUaINyF5zmBcw/9e42b29cee8d866df115e7d1d8e3cd58/tekna.png",
             "nordnetID": "17473119",
-            "nordnetName": "TEKNA HOLDING ASA"
+            "nordnetName": "TEKNA HOLDING ASA",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "TELENOR",
@@ -3671,7 +3977,8 @@
             "bransje": "telekommunikasjon",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/4x7ruz4V8IMVAGAKIrVdku/03f9b57ab4963350cb5768b693249186/image.png",
             "nordnetID": "16105595",
-            "nordnetName": "TELENOR"
+            "nordnetName": "TELENOR",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "TGS",
@@ -3683,7 +3990,8 @@
             "bransje": "olje & gass - utstyr og tjenester",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/quLo4LaSmK8MrBfZE0h4G/2a41587e1bc0d2d0e90acdf28cdada03/image.png",
             "nordnetID": "16105575",
-            "nordnetName": "TGS ASA"
+            "nordnetName": "TGS ASA",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "THE KINGFISH COMP",
@@ -3695,7 +4003,8 @@
             "bransje": "pakket mat",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/7ao0yN1KwT5NTeoJuKHIQP/edb35c26ec885c00939a52078951befa/The_Kingfish_Company.jpeg",
             "nordnetID": "17392206",
-            "nordnetName": "THE KINGFISH COMPANY"
+            "nordnetName": "THE KINGFISH COMPANY",
+            "market": "Euronext Growth Oslo"
         },
         {
             "name": "THOR MEDICAL",
@@ -3707,7 +4016,8 @@
             "bransje": "bioteknologi",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/B8dP74m2NRCTIibYeMbGd/d00ad2597aa7c5e51ca1ccc331d49fce/Screenshot_2023-01-27_at_12.42.39.png",
             "nordnetID": "16156313",
-            "nordnetName": "THOR MEDICAL ASA"
+            "nordnetName": "THOR MEDICAL ASA",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "TIETOEVRY",
@@ -3719,7 +4029,8 @@
             "bransje": "it - tjenester",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/5t03R6ILWpvA5HYJwJiTBE/80e5fda0e9f38af6760d1e13780166b7/image.png",
             "nordnetID": "16100871",
-            "nordnetName": "TietoEVRY Corporation"
+            "nordnetName": "TietoEVRY Corporation",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "TOMRA SYSTEMS",
@@ -3731,7 +4042,8 @@
             "bransje": "avfallsh\u00e5ndtering",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/2TX8onwqIucLNJTyATgIKL/9f1763720e720e6ebad146c624f6bfd9/image.png",
             "nordnetID": "17775123",
-            "nordnetName": "TOMRA SYSTEMS"
+            "nordnetName": "TOMRA SYSTEMS",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "TOTENS SPAREBANK",
@@ -3743,7 +4055,8 @@
             "bransje": "banker - regionale",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/CUROdm5nzW5uaiTldfcOq/b9beaa4e24ebf5a867ff577d06d0e627/image.png",
             "nordnetID": "16105425",
-            "nordnetName": "TOTENS SPAREBANK"
+            "nordnetName": "TOTENS SPAREBANK",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "TREASURE",
@@ -3755,7 +4068,8 @@
             "bransje": "kapitalforvaltning",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/4jnC46RE5dU7jQerSO1SlU/20f458e89f2240e2f74dbbc69695e36a/image.png",
             "nordnetID": "16561379",
-            "nordnetName": "TREASURE"
+            "nordnetName": "TREASURE",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "TYSNES SPAREBANK",
@@ -3767,7 +4081,8 @@
             "bransje": "banker - regionale",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/4hROWAJ7sfJwfavzg7hQuU/54c57f9009566f76e67b6b2a705158a6/image.png",
             "nordnetID": "16391948",
-            "nordnetName": "TYSNES SPAREBANK"
+            "nordnetName": "TYSNES SPAREBANK",
+            "market": "Euronext Growth Oslo"
         },
         {
             "name": "ULTIMOVACS",
@@ -3779,7 +4094,8 @@
             "bransje": "bioteknologi",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/2iahAN8UWUlMk5YOFPwlvR/5a7daf89901674e183c8922cd6259765/image.png",
             "nordnetID": "17058977",
-            "nordnetName": "ULTIMOVACS"
+            "nordnetName": "ULTIMOVACS",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "UNIVID",
@@ -3791,7 +4107,8 @@
             "bransje": "programvare - infrastruktur",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/ftl7kuC8OCUOKHCVUlSFf/bd9e01d283047f5bb211c3066fe9181d/image.png",
             "nordnetID": "16105696",
-            "nordnetName": "UNIVID ASA"
+            "nordnetName": "UNIVID ASA",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "VEIDEKKE",
@@ -3803,7 +4120,8 @@
             "bransje": "bygg og anlegg",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/3NoFaG2w1SgV0O2Tj0Gb0l/61ef428c3b4cff7877821ba4dcfc6118/image.png",
             "nordnetID": "16105686",
-            "nordnetName": "VEIDEKKE"
+            "nordnetName": "VEIDEKKE",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "VISTIN PHARMA",
@@ -3815,7 +4133,8 @@
             "bransje": "medsinprodusenter - spesialist og generell",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/2PPso8w1ETkRV9KjKiqZmF/8bbce23d2710cb3ceb07b56dd568281d/image.png",
             "nordnetID": "16411097",
-            "nordnetName": "VISTIN PHARMA"
+            "nordnetName": "VISTIN PHARMA",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "VOLUE",
@@ -3827,7 +4146,8 @@
             "bransje": "programvare - applikasjoner",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/5H39f5jiDC3rqcD316yEiA/1a2e006af96836a03978d21ce636d9e4/image.png",
             "nordnetID": "17367126",
-            "nordnetName": "VOLUE ASA"
+            "nordnetName": "VOLUE ASA",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "VOSS VEKSEL OGLAND",
@@ -3838,7 +4158,8 @@
             "sektor": "finansielle tjenester",
             "bransje": "banker - regionale",
             "nordnetID": "16105690",
-            "nordnetName": "VOSS VEKSEL- OG LANDMANDSBANK"
+            "nordnetName": "VOSS VEKSEL- OG LANDMANDSBANK",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "VOW",
@@ -3850,7 +4171,8 @@
             "bransje": "forurensnings- og behandlingskontroll",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/27ulAEf2f1AS6k4EYZP8zE/a9aa55d4113238a4c0926fb7cb8da812/image.png",
             "nordnetID": "16280186",
-            "nordnetName": "VOW"
+            "nordnetName": "VOW",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "VOW GREEN METALS",
@@ -3862,7 +4184,8 @@
             "bransje": "avfallsh\u00e5ndtering",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/6nFzJhp4z7N1CvwjD9qS2Q/66323c7f802965b0d85c16ac6d2ca8e2/image.png",
             "nordnetID": "17539752",
-            "nordnetName": "VOW GREEN METALS AS"
+            "nordnetName": "VOW GREEN METALS AS",
+            "market": "Euronext Growth Oslo"
         },
         {
             "name": "V\u00c5R ENERGI",
@@ -3874,7 +4197,8 @@
             "bransje": "olje & gass - e&p",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/CADlRxr76FvYkHzlyV9K4/f65c9427b674ea0542c7f84b6a26f9d3/image.png",
             "nordnetID": "17686528",
-            "nordnetName": "V\u00c5R ENERGI ASA"
+            "nordnetName": "V\u00c5R ENERGI ASA",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "WALLENIUS WILHELMS",
@@ -3886,7 +4210,8 @@
             "bransje": "sj\u00f8fart",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/1JFQkm7gTNhkpVmtoyhh90/553459c0f683c430138d1483ea898e9b/image.png",
             "nordnetID": "16105255",
-            "nordnetName": "WALLENIUS WILHELMSEN"
+            "nordnetName": "WALLENIUS WILHELMSEN",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "WEBSTEP",
@@ -3898,7 +4223,8 @@
             "bransje": "it - tjenester",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/5VTGcKZosnx8KTYT1Aczpu/52bc78de6d4037b466d1f6083a521c52/image.png",
             "nordnetID": "16159227",
-            "nordnetName": "WEBSTEP"
+            "nordnetName": "WEBSTEP",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "WESTERN BULK CHART",
@@ -3910,7 +4236,8 @@
             "bransje": "sj\u00f8fart",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/2yicbUX5DWQcctoeexrbXx/ba25016d799a48242bf3b4340d5b1793/image.png",
             "nordnetID": "16606769",
-            "nordnetName": "WESTERN BULK CHARTERING AS"
+            "nordnetName": "WESTERN BULK CHARTERING AS",
+            "market": "Euronext Growth Oslo"
         },
         {
             "name": "WILH. WILHELMSEN A",
@@ -3922,7 +4249,8 @@
             "bransje": "sj\u00f8fart",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/6VZ4nEf6dnCVsoUkF1mAOU/83984601de28fc9351c02a3f52a7c589/Screenshot_2023-01-28_at_20.55.29.png",
             "nordnetID": "16105691",
-            "nordnetName": "WILH. WILHELMSEN HOLDING SER. A"
+            "nordnetName": "WILH. WILHELMSEN HOLDING SER. A",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "WILH. WILHELMSEN B",
@@ -3934,7 +4262,8 @@
             "bransje": "sj\u00f8fart",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/6VZ4nEf6dnCVsoUkF1mAOU/83984601de28fc9351c02a3f52a7c589/Screenshot_2023-01-28_at_20.55.29.png",
             "nordnetID": "16105692",
-            "nordnetName": "WILH. WILHELMSEN HOLDING SER. B"
+            "nordnetName": "WILH. WILHELMSEN HOLDING SER. B",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "WPU - WASTE PLASTI",
@@ -3945,7 +4274,8 @@
             "sektor": "industri",
             "bransje": "avfallsh\u00e5ndtering",
             "nordnetID": "17593738",
-            "nordnetName": "WPU - WASTE PLASTIC UPCYCLING A/S"
+            "nordnetName": "WPU - WASTE PLASTIC UPCYCLING A/S",
+            "market": "Euronext Growth Oslo"
         },
         {
             "name": "XPLORA TECHNOLOGIE",
@@ -3957,7 +4287,8 @@
             "bransje": "netthandel",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/5vTSjXS2y4DpZNSfMzkWW/3a0e07022662ac5f53d2dbb9de4368f9/image.png",
             "nordnetID": "17383198",
-            "nordnetName": "XPLORA TECHNOLOGIES"
+            "nordnetName": "XPLORA TECHNOLOGIES",
+            "market": "Euronext Growth Oslo"
         },
         {
             "name": "XXL",
@@ -3969,7 +4300,8 @@
             "bransje": "spesialist detaljhandel",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/7bBlF8PORQ6EoMo7vNubS3/c0cdcc1b9307b222c7fcddaa405c0211/image.png",
             "nordnetID": "16325339",
-            "nordnetName": "XXL"
+            "nordnetName": "XXL",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "YARA INTERNATIONAL",
@@ -3981,7 +4313,8 @@
             "bransje": "jorbruksinnsatser",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/46gwdAXGGVqahid9DtQ3e3/a167a204c11ff86753e92ac9615eb6d0/image.png",
             "nordnetID": "16105608",
-            "nordnetName": "YARA INTERNATIONAL"
+            "nordnetName": "YARA INTERNATIONAL",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "ZALARIS",
@@ -3993,7 +4326,8 @@
             "bransje": "personal- og arbeidskraftformidling",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/73wtJNrFD0UgB2mtdSHr0I/bc6d27d5c659b2c164aafa4fef4f2061/image.png",
             "nordnetID": "16299948",
-            "nordnetName": "ZALARIS"
+            "nordnetName": "ZALARIS",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "ZAPTEC",
@@ -4005,7 +4339,8 @@
             "bransje": "bildeler",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/HC6HEobqxUCq4KZPkfCol/e821249848499b713fa980b40af383e0/image.png",
             "nordnetID": "16478530",
-            "nordnetName": "ZAPTEC ASA"
+            "nordnetName": "ZAPTEC ASA",
+            "market": "Oslo B\u00f8rs"
         },
         {
             "name": "ZENITH ENERGY",
@@ -4016,7 +4351,8 @@
             "sektor": "energi",
             "bransje": "olje & gass - e&p",
             "nordnetID": "18141360",
-            "nordnetName": "ZENITH ENERGY"
+            "nordnetName": "ZENITH ENERGY",
+            "market": "Euronext Growth Oslo"
         },
         {
             "name": "ZWIPE",
@@ -4028,7 +4364,8 @@
             "bransje": "programvare - infrastruktur",
             "icon": "https://images.ctfassets.net/6xe8ehctp75g/59qtYLKDg40taCDZVoN4cF/8ce15446a996a66928b9241ee5b5f95d/image.png",
             "nordnetID": "16335884",
-            "nordnetName": "ZWIPE"
+            "nordnetName": "ZWIPE",
+            "market": "Euronext Growth Oslo"
         }
     ]
 }
