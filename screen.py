@@ -373,7 +373,7 @@ class MarketScreener:
             self.json_response = {'ticker': stock, 'name': stockname, 'rs': rs, 'header': header, 'header url': mapped_ticker['nordnet'], 'body': body, 'fields': [ {'title': 'Adj Close', 'field': str(df["Adj Close"].iloc[-1].round(2))+"kr\n"+str(priceChange)+"%"}, {'title': 'Closing Range', 'field': str(closingRange)}, {'title': 'vwap', 'field': str(vwap)},\
                         {'title': 'Volume SMA20', 'field': str(volumeChange)+'%'}, {'title': 'RS', 'field': str(rs.round(2))}], \
                         'market': market, 'yahoo': "https://finance.yahoo.com/chart/"+stock, \
-                        'minervini': trend}
+                        'minervini': trend, 'vwap': vwap}
             #################################################################### discord embed ###############################
             if pivotPoint != None:
                 gsheet_dict['PivotPoint'] = True

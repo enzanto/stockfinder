@@ -97,7 +97,7 @@ async def report_db(tickers, minervini=False):
             # else:
                 # print("today is newest")
             if minervini:
-                if json_data['minervini'] < 7:
+                if json_data['minervini'] < 7 or json_data['vwap'] < 1:
                     # print(f"{json_data['ticker']} skipped. minervini score: {json_data['minervini']}")
                     return
                 else:
