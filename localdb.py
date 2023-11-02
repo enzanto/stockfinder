@@ -87,7 +87,7 @@ class tickermap:
         json_data = Column(JSON)
 
     def __init__(self):
-        engine=create_engine()
+        engine=create_engine(settings.db_connect_address)
         Base.metadata.create_all(engine)
         Session = sessionmaker(bind=engine)
         self.session=Session()
@@ -112,7 +112,7 @@ class userdata:
         json_data = Column(JSON)
 
     def __init__(self):
-        engine=create_engine()
+        engine=create_engine(settings.db_connect_address)
         Base.metadata.create_all(engine)
         Session = sessionmaker(bind=engine)
         self.session=Session()
@@ -146,7 +146,7 @@ class scanReport:
         pivots = Column(LargeBinary)
 
     def __init__(self):
-        engine=create_engine()
+        engine=create_engine(settings.db_connect_address)
         Base.metadata.create_all(engine)
         Session = sessionmaker(bind=engine)
         self.session=Session()
@@ -179,7 +179,7 @@ class portfolioReport:
         pivots = Column(LargeBinary)
 
     def __init__(self):
-        engine=create_engine()
+        engine=create_engine(settings.db_connect_address)
         Base.metadata.create_all(engine)
         Session = sessionmaker(bind=engine)
         self.session=Session()
