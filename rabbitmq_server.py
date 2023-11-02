@@ -70,6 +70,12 @@ class webscrape_nordnet(object):
                 ticker['icon'] = response_filtered['instrument_icon']
             ticker['nordnetID'] = str(response_filtered['instrument_id'])
             ticker['nordnetName'] = response_filtered['display_name']
+            try:
+                testurl =  f"https://www.nordnet.no/market/stocks/{ticker['nordnetID']}-{ticker['nordnetName'][0]}"
+                testresponse = self.session.get(testurl)
+                ticker['nordnet'] = testresponse.url 
+            except:
+                ticker['nordnet'] = "http://www.nordnet.no"
         except Exception as e:
             await rabbit_logger(f"{ticker['ticker']} failed")
             print(e)
