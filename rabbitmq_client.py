@@ -166,7 +166,7 @@ class rabbitmq(object):
             correlation_id = str(uuid.uuid4())
             future = self.loop.create_future()
             self.futures[correlation_id] = future
-            order = {'order': 'build report', 'request': request_dict, 'rsi': rsi}
+            order = {'order': 'portfolio report', 'request': request_dict, 'rsi': rsi}
             json_object = json.dumps(order, indent=4)
             await self.channel.default_exchange.publish(
                 aio_pika.Message(
