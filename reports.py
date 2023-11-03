@@ -90,7 +90,7 @@ async def report_db(tickers, minervini=False):
                 # print("today is not newest")
                 await work.build_report(i, screener.indexRSI)
                 reportdate, json_data, investtech, pivots = report_db.get_report_data(ticker=ticker)
-            elif reportdate.time() < time(17,15):
+            elif reportdate.time() < time(16,15):
                 # print("updating report,")
                 await work.build_report(i, screener.indexRSI)
                 reportdate, json_data, investtech, pivots = report_db.get_report_data(ticker=ticker)
@@ -156,7 +156,7 @@ async def report_portfolio(tickers):
             print("today is not newest")
             await work.portfolio_report(i)
             reportdate, json_data = report_db.get_report_data(ticker=ticker)
-        elif reportdate.time() < time(16,45):
+        elif reportdate.time() < time(15,45):
             print("updating report,")
             await work.portfolio_report(i)
             reportdate, json_data = report_db.get_report_data(ticker=ticker)

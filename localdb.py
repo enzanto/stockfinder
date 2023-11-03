@@ -87,24 +87,25 @@ class tickermap:
         json_data = Column(JSON)
 
     def __init__(self):
-        engine=create_engine(settings.db_connect_address)
-        Base.metadata.create_all(engine)
-        Session = sessionmaker(bind=engine)
-        self.session=Session()
+        # self.engine=create_engine(settings.db_connect_address)
+        self.engine = settings.engine
+        Base.metadata.create_all(self.engine)
     def insert_map_data(self,ticker, json_data):
-        record = self.session.query(self.jsonMap).filter_by(ticker=ticker.lower()).first()
-        if record:
-            record.json_data = json_data
-        else:
-            new_record = self.jsonMap(ticker=ticker.lower(), json_data=json_data)
-            self.session.add(new_record)
-        self.session.commit()
+        with sessionmaker(bind=self.engine)() as session:
+            record = self.session.query(self.jsonMap).filter_by(ticker=ticker.lower()).first()
+            if record:
+                record.json_data = json_data
+            else:
+                new_record = self.jsonMap(ticker=ticker.lower(), json_data=json_data)
+                session.add(new_record)
+            session.commit()
     def get_map_data(self,ticker):
-        record = self.session.query(self.jsonMap).filter_by(ticker=ticker).first()
-        if record:
-            return record.json_data
-        else:
-            return None
+        with sessionmaker(bind=self.engine)() as session:
+            record = session.query(self.jsonMap).filter_by(ticker=ticker).first()
+            if record:
+                return record.json_data
+            else:
+                return None
 class userdata:
     class userdata(Base):
         __tablename__ = 'userdata'
@@ -112,10 +113,18 @@ class userdata:
         json_data = Column(JSON)
 
     def __init__(self):
-        engine=create_engine(settings.db_connect_address)
+        # engine=create_engine(settings.db_connect_address)
+        engine = settings.engine
         Base.metadata.create_all(engine)
         Session = sessionmaker(bind=engine)
         self.session=Session()
+    def get_userids(self):
+        tuple_list = self.session.query(self.userdata.json_data).all()
+        json_list = []
+        for row in tuple_list:
+            json_data = row[0]
+            json_list.append(json_data)
+        return json_list 
     def insert_portfolio_data(self,userid, json_data):
         required_keys = ['userid', 'portfolio','watchlist']
         for key in required_keys:
@@ -146,28 +155,30 @@ class scanReport:
         pivots = Column(LargeBinary)
 
     def __init__(self):
-        engine=create_engine(settings.db_connect_address)
-        Base.metadata.create_all(engine)
-        Session = sessionmaker(bind=engine)
-        self.session=Session()
+        # self.engine=create_engine(settings.db_connect_address)
+        self.engine = settings.engine
+        Base.metadata.create_all(self.engine)
+
 
     def insert_report_data(self,ticker, json_data, image, investtech_img = None):
-        record = self.session.query(self.report).filter_by(ticker=ticker).first()
-        if record:
-            record.json_data = json_data
-            record.date_col = datetime.now(tz)
-            record.investtech = investtech_img
-            record.pivots = image
-        else:
-            new_record = self.report(ticker=ticker, json_data=json_data, date_col=datetime.now(tz), investtech=investtech_img, pivots=image)
-            self.session.add(new_record)
-        self.session.commit()
+        with sessionmaker(bind=self.engine)() as session:
+            record = session.query(self.report).filter_by(ticker=ticker).first()
+            if record:
+                record.json_data = json_data
+                record.date_col = datetime.now(tz)
+                record.investtech = investtech_img
+                record.pivots = image
+            else:
+                new_record = self.report(ticker=ticker, json_data=json_data, date_col=datetime.now(tz), investtech=investtech_img, pivots=image)
+                session.add(new_record)
+            session.commit()
     def get_report_data(self, ticker):
-        record = self.session.query(self.report).filter_by(ticker=ticker).first()
-        if record:
-            return record.date_col, record.json_data, record.investtech, record.pivots
-        else:
-            return None, None, None, None
+        with sessionmaker(bind=self.engine)() as session:
+            record = session.query(self.report).filter_by(ticker=ticker).first()
+            if record:
+                return record.date_col, record.json_data, record.investtech, record.pivots
+            else:
+                return None, None, None, None
 
 class portfolioReport:
     class report(Base):
@@ -179,7 +190,8 @@ class portfolioReport:
         pivots = Column(LargeBinary)
 
     def __init__(self):
-        engine=create_engine(settings.db_connect_address)
+        # engine=create_engine(settings.db_connect_address)
+        engine = settings.engine
         Base.metadata.create_all(engine)
         Session = sessionmaker(bind=engine)
         self.session=Session()

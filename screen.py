@@ -498,7 +498,50 @@ async def main():
     await testing.rabbit.disconnect()
     print("ALL DONE GOING TO BED")
 
+async def portfolio_report():
+    from reports import report_portfolio 
+    testing = MarketScreener()
+    userdata_db = localdb.userdata()
+    userdata = userdata_db.get_userids()
+    print(userdata)
+    embed_dict = []
+    for user in userdata:
+        tickerlist = []
+        if user['portfolio'] == None:
+            continue
+        for i in user['portfolio']:
+            print(i)
+            tickerlist.append(i)
+        embeds= await(report_portfolio(tickerlist))
+        embed_dict.append({'user': user['userid'], 'embeds': embeds})
+    #fetch from DB
+
+
+    @bot.event
+    async def on_ready():
+        for user in embed_dict:
+            discord_user = await bot.fetch_user(user['user'])
+        logger.info("Bot is ready")
+        length=6
+        embeds = user['embeds']
+        if len(embeds) > 0:
+            for i in range(0, len(embeds), length):
+                x=i
+                emb = embeds[x:x+length]
+                await discord_user.send(embeds=emb, silent=True)
+        logger.info("done sending")
+        await asyncio.sleep(30)
+        await bot.close()
+
+    await bot.start(discord_token)
+    print("ALL DONE GOING TO BED")
+
 if __name__ == "__main__":
     logger = settings.logging.getLogger("bot")
     logger.info("test")
-    asyncio.run(main())
+    scan = os.environ['SCAN']
+    if scan == "minervini":
+        asyncio.run(main())
+    elif scan == "portfolio":
+        print(scan)
+        asyncio.run(portfolio_report())
