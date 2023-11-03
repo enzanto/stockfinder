@@ -74,7 +74,7 @@ class MarketScreener:
         #     data = json.load(mapfile)
         #     self.tickermap = data['stocks']
         self.tickermapdb = localdb.tickermap()
-        self.result = {"result": [], "metadata": {"time": None}}
+        self.result = {"result": [], 'portfolio': [],"metadata": {"time": None}}
         self.indexRSI = None
         self.stocklist = pd.DataFrame(columns = ['Name', 'Symbol', 'Market'])
         self.exportdf = pd.DataFrame(columns = ['Stock', 'Ticker', 'Adj Close', 'Change', 'Closing range', 'vwap', 'Volume vs sma20', 'RS', 'Market', 'Yahoo'])
@@ -244,56 +244,56 @@ class MarketScreener:
 
     #json response, with header and body. fields: ema 8, ema21, sma50, trailing stop, volume sma
     async def portfolio_scan(self, i, return_text=False):
-            x = i
-            notfound=False
-            watchlist = False
             if self.indexRSI == None:
                 self.get_osebx_rsi()
             today = datetime.date.today()
-            # get from stocklist when doing full scan
-            if type(i) == int:
-                    stock = self.stocklist["Symbol"][i]
-                    market = self.stocklist["Market"][i]
-                    stockname = self.stocklist["Name"][i]
-
-            else:
-                try:
-                    stock = i["Symbol"]
-                    market = i["Market"]
-                    stockname = i["Name"]
-                except:
-                    stock = i['ticker']
-                    market = "placeholder"
-                    stockname = i['name']
-                    watchlist = True
+            stock = i['ticker']
+            market = i['market']
+            stockname = i['name']
+            watchlist = True
             mapped_ticker = self.tickermapdb.get_map_data(ticker=stock)
             stock_db = "ticker_" + stock.lower().replace(".","_")
             filename = stock.lower().replace(".","_")+".jpg"
-            filename_investtech = stock.lower().replace(".","_")+"-investtech.png"
             df = pd.read_sql(stock_db,engine, index_col="Date", parse_dates={"Date": {"format": "%d/%m/%y"}})
             emas = [8,21]
             smas = [50]
             fields = []
-            for ema in emas:
-                df[f"EMA_{ema}"]=round(df["Adj Close"].ewm(span=ema,min_periods=ema).mean())
-                fields.append({'title': f"EMA {ema}", "field": df[f"EMA_{ema}"].iloc[-1]})
-            for sma in smas:
-                df[f"SMA_{sma}"]=round(df['Adj Close'].rolling(window=sma).mean(),2)
-                fields.append({'title': f"SMA {sma}", "field": df[f"SMA_{sma}"].iloc[-1]})
-            df['Volume_SMA_20'] = round(df['Volume'].rolling(window=20).mean(),2)
+            score = 0
             price = round(df['Adj Close'].iloc[-1])
+            df['Volume_SMA_20'] = round(df['Volume'].rolling(window=20).mean(),2)
             volumeChange = round(((df['Volume'].iloc[-1] / df['Volume_SMA_20'].iloc[-1]))*100,2)
             priceChange = round(((df['Adj Close'].iloc[-1] / df['Adj Close'].iloc[-2]) -1)*100,2)
             trailing = trailing_stop(df)
+            print("TRAILING", trailing)
+            for ema in emas:
+                df[f"EMA_{ema}"]=round(df["Adj Close"].ewm(span=ema,min_periods=ema).mean())
+                fields.append({'title': f"EMA {ema}", "field": df[f"EMA_{ema}"].iloc[-1]})
+                if price < df[f'EMA_{ema}'].iloc[-1]:
+                    score +=1
+            for sma in smas:
+                df[f"SMA_{sma}"]=round(df['Adj Close'].rolling(window=sma).mean(),2)
+                fields.append({'title': f"SMA {sma}", "field": df[f"SMA_{sma}"].iloc[-1]})
+                if price < df[f'SMA_{sma}'].iloc[-1]:
+                    score +=1
+            try:
+                if price < trailing:
+                    score+=1
+            except:
+                if "Downtrend" in trailing:
+                    score +=1
+            #choose colour for discord
+            
 
-
-            header = f"{today} - {stockname} - {stock}: {price}  {priceChange}%"
+            header = f"{today} - {stockname} - {stock}: {price}kr  {priceChange}%"
             body = f"Daily portfolio report \nchecking against indicators. see fields"
             self.json_portfolio = {'ticker': stock, 'name': stockname, 'header': header, 'header url': mapped_ticker['nordnet'], 'body': body, 'fields': [ \
-                                    {'title': 'Volume SMA20', 'field': str(volumeChange)+'%'}, {'title': 'Trailing Stop', 'field': {trailing}}],\
-                                    'yahoo': "https://finance.yahoo.com/chart/"+stock}
+                                    {'title': 'Volume SMA20', 'field': str(volumeChange)+'%'}, {'title': 'Trailing Stop', 'field': trailing}],\
+                                    'yahoo': "https://finance.yahoo.com/chart/"+stock, 'score': score}
             for field in fields:
                 self.json_portfolio['fields'].append(field)
+            print(self.json_portfolio)
+            if return_text:
+                return self.json_portfolio
     async def scan(self, i, return_text=False):
             x = i
             notfound=False
@@ -313,7 +313,7 @@ class MarketScreener:
                     stockname = i["Name"]
                 except:
                     stock = i['ticker']
-                    market = "placeholder"
+                    market = i['market'] 
                     stockname = i['name']
                     watchlist = True
                 
@@ -420,7 +420,6 @@ class MarketScreener:
             img = discord.File(imageIO, filename=imagename+'.png')
             mbd=discord.Embed(title=stockname, url=url, description=body,color=color)
             mbd.set_image(url="attachment://"+imagename+'.png')
-            logger.info("waypoint")
             try:
                 mbd2=discord.Embed(url=url)
                 investtech_imageIO = io.BytesIO(investtech_image)
@@ -439,6 +438,23 @@ class MarketScreener:
                 response_dict = {"stock":stock,"market": market, "embed": [mbd], "image": [img], "trend": trend}
             self.result['result'].append(response_dict)
             # return response_dict
+    async def create_portfolio_embeds(self, json_data, image=None):
+            stock = json_data['ticker']
+            stockname = json_data['name']
+            header = json_data['header']
+            header_url = json_data['header url']
+            body = json_data['body']
+            fields = json_data['fields']
+            url = json_data['yahoo']
+            score = json_data['score']
+            color = discord.Color.green() if score == 0 else discord.Color.orange() if score < 3 else discord.Color.red()
+            mbd=discord.Embed(title=stockname, url=url, description=body,color=color)
+            mbd.set_author(name=header, url=header_url)
+            for i in fields:
+                mbd.add_field(name=i['title'], value=i['field'])
+            response_dict = {"stock":stock, "embed": [mbd]}
+            self.result['portfolio'].append(response_dict)
+
 
 
 

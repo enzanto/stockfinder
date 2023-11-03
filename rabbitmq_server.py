@@ -265,19 +265,24 @@ async def main(conn) -> None:
                             response = json.dumps({'ticker': ticker, 'status': "an error occured", 'minervini': 0})
 
                     elif n['order'] == "portfolio report":
-                        ticker=n['request']['ticker']
-                        logger.info(f"starting {ticker}")
-                        await localdb.db_updater(ticker,serverside=True)
-                        screener = screen.MarketScreener()
-                        if n['rsi'] == None:
-                            screener.get_osebx_rsi()
-                        else:
-                            screener.indexRSI = n['rsi']
-                        #json response, with header and body. fields: ema 8, ema21, sma50, trailing stop, volume sma
-                        json_result = await screener.portfolio_scan(['request'], return_text=True)
-                        print(json_result)
-                        response = json.dumps({'ticker': ticker, 'status': 'complete'})
-                        portfolio_report.insert_report_data(ticker,json_result)
+                        try:
+                            ticker=n['request']['ticker']
+                            logger.info(f"starting {ticker}")
+                            await localdb.db_updater(ticker,serverside=True)
+                            screener = screen.MarketScreener()
+                            if n['rsi'] == None:
+                                screener.get_osebx_rsi()
+                            else:
+                                screener.indexRSI = n['rsi']
+                            print("test1")
+                            #json response, with header and body. fields: ema 8, ema21, sma50, trailing stop, volume sma
+                            json_result = await screener.portfolio_scan(n['request'], return_text=True)
+                            response = json.dumps({'ticker': ticker, 'status': 'complete'})
+                            print(json_result)
+                            portfolio_report.insert_report_data(ticker,json_result)
+                        except Exception as e:
+                            print(e)
+                            response = json.dumps({'ticker': ticker, 'status': "an error occured", 'minervini': 0})
                     else:
                         await message.reject(requeue=True)
                         continue

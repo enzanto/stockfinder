@@ -11,18 +11,7 @@ tickermapdb = localdb.tickermap()
 userdatadb = localdb.userdata()
 
 logger = settings.logging.getLogger("discord")
-# def get_ticker_map():
-#     with open('data/map.json', 'r') as mapfile:
-#         data=json.load(mapfile)
-#         return data
-# def get_portfolio():
-#     with open('data/portfolio.json', 'r') as watchfile:
-#         data=json.load(watchfile)
-#     return data
-# def update_portfolio(data):
-#     json_object = json.dumps(data, indent=4)
-#     with open('data/portfolio.json', 'w') as outfile:
-#         outfile.write(json_object)
+
 class Portfolio(app_commands.Group):
     @app_commands.command()
     async def add(self,interaction: discord.Interaction, text: str):
@@ -31,7 +20,10 @@ class Portfolio(app_commands.Group):
         discordusername = discorduser.name
         try:
             userdata = userdatadb.get_portfolio_data(discorduser.id) 
+            if userdata['portfolio'] == None:
+                userdata['portfolio'] = []
             portfolio = userdata['portfolio']
+            
             present = True
         except:
             present = False
@@ -56,6 +48,7 @@ class Portfolio(app_commands.Group):
                     portfolio.append(i)
                 else:
                     print(f"{i} already present")
+            print(userdata)
             userdatadb.insert_portfolio_data(discorduser.id, userdata)
         elif present == False:
             print("user not found")
@@ -77,7 +70,7 @@ class Portfolio(app_commands.Group):
         discorduser = interaction.user
         discordusername = discorduser.name
         userdata = userdatadb.get_portfolio_data(discorduser.id)
-        if userdata == None:
+        if userdata == None or userdata['portfolio'] == None:
             await interaction.response.send_message("You have no list", ephemeral=True, silent=True, delete_after=60)
             return
         if discorduser.nick != None:
@@ -106,28 +99,6 @@ class Portfolio(app_commands.Group):
         userdatadb.insert_portfolio_data(userid=discorduser.id, json_data=userdata)
         await interaction.response.send_message(" ".join(result)+f" removed from {discordusername}", ephemeral=True, delete_after=60)
     
-    # @app_commands.command()
-    # async def report(self, interaction: discord.Interaction):
-    #     await interaction.response.send_message("Building Report", ephemeral=True, delete_after=60)
-    #     map = get_ticker_map()
-    #     data = get_portfolio()
-    #     user = next(item for item in data['users'] if item['userid'] == interaction.user.id)
-    #     userlist = user['tickers']
-    #     userlist.sort()
-    #     portfolio = []
-    #     for i in userlist:
-    #         ticker = next(item for item in map['stocks'] if item['ticker'].lower() == i.lower())
-    #         portfolio.append(ticker)
-    #     embeds,embed_images = report_simple(portfolio)
-    #     print(len(embeds))
-    #     await interaction.edit_original_response(content="report in DM")
-    #     length = 6
-    #     for i in range(0, len(embeds), length):
-    #         x=i
-    #         print(i,x)
-    #         emb = embeds[x:x+length]
-    #         im = embed_images[x:x+length]
-    #         await interaction.user.send(embeds=emb, files=im)
 
     @app_commands.command()
     async def report(self, interaction: discord.Interaction):
@@ -137,31 +108,23 @@ class Portfolio(app_commands.Group):
             await interaction.response.send_message("No portfolio found", ephemeral=True, delete_after=60)
         userlist = userdata['portfolio']
         userlist.sort()
-        embeds,images,embeds2,images2 = await report_portfolio(userlist)
+        embeds = await report_portfolio(userlist)
         print("got the stuff")
         print("length: " ,len(embeds))
         await interaction.edit_original_response(content="report in DM")
         length = 6
-        for i in range(0, len(embeds2), length):
+        for i in range(0, len(embeds), length):
             x=i
             print(i,x)
-            emb = embeds2[x:x+length]
-            im = images2[x:x+length]
-            await interaction.user.send(embeds=emb, files=im, silent=True)
-        if len(embeds) > 0:
-            for i in range(0, len(embeds), length):
-                x=i
-                print(i,x)
-                emb = embeds[x:x+length]
-                im = images[x:x+length]
-                await interaction.user.send(embeds=emb, files=im, silent=True)
+            emb = embeds[x:x+length]
+            if emb:
+                await interaction.user.send(embeds=emb, silent=True)
         # for i in range(0, len(embeds), length):
         #     x=i
         #     print(i,x)
         #     emb = embeds[x:x+length]
         #     im = embed_images[x:x+length]
         #     await interaction.user.send(embeds=emb, files=im)
-
 
 async def setup(bot):
     bot.tree.add_command(Portfolio(name="portfolio", description="Access portfolio"), guild=settings.GUILD_ID)

@@ -31,6 +31,8 @@ class Watchlist(app_commands.Group):
         discordusername = discorduser.name
         try:
             userdata = userdatadb.get_portfolio_data(discorduser.id) 
+            if userdata['watchlist'] == None:
+                userdata['watchlist'] = []
             watchlist = userdata['watchlist']
             present = True
         except:
@@ -77,7 +79,7 @@ class Watchlist(app_commands.Group):
         discorduser = interaction.user
         discordusername = discorduser.name
         userdata = userdatadb.get_portfolio_data(discorduser.id)
-        if userdata == None:
+        if userdata == None or userdata['watchlist'] == None:
             await interaction.response.send_message("You have no list", ephemeral=True, silent=True, delete_after=60)
             return
         if discorduser.nick != None:

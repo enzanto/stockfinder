@@ -57,8 +57,8 @@ async def report_full(tickers):
             embeds2.extend(i['embed'])
             images2.extend(i['image'])
         elif "image investtech" not in i:
-            embeds.append(i['embed'])
-            images.append(i['image'])
+            embeds.extend(i['embed'])
+            images.extend(i['image'])
     await screener.rabbit.disconnect()
     print("done with report")
     return embeds,images,embeds2,images2
@@ -128,8 +128,8 @@ async def report_db(tickers, minervini=False):
             embeds2.extend(i['embed'])
             images2.extend(i['image'])
         elif "image investtech" not in i:
-            embeds.append(i['embed'])
-            images.append(i['image'])
+            embeds.extend(i['embed'])
+            images.extend(i['image'])
     await screener.rabbit.disconnect()
     print("done with report")
     return embeds,images,embeds2,images2
@@ -150,20 +150,20 @@ async def report_portfolio(tickers):
         mapped_tickers.append(mapped)
     async def fetch_embeds(i):
         ticker = i['ticker']
-        reportdate, json_data = report_db.get_report_data(ticker=ticker)
+        reportdate, json_data = report_db.get_report_data(ticker=ticker) ###### change report data to new
         print(reportdate)
         if reportdate == None or today.date() > reportdate.date():
             print("today is not newest")
             await work.portfolio_report(i)
             reportdate, json_data = report_db.get_report_data(ticker=ticker)
-        elif reportdate.time() < time(17,15):
+        elif reportdate.time() < time(16,45):
             print("updating report,")
             await work.portfolio_report(i)
             reportdate, json_data = report_db.get_report_data(ticker=ticker)
         else:
             print("today is newest")
         print(json_data)
-        # await screener.create_embeds(json_data=json_data, image=pivots, investtech_image=investtech)
+        await screener.create_portfolio_embeds(json_data=json_data)
     db_tasks = []
     for i in mapped_tickers:
         db_tasks.append(asyncio.create_task(fetch_embeds(i)))
@@ -178,20 +178,20 @@ async def report_portfolio(tickers):
                 task.cancel()
         print(f"{cancel} tasks canceled")
     embeds = []
-    embeds2 = []
-    images = []
-    images2 = []
-    # finished_result = sorted(screener.json_portfolio['result'], key=lambda x: x['stock'])
-    # for i in finished_result:
-    #     if "image investtech" in i:
-    #         embeds2.extend(i['embed'])
-    #         images2.extend(i['image'])
-    #     elif "image investtech" not in i:
-    #         embeds.append(i['embed'])
-    #         images.append(i['image'])
+    # embeds2 = []
+    # images = []
+    # images2 = []
+    finished_result = sorted(screener.result['portfolio'], key=lambda x: x['stock'])
+    for i in finished_result:
+        # if "image investtech" in i:
+        #     embeds2.extend(i['embed'])
+        #     images2.extend(i['image'])
+        # elif "image investtech" not in i:
+            embeds.extend(i['embed'])
+        #     images.append(i['image'])
     await screener.rabbit.disconnect()
     print("done with report")
-    return embeds,images,embeds2,images2
+    return embeds
 
 
 
