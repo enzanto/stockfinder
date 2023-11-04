@@ -12,11 +12,11 @@ logger2 = settings.logging.getLogger("discord")
 tz = settings.tz
 
 Base = declarative_base()
-def connect_db():
-    engine = create_engine(settings.db_connect_address)
-    return engine
+# def connect_db():
+#     engine = create_engine(settings.db_connect_address)
+#     return engine
 start_date = date.today() - timedelta(days= 365*3)
-async def db_updater(symbol, engine=connect_db(), start=start_date, rabbit=None, serverside=False,logger=logger2):
+async def db_updater(symbol, engine=settings.engine, start=start_date, rabbit=None, serverside=False,logger=logger2):
     tableName = "ticker_" + symbol.lower().replace(".","_")
     logger.info(f"Updating table for {symbol}")
     if rabbit == None and serverside == False:
@@ -75,7 +75,7 @@ async def db_updater(symbol, engine=connect_db(), start=start_date, rabbit=None,
             return
     # await rabbit.disconnect()
 
-def get_table(symbol, engine=connect_db()):
+def get_table(symbol, engine=settings.engine):
     tableName = "ticker_" + symbol.lower().replace(".","_")
     df = pd.read_sql(tableName,engine, index_col="Date")
     return df

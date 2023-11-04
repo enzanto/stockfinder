@@ -382,26 +382,31 @@ class MarketScreener:
             self.json_response = {'ticker': stock, 'name': stockname, 'rs': rs, 'header': header, 'header url': mapped_ticker['nordnet'], 'body': body, 'fields': [ {'title': 'Adj Close', 'field': str(price)+"kr\n"+str(priceChange)+"%"}, {'title': 'Closing Range', 'field': str(closingRange)}, {'title': 'vwap', 'field': str(vwap)},\
                         {'title': 'Volume SMA20', 'field': str(volumeChange)+'%'}, {'title': 'RS', 'field': str(rs.round(2))}], \
                         'market': market, 'yahoo': "https://finance.yahoo.com/chart/"+stock, \
-                        'minervini': trend, 'vwap': vwap}
+                        'minervini': trend, 'vwap': vwap, 'color': None}
             #################################################################### discord embed ###############################
             if pivotPoint != None:
                 gsheet_dict['PivotPoint'] = True
                 self.json_response['fields'].append({'title': 'pivot point', 'field': pivotPoint})
+                self.json_response['color'] = 'blue'
             if macd_out != None:
                 if "climb" in macd_out:
                     gsheet_dict['MACD'] = "Climb"
                     self.json_response['fields'].append({'title': 'macd', 'field': macd_out})
+                    self.json_response['color'] = 'blue'
                 elif "decline" in macd_out:
                     gsheet_dict['MACD'] = "Decline"
                     self.json_response['fields'].append({'title': 'macd', 'field': macd_out})
             if new_high != None:
                 gsheet_dict['20Day high'] = True
                 self.json_response['fields'].append({'title': '20day high', 'field': new_high})
+                self.json_response['color'] = 'blue'
             if bollinger_band_out != None:
                 self.json_response['fields'].append({'title': 'bollinger', 'field': bollinger_band_out})
             if trailing != None:
                 gsheet_dict['Trailing'] = True
                 self.json_response['fields'].append({'title': 'trailing stop', 'field': trailing})
+                if isinstance(trailing, str) and "Uptrend" in trailing:
+                    self.json_response['color'] = 'blue'
             new_row = pd.Series(gsheet_dict)
             self.exportdf = pd.concat([self.exportdf, new_row.to_frame().T], ignore_index=True)
             if return_text:
@@ -423,7 +428,7 @@ class MarketScreener:
             rs = json_data['rs']
             imagename = json_data['ticker'].replace('.','_')
             imageIO = io.BytesIO(image)
-            color = discord.Color.green() if rs >= 100 else discord.Color.orange() if rs >= 50 else discord.Color.red()
+            color = discord.Color.blue() if json_data['color'] == "blue" else  discord.Color.green() if rs >= 100 else discord.Color.orange() if rs >= 50 else discord.Color.red()
 
             # header,body = get_text(mapped_ticker)
             img = discord.File(imageIO, filename=imagename+'.png')
