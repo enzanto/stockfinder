@@ -259,7 +259,11 @@ class MarketScreener:
             smas = [50]
             fields = []
             score = 0
-            price = round(df['Adj Close'].iloc[-1])
+            price = df['Adj Close'].iloc[-1]
+            if price > 10:
+                price = round(price, 2)
+            else:
+                price = round(price, 3)
             df['Volume_SMA_20'] = round(df['Volume'].rolling(window=20).mean(),2)
             volumeChange = round(((df['Volume'].iloc[-1] / df['Volume_SMA_20'].iloc[-1]))*100,2)
             priceChange = round(((df['Adj Close'].iloc[-1] / df['Adj Close'].iloc[-2]) -1)*100,2)
@@ -321,6 +325,11 @@ class MarketScreener:
             filename = stock.lower().replace(".","_")+".jpg"
             filename_investtech = stock.lower().replace(".","_")+"-investtech.png"
             df = pd.read_sql(stock_db,engine, index_col="Date", parse_dates={"Date": {"format": "%d/%m/%y"}})
+            price = df['Adj Close'].iloc[-1]
+            if price > 10:
+                price = round(price, 2)
+            else:
+                price = round(price, 3)
             if len(df) < 200 and watchlist == False:
                 logger.warning(f"Under 200 days of data on {stock} - {stockname}, skipping")
                 return
@@ -370,7 +379,7 @@ class MarketScreener:
             gsheet_dict = {'Stock': '=hyperlink(\"https://finance.yahoo.com/chart/'+stock+'\",\"'+stockname+'\")', 'Ticker': stock, 'Adj Close' : df["Adj Close"].iloc[-1].round(2), 'Change': str(priceChange)+"%", 'Closing range': closingRange, \
                         'vwap': vwap, 'Volume vs sma20': str(volumeChange)+"%", 'RS': rs.round(2), 'Market': market, 'Yahoo': "https://finance.yahoo.com/chart/"+stock, \
                         'PivotPoint': False, 'MACD': False, '20Day high': False, 'Minervini': trend}
-            self.json_response = {'ticker': stock, 'name': stockname, 'rs': rs, 'header': header, 'header url': mapped_ticker['nordnet'], 'body': body, 'fields': [ {'title': 'Adj Close', 'field': str(df["Adj Close"].iloc[-1].round(2))+"kr\n"+str(priceChange)+"%"}, {'title': 'Closing Range', 'field': str(closingRange)}, {'title': 'vwap', 'field': str(vwap)},\
+            self.json_response = {'ticker': stock, 'name': stockname, 'rs': rs, 'header': header, 'header url': mapped_ticker['nordnet'], 'body': body, 'fields': [ {'title': 'Adj Close', 'field': str(price)+"kr\n"+str(priceChange)+"%"}, {'title': 'Closing Range', 'field': str(closingRange)}, {'title': 'vwap', 'field': str(vwap)},\
                         {'title': 'Volume SMA20', 'field': str(volumeChange)+'%'}, {'title': 'RS', 'field': str(rs.round(2))}], \
                         'market': market, 'yahoo': "https://finance.yahoo.com/chart/"+stock, \
                         'minervini': trend, 'vwap': vwap}
