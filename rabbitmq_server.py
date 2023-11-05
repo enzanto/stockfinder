@@ -41,7 +41,7 @@ class webscrape_nordnet(object):
         self.cookie = ""
         self.cookie_time = datetime.now()
 
-    def get_cookie(self, url):
+    def get_cookie(self, url="https://www.nordnet.no"):
         self.session.get(url)
         self.cookie = self.session.cookies.get_dict()
         cookie_csrf = self.cookie['_csrf']
@@ -90,6 +90,27 @@ class webscrape_nordnet(object):
         return json_ticker
 
 
+    def get_info(self, mapped_ticker):
+        if self.cookie == "" or self.cookie_time + timedelta(hours=12) > datetime.now():
+            self.get_cookie("https://www.nordnet.no")
+        symbol = mapped_ticker['ticker'].replace(".ol", "")
+        url = f"{mapped_ticker['nordnet']}?details"
+        html = self.session.get(url).text
+        soup = BeautifulSoup(html, "lxml")
+        info = soup.find("h3", string="Om verdipapiret").find_parent("div")
+        list_items = info.find_all("li")
+        json_out = {}
+        for item in list_items:
+            divs = item.find_all("div")
+            try:
+                key = divs[1].text
+                value = divs[2].text
+                json_out[key] = value
+                
+            except:
+                continue
+        return json_out
+
 class webscrape_investtech(object):
 
     def __init__(self):
@@ -102,7 +123,7 @@ class webscrape_investtech(object):
         self.cookie_time = datetime.now()
 
 
-    def get_cookie(self, url):
+    def get_cookie(self, url="http://www.investtech.com"):
         self.session.get(url)
         self.cookie = self.session.cookies.get_dict()
         cookie_sid = self.cookie['sid']
