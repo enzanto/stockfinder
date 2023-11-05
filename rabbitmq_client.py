@@ -5,8 +5,6 @@ import uuid
 import aio_pika
 import json
 from typing import MutableMapping
-# import screen
-# from localdb import db_updater,tickermap,scanReport,userdata
 from aio_pika.abc import (
     AbstractChannel, AbstractConnection, AbstractIncomingMessage, AbstractQueue,
 )

@@ -219,9 +219,9 @@ async def main(conn) -> None:
     print(" [x] Awaiting RPC requests")
     scrape_nordnet = webscrape_nordnet()
     scrape_investtech = webscrape_investtech()
-    update_report = localdb.scanReport()
-    portfolio_report = localdb.portfolioReport()
-    map_db = localdb.tickermap()
+    update_report = localdb.scan_report.ScanReport()
+    portfolio_report = localdb.portfolio_report.PortfolioReport()
+    map_db = localdb.tickermap.TickerMap()
     async with conn.queue.iterator() as qiterator:
         message: AbstractIncomingMessage
         async for message in qiterator:
@@ -275,7 +275,7 @@ async def main(conn) -> None:
                         try:
                             ticker=n['request']['ticker']
                             logger.info(f"starting {ticker}")
-                            await localdb.db_updater(ticker,serverside=True)
+                            await localdb.ticker_db.db_updater(ticker,serverside=True)
                             screener = screen.MarketScreener()
                             if n['rsi'] == None:
                                 screener.get_osebx_rsi()
@@ -315,7 +315,7 @@ async def test():
     screener = screen.MarketScreener()
     screener.get_osebx_rsi()
     json_result, image= await screener.scan(tickermap, return_text=True)
-    savereport = localdb.saveReport()
+    savereport = localdb.scan_report.saveReport()
     # savereport.insert_report_data(ticker=tickermap['ticker'], json_data=json_result, image=image, investtech_img=investtech_image)
     dbDate, dbJson, dbInvesttech, dbimg = savereport.get_report_data(ticker=tickermap['ticker'])
     print(dbDate)

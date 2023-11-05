@@ -2,7 +2,7 @@ import pandas as pd
 import rabbitmq_client as rabbitmq
 import asyncio
 from sqlalchemy import create_engine
-# from localdb import db_updater,tickermap,scanReport
+# from localdb import db_updater,tickermap,ScanReport
 import localdb
 from indicators import macd,new_20day_high,bollinger_band,trend_template,pivot_point,trailing_stop
 # from investech_scrape import get_img,get_text
@@ -73,7 +73,7 @@ class MarketScreener:
         # with open('data/map.json','r') as mapfile:
         #     data = json.load(mapfile)
         #     self.tickermap = data['stocks']
-        self.tickermapdb = localdb.tickermap()
+        self.tickermapdb = localdb.tickermap.TickerMap()
         self.result = {"result": [], 'portfolio': [],"metadata": {"time": None}}
         self.indexRSI = None
         self.stocklist = pd.DataFrame(columns = ['Name', 'Symbol', 'Market'])
@@ -207,7 +207,7 @@ class MarketScreener:
         update_tasks = []
         for i in self.stocklist.index:
             stock = str(self.stocklist["Symbol"][i])
-            update_tasks.append(asyncio.create_task(localdb.db_updater(stock, engine, rabbit=self.rabbit,logger=logger)))
+            update_tasks.append(asyncio.create_task(localdb.ticker_db.db_updater(stock, engine, rabbit=self.rabbit,logger=logger)))
         try:
             result = await asyncio.shield(asyncio.wait_for(asyncio.gather(*update_tasks), timeout=600))
         except asyncio.TimeoutError:
@@ -478,7 +478,7 @@ async def main():
     testing = MarketScreener()
     testing.get_osebx_tickers()
     testing.get_osebx_rsi()
-    scanreport = localdb.scanReport()
+    scanreport = localdb.scan_report.ScanReport()
     await testing.rabbit.connect()
     ticker_dict_list = testing.stocklist.to_dict(orient='records')
     tickers = []
@@ -515,7 +515,7 @@ async def main():
 async def portfolio_report():
     from reports import report_portfolio 
     testing = MarketScreener()
-    userdata_db = localdb.userdata()
+    userdata_db = localdb.userdata.UserData()
     userdata = userdata_db.get_userids()
     print(userdata)
     embed_dict = []
