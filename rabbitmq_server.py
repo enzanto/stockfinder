@@ -15,7 +15,7 @@ from urllib3.util.retry import Retry
 from aio_pika import Message, connect
 from aio_pika.abc import AbstractIncomingMessage
 import time
-import os
+import os,sys,signal
 import localdb, screen, settings
 logger = settings.logging.getLogger("bot")
 
@@ -24,6 +24,11 @@ try:
 except KeyError:
     hostname = "No hostname found"
 
+def signal_handler(sig, frame, conn):
+    logger.warn(f"Recieved signal: {sig}")
+    conn.connection.close()
+    settings.engine.dispose()
+    sys.exit(0)
 #simple class object to fetch information from nordnet, with cookie and headers.
 class webscrape_nordnet(object):
 
@@ -54,6 +59,7 @@ class webscrape_nordnet(object):
             'Sec-Fetch-Site': "same-origin"
             }
         self.session.headers.update(headers)
+        self.cookie_time = datetime.now()
 
 #the "main" part of the class object for now. Fetches the icon URL from Nordnet at stores it.
     async def get_logo(self, ticker):
@@ -107,6 +113,7 @@ class webscrape_investtech(object):
                 "Cookie": f"sid={cookie_sid}; consent=all"
             }
         self.session.headers.update(headers)
+        self.cookie_time = datetime.now()
 
 
     async def get_text(self, ticker):
@@ -319,5 +326,6 @@ async def test():
 
 if __name__ == "__main__":
     conn = rabbitcon()
+    signal.signal(signal.SIGTERM, signal_handler, conn)
     asyncio.run(main(conn))
     # asyncio.run(test())

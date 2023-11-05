@@ -5,6 +5,7 @@ from cogs.cronjobs import CronJobs
 from apscheduler.schedulers.asyncio import AsyncIOScheduler
 from apscheduler.triggers.cron import CronTrigger
 import aiocron
+import sys, signal
 
 logger = settings.logging.getLogger("bot")
 
@@ -13,11 +14,19 @@ async def is_owner(ctx):
 
 CHANNEL_ID=1155922005565116426
 
+
+def signal_handler(sig, frame, bot):
+    logger.warn(f"Recieved signal: {sig}")
+    bot.close()
+    settings.engine.dispose()
+    sys.exit(0)
+
 def run():
     intents= discord.Intents.all()
     intents.message_content = True
     intents.members = True
     bot = commands.Bot(command_prefix="!", intents=intents)
+    signal.signal(signal.SIGTERM, signal_handler, bot)
 
 
 
