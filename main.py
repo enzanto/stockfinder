@@ -1,10 +1,6 @@
 import settings
 import discord
 from discord.ext import commands
-from cogs.cronjobs import CronJobs
-from apscheduler.schedulers.asyncio import AsyncIOScheduler
-from apscheduler.triggers.cron import CronTrigger
-import aiocron
 import sys, signal
 
 logger = settings.logging.getLogger("bot")

@@ -7,8 +7,8 @@ import time
 import localdb
 # from investech_scrape import get_img,get_text
 from reports import *
-tickermapdb = localdb.tickermap()
-userdatadb = localdb.userdata()
+tickermapdb = localdb.TickerMap()
+userdatadb = localdb.UserData()
 
 logger = settings.logging.getLogger("discord")
 

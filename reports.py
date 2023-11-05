@@ -2,12 +2,8 @@
 from screen import MarketScreener
 import discord
 import json
-import pandas as pd
-from sqlalchemy import create_engine
-from indicators import *
-from osebx import *
 import asyncio
-from localdb import userdata, tickermap, scanReport, portfolioReport
+from localdb import tickermap, scan_report, portfolio_report 
 from datetime import datetime, time
 import rabbitmq_client
 
@@ -66,8 +62,8 @@ async def report_full(tickers):
 async def report_db(tickers, minervini=False):
     today = datetime.now()
     work = await rabbitmq_client.rabbitmq().connect()
-    map_db = tickermap()
-    report_db = scanReport()
+    map_db = tickermap.TickerMap()
+    report_db = scan_report.ScanReport()
     mapped_tickers = []
     if isinstance(tickers, list) == False:
             tickers = [tickers]
@@ -137,8 +133,8 @@ async def report_db(tickers, minervini=False):
 async def report_portfolio(tickers):
     today = datetime.now()
     work = await rabbitmq_client.rabbitmq().connect()
-    map_db = tickermap()
-    report_db = portfolioReport()
+    map_db = tickermap.TickerMap()
+    report_db = portfolio_report.PortfolioReport()
     mapped_tickers = []
     if isinstance(tickers, list) == False:
             tickers = [tickers]

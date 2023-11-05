@@ -16,7 +16,8 @@ from aio_pika import Message, connect
 from aio_pika.abc import AbstractIncomingMessage
 import time
 import os,sys,signal
-import localdb, screen, settings
+import localdb, settings
+from screener import market_screener
 logger = settings.logging.getLogger("bot")
 
 try:
@@ -240,9 +241,9 @@ async def main(conn) -> None:
     print(" [x] Awaiting RPC requests")
     scrape_nordnet = webscrape_nordnet()
     scrape_investtech = webscrape_investtech()
-    update_report = localdb.scanReport()
-    portfolio_report = localdb.portfolioReport()
-    map_db = localdb.tickermap()
+    update_report = localdb.scan_report.ScanReport()
+    portfolio_report = localdb.portfolio_report.PortfolioReport()
+    map_db = localdb.tickermap.TickerMap()
     async with conn.queue.iterator() as qiterator:
         message: AbstractIncomingMessage
         async for message in qiterator:
@@ -273,7 +274,7 @@ async def main(conn) -> None:
                                 raise "Mapped ticker not found"
                             logger.info(f"starting {ticker}")
                             await localdb.db_updater(ticker,serverside=True)
-                            screener = screen.MarketScreener()
+                            screener = market_screener.MarketScreener()
                             if n['rsi'] == None:
                                 screener.get_osebx_rsi()
                             else:
@@ -296,8 +297,8 @@ async def main(conn) -> None:
                         try:
                             ticker=n['request']['ticker']
                             logger.info(f"starting {ticker}")
-                            await localdb.db_updater(ticker,serverside=True)
-                            screener = screen.MarketScreener()
+                            await localdb.ticker_db.db_updater(ticker,serverside=True)
+                            screener = market_screener.MarketScreener()
                             if n['rsi'] == None:
                                 screener.get_osebx_rsi()
                             else:
@@ -333,10 +334,10 @@ async def test():
     scrape_investtech = webscrape_investtech()
     header,body = await asyncio.wait_for(scrape_investtech.get_text(tickermap), timeout=10)
     investtech_image = await asyncio.wait_for(scrape_investtech.get_image(tickermap, b64=False), timeout=10)
-    screener = screen.MarketScreener()
+    screener = market_screener.MarketScreener()
     screener.get_osebx_rsi()
     json_result, image= await screener.scan(tickermap, return_text=True)
-    savereport = localdb.saveReport()
+    savereport = localdb.scan_report.saveReport()
     # savereport.insert_report_data(ticker=tickermap['ticker'], json_data=json_result, image=image, investtech_img=investtech_image)
     dbDate, dbJson, dbInvesttech, dbimg = savereport.get_report_data(ticker=tickermap['ticker'])
     print(dbDate)
