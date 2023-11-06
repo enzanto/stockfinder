@@ -2,7 +2,7 @@
 from sqlalchemy import create_engine, Column, Integer, JSON, BigInteger, String, DateTime, LargeBinary
 from sqlalchemy.orm import sessionmaker,declarative_base
 
-from .. import settings
+import settings
 Base=declarative_base()
 class UserData:
     class UserData(Base):

@@ -1,5 +1,4 @@
 import asyncio
-import localdb
 import datetime as dt
 import os
 import discord
@@ -7,6 +6,7 @@ import gspread
 import settings
 from screener import market_screener
 from reports import report_db, report_portfolio
+from localdb import userdata
 logger = settings.logging.getLogger("discord")
 # setup
 try:#google sheet
@@ -35,7 +35,6 @@ async def main():
     testing = market_screener.MarketScreener()
     testing.get_osebx_tickers()
     testing.get_osebx_rsi()
-    scanreport = localdb.scan_report.ScanReport()
     await testing.rabbit.connect()
     ticker_dict_list = testing.stocklist.to_dict(orient='records')
     tickers = []
@@ -71,11 +70,11 @@ async def main():
 
 async def portfolio_report():
     testing = market_screener.MarketScreener()
-    userdata_db = localdb.userdata.UserData()
-    userdata = userdata_db.get_userids()
-    print(userdata)
+    userdata_db = userdata.UserData()
+    user_data = userdata_db.get_userids()
+    print(user_data)
     embed_dict = []
-    for user in userdata:
+    for user in user_data:
         tickerlist = []
         if user['portfolio'] == None:
             continue
@@ -89,16 +88,16 @@ async def portfolio_report():
 
     @bot.event
     async def on_ready():
+        logger.info("Bot is ready")
         for user in embed_dict:
             discord_user = await bot.fetch_user(user['user'])
-        logger.info("Bot is ready")
-        length=6
-        embeds = user['embeds']
-        if len(embeds) > 0:
-            for i in range(0, len(embeds), length):
-                x=i
-                emb = embeds[x:x+length]
-                await discord_user.send(embeds=emb, silent=True)
+            length=6
+            embeds = user['embeds']
+            if len(embeds) > 0:
+                for i in range(0, len(embeds), length):
+                    x=i
+                    emb = embeds[x:x+length]
+                    await discord_user.send(embeds=emb, silent=True)
         logger.info("done sending")
         await asyncio.sleep(30)
         await bot.close()

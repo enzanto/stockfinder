@@ -4,11 +4,11 @@ import json
 from discord import app_commands
 import settings
 import time
-import localdb
+from localdb import tickermap, userdata
 # from investech_scrape import get_img,get_text
 from reports import *
-tickermapdb = localdb.TickerMap()
-userdatadb = localdb.UserData()
+tickermapdb = tickermap.TickerMap()
+userdatadb = userdata.UserData()
 
 logger = settings.logging.getLogger("discord")
 # def get_ticker_map():

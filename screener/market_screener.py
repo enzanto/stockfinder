@@ -13,7 +13,8 @@ import datetime as dt
 
 import settings
 import localdb
-from indicators import macd,new_20day_high,bollinger_band,trend_template,pivot_point,trailing_stop
+from localdb import portfolio_report, scan_report, ticker_db, tickermap, userdata
+from screener.indicators import macd,new_20day_high,bollinger_band,trend_template,pivot_point,trailing_stop
 
 logger = settings.logging.getLogger("discord")
 # setup
@@ -26,7 +27,7 @@ class MarketScreener:
         # with open('data/map.json','r') as mapfile:
         #     data = json.load(mapfile)
         #     self.tickermap = data['stocks']
-        self.tickermapdb = localdb.tickermap.TickerMap()
+        self.tickermapdb = tickermap.TickerMap()
         self.result = {"result": [], 'portfolio': [],"metadata": {"time": None}}
         self.indexRSI = None
         self.stocklist = pd.DataFrame(columns = ['Name', 'Symbol', 'Market'])
@@ -160,7 +161,7 @@ class MarketScreener:
         update_tasks = []
         for i in self.stocklist.index:
             stock = str(self.stocklist["Symbol"][i])
-            update_tasks.append(asyncio.create_task(localdb.ticker_db.db_updater(stock, engine, rabbit=self.rabbit,logger=logger)))
+            update_tasks.append(asyncio.create_task(ticker_db.db_updater(stock, engine, rabbit=self.rabbit,logger=logger)))
         try:
             result = await asyncio.shield(asyncio.wait_for(asyncio.gather(*update_tasks), timeout=600))
         except asyncio.TimeoutError:

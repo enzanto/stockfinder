@@ -17,6 +17,7 @@ from aio_pika.abc import AbstractIncomingMessage
 import time
 import os,sys,signal
 import localdb, settings
+from localdb import portfolio_report, scan_report, ticker_db, tickermap, userdata
 from screener import market_screener
 logger = settings.logging.getLogger("bot")
 
@@ -25,7 +26,7 @@ try:
 except KeyError:
     hostname = "No hostname found"
 
-def signal_handler(sig, frame, conn):
+def signal_handler(sig, frame):
     logger.warn(f"Recieved signal: {sig}")
     conn.connection.close()
     settings.engine.dispose()
@@ -241,9 +242,9 @@ async def main(conn) -> None:
     print(" [x] Awaiting RPC requests")
     scrape_nordnet = webscrape_nordnet()
     scrape_investtech = webscrape_investtech()
-    update_report = localdb.scan_report.ScanReport()
-    portfolio_report = localdb.portfolio_report.PortfolioReport()
-    map_db = localdb.tickermap.TickerMap()
+    update_report = scan_report.ScanReport()
+    portfoli_report = portfolio_report.PortfolioReport()
+    map_db = tickermap.TickerMap()
     async with conn.queue.iterator() as qiterator:
         message: AbstractIncomingMessage
         async for message in qiterator:
@@ -273,7 +274,7 @@ async def main(conn) -> None:
                             if mapped_ticker == None:
                                 raise "Mapped ticker not found"
                             logger.info(f"starting {ticker}")
-                            await localdb.db_updater(ticker,serverside=True)
+                            await ticker_db.db_updater(ticker,serverside=True)
                             screener = market_screener.MarketScreener()
                             if n['rsi'] == None:
                                 screener.get_osebx_rsi()
@@ -297,7 +298,7 @@ async def main(conn) -> None:
                         try:
                             ticker=n['request']['ticker']
                             logger.info(f"starting {ticker}")
-                            await localdb.ticker_db.db_updater(ticker,serverside=True)
+                            await ticker_db.db_updater(ticker,serverside=True)
                             screener = market_screener.MarketScreener()
                             if n['rsi'] == None:
                                 screener.get_osebx_rsi()
@@ -308,7 +309,7 @@ async def main(conn) -> None:
                             json_result = await screener.portfolio_scan(n['request'], return_text=True)
                             response = json.dumps({'ticker': ticker, 'status': 'complete'})
                             print(json_result)
-                            portfolio_report.insert_report_data(ticker,json_result)
+                            portfoli_report.insert_report_data(ticker,json_result)
                         except Exception as e:
                             print(e)
                             response = json.dumps({'ticker': ticker, 'status': "an error occured", 'minervini': 0})
@@ -337,7 +338,7 @@ async def test():
     screener = market_screener.MarketScreener()
     screener.get_osebx_rsi()
     json_result, image= await screener.scan(tickermap, return_text=True)
-    savereport = localdb.scan_report.saveReport()
+    savereport = scan_report.saveReport()
     # savereport.insert_report_data(ticker=tickermap['ticker'], json_data=json_result, image=image, investtech_img=investtech_image)
     dbDate, dbJson, dbInvesttech, dbimg = savereport.get_report_data(ticker=tickermap['ticker'])
     print(dbDate)
@@ -348,6 +349,7 @@ async def test():
 
 if __name__ == "__main__":
     conn = rabbitcon()
-    signal.signal(signal.SIGTERM, signal_handler, conn)
+    signal.signal(signal.SIGTERM, signal_handler)
+    signal.signal(signal.SIGTERM, signal_handler)
     asyncio.run(main(conn))
     # asyncio.run(test())
