@@ -91,6 +91,7 @@ async def portfolio_report():
         logger.info("Bot is ready")
         for user in embed_dict:
             discord_user = await bot.fetch_user(user['user'])
+            print(discord_user.name)
             length=6
             embeds = user['embeds']
             if len(embeds) > 0:

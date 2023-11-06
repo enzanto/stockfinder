@@ -1,5 +1,5 @@
 # from investech_scrape import get_img,get_text
-from screen import MarketScreener
+from screener import market_screener
 import discord
 import json
 import asyncio
@@ -15,7 +15,7 @@ def report_simple(tickers):
     for ticker in tickers:
         # print(ticker)
         filename = ticker['ticker'].lower().replace(".","_")+".jpg"
-        MarketScreener.create_chart(ticker['ticker'])
+        market_screener.MarketScreener.create_chart(ticker['ticker'])
         header, message = "header","message"
         img = discord.File("images/"+filename, filename=filename)
         mbd=discord.Embed(title=ticker['name'], url="https://finance.yahoo.com/chart/"+ticker['ticker'], description=message)
@@ -33,7 +33,7 @@ def report_simple(tickers):
 async def report_full(tickers):
     if isinstance(tickers, list) == False:
             tickers = [tickers]
-    screener = MarketScreener()
+    screener = market_screener.MarketScreener()
     await screener.rabbit.connect()
     screener.get_osebx_rsi()
     tasks = [screener.scan(i) for i in tickers]
@@ -67,7 +67,7 @@ async def report_db(tickers, minervini=False):
     mapped_tickers = []
     if isinstance(tickers, list) == False:
             tickers = [tickers]
-    screener = MarketScreener()
+    screener = market_screener.MarketScreener()
     await screener.rabbit.connect()
     screener.get_osebx_rsi()
     for i in tickers:
@@ -138,7 +138,7 @@ async def report_portfolio(tickers):
     mapped_tickers = []
     if isinstance(tickers, list) == False:
             tickers = [tickers]
-    screener = MarketScreener()
+    screener = market_screener.MarketScreener()
     await screener.rabbit.connect()
     screener.get_osebx_rsi()
     for i in tickers:
