@@ -12,6 +12,19 @@ With the help of RABBITMQ i have multiple worker pod with VPN so I don't get rat
 
 The screen.py can be run as a cronjob to scan entire Oslo børs
 
+Here is a simple diagram to show the flow of information.
+
+```mermaid
+graph LR;
+    Rabbit_MQ<-->WORKER_1-10;
+    WORKER_1-10-->POSTGRES;
+    DISCORD_BOT<-->Rabbit_MQ;
+    DISCORD_BOT<-->POSTGRES;
+    MINERVINI_SCAN<-->POSTGRES;
+    MINERVINI_SCAN<-->Rabbit_MQ;
+    MINERVINI_SCAN<-->DISCORD_BOT;
+```
+
 --------
 ##### Credits:  
 Big thanks to Richard Moglen for giving me both the idea of making this, and great guides to both python and stock market in general.

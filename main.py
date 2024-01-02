@@ -11,18 +11,12 @@ async def is_owner(ctx):
 CHANNEL_ID=1155922005565116426
 
 
-def signal_handler(sig, frame, bot):
-    logger.warn(f"Recieved signal: {sig}")
-    bot.close()
-    settings.engine.dispose()
-    sys.exit(0)
 
 def run():
     intents= discord.Intents.all()
     intents.message_content = True
     intents.members = True
     bot = commands.Bot(command_prefix="!", intents=intents)
-    signal.signal(signal.SIGTERM, signal_handler, bot)
 
 
 
@@ -32,9 +26,9 @@ def run():
         logger.info(f"Guild: {bot.guilds[0]} (guild ID: {bot.guilds[0].id})")
         logger.info(settings.engine)
         
-        for cog_file in settings.COGS_DIR.glob("*.py"):
-            if cog_file.name != "__init__.py":
-                await bot.load_extension(f"cogs.{cog_file.name[:-3]}")
+        # for cog_file in settings.COGS_DIR.glob("*.py"):
+        #     if cog_file.name != "__init__.py":
+        #         await bot.load_extension(f"cogs.{cog_file.name[:-3]}")
         for slash_file in settings.SLASH_DIR.glob("*.py"):
             if slash_file.name != "__init__.py":
                 # print(slash_file.name)
@@ -52,6 +46,12 @@ def run():
         """ Answers with pong"""
         await ctx.send("pong")
 
+    def signal_handler(sig, frame):
+        logger.warn(f"Recieved signal: {sig}")
+        settings.engine.dispose()
+        bot.close()
+        sys.exit(0)
+    signal.signal(signal.SIGTERM, signal_handler)
     bot.run(settings.discord_token) #removed root_logger=true
     
 if __name__ == "__main__":

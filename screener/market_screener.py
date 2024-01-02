@@ -151,7 +151,7 @@ class MarketScreener:
             mpf.plot(df,**kwargs,style='yahoo',addplot=apdict, alines=dict(alines=pivotlines), savefig=filename)
         else:
             image_bytes = BytesIO()
-            mpf.plot(df,**kwargs,style='yahoo',addplot=apdict, alines=dict(alines=pivotlines), savefig=image_bytes)
+            mpf.plot(df,**kwargs,style='yahoo',addplot=apdict, alines=dict(alines=pivotlines), show_nontrading=True, savefig=image_bytes)
             image_bytes.seek(0)
             return image_bytes.getvalue()
 
@@ -223,14 +223,26 @@ class MarketScreener:
             priceChange = round(((df['Adj Close'].iloc[-1] / df['Adj Close'].iloc[-2]) -1)*100,2)
             trailing = trailing_stop(df)
             print("TRAILING", trailing)
+            #set up emojis
+            def check_trend(price, value):
+                icon = ":chart_with_upwards_trend:" if value > price else ":chart_with_downwards_trend:"
+                return icon
+            def check_pass(reference_value, current_value):
+                if isinstance(reference_value, str):
+                    icon = ":white_check_mark:" if "Uptrend" in reference_value else ":red_circle:"
+                    return icon
+                icon = ":white_check_mark:" if reference_value < current_value else ":red_circle:"
+                return icon
             for ema in emas:
-                df[f"EMA_{ema}"]=round(df["Adj Close"].ewm(span=ema,min_periods=ema).mean())
-                fields.append({'title': f"EMA {ema}", "field": df[f"EMA_{ema}"].iloc[-1]})
+                df[f"EMA_{ema}"]=round(df["Adj Close"].ewm(span=ema,min_periods=ema).mean(),2)
+                emavalue = df[f"EMA_{ema}"].iloc[-1]
+                fields.append({'title': f"EMA {ema} {check_pass(emavalue, price)}", "field": emavalue})
                 if price < df[f'EMA_{ema}'].iloc[-1]:
                     score +=1
             for sma in smas:
                 df[f"SMA_{sma}"]=round(df['Adj Close'].rolling(window=sma).mean(),2)
-                fields.append({'title': f"SMA {sma}", "field": df[f"SMA_{sma}"].iloc[-1]})
+                smavalue = df[f"SMA_{sma}"].iloc[-1]
+                fields.append({'title': f"SMA {sma} {check_pass(smavalue, price)}", "field": smavalue})
                 if price < df[f'SMA_{sma}'].iloc[-1]:
                     score +=1
             try:
@@ -239,20 +251,18 @@ class MarketScreener:
             except:
                 if "Downtrend" in trailing:
                     score +=1
-            #choose colour for discord
-            
 
             header = f"{today} - {stockname} - {stock}: {price}kr  {priceChange}%"
             body = f"Daily portfolio report \nchecking against indicators. see fields"
-            self.json_portfolio = {'ticker': stock, 'name': stockname, 'header': header, 'header url': mapped_ticker['nordnet'], 'body': body, 'fields': [ \
-                                    {'title': 'Volume SMA20', 'field': str(volumeChange)+'%'}, {'title': 'Trailing Stop', 'field': trailing}],\
+            self.json_portfolio = {'ticker': stock, 'name': f"{stockname} {check_trend(0,priceChange)}", 'header': header, 'header url': mapped_ticker['nordnet'], 'body': body, 'fields': [ \
+                                    {'title': f'Volume SMA20 {check_trend(100, volumeChange)}', 'field': str(volumeChange)+'%'}, {'title': f'Trailing Stop {check_pass(trailing, price)}', 'field': trailing}],\
                                     'yahoo': "https://finance.yahoo.com/chart/"+stock, 'score': score}
             for field in fields:
                 self.json_portfolio['fields'].append(field)
             print(self.json_portfolio)
             if return_text:
                 return self.json_portfolio
-    async def scan(self, i, return_text=False):
+    async def scan(self, i, return_text=False, minerviniscan=False):
             x = i
             notfound=False
             watchlist = False
@@ -274,7 +284,6 @@ class MarketScreener:
                     market = i['market'] 
                     stockname = i['name']
                     watchlist = True
-                
             stock_db = "ticker_" + stock.lower().replace(".","_")
             filename = stock.lower().replace(".","_")+".jpg"
             filename_investtech = stock.lower().replace(".","_")+"-investtech.png"
@@ -300,6 +309,9 @@ class MarketScreener:
             else:
                 closingRange = round(((df['Close'].iloc[-1]-df['Low'].iloc[-1])/(df['High'].iloc[-1]-df["Low"].iloc[-1]))*100,2)
             trend = trend_template(df)
+            if minerviniscan == True and trend > 7:
+                logger.info(f"{stock} failed minervini scan")
+                return
             #################3 part 2
             # for tickers in self.tickermap:
             #     if stock.lower() == tickers['ticker']:
@@ -325,6 +337,7 @@ class MarketScreener:
             bollinger_band_out = bollinger_band(df)
             pivotPoint = pivot_point(df)
             trailing = trailing_stop(df)
+            print("scan test")
             if "investechID" in mapped_ticker and return_text == False:
                 header,body= await self.rabbit.get_investtech(mapped_ticker)
             else:
@@ -340,19 +353,22 @@ class MarketScreener:
             #################################################################### discord embed ###############################
             if pivotPoint != None:
                 gsheet_dict['PivotPoint'] = True
-                self.json_response['fields'].append({'title': 'pivot point', 'field': pivotPoint})
+                self.json_response['fields'].append({'title': 'pivot point :white_check_mark:', 'field': pivotPoint})
                 self.json_response['color'] = 'blue'
+                self.json_response['name'] = f"{stockname} :bell:"
             if macd_out != None:
                 if "climb" in macd_out:
                     gsheet_dict['MACD'] = "Climb"
-                    self.json_response['fields'].append({'title': 'macd', 'field': macd_out})
+                    self.json_response['fields'].append({'title': 'macd :chart_with_upwards_trend:', 'field': macd_out})
                     self.json_response['color'] = 'blue'
+                    self.json_response['name'] = f"{stockname} :bell:"
                 elif "decline" in macd_out:
                     gsheet_dict['MACD'] = "Decline"
-                    self.json_response['fields'].append({'title': 'macd', 'field': macd_out})
+                    self.json_response['fields'].append({'title': 'macd :chart_with_downwards_trend:', 'field': macd_out})
             if new_high != None:
                 gsheet_dict['20Day high'] = True
                 self.json_response['fields'].append({'title': '20day high', 'field': new_high})
+                self.json_response['name'] = f"{stockname} :bell:"
                 self.json_response['color'] = 'blue'
             if bollinger_band_out != None:
                 self.json_response['fields'].append({'title': 'bollinger', 'field': bollinger_band_out})
@@ -361,6 +377,7 @@ class MarketScreener:
                 self.json_response['fields'].append({'title': 'trailing stop', 'field': trailing})
                 if isinstance(trailing, str) and "Uptrend" in trailing:
                     self.json_response['color'] = 'blue'
+                    self.json_response['name'] = f"{stockname} :bell:"
             new_row = pd.Series(gsheet_dict)
             self.exportdf = pd.concat([self.exportdf, new_row.to_frame().T], ignore_index=True)
             if return_text:

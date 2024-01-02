@@ -291,6 +291,7 @@ async def main(conn) -> None:
                             #have function here to add data to database
                             update_report.insert_report_data(ticker,json_result, image, investtech_image)
                         except Exception as e:
+                            print("Exception Raised")
                             print(e)
                             response = json.dumps({'ticker': ticker, 'status': "an error occured", 'minervini': 0})
 
@@ -349,7 +350,6 @@ async def test():
 
 if __name__ == "__main__":
     conn = rabbitcon()
-    signal.signal(signal.SIGTERM, signal_handler)
     signal.signal(signal.SIGTERM, signal_handler)
     asyncio.run(main(conn))
     # asyncio.run(test())
