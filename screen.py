@@ -69,7 +69,6 @@ async def main():
     print("ALL DONE GOING TO BED")
 
 async def portfolio_report():
-    testing = market_screener.MarketScreener()
     userdata_db = userdata.UserData()
     user_data = userdata_db.get_userids()
     print(user_data)
@@ -79,7 +78,6 @@ async def portfolio_report():
         if user['portfolio'] == None:
             continue
         for i in user['portfolio']:
-            print(i)
             tickerlist.append(i)
         embeds= await(report_portfolio(tickerlist))
         embed_dict.append({'user': user['userid'], 'embeds': embeds})
@@ -106,11 +104,61 @@ async def portfolio_report():
     await bot.start(discord_token)
     print("ALL DONE GOING TO BED")
 
+async def watchlist_report():
+    userdata_db = userdata.UserData()
+    user_data = userdata_db.get_userids()
+    print(user_data)
+    embed_dict = []
+    for user in user_data:
+        tickerlist = []
+        if user['watchlist'] == None:
+            continue
+        for i in user['watchlist']:
+            #change to i['symbol'] when updating the watchlist structure
+            tickerlist.append(i)
+        print(user['userid'])
+        embeds,images,embeds2,images2 = await(report_db(user['watchlist']))
+        embed_dict.append({'user': user['userid'], 'embeds': embeds, 'images': images, 'embeds2': embeds2, 'images2': images2})
+
+
+    @bot.event
+    async def on_ready():
+        logger.info("Bot is ready")
+        for user in embed_dict:
+            discord_user = await bot.fetch_user(user['user'])
+            print(discord_user.name)
+            length=6
+            embeds = user['embeds']
+            images = user['images']
+            embeds2 = user['embeds2']
+            images2 = user['images2']
+            for i in range(0, len(embeds2), length):
+                x=i
+                emb = embeds2[x:x+length]
+                im = images2[x:x+length]
+                await discord_user.send(embeds=emb, files=im, silent=True)
+            if len(embeds) > 0:
+                for i in range(0, len(embeds), length):
+                    x=i
+                    emb = embeds[x:x+length]
+                    im = images[x:x+length]
+                    await discord_user.send(embeds=emb, files=im, silent=True)
+        logger.info("done sending")
+        await asyncio.sleep(30)
+        await bot.close()
+
+    await bot.start(discord_token)
+    print("ALL DONE GOING TO BED")
+
 if __name__ == "__main__":
     logger = settings.logging.getLogger("bot")
     scan = os.environ['SCAN']
     if scan == "minervini":
         asyncio.run(main())
+        asyncio.run(watchlist_report())
     elif scan == "portfolio":
         print(scan)
         asyncio.run(portfolio_report())
+    elif scan == "watchlist":
+        print(scan)
+        asyncio.run(watchlist_report())
