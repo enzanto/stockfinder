@@ -11,3 +11,4 @@ rabbitmq/dockerfile-rabbit
 *.tar
 test*
 dockerfile*
+ovpn/
