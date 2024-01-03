@@ -8,3 +8,5 @@ data/watchlist.json
 test*.py
 test*.json
 build-and-export.sh
+ovpn/
+testfiles/
