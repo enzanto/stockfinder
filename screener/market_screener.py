@@ -367,17 +367,21 @@ class MarketScreener:
                     self.json_response['fields'].append({'title': 'macd :chart_with_downwards_trend:', 'field': macd_out})
             if new_high != None:
                 gsheet_dict['20Day high'] = True
-                self.json_response['fields'].append({'title': '20day high', 'field': new_high})
+                self.json_response['fields'].append({'title': '20day high :white_check_mark:', 'field': new_high})
                 self.json_response['name'] = f"{stockname} :bell:"
                 self.json_response['color'] = 'blue'
             if bollinger_band_out != None:
                 self.json_response['fields'].append({'title': 'bollinger', 'field': bollinger_band_out})
             if trailing != None:
                 gsheet_dict['Trailing'] = True
-                self.json_response['fields'].append({'title': 'trailing stop', 'field': trailing})
                 if isinstance(trailing, str) and "Uptrend" in trailing:
+                    self.json_response['fields'].append({'title': 'trailing stop :white_check_mark:', 'field': trailing})
                     self.json_response['color'] = 'blue'
                     self.json_response['name'] = f"{stockname} :bell:"
+                elif isinstance(trailing, str) and "Downtrend" in trailing:
+                    self.json_response['fields'].append({'title': 'trailing stop :red_circle:', 'field': trailing})
+                else:
+                    self.json_response['fields'].append({'title': 'trailing stop', 'field': trailing})
             new_row = pd.Series(gsheet_dict)
             self.exportdf = pd.concat([self.exportdf, new_row.to_frame().T], ignore_index=True)
             if return_text:
