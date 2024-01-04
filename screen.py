@@ -22,6 +22,7 @@ discord_token = os.environ['discord_token']
 print("discord_webhook_url ENV OK")
 intents = discord.Intents.default()
 bot = discord.Client(intents=intents)
+bot2 = discord.Client(intents=intents)
 channel_id = 1161668764341907556
 today = dt.date.today()
 today = str(today)
@@ -121,11 +122,11 @@ async def watchlist_report():
         embed_dict.append({'user': user['userid'], 'embeds': embeds, 'images': images, 'embeds2': embeds2, 'images2': images2})
 
 
-    @bot.event
+    @bot2.event
     async def on_ready():
         logger.info("Bot is ready")
         for user in embed_dict:
-            discord_user = await bot.fetch_user(user['user'])
+            discord_user = await bot2.fetch_user(user['user'])
             print(discord_user.name)
             length=6
             embeds = user['embeds']
@@ -137,25 +138,30 @@ async def watchlist_report():
                 emb = embeds2[x:x+length]
                 im = images2[x:x+length]
                 await discord_user.send(embeds=emb, files=im, silent=True)
+                print("-------------------------------------sending to discord-----------------------------")
             if len(embeds) > 0:
                 for i in range(0, len(embeds), length):
                     x=i
                     emb = embeds[x:x+length]
                     im = images[x:x+length]
                     await discord_user.send(embeds=emb, files=im, silent=True)
-        logger.info("done sending")
+        logger.info("done sending watchlist in DM")
         await asyncio.sleep(30)
-        await bot.close()
-
-    await bot.start(discord_token)
+        await bot2.close()
+    print("------------------------------starting bot in watchlist------------------------------------")
+    await asyncio.sleep(5)
+    await bot2.start(discord_token)
     print("ALL DONE GOING TO BED")
 
 if __name__ == "__main__":
     logger = settings.logging.getLogger("bot")
     scan = os.environ['SCAN']
     if scan == "minervini":
-        asyncio.run(main())
-        asyncio.run(watchlist_report())
+        loop = asyncio.new_event_loop()
+        asyncio.set_event_loop(loop)
+        loop.run_until_complete(main())
+        loop.run_until_complete(watchlist_report())
+        loop.close()
     elif scan == "portfolio":
         print(scan)
         asyncio.run(portfolio_report())
