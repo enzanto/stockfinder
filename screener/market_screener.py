@@ -209,6 +209,8 @@ class MarketScreener:
             stock_db = "ticker_" + stock.lower().replace(".","_")
             filename = stock.lower().replace(".","_")+".jpg"
             df = pd.read_sql(stock_db,engine, index_col="Date", parse_dates={"Date": {"format": "%d/%m/%y"}})
+            latest_date = df.index.max()
+            latest_date_str = latest_date.strftime('%d-%m-%Y')
             emas = [8,21]
             smas = [50]
             fields = []
@@ -252,7 +254,7 @@ class MarketScreener:
                 if "Downtrend" in trailing:
                     score +=1
 
-            header = f"{today} - {stockname} - {stock}: {price}kr  {priceChange}%"
+            header = f"{latest_date_str} - {stockname} - {stock}: {price}kr  {priceChange}%"
             body = f"Daily portfolio report \nchecking against indicators. see fields"
             self.json_portfolio = {'ticker': stock, 'name': f"{stockname} {check_trend(0,priceChange)}", 'header': header, 'header url': mapped_ticker['nordnet'], 'body': body, 'fields': [ \
                                     {'title': f'Volume SMA20 {check_trend(100, volumeChange)}', 'field': str(volumeChange)+'%'}, {'title': f'Trailing Stop {check_pass(trailing, price)}', 'field': trailing}],\
