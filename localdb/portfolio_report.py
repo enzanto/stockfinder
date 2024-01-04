@@ -28,6 +28,12 @@ class PortfolioReport:
         self.session=Session()
 
     def insert_report_data(self,ticker, json_data, ):#image = None, investtech_img = None):
+        '''
+        Stores portfolio report data in DB
+        
+        :param ticker: Ticker symbol
+        :param json_data: JSON formatted report data
+        '''
         record = self.session.query(self.report).filter_by(ticker=ticker).first()
         if record:
             record.json_data = json_data
@@ -39,6 +45,13 @@ class PortfolioReport:
             self.session.add(new_record)
         self.session.commit()
     def get_report_data(self, ticker):
+        '''
+        Fetches report data and creation date from DB
+        if no report is found, returns None for all params
+
+        :param ticker: Ticker symbol
+        :param return: Creation date, JSON formatted report
+        '''
         record = self.session.query(self.report).filter_by(ticker=ticker).first()
         if record:
             return record.date_col, record.json_data#, record.investtech, record.pivots

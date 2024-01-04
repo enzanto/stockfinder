@@ -7,10 +7,20 @@ import yfinance as yf
 from datetime import date, timedelta
 
 import settings 
-print(settings.engine)
+
 logger = settings.logging.getLogger("discord")
 start_date = date.today() - timedelta(days= 365*3)
 async def db_updater(symbol, engine=settings.engine, start=start_date, rabbit=None, serverside=False):
+    '''
+    Updates DB with latest stock prices. Checks for newest price in DB, only fetches prices newer than latest price stored
+    If serverside simply fetches newest prices and updates DB.
+    if Client side, connects to rabbitmq server and gets info from servers listening to rabbitmq
+    
+    :params symbol: ticker symbol
+    :params engine: sqlalchemy engine
+    :params rabbit: Rabbitmq client.
+    :params serverside: Set True if on server side and not client side 
+    '''
     tableName = "ticker_" + symbol.lower().replace(".","_")
     logger.info(f"Updating table for {symbol}")
     if rabbit == None and serverside == False:
@@ -70,6 +80,12 @@ async def db_updater(symbol, engine=settings.engine, start=start_date, rabbit=No
     # await rabbit.disconnect()
 
 def get_table(symbol, engine=settings.engine):
+    '''
+    Fetched stock data from DB and returns it as a DF
+
+    :params symbol: Ticker symbol
+    :params return: Returns Dataframe
+    '''
     tableName = "ticker_" + symbol.lower().replace(".","_")
     df = pd.read_sql(tableName,engine, index_col="Date")
     return df

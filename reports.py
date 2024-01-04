@@ -1,36 +1,19 @@
-# from investech_scrape import get_img,get_text
-from screener import market_screener
-import discord
-import json
 import asyncio
-from localdb import tickermap, scan_report, portfolio_report 
+
+import json
+
 from datetime import datetime, time
+from screener import market_screener
 import rabbitmq_client
+from localdb import tickermap, scan_report, portfolio_report 
 
 
-def report_simple(tickers):
-    embed_images = []
-    embeds = []
-    length = 6
-    for ticker in tickers:
-        # print(ticker)
-        filename = ticker['ticker'].lower().replace(".","_")+".jpg"
-        market_screener.MarketScreener.create_chart(ticker['ticker'])
-        header, message = "header","message"
-        img = discord.File("images/"+filename, filename=filename)
-        mbd=discord.Embed(title=ticker['name'], url="https://finance.yahoo.com/chart/"+ticker['ticker'], description=message)
-        mbd.set_image(url="attachment://"+filename)
-        mbd.set_author(name=header, url=ticker['investech'])
-        embed_images.append(img)
-        embeds.append(mbd)
-    print(len(embeds))
-    for i in range(0, len(embeds), length):
-        x=i
-        emb = embeds[x:x+length]
-        im = embed_images[x:x+length]
-    return emb,im
+
 
 async def report_full(tickers):
+    '''
+    Currently unused, might make use of this later
+    '''
     if isinstance(tickers, list) == False:
             tickers = [tickers]
     screener = market_screener.MarketScreener()
@@ -60,6 +43,14 @@ async def report_full(tickers):
     return embeds,images,embeds2,images2
 
 async def report_db(tickers, minervini=False):
+    '''
+    Checks if there is a fresh report available. If not, creates one and store it in DB.
+    Returns Discord embeds with images
+
+    :param tickers: single ticker or list of tickers
+    :param minervini: If True, returns only tickers that pass the minervini test.
+    :return: Discord embeds and images (embeds, images, embeds2, images2)
+    '''
     today = datetime.now()
     work = await rabbitmq_client.rabbitmq().connect()
     map_db = tickermap.TickerMap()
@@ -76,25 +67,18 @@ async def report_db(tickers, minervini=False):
             mapped_tickers.append(mapped)
         except:
             print('ticker not in map')
-            return
     async def fetch_embeds(i):
         try:
             ticker = i['ticker']
             reportdate, json_data, investtech, pivots = report_db.get_report_data(ticker=ticker)
-            # print(reportdate)
             if reportdate == None or today.date() > reportdate.date():
-                # print("today is not newest")
                 await work.build_report(i, screener.indexRSI)
                 reportdate, json_data, investtech, pivots = report_db.get_report_data(ticker=ticker)
             elif reportdate.time() < time(16,15):
-                # print("updating report,")
                 await work.build_report(i, screener.indexRSI)
                 reportdate, json_data, investtech, pivots = report_db.get_report_data(ticker=ticker)
-            # else:
-                # print("today is newest")
             if minervini:
                 if json_data['minervini'] < 7 or json_data['vwap'] < 1:
-                    # print(f"{json_data['ticker']} skipped. minervini score: {json_data['minervini']}")
                     return
                 else:
                     print(f"{ticker} added with a score of {json_data['minervini']}")
@@ -131,6 +115,13 @@ async def report_db(tickers, minervini=False):
     return embeds,images,embeds2,images2
 
 async def report_portfolio(tickers):
+    '''
+    Checks if there is a fresh report available. If not, creates one and store it in DB.
+    Returns Discord embed
+
+    :param tickers: single ticker or list of tickers
+    :return: Discord embed
+    '''
     today = datetime.now()
     work = await rabbitmq_client.rabbitmq().connect()
     map_db = tickermap.TickerMap()
@@ -152,7 +143,7 @@ async def report_portfolio(tickers):
             print("today is not newest")
             await work.portfolio_report(i)
             reportdate, json_data = report_db.get_report_data(ticker=ticker)
-        elif reportdate.time() < time(15,45):
+        elif reportdate.time() < time(15,45): 
             print("updating report,")
             await work.portfolio_report(i)
             reportdate, json_data = report_db.get_report_data(ticker=ticker)
@@ -174,17 +165,9 @@ async def report_portfolio(tickers):
                 task.cancel()
         print(f"{cancel} tasks canceled")
     embeds = []
-    # embeds2 = []
-    # images = []
-    # images2 = []
     finished_result = sorted(screener.result['portfolio'], key=lambda x: x['stock'])
     for i in finished_result:
-        # if "image investtech" in i:
-        #     embeds2.extend(i['embed'])
-        #     images2.extend(i['image'])
-        # elif "image investtech" not in i:
             embeds.extend(i['embed'])
-        #     images.append(i['image'])
     await screener.rabbit.disconnect()
     print("done with report")
     return embeds

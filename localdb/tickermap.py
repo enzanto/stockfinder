@@ -16,6 +16,12 @@ class TickerMap:
         self.engine = settings.engine
         Base.metadata.create_all(self.engine)
     def insert_map_data(self,ticker, json_data):
+        '''
+        Inserts or updates new information to tickermap DB.
+
+        :param ticker: Ticker symbol
+        :param json_data: JSON formatted data to store
+        '''
         with sessionmaker(bind=self.engine)() as session:
             record = self.session.query(self.jsonMap).filter_by(ticker=ticker.lower()).first()
             if record:
@@ -25,6 +31,12 @@ class TickerMap:
                 session.add(new_record)
             session.commit()
     def get_map_data(self,ticker):
+        '''
+        Fetches mapped ticker data, formatted as JSON
+
+        :params ticker: Ticker symbol
+        :params return: JSON formatted ticker data
+        '''
         with sessionmaker(bind=self.engine)() as session:
             record = session.query(self.jsonMap).filter_by(ticker=ticker).first()
             if record:

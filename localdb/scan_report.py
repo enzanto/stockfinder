@@ -26,6 +26,14 @@ class ScanReport:
 
 
     def insert_report_data(self,ticker, json_data, image, investtech_img = None):
+        '''
+        Stores report data in DB.
+
+        :param ticker: Ticker symbol
+        :param json_data: JSON formatted report data
+        :param image: chart image stored as binary
+        :param investtech_img: investtech image stored as binary
+        '''
         with sessionmaker(bind=self.engine)() as session:
             record = session.query(self.report).filter_by(ticker=ticker).first()
             if record:
@@ -38,6 +46,13 @@ class ScanReport:
                 session.add(new_record)
             session.commit()
     def get_report_data(self, ticker):
+        '''
+        Fetches report data and creation date from DB
+        if no report is found, returns None for all params
+
+        :param ticker: Ticker symbol
+        :param return: Creation date, JSON formatted report, Investtech image, pivots image
+        '''
         with sessionmaker(bind=self.engine)() as session:
             record = session.query(self.report).filter_by(ticker=ticker).first()
             if record:

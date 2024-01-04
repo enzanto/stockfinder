@@ -6,11 +6,12 @@ from sqlalchemy import create_engine
 engine = create_engine('sqlite:///data/TEST_DB.db')
 
 def macd(df):
-    # stock_db = "ticker_" + stock.lower().replace(".","_")
-    # try:
-    #     df = pd.read_sql(stock_db,engine)
-    #     if df.empty:
-    #         return None
+    '''
+    Calculates MACD of yahoo dataframe, returns if MACD indicates change to climb or change to decline
+    
+    :params df: Dataframe fetched from yfinance
+    :params return: string with info of incline or decline
+    '''
     df.ta.macd(close='Adj Close', fast=12, slow=26, signal=9, append=True)
     df["SMA_200"]=round(df['Adj Close'].rolling(window=200).mean(),2)
     df["EMA_200"]=round(df["Adj Close"].ewm(span=200,min_periods=200).mean())
@@ -23,39 +24,26 @@ def macd(df):
             return "started climbing! "+str(df['MACDh_12_26_9'].iloc[-1])
         elif df['MACDh_12_26_9'].iloc[-1] < 0 and df['MACDh_12_26_9'].iloc[-2] > 0 and df['MACD_12_26_9'].iloc[-1] > 0:
             return 'started declining '+str(df['MACDh_12_26_9'].iloc[-1])
-    # except:
-    #     print('no info on '+stock)
-    #     print("---------------------------------")
-    #     print("")
 
 def new_20day_high(df):
-    # stock_db = "ticker_" + stock.lower().replace(".","_")
-    # try:
-    #     df = pd.read_sql(stock_db,engine)
-    #     if df.empty:
-    #         return None
-    df["SMA_200"]=round(df["Adj Close"].rolling(window=200).mean(),2)
-    moving_average_200=df["SMA_200"].iloc[-1]
-    try:
-        moving_average_200_20past=df['SMA_200'].iloc[-20]
-    except:
-        moving_average_200_20past=0
+    '''
+    Checks if latest day is a new high price of the last 20 says
+
+    :params df: DataFrame from yfinance
+    :params return: returns True if True
+    '''
     tail = df.tail(20)
     high20 = tail['Adj Close'].iloc[:-1].max()
-    if tail['Adj Close'].iloc[-1] > high20:# and tail['Adj Close'].iloc[-2] < high20: #and moving_average_200 > moving_average_200_20past:
+    if tail['Adj Close'].iloc[-1] > high20:
         return True
-        # print(stock+' is a new 20 day max')
-        # print('https://finance.yahoo.com/chart/'+stock)
-    # except:
-    #     print('no data on '+stock) 
-    #     print("---------------------------------")
-    #     print("")
 
 def bollinger_band(df):
-    # stock_db = "ticker_" + stock.lower().replace(".","_")
-    # df = pd.read_sql(stock_db,engine)
-    # if df.empty:
-    #     return None
+    '''
+    Checks if latest day is outside bolliger band
+
+    :params df: DataFrame from yfinance
+    :params return: String with info
+    '''
     df['ma20'] = df.Close.rolling(20).mean()
     df['vol'] = df.Close.rolling(20).std()
     df['upper_bb'] = df.ma20 + (2 * df.vol)
@@ -72,6 +60,12 @@ def bollinger_band(df):
         # print('https://finance.yahoo.com/chart/'+stock)
 
 def trend_template(df):
+    '''
+    The minervini scan, checks if the stock fullfills the 7(of 8) rules of minervini
+
+    :params df: Dataframe from yfinance
+    :params return: Number of tests passed
+    '''
     # stock_db = "ticker_" + stock.lower().replace(".","_")
     # df = pd.read_sql(stock_db,engine)
     tests_passed=0
@@ -146,6 +140,12 @@ def trend_template(df):
     return tests_passed
 
 def pivot_point(df):
+    '''
+    Calculates pivots points on the DF and checks if current day breaches the pivot point
+
+    :params df: DataFrame from yfinance
+    :params return: returns last pivot point if price breaches
+    '''
     #stock = stocklist["Symbol"][i]+".ol"
     # stock_db = "ticker_" + stock.lower().replace(".","_")
     # df = pd.read_sql(stock_db, engine, index_col="Date")
@@ -194,6 +194,13 @@ def pivot_point(df):
         return  lastPivot
 
 def trailing_stop(df, return_df = False):
+    '''
+    Calculates trailing stop for provided DataFrame. Can return dataframe with trailing stop columns
+
+    :params df: DataFrame from yfinance
+    :params return_df: if True, returns dataframe with extra columns
+    :params return: returns trailing stop value, or dataframe
+    '''
     if len(df) < 50:
         return
     pd.set_option('mode.chained_assignment', None)
