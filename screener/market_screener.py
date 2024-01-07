@@ -216,6 +216,7 @@ class MarketScreener:
             fields = []
             score = 0
             price = df['Adj Close'].iloc[-1]
+            month_check = [1,3]
             if price > 10:
                 price = round(price, 2)
             else:
@@ -227,6 +228,12 @@ class MarketScreener:
             print("TRAILING", trailing)
             #set up emojis
             def check_trend(price, value):
+                '''
+                check if there is inclining or declining trend
+
+                :params price: referance value
+                :value: current value to check trend
+                '''
                 icon = ":chart_with_upwards_trend:" if value > price else ":chart_with_downwards_trend:"
                 return icon
             def check_pass(reference_value, current_value):
@@ -247,6 +254,11 @@ class MarketScreener:
                 fields.append({'title': f"SMA {sma} {check_pass(smavalue, price)}", "field": smavalue})
                 if price < df[f'SMA_{sma}'].iloc[-1]:
                     score +=1
+            for month in month_check:
+                df_backtrack = month*21
+                month_price = df['Adj Close'].iloc[-df_backtrack]
+                month_change = ((price/month_price)-1) * 100
+                fields.append({'title': f'{month} change {check_trend(month_price, value=price)}', 'field': f'{month_change}%'})
             try:
                 if price < trailing:
                     score+=1
