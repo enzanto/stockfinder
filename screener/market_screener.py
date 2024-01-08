@@ -257,7 +257,7 @@ class MarketScreener:
             for month in month_check:
                 df_backtrack = month*21
                 month_price = df['Adj Close'].iloc[-df_backtrack]
-                month_change = ((price/month_price)-1) * 100
+                month_change = round(((price/month_price)-1) * 100,2)
                 fields.append({'title': f'{month} change {check_trend(month_price, value=price)}', 'field': f'{month_change}%'})
             try:
                 if price < trailing:
