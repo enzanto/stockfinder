@@ -210,9 +210,9 @@ class rabbitcon(object):
 
     async def connect(self):
         try:
-            self.connection = await connect("amqp://pod:pod@rabbit-cluster.default/")
+            self.connection = await connect(f"amqp://{settings.rabbit_user}:{settings.rabbit_password}@rabbit-cluster.default/")
         except:
-            self.connection = await connect("amqp://pod:pod@192.168.10.80:30500/?heartbeat=900")
+            self.connection = await connect(f"amqp://{settings.rabbit_user}:{settings.rabbit_password}@192.168.10.80:30500/?heartbeat=900")
 
         self.channel = await self.connection.channel()
         await self.channel.set_qos(prefetch_count=1)
@@ -234,7 +234,7 @@ async def main(conn) -> None:
 #
 
 # connect to the server and declare a que. Setting prefetch to 1 so other workers can grab from que as well.
-    # connection = await connect("amqp://pod:pod@rabbit-cluster.default/")
+    # connection = await connect(f"amqp://{settings.rabbit_user}:{settings.rabbit_password}@rabbit-cluster.default/")
     # channel = await connection.channel()
     # await channel.set_qos(prefetch_count=1)
     # exchange = channel.default_exchange

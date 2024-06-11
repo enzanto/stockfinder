@@ -4,6 +4,7 @@ import base64
 import uuid
 import aio_pika
 import json
+from settings import rabbit_password,rabbit_user
 from typing import MutableMapping
 from aio_pika.abc import (
     AbstractChannel, AbstractConnection, AbstractIncomingMessage, AbstractQueue,
@@ -26,9 +27,9 @@ class rabbitmq(object):
 
     async def connect(self):
         try:
-            self.connection = await aio_pika.connect_robust("amqp://pod:pod@rabbit-cluster.default/?heartbeat=900", loop=self.loop)
+            self.connection = await aio_pika.connect_robust(f"amqp://{rabbit_user}:{rabbit_password}@rabbit-cluster.default/?heartbeat=900", loop=self.loop)
         except:
-            self.connection = await aio_pika.connect_robust("amqp://pod:pod@192.168.10.80:31394/?heartbeat=900", loop=self.loop)
+            self.connection = await aio_pika.connect_robust(f"amqp://{rabbit_user}:{rabbit_password}@192.168.10.80:31394/?heartbeat=900", loop=self.loop)
         self.channel = await self.connection.channel()
         self.callback_queue = await self.channel.declare_queue(name=self.rpc_queue,exclusive=True)
         await self.callback_queue.consume(self.on_response, no_ack=True)

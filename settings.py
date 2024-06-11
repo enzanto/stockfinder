@@ -31,6 +31,13 @@ except KeyError as err:
     engine = create_engine('sqlite:///data/TEST_DB.db')
 
 try:
+    rabbit_user = os.environ['RABBIT_USER']
+    rabbit_password = os.environ['RABBIT_PASSWORD']
+except:
+    rabbit_user = "pod"
+    rabbit_password = "pod"
+
+try:
     tz = pytz.timezone(os.environ['TZ'])
 except KeyError:
     tz = pytz.timezone('Europe/Oslo')
