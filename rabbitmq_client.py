@@ -28,7 +28,7 @@ class rabbitmq(object):
         try:
             self.connection = await aio_pika.connect_robust("amqp://pod:pod@rabbit-cluster.default/?heartbeat=900", loop=self.loop)
         except:
-            self.connection = await aio_pika.connect_robust("amqp://pod:pod@192.168.1.204:31394/?heartbeat=900", loop=self.loop)
+            self.connection = await aio_pika.connect_robust("amqp://pod:pod@192.168.10.80:31394/?heartbeat=900", loop=self.loop)
         self.channel = await self.connection.channel()
         self.callback_queue = await self.channel.declare_queue(name=self.rpc_queue,exclusive=True)
         await self.callback_queue.consume(self.on_response, no_ack=True)
@@ -85,7 +85,8 @@ class rabbitmq(object):
                     body=json_object.encode(),
                     content_type="text/plain",
                     correlation_id=correlation_id,
-                    reply_to=self.callback_queue.name
+                    reply_to=self.callback_queue.name,
+                    expiration=300
                 ),
                 routing_key="rpc_queue"
             )

@@ -165,7 +165,6 @@ if __name__ == "__main__":
         asyncio.set_event_loop(loop)
         loop.run_until_complete(main())
         loop.run_until_complete(watchlist_report())
-        loop.close()
     elif scan == "portfolio":
         print(scan)
         asyncio.run(portfolio_report())
@@ -173,3 +172,5 @@ if __name__ == "__main__":
         print(scan)
         asyncio.run(watchlist_report())
     asyncio.run(send_embeds())
+    with loop:
+        pass

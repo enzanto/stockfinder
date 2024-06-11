@@ -1,5 +1,6 @@
 import discord
 from discord.ext import commands
+import yfinance as yf
 import json
 from discord import app_commands
 import settings
@@ -25,8 +26,8 @@ logger = settings.logging.getLogger("discord")
 #         outfile.write(json_object)
 class Watchlist(app_commands.Group):
     @app_commands.command()
-    async def add(self,interaction: discord.Interaction, text: str):
-        inputs = text.split()
+    async def add(self,interaction: discord.Interaction, symbol: str):
+        inputs = symbol.split()
         discorduser = interaction.user
         discordusername = discorduser.name
         try:
@@ -74,8 +75,8 @@ class Watchlist(app_commands.Group):
             await interaction.response.send_message("You have no list", ephemeral=True, delete_after=60)
 
     @app_commands.command()
-    async def remove(self,interaction: discord.Interaction, text: str):
-        inputs = text.split()
+    async def remove(self,interaction: discord.Interaction, symbol: str):
+        inputs = symbol.split()
         discorduser = interaction.user
         discordusername = discorduser.name
         userdata = userdatadb.get_portfolio_data(discorduser.id)

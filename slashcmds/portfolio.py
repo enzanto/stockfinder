@@ -1,5 +1,6 @@
 import discord
 from discord.ext import commands
+import yfinance as yf
 import json
 from discord import app_commands
 import settings
@@ -14,8 +15,8 @@ logger = settings.logging.getLogger("discord")
 
 class Portfolio(app_commands.Group):
     @app_commands.command()
-    async def add(self,interaction: discord.Interaction, text: str):
-        inputs = text.split()
+    async def add(self,interaction: discord.Interaction, symbol: str):
+        inputs = symbol.split()
         discorduser = interaction.user
         discordusername = discorduser.name
         try:

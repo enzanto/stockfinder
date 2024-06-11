@@ -212,7 +212,7 @@ class rabbitcon(object):
         try:
             self.connection = await connect("amqp://pod:pod@rabbit-cluster.default/")
         except:
-            self.connection = await connect("amqp://pod:pod@192.168.1.204:31394/?heartbeat=900")
+            self.connection = await connect("amqp://pod:pod@192.168.10.80:30500/?heartbeat=900")
 
         self.channel = await self.connection.channel()
         await self.channel.set_qos(prefetch_count=1)
@@ -221,6 +221,7 @@ class rabbitcon(object):
         self.queue = await self.channel.declare_queue("rpc_queue")
 
 async def rabbit_logger(log):
+    global conn
     log = f"{hostname} - {log}"
     message_body = log.encode()
     await conn.exchange_log.publish(Message(body=message_body), routing_key="log")
