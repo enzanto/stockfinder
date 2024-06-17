@@ -161,10 +161,8 @@ if __name__ == "__main__":
     logger = settings.logging.getLogger("bot")
     scan = os.environ['SCAN']
     if scan == "minervini":
-        loop = asyncio.new_event_loop()
-        asyncio.set_event_loop(loop)
-        loop.run_until_complete(main())
-        loop.run_until_complete(watchlist_report())
+        asyncio.run(main())
+        asyncio.run(watchlist_report())
     elif scan == "portfolio":
         print(scan)
         asyncio.run(portfolio_report())
@@ -172,5 +170,3 @@ if __name__ == "__main__":
         print(scan)
         asyncio.run(watchlist_report())
     asyncio.run(send_embeds())
-    with loop:
-        pass
