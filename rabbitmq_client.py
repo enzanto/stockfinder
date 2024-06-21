@@ -210,8 +210,9 @@ class rabbitmq(object):
             df.index = pd.to_datetime(df.index)
             print(df.head())
             return df
-        except asyncio.CancelledError:
+        except asyncio.CancelledError as e:
             print(f"task was cancelled: {ticker}")
+            print(e)
             raise
         # finally:
         #     try:

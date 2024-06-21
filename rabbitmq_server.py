@@ -47,7 +47,6 @@ class webscrape_nordnet(object):
         self.session.get(url)
         self.cookie = self.session.cookies.get_dict()
         cookie_csrf = self.cookie['_csrf']
-        cookie_next = self.cookie['NEXT']
         headers = {
             'cookie': f"lang=no; _csrf={cookie_csrf}",
             'User-Agent': "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/118.0",
@@ -55,7 +54,7 @@ class webscrape_nordnet(object):
             'Referer': "https://www.nordnet.no/",
             'client-id': "NEXT",
             'Connection': "keep-alive",
-            'Cookie': f"NEXT={cookie_next}; lang=no; _csrf={cookie_csrf}; cookie_consent=analytics%2Cfunctional%2Cmarketing%2Cnecessary; _ga=GA1.2.403542613.1696779243; _gid=GA1.2.780383003.1696779243; _gat_UA-58430789-10=1", 
+            'Cookie': f"lang=no; _csrf={cookie_csrf}; cookie_consent=analytics%2Cfunctional%2Cmarketing%2Cnecessary; _ga=GA1.2.403542613.1696779243; _gid=GA1.2.780383003.1696779243; _gat_UA-58430789-10=1", 
             'Sec-Fetch-Dest': "empty",
             'Sec-Fetch-Mode': "cors",
             'Sec-Fetch-Site': "same-origin"
@@ -85,17 +84,16 @@ class webscrape_nordnet(object):
             except:
                 ticker['nordnet'] = "http://www.nordnet.no"
         except Exception as e:
-            await rabbit_logger(f"{ticker['ticker']} failed")
             print(e)
             print(ticker)
         json_ticker = json.dumps(ticker)
         return json_ticker
 
 
-    def get_info(self, mapped_ticker):
+    async def get_info(self, mapped_ticker):
+        print(type(mapped_ticker))
         if self.cookie == "" or self.cookie_time + timedelta(hours=12) > datetime.now():
             self.get_cookie("https://www.nordnet.no")
-        symbol = mapped_ticker['ticker'].replace(".ol", "")
         url = f"{mapped_ticker['nordnet']}?details"
         html = self.session.get(url).text
         soup = BeautifulSoup(html, "lxml")
@@ -111,6 +109,7 @@ class webscrape_nordnet(object):
                 
             except:
                 continue
+        json_out = json.dumps(json_out)
         return json_out
 
 class webscrape_investtech(object):

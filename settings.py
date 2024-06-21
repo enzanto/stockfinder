@@ -22,7 +22,7 @@ try:#database
         DBPORT = os.environ['DBPORT']
         print('DBPORT ENV ok')
     except:
-        DBPORT = 5432
+        DBPORT = "5432"
         print('DBPORT set to standard 5432')
     db_connect_address = f'postgresql+psycopg2://{DBUSER}:{DBPASSWORD}@{DBADDRESS}:{DBPORT}/{DBNAME}'
     engine = create_engine('postgresql+psycopg2://'+DBUSER+':'+DBPASSWORD+'@'+DBADDRESS+':'+DBPORT+'/'+DBNAME)
