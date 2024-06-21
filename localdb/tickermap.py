@@ -23,7 +23,7 @@ class TickerMap:
         :param json_data: JSON formatted data to store
         '''
         with sessionmaker(bind=self.engine)() as session:
-            record = self.session.query(self.jsonMap).filter_by(ticker=ticker.lower()).first()
+            record = session.query(self.jsonMap).filter_by(ticker=ticker.lower()).first()
             if record:
                 record.json_data = json_data
             else:

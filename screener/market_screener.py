@@ -423,6 +423,10 @@ class MarketScreener:
             mbd=discord.Embed(title=stockname, url=url, description=body,color=color)
             mbd.set_image(url="attachment://"+imagename+'.png')
             try:
+                mbd.set_thumbnail(url=json_data['icon'])
+            except Exception as e:
+                logger.warn(e)
+            try:
                 mbd2=discord.Embed(url=url)
                 investtech_imageIO = BytesIO(investtech_image)
                 img_investtech = discord.File(investtech_imageIO, filename=imagename+'_investtech.png')
