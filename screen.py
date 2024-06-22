@@ -15,11 +15,11 @@ try:#google sheet
     ws = sh.worksheet('oslobors')
     googleSheet = True
 except:
-    print("Google sheets not selected")
+    logger.warning("Google sheets not selected")
     googleSheet = False
 
 discord_token = os.environ['discord_token']
-print("discord_webhook_url ENV OK")
+logger.info("discord_webhook_url ENV OK")
 intents = discord.Intents.default()
 bot = discord.Client(intents=intents)
 channel_id = 1161668764341907556
@@ -48,7 +48,7 @@ async def main():
 async def portfolio_report():
     userdata_db = userdata.UserData()
     user_data = userdata_db.get_userids()
-    print(user_data)
+    logger.info(user_data)
     embed_dict = []
     for user in user_data:
         tickerlist = []
@@ -63,7 +63,7 @@ async def portfolio_report():
 async def watchlist_report():
     userdata_db = userdata.UserData()
     user_data = userdata_db.get_userids()
-    print(user_data)
+    logger.info(user_data)
     embed_dict = []
     for user in user_data:
         tickerlist = []
@@ -72,7 +72,7 @@ async def watchlist_report():
         for i in user['watchlist']:
             #change to i['symbol'] when updating the watchlist structure
             tickerlist.append(i)
-        print(user['userid'])
+        logger.info(user['userid'])
         embeds,images,embeds2,images2 = await(report_db(user['watchlist']))
         embed_dict.append({'user': user['userid'], 'embeds': embeds, 'images': images, 'embeds2': embeds2, 'images2': images2})
         completed_rapports['watchlist'] = embed_dict
@@ -120,7 +120,7 @@ async def send_embeds():
             return
         for user in rapports:
             discord_user = await bot.fetch_user(user['user'])
-            print(discord_user.name)
+            logger.info(discord_user.name)
             length=6
             embeds = user['embeds']
             images = user['images']
@@ -145,7 +145,7 @@ async def send_embeds():
             return
         for user in rapports:
             discord_user = await bot.fetch_user(user['user'])
-            print(discord_user.name)
+            logger.info(discord_user.name)
             length=6
             embeds = user['embeds']
             if len(embeds) > 0:
@@ -164,9 +164,9 @@ if __name__ == "__main__":
         asyncio.run(main())
         asyncio.run(watchlist_report())
     elif scan == "portfolio":
-        print(scan)
+        logger.info(scan)
         asyncio.run(portfolio_report())
     elif scan == "watchlist":
-        print(scan)
+        logger.info(scan)
         asyncio.run(watchlist_report())
     asyncio.run(send_embeds())

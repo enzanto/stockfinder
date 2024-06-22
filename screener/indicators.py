@@ -55,9 +55,7 @@ def bollinger_band(df):
     choices = ['Buy', 'Sell']
     df['Signal'] = np.select(conditions,choices)
     if df['Signal'].iloc[-1] == ("Sell" or "Buy"):
-        #print(df['Signal'].iloc[-1])
         return  "is outside Bollinger Band"
-        # print('https://finance.yahoo.com/chart/'+stock)
 
 def trend_template(df):
     '''
@@ -70,13 +68,11 @@ def trend_template(df):
     # df = pd.read_sql(stock_db,engine)
     tests_passed=0
     if df.empty:
-        print("empty dataframe passed to trend template")
         return None
     smaUsed=[50,150,200]
     for x in smaUsed:
         sma=x
         df["SMA_"+str(sma)]=round(df["Adj Close"].rolling(window=sma).mean(),2)
-    # print(df)
     currentClose=df["Adj Close"].iloc[-1]
     moving_average_50=df["SMA_50"].iloc[-1]
     moving_average_150=df["SMA_150"].iloc[-1]

@@ -5,7 +5,6 @@ import json
 from discord import app_commands
 import settings
 import time
-# from investech_scrape import get_img,get_text
 from localdb import tickermap, userdata
 from reports import *
 tickermapdb = tickermap.TickerMap()
@@ -37,7 +36,7 @@ class Portfolio(app_commands.Group):
                 if ticker == None:
                     raise Exception(f"{i} not found in tickermap. trying .ol extension")
             except Exception as e:
-                print(e)
+                logger.warning(e)
                 ticker = tickermapdb.get_map_data(i+".ol")
             if ticker == None:
                 logger.warning(f"{i} not in tickermap")
@@ -48,11 +47,10 @@ class Portfolio(app_commands.Group):
                 if i not in portfolio:
                     portfolio.append(i)
                 else:
-                    print(f"{i} already present")
-            print(userdata)
+                    logger.info(f"{i} already present")
             userdatadb.insert_portfolio_data(discorduser.id, userdata)
         elif present == False:
-            print("user not found")
+            logger.info("user not found creating new user")
             new_dict = {"userid": discorduser.id, "portfolio": result}
             userdatadb.insert_portfolio_data(discorduser.id, new_dict)
         await interaction.response.send_message(" ".join(result)+f" added to {discordusername}", ephemeral=True, delete_after=60)
@@ -85,7 +83,7 @@ class Portfolio(app_commands.Group):
                 if ticker == None:
                     raise Exception(f"{i} not found in tickermap. trying .ol extension")
             except Exception as e:
-                print(e)
+                logger.warning(e)
                 ticker = tickermapdb.get_map_data(i+".ol")
             if ticker == None:
                 logger.warning(f"{i} not in tickermap")
@@ -110,23 +108,16 @@ class Portfolio(app_commands.Group):
         userlist = userdata['portfolio']
         userlist.sort()
         embeds = await report_portfolio(userlist)
-        print("got the stuff")
-        print("length: " ,len(embeds))
+        logger.info(f"retrieved portfolio report for {interaction.user.name}")
+        logger.info("length: " ,len(embeds))
         await interaction.edit_original_response(content="report in DM")
         length = 6
         for i in range(0, len(embeds), length):
             x=i
-            print(i,x)
             emb = embeds[x:x+length]
             if emb:
                 await interaction.user.send(embeds=emb, silent=True)
-        # for i in range(0, len(embeds), length):
-        #     x=i
-        #     print(i,x)
-        #     emb = embeds[x:x+length]
-        #     im = embed_images[x:x+length]
-        #     await interaction.user.send(embeds=emb, files=im)
 
 async def setup(bot):
     bot.tree.add_command(Portfolio(name="portfolio", description="Access portfolio"), guild=settings.GUILD_ID)
-    print("portfolio added")
+    logger.info("portfolio added")

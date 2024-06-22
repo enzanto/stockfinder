@@ -48,7 +48,7 @@ async def db_updater(symbol, engine=settings.engine, start=start_date, rabbit=No
             logger.info(str(len(new_rows))+ f' new rows imported to {symbol}')
         except Exception as e:
             if str(e)== f"Todays volume is not equal, updating {symbol}":
-                print(e)
+                logger.warning(e)
                 if serverside == True:
                     new_data = yf.download(symbol, start_date)
                 else:
@@ -57,14 +57,14 @@ async def db_updater(symbol, engine=settings.engine, start=start_date, rabbit=No
                 new_data.to_sql(tableName, engine, if_exists='replace')
                 return
             elif str(e) == f"{symbol} already at newest data":
-                print(e)
+                logger.warning(e)
                 return
             else:
-                print(e)
+                logger.warning(e)
                 return
         
     except Exception as e:
-        print(symbol,e)
+        logger.warning(symbol,e)
         try:
             if serverside == True:
                 new_data = yf.download(symbol, start_date)
@@ -72,10 +72,10 @@ async def db_updater(symbol, engine=settings.engine, start=start_date, rabbit=No
                 new_data = await rabbit.get_yahoo(symbol, start_date)
             new_data.index.name = "Date"
             new_data.to_sql(tableName, engine)
-            print(f'New table created for {tableName} with {str(len(new_data))} rows')
+            logger.info(f'New table created for {tableName} with {str(len(new_data))} rows')
         except Exception as e:
-            print(e)
-            print("No data on " + symbol)
+            logger.warning(e)
+            logger.warning("No data on " + symbol)
             return
     # await rabbit.disconnect()
 

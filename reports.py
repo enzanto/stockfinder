@@ -6,7 +6,7 @@ from datetime import datetime, time
 from screener import market_screener
 import rabbitmq_client
 from localdb import tickermap, scan_report, portfolio_report 
-
+from settings import logger
 
 
 
@@ -24,8 +24,8 @@ async def report_full(tickers):
         try:
             await task
         except Exception as e:
-            print(f"Error occured: {e}")
-    print("done awaiting tasks")
+            logger.warning(f"Error occured: {e}")
+    logger.info("done awaiting tasks")
     embeds = []
     embeds2 = []
     images = []
@@ -39,7 +39,7 @@ async def report_full(tickers):
             embeds.extend(i['embed'])
             images.extend(i['image'])
     await screener.rabbit.disconnect()
-    print("done with report")
+    logger.info("done with report")
     return embeds,images,embeds2,images2
 
 async def report_db(tickers, minervini=False):
@@ -66,7 +66,7 @@ async def report_db(tickers, minervini=False):
             mapped = map_db.get_map_data(i)
             mapped_tickers.append(mapped)
         except:
-            print('ticker not in map')
+            logger.warning('ticker not in map')
     async def fetch_embeds(i):
         try:
             ticker = i['ticker']
@@ -81,23 +81,23 @@ async def report_db(tickers, minervini=False):
                 if json_data['minervini'] < 7 or json_data['vwap'] < 1:
                     return
                 else:
-                    print(f"{ticker} added with a score of {json_data['minervini']}")
+                    logger.info(f"{ticker} added with a score of {json_data['minervini']}")
             await screener.create_embeds(json_data=json_data, image=pivots, investtech_image=investtech)
         except Exception as e:
-            print(i)
+            logger.warning(e)
     db_tasks = []
     for i in mapped_tickers:
         db_tasks.append(asyncio.create_task(fetch_embeds(i)))
     try:
         result = await asyncio.shield(asyncio.wait_for(asyncio.gather(*db_tasks), timeout=600))
     except asyncio.TimeoutError:
-        print("timed out of gather")
+        logger.warning("timed out of gather")
         cancel = 0
         for task in db_tasks:
             if not task.done():
                 cancel += 1
                 task.cancel()
-        print(f"{cancel} tasks canceled")
+        logger.warning(f"{cancel} tasks canceled")
     embeds = []
     embeds2 = []
     images = []
@@ -111,7 +111,7 @@ async def report_db(tickers, minervini=False):
             embeds.extend(i['embed'])
             images.extend(i['image'])
     await screener.rabbit.disconnect()
-    print("done with report")
+    logger.info("done with report")
     return embeds,images,embeds2,images2
 
 async def report_portfolio(tickers):
@@ -138,18 +138,18 @@ async def report_portfolio(tickers):
     async def fetch_embeds(i):
         ticker = i['ticker']
         reportdate, json_data = report_db.get_report_data(ticker=ticker) ###### change report data to new
-        print(reportdate)
+        logger.info(reportdate)
         if reportdate == None or today.date() > reportdate.date():
-            print("today is not newest")
+            logger.info("today is not newest")
             await work.portfolio_report(i)
             reportdate, json_data = report_db.get_report_data(ticker=ticker)
         elif reportdate.time() < time(15,45): 
-            print("updating report,")
+            logger.info("updating report,")
             await work.portfolio_report(i)
             reportdate, json_data = report_db.get_report_data(ticker=ticker)
         else:
-            print("today is newest")
-        print(json_data)
+            logger.info("today is newest")
+        logger.info(json_data)
         await screener.create_portfolio_embeds(json_data=json_data)
     db_tasks = []
     for i in mapped_tickers:
@@ -157,19 +157,19 @@ async def report_portfolio(tickers):
     try:
         result = await asyncio.shield(asyncio.wait_for(asyncio.gather(*db_tasks), timeout=600))
     except asyncio.TimeoutError:
-        print("timed out of gather")
+        logger.warning("timed out of gather")
         cancel = 0
         for task in db_tasks:
             if not task.done():
                 cancel += 1
                 task.cancel()
-        print(f"{cancel} tasks canceled")
+        logger.warning(f"{cancel} tasks canceled")
     embeds = []
     finished_result = sorted(screener.result['portfolio'], key=lambda x: x['stock'])
     for i in finished_result:
             embeds.extend(i['embed'])
     await screener.rabbit.disconnect()
-    print("done with report")
+    logger.info("done with report")
     return embeds
 
 
@@ -180,4 +180,4 @@ if __name__ == "__main__":
         data=json.load(mapfile)
     stocks = data['stocks'][:3]
     stocks[0]['yahoo'] = "https://finance.yahoo.com/chart/"+stocks[0]['ticker']
-    print(data['stocks'][:3])
+    logger.info(data['stocks'][:3])

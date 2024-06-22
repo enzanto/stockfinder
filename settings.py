@@ -4,30 +4,30 @@ from logging.config import dictConfig
 import discord
 from sqlalchemy import create_engine
 import pytz
-
+logger = logging.getLogger("bot")
 try:
     discord_token=os.environ['discord_token']
     GUILD_ID = discord.Object(id=int(os.environ['GUILD_ID']))
 except KeyError:
-    print("discord not set up")
+    logger.warning("discord not set up")
 try:#database
     DBUSER = os.environ['DBUSER']
-    print("DBUSER ENV ok")
+    logger.info("DBUSER ENV ok")
     DBPASSWORD = os.environ['DBPASSWORD']
-    print("DBPASSWORD ENV ok")
+    logger.info("DBPASSWORD ENV ok")
     DBADDRESS = os.environ['DBADDRESS']
-    print('DBADDRESS ENV OK')
+    logger.info('DBADDRESS ENV OK')
     DBNAME = os.environ['DBNAME']
     try:
         DBPORT = os.environ['DBPORT']
-        print('DBPORT ENV ok')
+        logger.info('DBPORT ENV ok')
     except:
         DBPORT = "5432"
-        print('DBPORT set to standard 5432')
+        logger.info('DBPORT set to standard 5432')
     db_connect_address = f'postgresql+psycopg2://{DBUSER}:{DBPASSWORD}@{DBADDRESS}:{DBPORT}/{DBNAME}'
     engine = create_engine('postgresql+psycopg2://'+DBUSER+':'+DBPASSWORD+'@'+DBADDRESS+':'+DBPORT+'/'+DBNAME)
 except KeyError as err:
-    print("DB variables not present, using sqlite local db")
+    logger.warning("DB variables not present, using sqlite local db")
     engine = create_engine('sqlite:///data/TEST_DB.db')
 
 try:

@@ -4,12 +4,12 @@ import base64
 import uuid
 import aio_pika
 import json
-from settings import rabbit_password,rabbit_user
+from settings import rabbit_password,rabbit_user, logging
 from typing import MutableMapping
 from aio_pika.abc import (
     AbstractChannel, AbstractConnection, AbstractIncomingMessage, AbstractQueue,
 )
-
+logger = logging.getLogger("bot")
 class rabbitmq(object):
     connection: AbstractConnection
     channel: AbstractChannel
@@ -23,7 +23,7 @@ class rabbitmq(object):
         self.futures: MutableMapping[str, asyncio.Future] = {}
         self.loop = asyncio.get_running_loop()
         self.rpc_queue = str(uuid.uuid4())
-        print(self.rpc_queue)
+        logger.info(f"RPC que: {self.rpc_queue}")
 
     async def connect(self):
         try:
@@ -43,16 +43,17 @@ class rabbitmq(object):
         try:
             # await self.callback_queue.delete()
             await asyncio.wait_for(self.callback_queue.delete(), timeout=3)
-        except asyncio.TimeoutError:
-            print("Timeout occurred while deleting the queue")
+        except asyncio.TimeoutError as e:
+            logger.warning("Timeout occurred while deleting the queue")
+            logger.warning(e)
         except aio_pika.exceptions.ChannelNotFoundEntity:
             pass
         except Exception as e:
-            print(e)
-        print("done closing")
+            logger.info(e)
+        logger.info("done closing")
     async def on_response(self, message: AbstractIncomingMessage) -> None:
         if message.correlation_id is None:
-            print(f"Bad message {message!r}")
+            logger.info(f"Bad message {message!r}")
             return
         future: asyncio.Future = self.futures.pop(message.correlation_id)
         future.set_result(message.body)
@@ -70,8 +71,8 @@ class rabbitmq(object):
             ),
             routing_key="rpc_queue"
         )
-        print(f"Sent RPC request: {i}")
-        print(int(await future))
+        logger.info(f"Sent RPC request: {i}")
+        logger.info(int(await future))
 
 
     async def send_json(self, i):
@@ -92,7 +93,7 @@ class rabbitmq(object):
                 routing_key="rpc_queue"
             )
             json_return = json.loads(await future)
-            print(json_return)
+            logger.info(json_return)
             for d in self.data['stocks']:
                 if d['ticker'] == json_return['ticker']:
                     if 'icon' in json_return:
@@ -101,8 +102,9 @@ class rabbitmq(object):
                         d['nordnetID'] = json_return['nordnetID']
                     if 'nordnetName' in json_return:
                         d['nordnetName'] = json_return['nordnetName']
-        except asyncio.CancelledError:
-            print(f"task {i} was cancelled: {i['ticker']}")
+        except asyncio.CancelledError as e:
+            logger.warning(f"task {i} was cancelled: {i['ticker']}")
+            logger.warning(e)
             raise
 
     async def get_investtech(self, i):
@@ -130,8 +132,9 @@ class rabbitmq(object):
             with open(f"images/{filename}-investtech.png", "wb") as imagefile:
                 imagefile.write(decoded_image)
             return header,body
-        except asyncio.CancelledError:
-            print(f"task {i} was cancelled: {i['ticker']}")
+        except asyncio.CancelledError as e:
+            logger.warning(f"task {i} was cancelled: {i['ticker']}")
+            logger.warning(e)
             raise
     
     async def build_report(self,request_dict, rsi = None):
@@ -152,12 +155,13 @@ class rabbitmq(object):
             )
             json_return = json.loads(await future)
             if 'status' in json_return:
-                print(json_return['ticker'], json_return['status'])
+                logger.warning(json_return['ticker'], json_return['status'])
             else:
-                print(json_return['ticker'])
+                logger.info(json_return['ticker'])
             return json_return 
-        except asyncio.CancelledError:
-            print(f"task was cancelled: {request_dict}")
+        except asyncio.CancelledError as e:
+            logger.warning(f"task was cancelled: {request_dict}")
+            logger.warning(e)
             raise
 
 
@@ -179,10 +183,11 @@ class rabbitmq(object):
             )
             json_return = json.loads(await future)
             if 'status' in json_return:
-                print(json_return['ticker'], json_return['status'])
+                logger.warning(json_return['ticker'], json_return['status'])
             return json_return 
-        except asyncio.CancelledError:
-            print(f"task was cancelled: {request_dict}")
+        except asyncio.CancelledError as e:
+            logger.warning(f"task was cancelled: {request_dict}")
+            logger.warning(e)
             raise
 
     async def get_yahoo(self, i, start=None):
@@ -208,24 +213,14 @@ class rabbitmq(object):
             json_return = json.loads(await future)
             df = pd.DataFrame.from_dict(json_return)
             df.index = pd.to_datetime(df.index)
-            print(df.head())
             return df
         except asyncio.CancelledError as e:
-            print(f"task was cancelled: {ticker}")
-            print(e)
+            logger.info(f"task was cancelled: {ticker}")
+            logger.info(e)
             raise
-        # finally:
-        #     try:
-        #         await self.callback_queue.delete()
-        #     except aio_pika.exceptions.ChannelNotFoundEntity:
-        #         # The channel is already closed; ignore this exception.
-        #         pass
-        #     except Exception as e:
-        #         print(e)
-
 # main is used for testing new features during development
 async def main():
-    print("not in use at the moment")
+    logger.info("not in use at the moment")
 if __name__ == "__main__":
     loop = asyncio.get_event_loop()
     loop.run_until_complete(main())

@@ -84,14 +84,14 @@ class webscrape_nordnet(object):
             except:
                 ticker['nordnet'] = "http://www.nordnet.no"
         except Exception as e:
-            print(e)
-            print(ticker)
+            logger.warning(e)
+            logger.warning(ticker)
         json_ticker = json.dumps(ticker)
         return json_ticker
 
 
     async def get_info(self, mapped_ticker):
-        print(type(mapped_ticker))
+        logger.info(type(mapped_ticker))
         if self.cookie == "" or self.cookie_time + timedelta(hours=12) > datetime.now():
             self.get_cookie("https://www.nordnet.no")
         url = f"{mapped_ticker['nordnet']}?details"
@@ -239,7 +239,7 @@ async def main(conn) -> None:
     # exchange = channel.default_exchange
     # queue = await channel.declare_queue("rpc_queue")
     await conn.connect()
-    print(" [x] Awaiting RPC requests")
+    logger.info(" [x] Awaiting RPC requests")
     scrape_nordnet = webscrape_nordnet()
     scrape_investtech = webscrape_investtech()
     update_report = scan_report.ScanReport()
@@ -248,12 +248,11 @@ async def main(conn) -> None:
     async with conn.queue.iterator() as qiterator:
         message: AbstractIncomingMessage
         async for message in qiterator:
-            print("test")
             try:
                 async with message.process(requeue=False):
                     assert message.reply_to is not None
                     n = json.loads(message.body.decode())
-                    print(n)
+                    logger.info(n)
                     if n['order'] == "get logo":
                         response = await asyncio.wait_for(scrape_nordnet.get_logo(n['request']), timeout=10)
                     elif n['order'] == "investtech":
@@ -291,8 +290,8 @@ async def main(conn) -> None:
                             #have function here to add data to database
                             update_report.insert_report_data(ticker,json_result, image, investtech_image)
                         except Exception as e:
-                            print("Exception Raised")
-                            print(e)
+                            logger.warning("Exception Raised")
+                            logger.warning(e)
                             response = json.dumps({'ticker': ticker, 'status': "an error occured", 'minervini': 0})
 
                     elif n['order'] == "portfolio report":
@@ -305,14 +304,13 @@ async def main(conn) -> None:
                                 screener.get_osebx_rsi()
                             else:
                                 screener.indexRSI = n['rsi']
-                            print("test1")
                             #json response, with header and body. fields: ema 8, ema21, sma50, trailing stop, volume sma
                             json_result = await screener.portfolio_scan(n['request'], return_text=True)
                             response = json.dumps({'ticker': ticker, 'status': 'complete'})
-                            print(json_result)
+                            logger.info(json_result)
                             portfoli_report.insert_report_data(ticker,json_result)
                         except Exception as e:
-                            print(e)
+                            logger.warning(e)
                             response = json.dumps({'ticker': ticker, 'status': "an error occured", 'minervini': 0})
                     else:
                         await message.reject(requeue=True)
@@ -324,10 +322,10 @@ async def main(conn) -> None:
                         ),
                         routing_key=message.reply_to,
                     )
-                    print("Request complete")
+                    logger.info("Request complete")
             except asyncio.TimeoutError:
                 await message.reject(requeue=True)
-                print("Message was timed out and requeued")
+                logger.warning("Message was timed out and requeued")
             except Exception:
                 logging.exception("Processing error for message %r", message)
 
@@ -342,7 +340,7 @@ async def test():
     savereport = scan_report.saveReport()
     # savereport.insert_report_data(ticker=tickermap['ticker'], json_data=json_result, image=image, investtech_img=investtech_image)
     dbDate, dbJson, dbInvesttech, dbimg = savereport.get_report_data(ticker=tickermap['ticker'])
-    print(dbDate)
+    logger.info(dbDate)
     imagefile = io.BytesIO(dbInvesttech)
     imagefile.seek(0)
     with open("testfile.png", 'wb') as file:

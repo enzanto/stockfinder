@@ -165,17 +165,17 @@ class MarketScreener:
         try:
             result = await asyncio.shield(asyncio.wait_for(asyncio.gather(*update_tasks), timeout=600))
         except asyncio.TimeoutError:
-            print("timed out of gather")
+            logger.warning("timed out of gather")
             cancel = 0
             for task in update_tasks:
                 if not task.done():
                     cancel += 1
                     task.cancel()
-            print(f"{cancel} tasks canceled")
+            logger.warning(f"{cancel} tasks canceled")
             return
         for task_result in result:
             if isinstance(task_result, Exception):
-                print(f"An exception occurred in one of the tasks: {task_result}")
+                logger.warning(f"An exception occurred in one of the tasks: {task_result}")
         # start investtech gather here?
 
     async def fullscan(self):
@@ -183,17 +183,17 @@ class MarketScreener:
         try:
             result = await asyncio.shield(asyncio.wait_for(asyncio.gather(*tasks), timeout=3600))
         except asyncio.TimeoutError:
-            print("timed out of gather")
+            logger.warning("timed out of gather")
             cancel = 0
             for task in tasks:
                 if not task.done():
                     task.cancel()
                     cancel += 1
-            print(f"{cancel} tasks canceled")
+            logger.warning(f"{cancel} tasks canceled")
             return
         for task_result in result:
             if isinstance(task_result, Exception):
-                print(f"An exception occurred in one of the tasks: {task_result}")
+                logger.warning(f"An exception occurred in one of the tasks: {task_result}")
         
 
     #json response, with header and body. fields: ema 8, ema21, sma50, trailing stop, volume sma
@@ -225,7 +225,6 @@ class MarketScreener:
             volumeChange = round(((df['Volume'].iloc[-1] / df['Volume_SMA_20'].iloc[-1]))*100,2)
             priceChange = round(((df['Adj Close'].iloc[-1] / df['Adj Close'].iloc[-2]) -1)*100,2)
             trailing = trailing_stop(df)
-            print("TRAILING", trailing)
             #set up emojis
             def check_trend(price, value):
                 '''
@@ -273,7 +272,7 @@ class MarketScreener:
                                     'yahoo': "https://finance.yahoo.com/chart/"+stock, 'score': score}
             for field in fields:
                 self.json_portfolio['fields'].append(field)
-            print(self.json_portfolio)
+            logger.info(self.json_portfolio)
             if return_text:
                 return self.json_portfolio
     async def scan(self, i, return_text=False, minerviniscan=False):
@@ -351,7 +350,6 @@ class MarketScreener:
             bollinger_band_out = bollinger_band(df)
             pivotPoint = pivot_point(df)
             trailing = trailing_stop(df)
-            print("scan test")
             if "investechID" in mapped_ticker and return_text == False:
                 header,body= await self.rabbit.get_investtech(mapped_ticker)
             else:
@@ -432,7 +430,7 @@ class MarketScreener:
                 img_investtech = discord.File(investtech_imageIO, filename=imagename+'_investtech.png')
                 mbd2.set_image(url="attachment://"+imagename+'_investtech.png')
             except Exception as e:
-                print(e)
+                logger.warning(e)
             mbd.set_author(name=header, url=header_url)
             for i in fields:
                 mbd.add_field(name=i['title'], value=i['field'])
@@ -440,7 +438,7 @@ class MarketScreener:
             try:
                 response_dict = {"stock":stock,"market": market, "embed": [mbd,mbd2], "image": [img,img_investtech], "image investtech": img_investtech, "trend": trend}
             except Exception as e:
-                print(e)
+                logger.warning(e)
                 response_dict = {"stock":stock,"market": market, "embed": [mbd], "image": [img], "trend": trend}
             self.result['result'].append(response_dict)
             # return response_dict
