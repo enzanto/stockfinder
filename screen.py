@@ -7,7 +7,7 @@ import settings
 from screener import market_screener
 from reports import report_db, report_portfolio
 from localdb import userdata
-logger = settings.logging.getLogger("discord")
+logger = settings.logger
 # setup
 try:#google sheet
     gc = gspread.service_account("/usr/src/app/credentials.json")
@@ -158,7 +158,7 @@ async def send_embeds():
     await bot.start(discord_token)
 
 if __name__ == "__main__":
-    logger = settings.logging.getLogger("bot")
+    logger = settings.logger
     scan = os.environ['SCAN']
     if scan == "minervini":
         asyncio.run(main())
@@ -169,4 +169,9 @@ if __name__ == "__main__":
     elif scan == "watchlist":
         logger.info(scan)
         asyncio.run(watchlist_report())
+    elif scan == "debug":
+        logger.info(scan)
+        channel_id = 1254060220804628671
+        logger.debug(f"set discord channel to {channel_id}")
+        asyncio.run(main())
     asyncio.run(send_embeds())

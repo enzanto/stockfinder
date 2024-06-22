@@ -358,7 +358,7 @@ class MarketScreener:
             gsheet_dict = {'Stock': '=hyperlink(\"https://finance.yahoo.com/chart/'+stock+'\",\"'+stockname+'\")', 'Ticker': stock, 'Adj Close' : df["Adj Close"].iloc[-1].round(2), 'Change': str(priceChange)+"%", 'Closing range': closingRange, \
                         'vwap': vwap, 'Volume vs sma20': str(volumeChange)+"%", 'RS': rs.round(2), 'Market': market, 'Yahoo': "https://finance.yahoo.com/chart/"+stock, \
                         'PivotPoint': False, 'MACD': False, '20Day high': False, 'Minervini': trend}
-            self.json_response = {'ticker': stock, 'name': stockname, 'rs': rs, 'header': header, 'header url': mapped_ticker['nordnet'], 'body': body, 'fields': [ {'title': 'Adj Close', 'field': str(price)+"kr\n"+str(priceChange)+"%"}, {'title': 'Closing Range', 'field': str(closingRange)}, {'title': 'vwap', 'field': str(vwap)},\
+            self.json_response = {'ticker': stock, 'name': stockname, 'rs': rs, 'header': header,'header url': mapped_ticker['nordnet'], 'body': body, 'fields': [ {'title': 'Adj Close', 'field': str(price)+"kr\n"+str(priceChange)+"%"}, {'title': 'Closing Range', 'field': str(closingRange)}, {'title': 'vwap', 'field': str(vwap)},\
                         {'title': 'Volume SMA20', 'field': str(volumeChange)+'%'}, {'title': 'RS', 'field': str(rs.round(2))}], \
                         'market': market, 'yahoo': "https://finance.yahoo.com/chart/"+stock, \
                         'minervini': trend, 'vwap': vwap, 'color': None}
@@ -394,6 +394,8 @@ class MarketScreener:
                     self.json_response['fields'].append({'title': 'trailing stop :red_circle:', 'field': trailing})
                 else:
                     self.json_response['fields'].append({'title': 'trailing stop', 'field': trailing})
+            if "icon" in mapped_ticker:
+                self.json_response['icon'] = mapped_ticker['icon']
             new_row = pd.Series(gsheet_dict)
             self.exportdf = pd.concat([self.exportdf, new_row.to_frame().T], ignore_index=True)
             if return_text:
@@ -423,7 +425,7 @@ class MarketScreener:
             try:
                 mbd.set_thumbnail(url=json_data['icon'])
             except Exception as e:
-                logger.warn(e)
+                logger.warning(e)
             try:
                 mbd2=discord.Embed(url=url)
                 investtech_imageIO = BytesIO(investtech_image)

@@ -27,7 +27,7 @@ except KeyError:
     hostname = "No hostname found"
 
 def signal_handler(sig, frame):
-    logger.warn(f"Recieved signal: {sig}")
+    logger.warning(f"Recieved signal: {sig}")
     conn.connection.close()
     settings.engine.dispose()
     sys.exit(0)

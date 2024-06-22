@@ -47,7 +47,7 @@ def run():
         await ctx.send("pong")
 
     def signal_handler(sig, frame):
-        logger.warn(f"Recieved signal: {sig}")
+        logger.warning(f"Recieved signal: {sig}")
         settings.engine.dispose()
         bot.close()
         sys.exit(0)
