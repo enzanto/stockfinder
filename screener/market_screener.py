@@ -270,6 +270,8 @@ class MarketScreener:
             self.json_portfolio = {'ticker': stock, 'name': f"{stockname} {check_trend(0,priceChange)}", 'header': header, 'header url': mapped_ticker['nordnet'], 'body': body, 'fields': [ \
                                     {'title': f'Volume SMA20 {check_trend(100, volumeChange)}', 'field': str(volumeChange)+'%'}, {'title': f'Trailing Stop {check_pass(trailing, price)}', 'field': trailing}],\
                                     'yahoo': "https://finance.yahoo.com/chart/"+stock, 'score': score}
+            if "icon" in mapped_ticker:
+                self.json_portfolio['icon'] = mapped_ticker['icon']
             for field in fields:
                 self.json_portfolio['fields'].append(field)
             logger.info(self.json_portfolio)
@@ -456,6 +458,10 @@ class MarketScreener:
             color = discord.Color.green() if score == 0 else discord.Color.orange() if score < 3 else discord.Color.red()
             mbd=discord.Embed(title=stockname, url=url, description=body,color=color)
             mbd.set_author(name=header, url=header_url)
+            try:
+                mbd.set_thumbnail(url=json_data['icon'])
+            except Exception as e:
+                logger.warning(e)
             for i in fields:
                 mbd.add_field(name=i['title'], value=i['field'])
             response_dict = {"stock":stock, "embed": [mbd]}
