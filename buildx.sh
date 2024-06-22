@@ -1,6 +1,6 @@
 #! /bin/bash
 echo "enter version number for stockfinder docker image"
-echo "last version = v1.5.9"
+echo "last version = v1.5.10"
 read VERSION
 script_path="$0"
 full_path="$(cd "$(dirname "$script_path")" && pwd)/$(basename "$script_path")"
@@ -12,5 +12,5 @@ if [ "$VERSION" = "development" ]; then
 else
     echo "tagging build with latest,$VERSION"
     sed -i "0,/=/{s/=.*/= $VERSION\"/}" $full_path
-    # docker buildx build --platform linux/amd64,linux/arm64 -t enzanto/stockfinder -t enzanto/stockfinder:$VERSION --push .
+    docker buildx build --platform linux/amd64,linux/arm64 -t enzanto/stockfinder -t enzanto/stockfinder:$VERSION --push .
 fi
