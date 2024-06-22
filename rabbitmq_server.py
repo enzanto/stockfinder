@@ -19,7 +19,7 @@ import os,sys,signal
 import localdb, settings
 from localdb import portfolio_report, scan_report, ticker_db, tickermap, userdata
 from screener import market_screener
-logger = settings.logging.getLogger("bot")
+logger = settings.logger
 
 try:
     hostname = os.environ['HOSTNAME']

@@ -10,7 +10,7 @@ from reports import *
 tickermapdb = tickermap.TickerMap()
 userdatadb = userdata.UserData()
 
-logger = settings.logging.getLogger("discord")
+logger = settings.logger
 class Watchlist(app_commands.Group):
     @app_commands.command()
     async def add(self,interaction: discord.Interaction, symbol: str):

@@ -8,7 +8,7 @@ from datetime import date, timedelta
 
 import settings 
 
-logger = settings.logging.getLogger("discord")
+logger = settings.logger
 start_date = date.today() - timedelta(days= 365*3)
 async def db_updater(symbol, engine=settings.engine, start=start_date, rabbit=None, serverside=False):
     '''

@@ -10,7 +10,7 @@ import concurrent.futures
 import settings
 from threading import Thread
 import datetime
-logger = settings.logging.getLogger("discord")
+logger = settings.logger
 # intents = discord.Intents.all()
 # bot = commands.Bot(case_insensitive=True, command_prefix='!', intents=intents, help_command=None)
 

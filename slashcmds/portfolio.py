@@ -10,7 +10,7 @@ from reports import *
 tickermapdb = tickermap.TickerMap()
 userdatadb = userdata.UserData()
 
-logger = settings.logging.getLogger("discord")
+logger = settings.logger
 
 class Portfolio(app_commands.Group):
     @app_commands.command()

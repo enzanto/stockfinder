@@ -3,7 +3,7 @@ import discord
 from discord.ext import commands
 import sys, signal
 
-logger = settings.logging.getLogger("bot")
+logger = settings.logger
 
 async def is_owner(ctx):
     return ctx.author.id == ctx.guild.owner.id

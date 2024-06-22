@@ -16,7 +16,7 @@ import localdb
 from localdb import portfolio_report, scan_report, ticker_db, tickermap, userdata
 from screener.indicators import macd,new_20day_high,bollinger_band,trend_template,pivot_point,trailing_stop
 
-logger = settings.logging.getLogger("discord")
+logger = settings.logger
 # setup
 today = dt.date.today()
 today = str(today)
