@@ -1,7 +1,7 @@
 pandas
 pandas_ta
 sqlalchemy
-numpy
+numpy==1.26.0
 datetime
 yfinance
 discord.py==2.3.2
