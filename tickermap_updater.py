@@ -30,6 +30,32 @@ async def new():
                     nordnetData[key] = nordnetInfo[key]
             ticker_map.insert_map_data(nordnetData['ticker'], nordnetData)
 
+async def nordnet_updater():
+    counter = 0
+    screen = MarketScreener()
+    screen.get_osebx_tickers()
+    ticker_map = tickermap.TickerMap()
+    nordnet = webscrape_nordnet()
+    nordnet.get_cookie()
+    keys = ['ISIN']
+    for _, row in screen.stocklist.iterrows():
+        ticker = row['Symbol']
+        mapped_ticker = ticker_map.get_map_data(ticker)
+        try:
+            for key in keys:
+                if key.lower() in mapped_ticker:
+                    continue
+                logger.debug(mapped_ticker)
+                nordnetData = json.loads(await nordnet.get_info(mapped_ticker))
+                logger.debug(nordnetData)
+                if key in nordnetData:
+                    mapped_ticker[key.lower()] = nordnetData[key]
+                    logger.debug(f"adding {key.lower()} to {ticker}")
+            ticker_map.insert_map_data(ticker, mapped_ticker)
+        except Exception as e:
+            logger.warning(e)
+    time.sleep(2)
+
 async def investech():
     screen = MarketScreener()
     screen.get_osebx_tickers()
@@ -67,6 +93,7 @@ async def test():
     data = ticker_map.get_map_data("prot.ol")
     print(type(data))
     print(data)
-asyncio.run(investech())
+# asyncio.run(investech())
+asyncio.run(nordnet_updater())
 # asyncio.run(new())
 # asyncio.run(test())

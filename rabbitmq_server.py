@@ -91,7 +91,6 @@ class webscrape_nordnet(object):
 
 
     async def get_info(self, mapped_ticker):
-        logger.info(type(mapped_ticker))
         if self.cookie == "" or self.cookie_time + timedelta(hours=12) > datetime.now():
             self.get_cookie("https://www.nordnet.no")
         url = f"{mapped_ticker['nordnet']}?details"
