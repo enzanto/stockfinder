@@ -184,7 +184,7 @@ def pivot_point(df):
             pivots.append(lastPivot)
             # index.append(lastIndex)
             dates.append(lastDate)
-        df["Pivot"][i]=lastPivot
+        df.loc[i, "Pivot"]=lastPivot
             
     if df['Adj Close'].iloc[-1] > df['Pivot'].iloc[-1] and df['Adj Close'].iloc[-2] < df['Pivot'].iloc[-2]:
         return  lastPivot
@@ -206,34 +206,35 @@ def trailing_stop(df, return_df = False):
     df['stop'] = None
     df['trend'] = 'Uptrend'
     if "Adj Close" in df.columns:
-        df['stop'].iloc[0] = df['Adj Close'].iloc[0] - atr_multiplier * df['ATRr_14'].iloc[0]
+        df.loc[df.index[0], "stop"] = df['Adj Close'].iloc[0] - atr_multiplier * df['ATRr_14'].iloc[0]
     else:
-        df['stop'].iloc[0] = df['Close'].iloc[0] - atr_multiplier * df['ATRr_14'].iloc[0]
+        df.loc[df.index[0], "stop"] = df['Close'].iloc[0] - atr_multiplier * df['ATRr_14'].iloc[0]
     
-    for i in range(1, len(df)):
+    for i in df.index[1:]:
+        previous_index = df.index[df.index.get_loc(i) -1]
         if "Adj Close" in df.columns:
-            current_price = df['Adj Close'].iloc[i]
+            current_price = df.loc[i, 'Adj Close'] 
         else:
-            current_price = df['Close'].iloc[i]
-        previous_stop = df['stop'].iloc[i-1]
-        atr = df['ATRr_14'].iloc[i]
-        current_trend = df["trend"].iloc[i-1]
+            current_price = df.loc[i, 'Close'] 
+        previous_stop = df.loc[previous_index, 'stop'] 
+        atr = df.loc[i, 'ATRr_14']
+        current_trend = df.loc[previous_index, 'trend']
 
         if current_price < previous_stop and current_trend == "Uptrend":
-            df['trend'].iloc[i] = 'Downtrend'
-            df['stop'].iloc[i] = current_price + atr_multiplier * atr
+            df.loc[i, 'trend'] = 'Downtrend'
+            df.loc[i, 'stop'] = current_price + atr_multiplier * atr
             continue
         elif current_price > previous_stop and current_trend == "Downtrend":
-            df['trend'].iloc[i] = 'Uptrend'
-            df['stop'].iloc[i] = current_price - atr_multiplier * atr
+            df.loc[i, 'trend'] = 'Uptrend'
+            df.loc[i, 'stop'] = current_price - atr_multiplier * atr
             continue
         else:
-            df['trend'].iloc[i] = df['trend'].iloc[i-1]
+            df.loc[i, 'trend'] = df.loc[previous_index, 'trend']
         
-        if df['trend'].iloc[i] == 'Uptrend':
-            df['stop'].iloc[i] = max(current_price - atr_multiplier * atr, previous_stop)
-        if df['trend'].iloc[i] == 'Downtrend':
-            df['stop'].iloc[i] = min(current_price + atr_multiplier * atr, previous_stop)
+        if df.loc[i, 'trend'] == 'Uptrend':
+            df.loc[i, 'stop'] = max(current_price - atr_multiplier * atr, previous_stop)
+        if df.loc[i, 'trend'] == 'Downtrend':
+            df.loc[i, 'stop'] = min(current_price + atr_multiplier * atr, previous_stop)
             
     df.dropna()
     if return_df:
