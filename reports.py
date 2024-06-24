@@ -49,7 +49,7 @@ async def report_db(tickers, minervini=False):
 
     :param tickers: single ticker or list of tickers
     :param minervini: If True, returns only tickers that pass the minervini test.
-    :return: Discord embeds and images (embeds, images, embeds2, images2)
+    :return: Discord embeds and images (embeds, images, embeds2, images2, tickersReported)
     '''
     today = datetime.now()
     work = await rabbitmq_client.rabbitmq().connect()
@@ -102,17 +102,20 @@ async def report_db(tickers, minervini=False):
     embeds2 = []
     images = []
     images2 = []
+    tickersReported = []
     finished_result = sorted(screener.result['result'], key=lambda x: x['stock'])
     for i in finished_result:
         if "image investtech" in i:
             embeds2.extend(i['embed'])
             images2.extend(i['image'])
+            tickersReported.append(i['stock'])
         elif "image investtech" not in i:
             embeds.extend(i['embed'])
             images.extend(i['image'])
+            tickersReported.append(i['stock'])
     await screener.rabbit.disconnect()
     logger.info("done with report")
-    return embeds,images,embeds2,images2
+    return embeds,images,embeds2,images2, tickersReported
 
 async def report_portfolio(tickers):
     '''

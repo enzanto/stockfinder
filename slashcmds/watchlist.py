@@ -104,7 +104,7 @@ class Watchlist(app_commands.Group):
             await interaction.response.send_message("No watchlist found", ephemeral=True, delete_after=60)
         userlist = userdata['watchlist']
         userlist.sort()
-        embeds,images,embeds2,images2 = await report_db(userlist)
+        embeds,images,embeds2,images2,tickersReported = await report_db(userlist)
         logger.info(f"retrieved watchlist report for {interaction.user.name}")
         logger.info("length: " ,len(embeds))
         await interaction.edit_original_response(content="report in DM")

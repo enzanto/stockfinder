@@ -4,6 +4,8 @@ import os
 import discord
 import gspread
 import settings
+import io
+import csv
 from screener import market_screener
 from reports import report_db, report_portfolio
 from localdb import userdata
@@ -41,8 +43,8 @@ async def main():
     tickers = []
     for i in ticker_dict_list:
         tickers.append(i['Symbol'])
-    embeds,images,embeds2,images2 = await(report_db(tickers, minervini=True))
-    completed_rapports['minervini'] = {'embeds': embeds, 'images': images, 'embeds2': embeds2, 'images2': images2}
+    embeds,images,embeds2,images2, tickersReported = await(report_db(tickers, minervini=True))
+    completed_rapports['minervini'] = {'embeds': embeds, 'images': images, 'embeds2': embeds2, 'images2': images2, 'tickersReported': tickersReported}
     await testing.rabbit.disconnect()
 
 async def portfolio_report():
@@ -73,7 +75,7 @@ async def watchlist_report():
             #change to i['symbol'] when updating the watchlist structure
             tickerlist.append(i)
         logger.info(user['userid'])
-        embeds,images,embeds2,images2 = await(report_db(user['watchlist']))
+        embeds,images,embeds2,images2,tickersReported= await(report_db(user['watchlist']))
         embed_dict.append({'user': user['userid'], 'embeds': embeds, 'images': images, 'embeds2': embeds2, 'images2': images2})
         completed_rapports['watchlist'] = embed_dict
 
@@ -99,6 +101,7 @@ async def send_embeds():
         embeds2 = rapports['embeds2']
         images2 = rapports['images2']
         channel = bot.get_channel(channel_id)
+        channelCSV = bot.get_channel(1254775560383627354)
         length=6
         for i in range(0, len(embeds2), length):
             x=i
@@ -111,6 +114,17 @@ async def send_embeds():
                 emb = embeds[x:x+length]
                 im = images[x:x+length]
                 await channel.send(embeds=emb, files=im, silent=True)
+        
+        headers = ['Symbol','Current Price','Date','Time','Change','Open','High','Low','Volume','Trade Date','Purchase Price','Quantity','Commission','High Limit','Low Limit','Comment']
+        buffer = io.StringIO()
+        writer = csv.DictWriter(buffer, fieldnames=headers)
+        writer.writeheader()
+        for symbol in rapports['tickersReported']:
+            writer.writerow({'Symbol': symbol})
+            print(symbol)
+        buffer.seek(0)
+        file = discord.File(buffer, filename="yahoo.csv")
+        await channelCSV.send("Yahoo finance watchlist import file", file=file)
         logger.info("done sending minervini")
         await asyncio.sleep(30)
 
