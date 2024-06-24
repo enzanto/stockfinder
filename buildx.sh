@@ -1,6 +1,6 @@
 #! /bin/bash
 echo "enter version number for stockfinder docker image"
-echo "last version = v1.5.10"
+echo "last version = v1.6.0"
 read VERSION
 script_path="$0"
 full_path="$(cd "$(dirname "$script_path")" && pwd)/$(basename "$script_path")"
