@@ -295,6 +295,7 @@ async def main(conn) -> None:
 
                     elif n['order'] == "portfolio report":
                         try:
+                            logger.debug(f"starting order on {n['request']['ticker']}")
                             ticker=n['request']['ticker']
                             logger.info(f"starting {ticker}")
                             await ticker_db.db_updater(ticker,serverside=True)
@@ -304,7 +305,9 @@ async def main(conn) -> None:
                             else:
                                 screener.indexRSI = n['rsi']
                             #json response, with header and body. fields: ema 8, ema21, sma50, trailing stop, volume sma
+                            logger.debug(f"starting screening {ticker}")
                             json_result = await screener.portfolio_scan(n['request'], return_text=True)
+                            logger.debug(f"Done screening {ticker}")
                             response = json.dumps({'ticker': ticker, 'status': 'complete'})
                             logger.info(json_result)
                             portfoli_report.insert_report_data(ticker,json_result)

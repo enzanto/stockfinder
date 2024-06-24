@@ -153,6 +153,9 @@ async def report_portfolio(tickers):
         else:
             logger.info("today is newest")
         logger.info(json_data)
+        if json_data == None:
+            logger.error(f"Failed to fetch embeds for {ticker}")
+            return
         await screener.create_portfolio_embeds(json_data=json_data)
     db_tasks = []
     for i in mapped_tickers:

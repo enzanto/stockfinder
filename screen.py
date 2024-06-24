@@ -124,6 +124,11 @@ async def send_embeds():
             print(symbol)
         buffer.seek(0)
         file = discord.File(buffer, filename="yahoo.csv")
+        try:
+            tradingViewString = ",".join(f"osl:{symbol.replace('.ol','')}" for symbol in rapports['tickersReported'])
+            await channelCSV.send(f"TradingView\n```{tradingViewString}```")
+        except Exception as e:
+            logger.error(e)
         await channelCSV.send("Yahoo finance watchlist import file", file=file)
         logger.info("done sending minervini")
         await asyncio.sleep(30)
@@ -159,7 +164,6 @@ async def send_embeds():
             return
         for user in rapports:
             discord_user = await bot.fetch_user(user['user'])
-            logger.info(discord_user.name)
             length=6
             embeds = user['embeds']
             if len(embeds) > 0:

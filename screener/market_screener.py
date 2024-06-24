@@ -233,9 +233,22 @@ class MarketScreener:
                 :params price: referance value
                 :value: current value to check trend
                 '''
+                def is_invalid(value):
+                    return value is None or value == "---" or (isinstance(value, float) and np.isnan(value))
+                if is_invalid(price) or is_invalid(value):
+                    logger.warning(f"price: {price}, value: {value}")
+                    icon = ""
+                    return icon
+                logger.debug(f"{value} is valid")
                 icon = ":chart_with_upwards_trend:" if value > price else ":chart_with_downwards_trend:"
                 return icon
             def check_pass(reference_value, current_value):
+                def is_invalid(value):
+                    return value is None or value == "---" or (isinstance(value, float) and np.isnan(value))
+                if is_invalid(reference_value) or is_invalid(current_value):
+                    logger.warning(f"reference value: {reference_value}, current_value: {current_value}")
+                    icon = ""
+                    return icon
                 if isinstance(reference_value, str):
                     icon = ":white_check_mark:" if "Uptrend" in reference_value else ":red_circle:"
                     return icon
@@ -244,25 +257,37 @@ class MarketScreener:
             for ema in emas:
                 df[f"EMA_{ema}"]=round(df["Adj Close"].ewm(span=ema,min_periods=ema).mean(),2)
                 emavalue = df[f"EMA_{ema}"].iloc[-1]
+                if np.isnan(emavalue):
+                    emavalue = "---"
                 fields.append({'title': f"EMA {ema} {check_pass(emavalue, price)}", "field": emavalue})
                 if price < df[f'EMA_{ema}'].iloc[-1]:
                     score +=1
             for sma in smas:
                 df[f"SMA_{sma}"]=round(df['Adj Close'].rolling(window=sma).mean(),2)
                 smavalue = df[f"SMA_{sma}"].iloc[-1]
+                if np.isnan(smavalue):
+                    smavalue = "---"
                 fields.append({'title': f"SMA {sma} {check_pass(smavalue, price)}", "field": smavalue})
                 if price < df[f'SMA_{sma}'].iloc[-1]:
                     score +=1
             for month in month_check:
                 df_backtrack = month*21
-                month_price = df['Adj Close'].iloc[-df_backtrack]
-                month_change = round(((price/month_price)-1) * 100,2)
+                if len(df) <= df_backtrack:
+                    month_change = "---"
+                    month_price = "---"
+                else:
+                    month_price = df['Adj Close'].iloc[-df_backtrack]
+                    month_change = round(((price/month_price)-1) * 100,2)
                 fields.append({'title': f'{month} change {check_trend(month_price, value=price)}', 'field': f'{month_change}%'})
             try:
                 if price < trailing:
                     score+=1
             except:
-                if "Downtrend" in trailing:
+                if trailing == None:
+                    logger.warning(f"Trailing for {stock} is {trailing} setting it to \"---\"")
+                    trailing = "---"
+                    score+=1
+                elif "Downtrend" in trailing:
                     score +=1
 
             header = f"{latest_date_str} - {stockname} - {stock}: {price}kr  {priceChange}%"
@@ -447,6 +472,7 @@ class MarketScreener:
             self.result['result'].append(response_dict)
             # return response_dict
     async def create_portfolio_embeds(self, json_data, image=None):
+            logger.debug(json_data)
             stock = json_data['ticker']
             stockname = json_data['name']
             header = json_data['header']

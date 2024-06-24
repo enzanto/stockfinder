@@ -29,7 +29,7 @@ class rabbitmq(object):
         try:
             self.connection = await aio_pika.connect_robust(f"amqp://{rabbit_user}:{rabbit_password}@rabbit-cluster.default/?heartbeat=900", loop=self.loop)
         except:
-            self.connection = await aio_pika.connect_robust(f"amqp://{rabbit_user}:{rabbit_password}@192.168.10.80:31394/?heartbeat=900", loop=self.loop)
+            self.connection = await aio_pika.connect_robust(f"amqp://{rabbit_user}:{rabbit_password}@192.168.10.80:30500/?heartbeat=900", loop=self.loop)
         self.channel = await self.connection.channel()
         self.callback_queue = await self.channel.declare_queue(name=self.rpc_queue,exclusive=True)
         await self.callback_queue.consume(self.on_response, no_ack=True)
@@ -183,7 +183,8 @@ class rabbitmq(object):
             )
             json_return = json.loads(await future)
             if 'status' in json_return:
-                logger.warning(json_return['ticker'], json_return['status'])
+                logger.warning(json_return['ticker'])
+                logger.warning(json_return['status'])
             return json_return 
         except asyncio.CancelledError as e:
             logger.warning(f"task was cancelled: {request_dict}")
