@@ -7,6 +7,7 @@ ENV LOGLEVEL=INFO
 #RUN python -m pip install --upgrade pip
 COPY requirements.txt ./
 RUN apt update && apt install pip --upgrade -y
+RUN apt-get update && apt-get install -y libxml2-dev libxslt1-dev
 RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
 #RUN cp crontab /etc/cron.d/stockfinder

@@ -10,3 +10,4 @@ test*.json
 build-and-export.sh
 ovpn/
 testfiles/
+pip_target/
