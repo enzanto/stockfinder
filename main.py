@@ -46,10 +46,10 @@ def run():
         """ Answers with pong"""
         await ctx.send("pong")
 
-    def signal_handler(sig, frame):
+    async def signal_handler(sig, frame):
         logger.warning(f"Recieved signal: {sig}")
         settings.engine.dispose()
-        bot.close()
+        await bot.close()
         sys.exit(0)
     signal.signal(signal.SIGTERM, signal_handler)
     bot.run(settings.discord_token) #removed root_logger=true
