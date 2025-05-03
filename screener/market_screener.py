@@ -31,7 +31,7 @@ class MarketScreener:
         self.result = {"result": [], 'portfolio': [],"metadata": {"time": None}}
         self.indexRSI = None
         self.stocklist = pd.DataFrame(columns = ['Name', 'Symbol', 'Market'])
-        self.exportdf = pd.DataFrame(columns = ['Stock', 'Ticker', 'Adj Close', 'Change', 'Closing range', 'vwap', 'Volume vs sma20', 'RS', 'Market', 'Yahoo'])
+        self.exportdf = pd.DataFrame(columns = ['Stock', 'Ticker', 'Close', 'Change', 'Closing range', 'vwap', 'Volume vs sma20', 'RS', 'Market', 'Yahoo'])
         self.json_response = None
         self.json_portfolio = None
         self.missing = []
@@ -99,7 +99,7 @@ class MarketScreener:
         if df.empty:
             stock_db = "ticker_" + stock.lower().replace(".","_")
             df = pd.read_sql(stock_db,engine, index_col="Date", parse_dates={"Date": {"format": "%d/%m/%y"}})
-        df["SMA_50"]=round(df["Adj Close"].rolling(window=50).mean(),2)
+        df["SMA_50"]=round(df["Close"].rolling(window=50).mean(),2)
         df = df.loc[df.index > start]
         pivots =[]
         dates = []
@@ -137,12 +137,12 @@ class MarketScreener:
         for i in range(2, df.shape[0] -2):
             if df['Low'].iloc[i] < df['Low'].iloc[i - 1] and df['Low'].iloc[i] < df['Low'].iloc[i + 1] and df['Low'].iloc[i + 1] < df['Low'].iloc[i + 2] and df['Low'].iloc[i - 1] < df['Low'].iloc[i - 2]:
                 level = df['Low'].iloc[i].round(2)
-                if np.sum([abs(level - y )< mean for y in hlines]) == 0 and level > (df['Low'].iloc[-1] - (mean*3)) and level < (df['Adj Close'].iloc[-1]):
+                if np.sum([abs(level - y )< mean for y in hlines]) == 0 and level > (df['Low'].iloc[-1] - (mean*3)) and level < (df['Close'].iloc[-1]):
                     hlines.append((level))
                     hline_type.append("green")
             if df['High'].iloc[i] > df['High'].iloc[i - 1] and df['High'].iloc[i] > df['High'].iloc[i + 1] and df['High'].iloc[i + 1] > df['High'].iloc[i + 2] and df['High'].iloc[i - 1] > df['High'].iloc[i - 2]:
                 level = df['High'].iloc[i].round(2)
-                if np.sum([abs(level - y )< mean for y in hlines]) == 0 and level < (df['High'].iloc[-1] + (mean*3)) and level > (df['Adj Close'].iloc[-1]):
+                if np.sum([abs(level - y )< mean for y in hlines]) == 0 and level < (df['High'].iloc[-1] + (mean*3)) and level > (df['Close'].iloc[-1]):
                     hlines.append((level))
                     hline_type.append("red")
         kwargs = dict(type='candle',volume=True,figratio=(16,8),figscale=1.8, tight_layout=True,hlines=dict(hlines=hlines, linestyle='dotted',colors=hline_type))
@@ -215,7 +215,7 @@ class MarketScreener:
             smas = [50]
             fields = []
             score = 0
-            price = df['Adj Close'].iloc[-1]
+            price = df['Close'].iloc[-1]
             month_check = [1,3]
             if price > 10:
                 price = round(price, 2)
@@ -223,8 +223,9 @@ class MarketScreener:
                 price = round(price, 3)
             df['Volume_SMA_20'] = round(df['Volume'].rolling(window=20).mean(),2)
             volumeChange = round(((df['Volume'].iloc[-1] / df['Volume_SMA_20'].iloc[-1]))*100,2)
-            priceChange = round(((df['Adj Close'].iloc[-1] / df['Adj Close'].iloc[-2]) -1)*100,2)
+            priceChange = round(((df['Close'].iloc[-1] / df['Close'].iloc[-2]) -1)*100,2)
             trailing = trailing_stop(df)
+            print(df.head(5))
             #set up emojis
             def check_trend(price, value):
                 '''
@@ -255,7 +256,7 @@ class MarketScreener:
                 icon = ":white_check_mark:" if reference_value < current_value else ":red_circle:"
                 return icon
             for ema in emas:
-                df[f"EMA_{ema}"]=round(df["Adj Close"].ewm(span=ema,min_periods=ema).mean(),2)
+                df[f"EMA_{ema}"]=round(df["Close"].ewm(span=ema,min_periods=ema).mean(),2)
                 emavalue = df[f"EMA_{ema}"].iloc[-1]
                 if np.isnan(emavalue):
                     emavalue = "---"
@@ -263,7 +264,7 @@ class MarketScreener:
                 if price < df[f'EMA_{ema}'].iloc[-1]:
                     score +=1
             for sma in smas:
-                df[f"SMA_{sma}"]=round(df['Adj Close'].rolling(window=sma).mean(),2)
+                df[f"SMA_{sma}"]=round(df['Close'].rolling(window=sma).mean(),2)
                 smavalue = df[f"SMA_{sma}"].iloc[-1]
                 if np.isnan(smavalue):
                     smavalue = "---"
@@ -276,7 +277,7 @@ class MarketScreener:
                     month_change = "---"
                     month_price = "---"
                 else:
-                    month_price = df['Adj Close'].iloc[-df_backtrack]
+                    month_price = df['Close'].iloc[-df_backtrack]
                     month_change = round(((price/month_price)-1) * 100,2)
                 fields.append({'title': f'{month} change {check_trend(month_price, value=price)}', 'field': f'{month_change}%'})
             try:
@@ -328,7 +329,7 @@ class MarketScreener:
             filename = stock.lower().replace(".","_")+".jpg"
             filename_investtech = stock.lower().replace(".","_")+"-investtech.png"
             df = pd.read_sql(stock_db,engine, index_col="Date", parse_dates={"Date": {"format": "%d/%m/%y"}})
-            price = df['Adj Close'].iloc[-1]
+            price = df['Close'].iloc[-1]
             if price > 10:
                 price = round(price, 2)
             else:
@@ -343,7 +344,7 @@ class MarketScreener:
                 logger.info(f"Too low volume on {stockname}, skipping")
                 return
             volumeChange = round(((df['Volume'].iloc[-1] / df['Volume_SMA_20'].iloc[-1]))*100,2)
-            priceChange = round(((df['Adj Close'].iloc[-1] / df['Adj Close'].iloc[-2]) -1)*100,2)
+            priceChange = round(((df['Close'].iloc[-1] / df['Close'].iloc[-2]) -1)*100,2)
             if df['High'].iloc[-1] == df['Low'].iloc[-1]:
                 closingRange = 50
             else:
@@ -382,10 +383,10 @@ class MarketScreener:
             else:
                 header = "header"
                 body = "Body"
-            gsheet_dict = {'Stock': '=hyperlink(\"https://finance.yahoo.com/chart/'+stock+'\",\"'+stockname+'\")', 'Ticker': stock, 'Adj Close' : df["Adj Close"].iloc[-1].round(2), 'Change': str(priceChange)+"%", 'Closing range': closingRange, \
+            gsheet_dict = {'Stock': '=hyperlink(\"https://finance.yahoo.com/chart/'+stock+'\",\"'+stockname+'\")', 'Ticker': stock, 'Close' : df["Close"].iloc[-1].round(2), 'Change': str(priceChange)+"%", 'Closing range': closingRange, \
                         'vwap': vwap, 'Volume vs sma20': str(volumeChange)+"%", 'RS': rs.round(2), 'Market': market, 'Yahoo': "https://finance.yahoo.com/chart/"+stock, \
                         'PivotPoint': False, 'MACD': False, '20Day high': False, 'Minervini': trend}
-            self.json_response = {'ticker': stock, 'name': stockname, 'rs': rs, 'header': header,'header url': mapped_ticker['nordnet'], 'body': body, 'fields': [ {'title': 'Adj Close', 'field': str(price)+"kr\n"+str(priceChange)+"%"}, {'title': 'Closing Range', 'field': str(closingRange)}, {'title': 'vwap', 'field': str(vwap)},\
+            self.json_response = {'ticker': stock, 'name': stockname, 'rs': rs, 'header': header,'header url': mapped_ticker['nordnet'], 'body': body, 'fields': [ {'title': 'Close', 'field': str(price)+"kr\n"+str(priceChange)+"%"}, {'title': 'Closing Range', 'field': str(closingRange)}, {'title': 'vwap', 'field': str(vwap)},\
                         {'title': 'Volume SMA20', 'field': str(volumeChange)+'%'}, {'title': 'RS', 'field': str(rs.round(2))}], \
                         'market': market, 'yahoo': "https://finance.yahoo.com/chart/"+stock, \
                         'minervini': trend, 'vwap': vwap, 'color': None}
