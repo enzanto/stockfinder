@@ -99,18 +99,10 @@ class webscrape_nordnet(object):
         if self.cookie == "" or self.cookie_time + timedelta(hours=12) > datetime.now():
             logger.debug("Getting new cookie")
             self.get_cookie("https://www.nordnet.no")
-        # logger.debug(self.cookie)
         url = f"{mapped_ticker['nordnet']}?details"
         logger.debug(url)
         html = self.session.get(url).text
         soup = BeautifulSoup(html, "lxml")
-        h3 = soup.find_all("h3")
-        # logger.debug(h3)
-        filename = f"nordnet_info_page_{mapped_ticker.get('nordnetID', 'unknown')}.html"
-        with open(filename, "w", encoding="utf-8") as f:
-            for h3_element in h3:
-                f.write(h3_element.text + "\n")
-        logger.debug(f"Saved 'html' to {filename}")
         info = soup.find("h3", string="Om verdipapiret").find_parent("div")
         list_items = info.find_all("li")
         json_out = {}
