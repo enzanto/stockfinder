@@ -2,7 +2,6 @@ import asyncio
 import datetime as dt
 import os
 import discord
-import gspread
 import settings
 import io
 import csv
@@ -11,14 +10,6 @@ from reports import report_db, report_portfolio
 from localdb import userdata
 logger = settings.logger
 # setup
-try:#google sheet
-    gc = gspread.service_account("/usr/src/app/credentials.json")
-    sh = gc.open('oslobors')
-    ws = sh.worksheet('oslobors')
-    googleSheet = True
-except:
-    logger.warning("Google sheets not selected")
-    googleSheet = False
 
 discord_token = os.environ['discord_token']
 logger.info("discord_webhook_url ENV OK")

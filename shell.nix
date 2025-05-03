@@ -17,7 +17,6 @@ pkgs.mkShell {
       beautifulsoup4
       yfinance
 #      aio_pika
-      gspread
       psycopg2-binary
       sqlalchemy
       apscheduler
@@ -58,7 +57,6 @@ pkgs.mkShell {
 
     pip install  \
       pandas_ta \
-      gspread_dataframe \
       ta \
       aiocron \
       mplfinance \
