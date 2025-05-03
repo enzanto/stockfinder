@@ -11,13 +11,13 @@ def macd(df):
     :params df: Dataframe fetched from yfinance
     :params return: string with info of incline or decline
     '''
-    df.ta.macd(close='Adj Close', fast=12, slow=26, signal=9, append=True)
-    df["SMA_200"]=round(df['Adj Close'].rolling(window=200).mean(),2)
-    df["EMA_200"]=round(df["Adj Close"].ewm(span=200,min_periods=200).mean())
+    df.ta.macd(close='Close', fast=12, slow=26, signal=9, append=True)
+    df["SMA_200"]=round(df['Close'].rolling(window=200).mean(),2)
+    df["EMA_200"]=round(df["Close"].ewm(span=200,min_periods=200).mean())
     sma200 = df["SMA_200"].iloc[-1]
     sma200_20old = df["SMA_200"].iloc[-20]
     ema200 = df['EMA_200'].iloc[-1]
-    if df['Adj Close'].iloc[-1] > sma200 or df['Adj Close'].iloc[-1] > ema200:
+    if df['Close'].iloc[-1] > sma200 or df['Close'].iloc[-1] > ema200:
         df = df.tail(20)
         if df['MACDh_12_26_9'].iloc[-1] > 0 and df['MACDh_12_26_9'].iloc[-2] < 0 and df['MACD_12_26_9'].iloc[-1] < 0:
             return "started climbing! "+str(df['MACDh_12_26_9'].iloc[-1])
@@ -32,8 +32,8 @@ def new_20day_high(df):
     :params return: returns True if True
     '''
     tail = df.tail(20)
-    high20 = tail['Adj Close'].iloc[:-1].max()
-    if tail['Adj Close'].iloc[-1] > high20:
+    high20 = tail['Close'].iloc[:-1].max()
+    if tail['Close'].iloc[-1] > high20:
         return True
 
 def bollinger_band(df):
@@ -71,13 +71,13 @@ def trend_template(df):
     smaUsed=[50,150,200]
     for x in smaUsed:
         sma=x
-        df["SMA_"+str(sma)]=round(df["Adj Close"].rolling(window=sma).mean(),2)
-    currentClose=df["Adj Close"].iloc[-1]
+        df["SMA_"+str(sma)]=round(df["Close"].rolling(window=sma).mean(),2)
+    currentClose=df["Close"].iloc[-1]
     moving_average_50=df["SMA_50"].iloc[-1]
     moving_average_150=df["SMA_150"].iloc[-1]
     moving_average_200=df["SMA_200"].iloc[-1]
-    low_of_52week=min(df["Adj Close"][-260:])
-    high_of_52week=max(df["Adj Close"][-260:])
+    low_of_52week=min(df["Close"][-260:])
+    high_of_52week=max(df["Close"][-260:])
 
     try:
         moving_average_200_20past=df["SMA_200"].iloc[-20]
@@ -185,7 +185,7 @@ def pivot_point(df):
             dates.append(lastDate)
         df.loc[i, "Pivot"]=lastPivot
             
-    if df['Adj Close'].iloc[-1] > df['Pivot'].iloc[-1] and df['Adj Close'].iloc[-2] < df['Pivot'].iloc[-2]:
+    if df['Close'].iloc[-1] > df['Pivot'].iloc[-1] and df['Close'].iloc[-2] < df['Pivot'].iloc[-2]:
         return  lastPivot
 
 def trailing_stop(df, return_df = False):
@@ -204,15 +204,15 @@ def trailing_stop(df, return_df = False):
     atr_multiplier = 3
     df['stop'] = None
     df['trend'] = 'Uptrend'
-    if "Adj Close" in df.columns:
-        df.loc[df.index[0], "stop"] = df['Adj Close'].iloc[0] - atr_multiplier * df['ATRr_14'].iloc[0]
+    if "Close" in df.columns:
+        df.loc[df.index[0], "stop"] = df['Close'].iloc[0] - atr_multiplier * df['ATRr_14'].iloc[0]
     else:
         df.loc[df.index[0], "stop"] = df['Close'].iloc[0] - atr_multiplier * df['ATRr_14'].iloc[0]
     
     for i in df.index[1:]:
         previous_index = df.index[df.index.get_loc(i) -1]
-        if "Adj Close" in df.columns:
-            current_price = df.loc[i, 'Adj Close'] 
+        if "Close" in df.columns:
+            current_price = df.loc[i, 'Close'] 
         else:
             current_price = df.loc[i, 'Close'] 
         previous_stop = df.loc[previous_index, 'stop'] 
@@ -243,3 +243,51 @@ def trailing_stop(df, return_df = False):
         return f"Broke trailing stop. Now in: {trend}"
     else:
         return round(df['stop'].iloc[-1], 2)
+
+
+def extended(df):
+    """ function to check if the last price has extended to far from the moving averages.
+        will be used to look for places to sell in to strength
+        10% from 10 sma
+        20% from 21 ema
+        50% from 50 sma
+        100% from 200sma
+    """
+
+    smaUsed=[10,50,200]
+    for x in smaUsed:
+        sma=x
+        df["SMA_"+str(sma)]=round(df["Close"].rolling(window=sma).mean(),2)
+    df["EMA_21"]=round(df["Close"].ewm(span=21,min_periods=22).mean())
+    last_row = df.iloc[-1]
+    adj_close = last_row['Close']
+    sma_10 = last_row['SMA_10']
+    sma_50 = last_row['SMA_50']
+    sma_200 = last_row['SMA_200']
+    ema_21 = last_row['EMA_21']
+
+    # Calculate percentage differences
+    diff_sma_10 = (adj_close - sma_10) / sma_10 * 100
+    diff_sma_50 = (adj_close - sma_50) / sma_50 * 100
+    diff_sma_200 = (adj_close - sma_200) / sma_200 * 100
+    diff_ema_21 = (adj_close - ema_21) / ema_21 * 100
+
+    # Initialize an empty list to store the result strings
+    results = []
+
+    # Check conditions and append appropriate strings
+    if diff_sma_10 >= 10:
+        results.append(f'{diff_sma_10:.2f}% above SMA_10')
+    if diff_ema_21 >= 20:
+        results.append(f'{diff_ema_21:.2f}% above EMA_21')
+    if diff_sma_50 >= 50:
+        results.append(f'{diff_sma_50:.2f}% above SMA_50')
+    if diff_sma_200 >= 100:
+        results.append(f'{diff_sma_200:.2f}% above SMA_200')
+
+    # Join the results into a single string
+    if len(results) > 0:
+        result_string = ', '.join(results)
+    else:
+        result_string = "stock not extended"
+    print(result_string)
