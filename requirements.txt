@@ -20,3 +20,4 @@ requests
 yfinance
 bs4
 typing
+lxml
