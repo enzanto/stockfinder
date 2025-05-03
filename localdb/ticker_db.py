@@ -34,6 +34,7 @@ async def db_updater(symbol, engine=settings.engine, start=start_date, rabbit=No
         try:
             if serverside == True:
                 new_data = yf.download(symbol, max_date)
+                new_data.columns = new_data.columns.get_level_values(0)
             else:
                 new_data = await rabbit.get_yahoo(symbol, max_date)
             logger.info(f"max date {max_date} for {symbol}")
@@ -51,6 +52,7 @@ async def db_updater(symbol, engine=settings.engine, start=start_date, rabbit=No
                 logger.warning(e)
                 if serverside == True:
                     new_data = yf.download(symbol, start_date)
+                    new_data.columns = new_data.columns.get_level_values(0)
                 else:
                     new_data = await rabbit.get_yahoo(symbol, start_date)
                 new_data.index.name = "Date"
@@ -68,6 +70,7 @@ async def db_updater(symbol, engine=settings.engine, start=start_date, rabbit=No
         try:
             if serverside == True:
                 new_data = yf.download(symbol, start_date)
+                new_data.columns = new_data.columns.get_level_values(0)
             else:
                 new_data = await rabbit.get_yahoo(symbol, start_date)
             new_data.index.name = "Date"
