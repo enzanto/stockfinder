@@ -290,4 +290,4 @@ def extended(df):
         result_string = ', '.join(results)
     else:
         result_string = "stock not extended"
-    print(result_string)
+    logger.info(result_string)

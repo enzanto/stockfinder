@@ -112,7 +112,7 @@ async def send_embeds():
         writer.writeheader()
         for symbol in rapports['tickersReported']:
             writer.writerow({'Symbol': symbol})
-            print(symbol)
+            logger.info(symbol)
         buffer.seek(0)
         file = discord.File(buffer, filename="yahoo.csv")
         try:

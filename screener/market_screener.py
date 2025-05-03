@@ -225,7 +225,6 @@ class MarketScreener:
             volumeChange = round(((df['Volume'].iloc[-1] / df['Volume_SMA_20'].iloc[-1]))*100,2)
             priceChange = round(((df['Close'].iloc[-1] / df['Close'].iloc[-2]) -1)*100,2)
             trailing = trailing_stop(df)
-            print(df.head(5))
             #set up emojis
             def check_trend(price, value):
                 '''

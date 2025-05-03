@@ -31,7 +31,6 @@ def run():
         #         await bot.load_extension(f"cogs.{cog_file.name[:-3]}")
         for slash_file in settings.SLASH_DIR.glob("*.py"):
             if slash_file.name != "__init__.py":
-                # print(slash_file.name)
                 await bot.load_extension(f"slashcmds.{slash_file.name[:-3]}")
 
         

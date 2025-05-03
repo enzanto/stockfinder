@@ -20,7 +20,7 @@ async def new():
         if data is None:
             try:
                 jsondata = {'name': row['Name'], 'ticker': row['Symbol'].lower(), 'market': row['Market']}
-                print(jsondata)
+                logger.info(jsondata)
                 nordnetData = await nordnet.get_logo(jsondata)
                 nordnetData = json.loads(nordnetData)
                 # logger.debug(nordnetData)
@@ -33,12 +33,12 @@ async def new():
                 new_stocks.append(ticker)
                 ticker_map.insert_map_data(nordnetData['ticker'], nordnetData)
             except Exception as e:
-                print(e)
+                logger.error(e)
                 failed_stocks.append(ticker)
-    print("new stocks")
-    print(new_stocks)
-    print("failed stocks")
-    print(failed_stocks)
+    logger.info("new stocks")
+    logger.info(new_stocks)
+    logger.info("failed stocks")
+    logger.info(failed_stocks)
 
 async def nordnet_updater():
     counter = 0
@@ -101,8 +101,8 @@ async def investech():
 async def test():
     ticker_map = tickermap.TickerMap()
     data = ticker_map.get_map_data("prot.ol")
-    print(type(data))
-    print(data)
+    logger.info(type(data))
+    logger.info(data)
 # asyncio.run(investech())
 # asyncio.run(nordnet_updater())
 asyncio.run(new())
