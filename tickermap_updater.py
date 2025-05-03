@@ -11,24 +11,34 @@ async def new():
     screen.get_osebx_tickers()
     ticker_map = tickermap.TickerMap()
     new_stocks = []
+    failed_stocks = []
     nordnet = webscrape_nordnet()
     nordnet.get_cookie()
     for index, row in screen.stocklist.iterrows():
         ticker = row['Symbol']
         data = ticker_map.get_map_data(ticker)
         if data is None:
-            new_stocks.append(ticker)
-            jsondata = {'name': row['Name'], 'ticker': row['Symbol'].lower(), 'market': row['Market']}
-            print(type(jsondata))
-            nordnetData = await nordnet.get_logo(jsondata)
-            nordnetData = json.loads(nordnetData)
-            nordnetInfo = await nordnet.get_info(nordnetData)
-            nordnetInfo = json.loads(nordnetInfo)
-            keys_to_transfer = ['sektor','bransje','ISIN']
-            for key in keys_to_transfer:
-                if key in nordnetInfo:
-                    nordnetData[key] = nordnetInfo[key]
-            ticker_map.insert_map_data(nordnetData['ticker'], nordnetData)
+            try:
+                jsondata = {'name': row['Name'], 'ticker': row['Symbol'].lower(), 'market': row['Market']}
+                print(jsondata)
+                nordnetData = await nordnet.get_logo(jsondata)
+                nordnetData = json.loads(nordnetData)
+                # logger.debug(nordnetData)
+                nordnetInfo = await nordnet.get_info(nordnetData)
+                nordnetInfo = json.loads(nordnetInfo)
+                keys_to_transfer = ['sektor','bransje','ISIN']
+                for key in keys_to_transfer:
+                    if key in nordnetInfo:
+                        nordnetData[key] = nordnetInfo[key]
+                new_stocks.append(ticker)
+                ticker_map.insert_map_data(nordnetData['ticker'], nordnetData)
+            except Exception as e:
+                print(e)
+                failed_stocks.append(ticker)
+    print("new stocks")
+    print(new_stocks)
+    print("failed stocks")
+    print(failed_stocks)
 
 async def nordnet_updater():
     counter = 0
@@ -94,6 +104,6 @@ async def test():
     print(type(data))
     print(data)
 # asyncio.run(investech())
-asyncio.run(nordnet_updater())
-# asyncio.run(new())
+# asyncio.run(nordnet_updater())
+asyncio.run(new())
 # asyncio.run(test())
