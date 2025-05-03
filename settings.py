@@ -65,7 +65,7 @@ dictConfig(LOGGING_CONFIG)
 
 
 logger = logging.getLogger(os.environ['LOGLEVEL'])
-try:
+try: #discord
     discord_token=os.environ['discord_token']
     GUILD_ID = discord.Object(id=int(os.environ['GUILD_ID']))
 except KeyError:
@@ -90,14 +90,14 @@ except KeyError as err:
     logger.warning("DB variables not present, using sqlite local db")
     engine = create_engine('sqlite:///data/TEST_DB.db')
 
-try:
+try: #rabbit connection
     rabbit_user = os.environ['RABBIT_USER']
     rabbit_password = os.environ['RABBIT_PASSWORD']
 except:
     rabbit_user = "pod"
     rabbit_password = "pod"
 
-try:
+try: #timezone
     tz = pytz.timezone(os.environ['TZ'])
 except KeyError:
     tz = pytz.timezone('Europe/Oslo')
