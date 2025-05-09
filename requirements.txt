@@ -3,7 +3,7 @@ pandas_ta
 sqlalchemy
 numpy==1.26.0
 datetime
-yfinance
+yfinance>=0.2.59
 discord.py==2.3.2
 bs4
 matplotlib
