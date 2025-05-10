@@ -10,7 +10,6 @@ matplotlib
 psycopg2-binary
 ta
 apscheduler
-aiocron
 mplfinance
 aio_pika
 asyncio
