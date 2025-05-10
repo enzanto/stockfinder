@@ -1,4 +1,4 @@
-FROM python:3.10-slim
+FROM python:3.12-slim
 
 
 WORKDIR /usr/src/app
@@ -9,6 +9,7 @@ COPY requirements.txt ./
 RUN apt update && apt install pip --upgrade -y
 RUN apt-get update && apt-get install -y libxml2-dev libxslt1-dev
 RUN pip install --no-cache-dir -r requirements.txt
+RUN sed -i 's/import NaN/import nan/' /usr/local/lib/python3.12/site-packages/pandas_ta/momentum/squeeze_pro.py
 COPY . .
 #RUN cp crontab /etc/cron.d/stockfinder
 
