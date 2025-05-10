@@ -7,7 +7,7 @@ import mplfinance as mpf
 import discord
 import requests
 
-import ta
+import pandas_ta as ta
 from io import StringIO, BytesIO
 import datetime as dt
 

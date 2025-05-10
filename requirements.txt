@@ -8,7 +8,6 @@ discord.py==2.3.2
 bs4
 matplotlib
 psycopg2-binary
-ta
 apscheduler
 mplfinance
 aio_pika
