@@ -52,7 +52,7 @@ def bollinger_band(df):
     conditions = [(df.rsi < 30) & (df.Close < df.lower_bb),
             (df.rsi > 70) & (df.Close > df.upper_bb)]
     choices = ['Buy', 'Sell']
-    df['Signal'] = np.select(conditions,choices)
+    df['Signal'] = np.select(conditions,choices, default='')
     if df['Signal'].iloc[-1] == ("Sell" or "Buy"):
         return  "is outside Bollinger Band"
 
