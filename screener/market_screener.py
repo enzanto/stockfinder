@@ -151,7 +151,11 @@ class MarketScreener:
             mpf.plot(df,**kwargs,style='yahoo',addplot=apdict, alines=dict(alines=pivotlines), savefig=filename)
         else:
             image_bytes = BytesIO()
-            mpf.plot(df,**kwargs,style='yahoo',addplot=apdict, alines=dict(alines=pivotlines), show_nontrading=True, savefig=image_bytes)
+            try:
+                mpf.plot(df,**kwargs,style='yahoo',addplot=apdict, alines=dict(alines=pivotlines), show_nontrading=True, savefig=image_bytes)
+            except Exception as e:
+                logger.error("Failed to create graph")
+                logger.debug(e)
             image_bytes.seek(0)
             return image_bytes.getvalue()
 
@@ -322,7 +326,10 @@ class MarketScreener:
                 except:
                     stock = i['ticker']
                     market = i['market'] 
-                    stockname = i['name']
+                    try:
+                        stockname = i['nordnetName']
+                    except:
+                        stockname = i['name']
                     watchlist = True
             stock_db = "ticker_" + stock.lower().replace(".","_")
             filename = stock.lower().replace(".","_")+".jpg"
