@@ -16,6 +16,7 @@ logger.info("discord_webhook_url ENV OK")
 intents = discord.Intents.default()
 bot = discord.Client(intents=intents)
 channel_id = 1161668764341907556
+channelCSV_id = 1254775560383627354
 today = dt.date.today()
 today = str(today)
 completed_rapports = {'minervini': None, 'portfolio': None, 'watchlist': None}
@@ -26,6 +27,12 @@ completed_rapports = {'minervini': None, 'portfolio': None, 'watchlist': None}
 
 #main is for running a minervini scan as a kubernetes cronjob 
 async def main():
+    """
+    Executes the market screener operations, including retrieving stock tickers, calculating their Relative Strength Index (RSI), and generating reports.
+
+    This function connects to the RabbitMQ server, retrieves ticker data, and stores the generated reports in the completed_rapports dictionary.
+    It is primarily used for running a Minervini scan as a Kubernetes cronjob.
+    """
     testing = market_screener.MarketScreener()
     testing.get_osebx_tickers()
     testing.get_osebx_rsi()
@@ -92,7 +99,7 @@ async def send_embeds():
         embeds2 = rapports['embeds2']
         images2 = rapports['images2']
         channel = bot.get_channel(channel_id)
-        channelCSV = bot.get_channel(1254775560383627354)
+        channelCSV = bot.get_channel(channelCSV_id)
         length=6
         for i in range(0, len(embeds2), length):
             x=i
@@ -117,10 +124,10 @@ async def send_embeds():
         file = discord.File(buffer, filename="yahoo.csv")
         try:
             tradingViewString = ",".join(f"osl:{symbol.replace('.ol','')}" for symbol in rapports['tickersReported'])
-            await channelCSV.send(f"TradingView\n```{tradingViewString}```")
+            await channelCSV.send(f"TradingView\n```{tradingViewString}```", silent=True)
         except Exception as e:
             logger.error(e)
-        await channelCSV.send("Yahoo finance watchlist import file", file=file)
+        await channelCSV.send("Yahoo finance watchlist import file", file=file, silent=True)
         logger.info("done sending minervini")
         await asyncio.sleep(30)
 
@@ -181,6 +188,7 @@ if __name__ == "__main__":
     elif scan == "debug":
         logger.info(scan)
         channel_id = 1254060220804628671
+        channelCSV_id = 1254060220804628671 
         logger.debug(f"set discord channel to {channel_id}")
         asyncio.run(main())
     asyncio.run(send_embeds())
