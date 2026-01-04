@@ -82,7 +82,7 @@ async def report_db(tickers, minervini=False):
                     return
                 else:
                     logger.info(f"{ticker} added with a score of {json_data['minervini']}")
-            await screener.create_embeds(json_data=json_data, image=pivots, investtech_image=investtech)
+            await screener.create_embeds(json_data=json_data, image=pivots)
         except Exception as e:
             logger.warning(e)
     db_tasks = []
@@ -105,14 +105,9 @@ async def report_db(tickers, minervini=False):
     tickersReported = []
     finished_result = sorted(screener.result['result'], key=lambda x: x['stock'])
     for i in finished_result:
-        if "image investtech" in i:
-            embeds2.extend(i['embed'])
-            images2.extend(i['image'])
-            tickersReported.append(i['stock'])
-        elif "image investtech" not in i:
-            embeds.extend(i['embed'])
-            images.extend(i['image'])
-            tickersReported.append(i['stock'])
+        embeds.extend(i['embed'])
+        images.extend(i['image'])
+        tickersReported.append(i['stock'])
     await screener.rabbit.disconnect()
     logger.info("done with report")
     return embeds,images,embeds2,images2, tickersReported

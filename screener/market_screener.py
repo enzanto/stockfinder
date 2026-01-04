@@ -384,11 +384,9 @@ class MarketScreener:
             bollinger_band_out = bollinger_band(df)
             pivotPoint = pivot_point(df)
             trailing = trailing_stop(df)
-            if "investechID" in mapped_ticker and return_text == False:
-                header,body= await self.rabbit.get_investtech(mapped_ticker)
-            else:
-                header = "header"
-                body = "Body"
+            today_str = dt.date.today().strftime('%Y-%m-%d')
+            header= f"{stockname} Daily report - {today_str}"
+            body = f"Daily report for {stockname} generated on {today_str}"
             gsheet_dict = {'Stock': '=hyperlink(\"https://finance.yahoo.com/chart/'+stock+'\",\"'+stockname+'\")', 'Ticker': stock, 'Close' : df["Close"].iloc[-1].round(2), 'Change': str(priceChange)+"%", 'Closing range': closingRange, \
                         'vwap': vwap, 'Volume vs sma20': str(volumeChange)+"%", 'RS': rs.round(2), 'Market': market, 'Yahoo': "https://finance.yahoo.com/chart/"+stock, \
                         'PivotPoint': False, 'MACD': False, '20Day high': False, 'Minervini': trend}
@@ -435,7 +433,7 @@ class MarketScreener:
             if return_text:
                 return self.json_response, image 
             # await self.rabbit.disconnect()
-    async def create_embeds(self, image, investtech_image=None, json_data=None):
+    async def create_embeds(self, image, json_data=None):
             # fetch data from 
             if json_data == None:
                 json_data = self.json_response
@@ -460,22 +458,11 @@ class MarketScreener:
                 mbd.set_thumbnail(url=json_data['icon'])
             except Exception as e:
                 logger.warning(e)
-            try:
-                mbd2=discord.Embed(url=url)
-                investtech_imageIO = BytesIO(investtech_image)
-                img_investtech = discord.File(investtech_imageIO, filename=imagename+'_investtech.png')
-                mbd2.set_image(url="attachment://"+imagename+'_investtech.png')
-            except Exception as e:
-                logger.warning(e)
             mbd.set_author(name=header, url=header_url)
             for i in fields:
                 mbd.add_field(name=i['title'], value=i['field'])
             mbd.set_footer(text=market)
-            try:
-                response_dict = {"stock":stock,"market": market, "embed": [mbd,mbd2], "image": [img,img_investtech], "image investtech": img_investtech, "trend": trend}
-            except Exception as e:
-                logger.warning(e)
-                response_dict = {"stock":stock,"market": market, "embed": [mbd], "image": [img], "trend": trend}
+            response_dict = {"stock":stock,"market": market, "embed": [mbd], "image": [img], "trend": trend}
             self.result['result'].append(response_dict)
             # return response_dict
     async def create_portfolio_embeds(self, json_data, image=None):
