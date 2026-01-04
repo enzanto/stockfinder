@@ -39,6 +39,11 @@ class MarketScreener:
         self.loop = asyncio.get_event_loop()
 
     def get_osebx_tickers(self):
+        """
+        Retrieves stock tickers from the Oslo Stock Exchange (OSEBX) and populates the stocklist DataFrame.
+    
+        This function sends a POST request to euronext for webscraping to fetch ticker data and processes the response to extract relevant details such as stock names, symbols, and exchange information. The resulting data is stored in the stocklist DataFrame with columns for Name, Symbol, and Market.
+        """
         url = "https://live.euronext.com/en/pd_es/data/stocks"
         querystring = {"mics":"XOSL,MERK,XOAS"}
         payload = "iDisplayLength=999&iDisplayStart=0"
@@ -64,6 +69,12 @@ class MarketScreener:
         self.stocklist = stocklist
 
     def get_osebx_rsi(self):
+        """
+        Retrieves the Relative Strength Index (RSI) for the Oslo Stock Exchange index over the past 30 days.
+    
+        This function sends a request to the Euronext API to fetch historical price data for the given stock ticker, processes the data into a DataFrame, and calculates the RSI using a 6-day window.
+        If the data retrieval fails, it defaults the RSI value to 50.
+        """
         try:
             now = dt.datetime.now()
             start = now - dt.timedelta(days=30)
@@ -92,6 +103,19 @@ class MarketScreener:
 
 
     def create_chart(self,stock=None, df=pd.DataFrame(), save=True):
+        """
+        Creates a financial chart for a specified stock.
+    
+        This function generates a candlestick chart for the provided stock data over the past year. It calculates the 50-day Simple Moving Average (SMA) and identifies pivot points in the data. The chart can be saved as an image file or returned as a byte stream for further processing.
+    
+        Parameters:
+        - stock (str): The stock ticker symbol for which to create the chart.
+        - df (pd.DataFrame): DataFrame containing historical stock data.
+        - save (bool): If True, saves the chart as an image file; if False, returns the chart as a byte stream.
+    
+        Returns:
+        - None if save is True, otherwise returns the image bytes of the chart.
+        """
         today = dt.datetime.now()
         start = today - dt.timedelta(days=365)
         filename = "images/" + stock.lower().replace(".","_")+".jpg"
@@ -160,6 +184,17 @@ class MarketScreener:
             return image_bytes.getvalue()
 
     async def database(self, engine=engine):
+        """
+        Executes the database update process for stock tickers.
+    
+        This asynchronous function retrieves stock tickers and their corresponding RSI values, then uses the ticker database to update each stock's information. It creates tasks for each stock and gathers the results. If the operation times out, it cancels any running tasks.
+    
+        Parameters:
+        - engine: The database engine used for executing SQL queries.
+    
+        Returns:
+        - None
+        """
         self.get_osebx_tickers()
         self.get_osebx_rsi()
         update_tasks = []
