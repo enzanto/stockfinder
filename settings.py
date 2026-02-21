@@ -90,12 +90,6 @@ except KeyError as err:
     logger.warning("DB variables not present, using sqlite local db")
     engine = create_engine('sqlite:///data/TEST_DB.db')
 
-try: #rabbit connection
-    rabbit_user = os.environ['RABBIT_USER']
-    rabbit_password = os.environ['RABBIT_PASSWORD']
-except:
-    rabbit_user = "pod"
-    rabbit_password = "pod"
 
 try: #timezone
     tz = pytz.timezone(os.environ['TZ'])
