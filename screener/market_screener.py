@@ -1,6 +1,5 @@
 import pandas as pd
 from bs4 import BeautifulSoup
-import rabbitmq_client as rabbitmq
 import asyncio
 import numpy as np
 import mplfinance as mpf
@@ -35,7 +34,6 @@ class MarketScreener:
         self.json_response = None
         self.json_portfolio = None
         self.missing = []
-        self.rabbit = rabbitmq.rabbitmq()
         self.loop = asyncio.get_event_loop()
 
     def get_osebx_tickers(self):
@@ -46,11 +44,9 @@ class MarketScreener:
         """
         url = "https://live.euronext.com/en/pd_es/data/stocks"
         querystring = {"mics":"XOSL,MERK,XOAS"}
-        payload = "iDisplayLength=999&iDisplayStart=0"
+        payload = "draw=1&columns%5B0%5D%5Bdata%5D=0&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=1&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=2&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=false&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=3&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=false&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B4%5D%5Bdata%5D=4&columns%5B4%5D%5Bname%5D=&columns%5B4%5D%5Bsearchable%5D=true&columns%5B4%5D%5Borderable%5D=false&columns%5B4%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B4%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B5%5D%5Bdata%5D=5&columns%5B5%5D%5Bname%5D=&columns%5B5%5D%5Bsearchable%5D=true&columns%5B5%5D%5Borderable%5D=false&columns%5B5%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B5%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B6%5D%5Bdata%5D=6&columns%5B6%5D%5Bname%5D=&columns%5B6%5D%5Bsearchable%5D=true&columns%5B6%5D%5Borderable%5D=false&columns%5B6%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B6%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B7%5D%5Bdata%5D=7&columns%5B7%5D%5Bname%5D=&columns%5B7%5D%5Bsearchable%5D=true&columns%5B7%5D%5Borderable%5D=false&columns%5B7%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B7%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=0&order%5B0%5D%5Bdir%5D=asc&start=0&length=500&search%5Bvalue%5D=&search%5Bregex%5D=false&args%5Bdisplay_datapoints%5D=logo%2Cname%2Cisin%2Csymbol%2Cmarket%2ClastPrice%2CprecentDayChange%2ClastTradeTime&iDisplayLength=500&iDisplayStart=0&sSortDir_0=asc&sSortField=shortName\n"
         headers = {
-            "cookie": "visid_incap_2784297=ycNtzE%2BcTqWSMVRPd8UR9i2rsWMAAAAAQUIPAAAAAADJL%2B4cY%2FbTQYmUc9f1OSqh; incap_ses_1103_2784297=fWbSHE%2B93H0vtC9dcKVODy2rsWMAAAAAWbJT65mx4E3P75XtK25IkA%3D%3D",
             "content-type": "application/x-www-form-urlencoded; charset=UTF-8",
-            "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36 Edg/108.0.1462.54"
         }
         response = requests.request("POST", url, data=payload, headers=headers, params=querystring)
         jsonresponse = response.json()
@@ -200,7 +196,7 @@ class MarketScreener:
         update_tasks = []
         for i in self.stocklist.index:
             stock = str(self.stocklist["Symbol"][i])
-            update_tasks.append(asyncio.create_task(ticker_db.db_updater(stock, engine, rabbit=self.rabbit,logger=logger)))
+            update_tasks.append(asyncio.create_task(ticker_db.db_updater(stock, engine)))
         try:
             result = await asyncio.shield(asyncio.wait_for(asyncio.gather(*update_tasks), timeout=600))
         except asyncio.TimeoutError:
@@ -419,11 +415,9 @@ class MarketScreener:
             bollinger_band_out = bollinger_band(df)
             pivotPoint = pivot_point(df)
             trailing = trailing_stop(df)
-            if "investechID" in mapped_ticker and return_text == False:
-                header,body= await self.rabbit.get_investtech(mapped_ticker)
-            else:
-                header = "header"
-                body = "Body"
+            today_str = dt.date.today().strftime('%Y-%m-%d')
+            header= f"{stockname} Daily report - {today_str}"
+            body = f"Daily report for {stockname} generated on {today_str}"
             gsheet_dict = {'Stock': '=hyperlink(\"https://finance.yahoo.com/chart/'+stock+'\",\"'+stockname+'\")', 'Ticker': stock, 'Close' : df["Close"].iloc[-1].round(2), 'Change': str(priceChange)+"%", 'Closing range': closingRange, \
                         'vwap': vwap, 'Volume vs sma20': str(volumeChange)+"%", 'RS': rs.round(2), 'Market': market, 'Yahoo': "https://finance.yahoo.com/chart/"+stock, \
                         'PivotPoint': False, 'MACD': False, '20Day high': False, 'Minervini': trend}
@@ -469,8 +463,7 @@ class MarketScreener:
             self.exportdf = pd.concat([self.exportdf, new_row.to_frame().T], ignore_index=True)
             if return_text:
                 return self.json_response, image 
-            # await self.rabbit.disconnect()
-    async def create_embeds(self, image, investtech_image=None, json_data=None):
+    async def create_embeds(self, image, json_data=None):
             # fetch data from 
             if json_data == None:
                 json_data = self.json_response
@@ -495,22 +488,11 @@ class MarketScreener:
                 mbd.set_thumbnail(url=json_data['icon'])
             except Exception as e:
                 logger.warning(e)
-            try:
-                mbd2=discord.Embed(url=url)
-                investtech_imageIO = BytesIO(investtech_image)
-                img_investtech = discord.File(investtech_imageIO, filename=imagename+'_investtech.png')
-                mbd2.set_image(url="attachment://"+imagename+'_investtech.png')
-            except Exception as e:
-                logger.warning(e)
             mbd.set_author(name=header, url=header_url)
             for i in fields:
                 mbd.add_field(name=i['title'], value=i['field'])
             mbd.set_footer(text=market)
-            try:
-                response_dict = {"stock":stock,"market": market, "embed": [mbd,mbd2], "image": [img,img_investtech], "image investtech": img_investtech, "trend": trend}
-            except Exception as e:
-                logger.warning(e)
-                response_dict = {"stock":stock,"market": market, "embed": [mbd], "image": [img], "trend": trend}
+            response_dict = {"stock":stock,"market": market, "embed": [mbd], "image": [img], "trend": trend}
             self.result['result'].append(response_dict)
             # return response_dict
     async def create_portfolio_embeds(self, json_data, image=None):

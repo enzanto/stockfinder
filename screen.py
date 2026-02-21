@@ -36,14 +36,12 @@ async def main():
     testing = market_screener.MarketScreener()
     testing.get_osebx_tickers()
     testing.get_osebx_rsi()
-    await testing.rabbit.connect()
     ticker_dict_list = testing.stocklist.to_dict(orient='records')
     tickers = []
     for i in ticker_dict_list:
         tickers.append(i['Symbol'])
     embeds,images,embeds2,images2, tickersReported = await(report_db(tickers, minervini=True))
     completed_rapports['minervini'] = {'embeds': embeds, 'images': images, 'embeds2': embeds2, 'images2': images2, 'tickersReported': tickersReported}
-    await testing.rabbit.disconnect()
 
 async def portfolio_report():
     userdata_db = userdata.UserData()

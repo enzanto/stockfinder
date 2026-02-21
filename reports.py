@@ -4,11 +4,60 @@ import json
 
 from datetime import datetime, time
 from screener import market_screener
-import rabbitmq_client
-from localdb import tickermap, scan_report, portfolio_report 
+from localdb import tickermap, scan_report, portfolio_report, ticker_db
 from settings import logger
 
+async def build_report_locally(mapped_ticker, rsi=None):
+    '''
+    Builds a scan report locally 
+    
+    :param mapped_ticker: Ticker dictionary from tickermap
+    :param rsi: Optional RSI value from index
+    :return: JSON report data and image
+    '''
+    ticker = mapped_ticker['ticker']
+    screener = market_screener.MarketScreener()
+    
+    if rsi is None:
+        screener.get_osebx_rsi()
+    else:
+        screener.indexRSI = rsi
+    
+    # Update ticker database with latest prices
+    await ticker_db.db_updater(ticker)
+    
+    # Run scan analysis
+    json_result, image = await screener.scan(mapped_ticker, return_text=True)
+    
+    # Save to database
+    report_db_instance = scan_report.ScanReport()
+    report_db_instance.insert_report_data(ticker, json_result, image, investtech_img=None)
 
+async def build_portfolio_report_locally(mapped_ticker, rsi=None):
+    '''
+    Builds a portfolio report locally 
+    
+    :param mapped_ticker: Ticker dictionary from tickermap
+    :param rsi: Optional RSI value from index
+    :return: JSON report data
+    '''
+    ticker = mapped_ticker['ticker']
+    screener = market_screener.MarketScreener()
+    
+    if rsi is None:
+        screener.get_osebx_rsi()
+    else:
+        screener.indexRSI = rsi
+    
+    # Update ticker database with latest prices
+    await ticker_db.db_updater(ticker)
+    
+    # Run portfolio scan analysis
+    json_result = await screener.portfolio_scan(mapped_ticker, return_text=True)
+    
+    # Save to database
+    report_db_instance = portfolio_report.PortfolioReport()
+    report_db_instance.insert_report_data(ticker, json_result)
 
 async def report_full(tickers):
     '''
@@ -17,7 +66,6 @@ async def report_full(tickers):
     if isinstance(tickers, list) == False:
             tickers = [tickers]
     screener = market_screener.MarketScreener()
-    await screener.rabbit.connect()
     screener.get_osebx_rsi()
     tasks = [screener.scan(i) for i in tickers]
     for task in asyncio.as_completed(tasks):
@@ -38,7 +86,6 @@ async def report_full(tickers):
         elif "image investtech" not in i:
             embeds.extend(i['embed'])
             images.extend(i['image'])
-    await screener.rabbit.disconnect()
     logger.info("done with report")
     return embeds,images,embeds2,images2
 
@@ -52,14 +99,12 @@ async def report_db(tickers, minervini=False):
     :return: Discord embeds and images (embeds, images, embeds2, images2, tickersReported)
     '''
     today = datetime.now()
-    work = await rabbitmq_client.rabbitmq().connect()
     map_db = tickermap.TickerMap()
     report_db = scan_report.ScanReport()
     mapped_tickers = []
     if isinstance(tickers, list) == False:
             tickers = [tickers]
     screener = market_screener.MarketScreener()
-    await screener.rabbit.connect()
     screener.get_osebx_rsi()
     for i in tickers:
         try:
@@ -72,17 +117,17 @@ async def report_db(tickers, minervini=False):
             ticker = i['ticker']
             reportdate, json_data, investtech, pivots = report_db.get_report_data(ticker=ticker)
             if reportdate == None or today.date() > reportdate.date():
-                await work.build_report(i, screener.indexRSI)
+                await build_report_locally(i, screener.indexRSI)
                 reportdate, json_data, investtech, pivots = report_db.get_report_data(ticker=ticker)
             elif reportdate.time() < time(16,15):
-                await work.build_report(i, screener.indexRSI)
+                await build_report_locally(i, screener.indexRSI)
                 reportdate, json_data, investtech, pivots = report_db.get_report_data(ticker=ticker)
             if minervini:
                 if json_data['minervini'] < 7 or json_data['vwap'] < 1:
                     return
                 else:
                     logger.info(f"{ticker} added with a score of {json_data['minervini']}")
-            await screener.create_embeds(json_data=json_data, image=pivots, investtech_image=investtech)
+            await screener.create_embeds(json_data=json_data, image=pivots)
         except Exception as e:
             logger.warning(e)
     db_tasks = []
@@ -105,15 +150,9 @@ async def report_db(tickers, minervini=False):
     tickersReported = []
     finished_result = sorted(screener.result['result'], key=lambda x: x['stock'])
     for i in finished_result:
-        if "image investtech" in i:
-            embeds2.extend(i['embed'])
-            images2.extend(i['image'])
-            tickersReported.append(i['stock'])
-        elif "image investtech" not in i:
-            embeds.extend(i['embed'])
-            images.extend(i['image'])
-            tickersReported.append(i['stock'])
-    await screener.rabbit.disconnect()
+        embeds.extend(i['embed'])
+        images.extend(i['image'])
+        tickersReported.append(i['stock'])
     logger.info("done with report")
     return embeds,images,embeds2,images2, tickersReported
 
@@ -126,14 +165,12 @@ async def report_portfolio(tickers):
     :return: Discord embed
     '''
     today = datetime.now()
-    work = await rabbitmq_client.rabbitmq().connect()
     map_db = tickermap.TickerMap()
     report_db = portfolio_report.PortfolioReport()
     mapped_tickers = []
     if isinstance(tickers, list) == False:
             tickers = [tickers]
     screener = market_screener.MarketScreener()
-    await screener.rabbit.connect()
     screener.get_osebx_rsi()
     for i in tickers:
         mapped = map_db.get_map_data(i)
@@ -144,11 +181,11 @@ async def report_portfolio(tickers):
         logger.info(reportdate)
         if reportdate == None or today.date() > reportdate.date():
             logger.info("today is not newest")
-            await work.portfolio_report(i)
+            await build_portfolio_report_locally(i)
             reportdate, json_data = report_db.get_report_data(ticker=ticker)
         elif reportdate.time() < time(15,45): 
             logger.info("updating report,")
-            await work.portfolio_report(i)
+            await build_portfolio_report_locally(i)
             reportdate, json_data = report_db.get_report_data(ticker=ticker)
         else:
             logger.info("today is newest")
@@ -174,7 +211,6 @@ async def report_portfolio(tickers):
     finished_result = sorted(screener.result['portfolio'], key=lambda x: x['stock'])
     for i in finished_result:
             embeds.extend(i['embed'])
-    await screener.rabbit.disconnect()
     logger.info("done with report")
     return embeds
 
