@@ -4,6 +4,7 @@ pkgs.mkShell {
     (python3.withPackages (ps:
       with ps; [
         aio-pika
+        debugpy
         pip
         setuptools
         pandas
@@ -41,6 +42,7 @@ pkgs.mkShell {
       export RABBIT_USER
       export RABBIT_PASSWORD
       export LOGLEVEL
+      export SCAN
       export discord_token
     else
       echo "No .env  file found. Continuing without extra environment variables."
